@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/purchase_service.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 
 class PremiumScreen extends StatefulWidget {
@@ -38,6 +39,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
   }
 
   Future<void> _buy(BuildContext context, String productId) async {
+    context.read<SoundService>().click();
     if (_purchases.status == PurchaseServiceStatus.unavailable) {
       _showStoreUnavailableSheet(context, productId);
       return;
@@ -85,6 +87,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
                     // Sadece geliştirme modunda (kDebugMode) ve mağaza
                     // gerçekten erişilemezken gösterilen fallback — gerçek
                     // ödeme akışının yerine geçmez.
+                    context.read<SoundService>().click();
                     storage.setUserPlan('premium');
                     Navigator.of(ctx).pop();
                   },
@@ -93,7 +96,10 @@ class _PremiumScreenState extends State<PremiumScreen> {
               ],
               const SizedBox(height: 8),
               TextButton(
-                onPressed: () => Navigator.of(ctx).pop(),
+                onPressed: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(ctx).pop();
+                },
                 child: const Text('Kapat'),
               ),
             ],
@@ -104,6 +110,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
   }
 
   Future<void> _restore(BuildContext context) async {
+    context.read<SoundService>().click();
     await _purchases.restorePurchases();
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
@@ -150,7 +157,10 @@ class _PremiumScreenState extends State<PremiumScreen> {
                     const Text('Premium hesabın aktif ✨', style: TextStyle(fontWeight: FontWeight.w800)),
                     const SizedBox(height: 12),
                     OutlinedButton(
-                      onPressed: () => storage.setUserPlan('free'),
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        storage.setUserPlan('free');
+                      },
                       child: const Text('Ücretsiz Plan'),
                     ),
                   ],

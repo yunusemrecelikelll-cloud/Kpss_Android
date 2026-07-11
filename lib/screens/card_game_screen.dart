@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../games/card_game_engine.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 
 /// JS: FREE_CARDGAME_DAILY
@@ -58,6 +60,7 @@ class _CardGameScreenState extends State<CardGameScreen> {
   }
 
   void _onFlip(int i) {
+    context.read<SoundService>().click();
     final res = _engine.flip(i);
     if (res.status == 'ignored') return;
     setState(() {});
@@ -92,6 +95,7 @@ class _CardGameScreenState extends State<CardGameScreen> {
     }
 
     final storage = context.watch<StorageService>();
+    final colors = context.watch<ThemeProvider>().colors;
     final premium = storage.isPremiumUser();
     final remaining =
         (kFreeCardGameDaily - (storage.getCardGameState()['plays'] as int)).clamp(0, kFreeCardGameDaily);
@@ -119,7 +123,7 @@ class _CardGameScreenState extends State<CardGameScreen> {
             Text(
               'Terimi tanımıyla eşleştir. Hamle: ${_engine.moves}'
               '${premium ? '' : ' • Kalan günlük hakkın: $remaining'}',
-              style: const TextStyle(fontSize: 13, color: Colors.grey),
+              style: TextStyle(fontSize: 13, color: colors.textFaint),
             ),
             const SizedBox(height: 12),
             Expanded(
@@ -140,12 +144,12 @@ class _CardGameScreenState extends State<CardGameScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: c.matched
-                            ? Colors.green.withValues(alpha: 0.18)
+                            ? colors.success.withValues(alpha: 0.18)
                             : flippedNow
                                 ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.15)
                                 : Theme.of(context).cardColor,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.grey.withValues(alpha: 0.25)),
+                        border: Border.all(color: colors.border),
                       ),
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(6),
@@ -163,7 +167,13 @@ class _CardGameScreenState extends State<CardGameScreen> {
               ),
             ),
             const SizedBox(height: 12),
-            OutlinedButton(onPressed: _newGame, child: const Text('🔄 Yeni Oyun')),
+            OutlinedButton(
+              onPressed: () {
+                context.read<SoundService>().click();
+                _newGame();
+              },
+              child: const Text('🔄 Yeni Oyun'),
+            ),
           ],
         ),
       ),

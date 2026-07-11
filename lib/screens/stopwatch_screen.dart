@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
 import '../models/subject.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 import 'tools_hub_screen.dart';
 
@@ -33,6 +34,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   }
 
   void _toggle() {
+    context.read<SoundService>().click();
     setState(() {
       _running = !_running;
       if (_running) {
@@ -44,6 +46,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
   }
 
   Future<void> _finishAndSave() async {
+    context.read<SoundService>().click();
     _timer?.cancel();
     final had = _seconds;
     setState(() => _running = false);

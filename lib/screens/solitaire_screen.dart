@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../models/topic.dart';
 import '../games/solitaire_engine.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 import '../services/question_picker.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 import 'topic_screen.dart';
 
@@ -22,6 +24,7 @@ class SolitaireScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final colors = context.watch<ThemeProvider>().colors;
     final premium = storage.isPremiumUser();
     final gp = storage.getGamePlayState(kSolitaireGameId);
     final left = (kFreeSolitaireDaily - (gp['plays'] as int)).clamp(0, kFreeSolitaireDaily);
@@ -34,7 +37,7 @@ class SolitaireScreen extends StatelessWidget {
         children: [
           Text(
             'Bir ders seç. ${premium ? "Sınırsız oynarsın." : "Bugün $left hakkın kaldı."}',
-            style: const TextStyle(fontSize: 13.5, color: Colors.grey),
+            style: TextStyle(fontSize: 13.5, color: colors.textFaint),
           ),
           const SizedBox(height: 16),
           for (final s in subjects)
@@ -59,8 +62,10 @@ class SolitaireScreen extends StatelessWidget {
                   ],
                 ),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () =>
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => _SolTopicPicker(subject: s))),
+                onTap: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => _SolTopicPicker(subject: s)));
+                },
               ),
             ),
         ],
@@ -76,6 +81,7 @@ class _SolTopicPicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final colors = context.watch<ThemeProvider>().colors;
     final progress = storage.getGamePassedTopics(kSolitaireGameId);
 
     return Scaffold(
@@ -93,7 +99,7 @@ class _SolTopicPicker extends StatelessWidget {
                 child: Card(
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: passed ? Colors.green.withValues(alpha: 0.2) : null,
+                      backgroundColor: passed ? colors.success.withValues(alpha: 0.2) : null,
                       child: Text(passed ? '✓' : '${i + 1}'),
                     ),
                     title: Text(t.baslik, style: const TextStyle(fontWeight: FontWeight.w700)),
@@ -104,6 +110,7 @@ class _SolTopicPicker extends StatelessWidget {
                             : 'Bu oyun için yeterli içerik yok'),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
+                      context.read<SoundService>().click();
                       if (!eligible) {
                         ScaffoldMessenger.of(context)
                             .showSnackBar(const SnackBar(content: Text('Bu konu için yeterli soru yok.')));
@@ -177,11 +184,13 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
   }
 
   void _answer(int idx) {
+    context.read<SoundService>().click();
     _engine.answer(idx);
     setState(() {});
   }
 
   void _advance() {
+    context.read<SoundService>().click();
     _engine.advance();
     setState(() {});
   }
@@ -218,6 +227,7 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
   Widget _buildBoard(BuildContext context) {
     final st = _engine;
     final cur = st.cards[st.cursor];
+    final colors = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: Text('🂡 Solitaire — ${widget.topic.baslik}')),
@@ -226,7 +236,7 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
           padding: const EdgeInsets.all(16),
           children: [
             Text('Kart ${st.cursor + 1} / ${st.cards.length}',
-                style: const TextStyle(fontSize: 13, color: Colors.grey)),
+                style: TextStyle(fontSize: 13, color: colors.textFaint)),
             const SizedBox(height: 10),
             SizedBox(
               height: 40,
@@ -239,10 +249,10 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
                   Color? bg;
                   String label = '${i + 1}';
                   if (c.status == 'cleared') {
-                    bg = Colors.green.withValues(alpha: 0.25);
+                    bg = colors.success.withValues(alpha: 0.25);
                     label = '✅';
                   } else if (c.status == 'wrong') {
-                    bg = Colors.red.withValues(alpha: 0.25);
+                    bg = colors.danger.withValues(alpha: 0.25);
                     label = '❌';
                   } else if (i == st.cursor) {
                     bg = Theme.of(context).colorScheme.primary.withValues(alpha: 0.25);
@@ -285,15 +295,16 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
   }
 
   Widget _buildOption(SolitaireCard cur, int i) {
+    final colors = context.watch<ThemeProvider>().colors;
     Color? borderColor;
     Color? bgColor;
     if (cur.status != 'pending') {
       if (i == cur.q.dogruIndex) {
-        borderColor = Colors.green;
-        bgColor = Colors.green.withValues(alpha: 0.12);
+        borderColor = colors.success;
+        bgColor = colors.success.withValues(alpha: 0.12);
       } else if (i == cur.given) {
-        borderColor = Colors.red;
-        bgColor = Colors.red.withValues(alpha: 0.12);
+        borderColor = colors.danger;
+        bgColor = colors.danger.withValues(alpha: 0.12);
       }
     }
     return Padding(
@@ -305,7 +316,7 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: borderColor ?? Colors.grey.withValues(alpha: 0.3)),
+            border: Border.all(color: borderColor ?? colors.border),
             color: bgColor,
           ),
           child: Row(
@@ -324,13 +335,14 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
     final st = _engine;
     final cleared = st.cards.where((c) => c.status == 'cleared').length;
     final passed = st.isPassed;
+    final colors = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: const Text('🂡 Solitaire')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Card(
-          color: passed ? null : Colors.red.withValues(alpha: 0.06),
+          color: passed ? null : colors.danger.withValues(alpha: 0.08),
           child: Padding(
             padding: const EdgeInsets.all(32),
             child: Column(
@@ -342,14 +354,14 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
                     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                 const SizedBox(height: 8),
                 Text('$cleared / ${st.cards.length} kartı doğru temizledin.',
-                    style: const TextStyle(color: Colors.grey)),
+                    style: TextStyle(color: colors.textFaint)),
                 const SizedBox(height: 6),
                 Text(
                   passed
                       ? '${widget.topic.baslik} konusunda iyi gidiyorsun.'
                       : '${widget.topic.baslik} konusunu tekrar çalışman işini kolaylaştırır.',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.grey),
+                  style: TextStyle(color: colors.textFaint),
                 ),
                 const SizedBox(height: 20),
                 Wrap(
@@ -359,17 +371,29 @@ class _SolPlayScreenState extends State<_SolPlayScreen> {
                   children: [
                     if (!passed)
                       ElevatedButton(
-                        onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (_) => TopicScreen(subject: widget.subject, topic: widget.topic)),
-                        ),
+                        onPressed: () {
+                          context.read<SoundService>().click();
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (_) => TopicScreen(subject: widget.subject, topic: widget.topic)),
+                          );
+                        },
                         child: const Text('📖 Konuyu Tekrar Çalış'),
                       ),
                     OutlinedButton(
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        Navigator.of(context).pop();
+                      },
                       child: const Text('Konu Listesine Dön'),
                     ),
-                    TextButton(onPressed: _retry, child: const Text('🔄 Tekrar Dene')),
+                    TextButton(
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        _retry();
+                      },
+                      child: const Text('🔄 Tekrar Dene'),
+                    ),
                   ],
                 ),
               ],

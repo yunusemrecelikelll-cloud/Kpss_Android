@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../models/question.dart';
 import '../services/storage_service.dart';
+import '../services/sound_service.dart';
+import '../theme/theme_provider.dart';
 import 'topic_screen.dart';
 import 'quiz_screen.dart';
 
@@ -37,6 +39,7 @@ class SubjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
     final completed = storage.getCompletedTopics();
     final examQCount = subject.konular.length * kSubjectExamQPerTopic;
 
@@ -49,12 +52,15 @@ class SubjectScreen extends StatelessWidget {
         itemBuilder: (context, i) {
           if (i == 0) {
             return Card(
-              color: Colors.deepPurple.withValues(alpha: 0.06),
+              color: c.violet.withValues(alpha: 0.08),
               child: ListTile(
                 title: Text('📝 ${subject.ad} Sınavı', style: const TextStyle(fontWeight: FontWeight.w800)),
                 subtitle: Text('$examQCount soru (her konudan $kSubjectExamQPerTopic)'),
                 trailing: ElevatedButton(
-                  onPressed: () => _startSubjectExam(context),
+                  onPressed: () {
+                    context.read<SoundService>().click();
+                    _startSubjectExam(context);
+                  },
                   child: const Text('Sınava Gir'),
                 ),
               ),
@@ -66,16 +72,19 @@ class SubjectScreen extends StatelessWidget {
           return Card(
             child: ListTile(
               leading: CircleAvatar(
-                backgroundColor: done ? Colors.green.withValues(alpha: 0.2) : null,
+                backgroundColor: done ? c.success.withValues(alpha: 0.2) : null,
                 child: Text(done ? '✓' : '$i'),
               ),
               title: Text(t.baslik, style: const TextStyle(fontWeight: FontWeight.w700)),
               subtitle: Text('${t.sorular.length} soru'
                   '${best != null ? ' • %$best en iyi' : ' • Henüz çözülmedi'}'),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t)),
-              ),
+              onTap: () {
+                context.read<SoundService>().click();
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t)),
+                );
+              },
             ),
           );
         },

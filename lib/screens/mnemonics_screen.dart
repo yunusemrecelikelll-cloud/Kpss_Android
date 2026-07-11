@@ -2,7 +2,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/subject.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 
 class _MnemonicItem {
@@ -66,6 +68,7 @@ class _MnemonicsScreenState extends State<MnemonicsScreen> {
     }
     if (_idx >= _items.length) _idx = 0;
     final it = _items[_idx];
+    final c = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: const Text('🧠 Akılda Kalıcı Kodlama')),
@@ -74,7 +77,7 @@ class _MnemonicsScreenState extends State<MnemonicsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('${_idx + 1} / ${_items.length}', style: const TextStyle(fontSize: 13, color: Colors.grey)),
+            Text('${_idx + 1} / ${_items.length}', style: TextStyle(fontSize: 13, color: c.textFaint)),
             const SizedBox(height: 14),
             Expanded(
               child: Card(
@@ -100,21 +103,30 @@ class _MnemonicsScreenState extends State<MnemonicsScreen> {
               children: [
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: () => setState(() => _idx = (_idx - 1 + _items.length) % _items.length),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      setState(() => _idx = (_idx - 1 + _items.length) % _items.length);
+                    },
                     child: const Text('← Önceki'),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () => setState(() => _idx = _rng.nextInt(_items.length)),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      setState(() => _idx = _rng.nextInt(_items.length));
+                    },
                     child: const Text('🔀 Karıştır'),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: () => setState(() => _idx = (_idx + 1) % _items.length),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      setState(() => _idx = (_idx + 1) % _items.length);
+                    },
                     child: const Text('Sonraki →'),
                   ),
                 ),

@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
 import '../models/subject.dart';
 import '../services/storage_service.dart';
+import '../services/sound_service.dart';
+import '../theme/theme_provider.dart';
 import 'premium_screen.dart';
 
 /// JS karşılığı: renderProfile() (src/js/app.js).
@@ -12,9 +14,13 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
-    final name = storage.getActiveUser().isNotEmpty
-        ? storage.getActiveUser()
-        : (storage.getUserName().isNotEmpty ? storage.getUserName() : 'Aday');
+    final c = context.watch<ThemeProvider>().colors;
+    // İsim önceliği getUserName()'e verildi: profil düzenleme diyaloğu
+    // StorageService.setUserName() ile kaydediyor, güncel değer hemen görünsün diye.
+    final name = storage.getUserName().isNotEmpty
+        ? storage.getUserName()
+        : (storage.getActiveUser().isNotEmpty ? storage.getActiveUser() : 'Aday');
+    final gender = storage.getUserGender();
     final premium = storage.isPremiumUser();
     final overall = storage.computeOverall();
     final streak = storage.getStreak();
@@ -36,7 +42,26 @@ class ProfileScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('👤 Profil')),
+      appBar: AppBar(
+        title: const Text('👤 Profil'),
+        actions: [
+          IconButton(
+            tooltip: 'İsim / Cinsiyet Düzenle',
+            icon: const Icon(Icons.edit_outlined),
+            onPressed: () {
+              context.read<SoundService>().click();
+              showDialog(
+                context: context,
+                builder: (_) => _EditProfileDialog(
+                  storage: storage,
+                  initialName: name == 'Aday' ? '' : name,
+                  initialGender: gender,
+                ),
+              );
+            },
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),
@@ -53,9 +78,9 @@ class ProfileScreen extends StatelessWidget {
                           Text('👤 $name Profili',
                               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
                           const SizedBox(height: 4),
-                          const Text(
+                          Text(
                             "Ücretsiz hesabın temel özetini, Premium'da ise detaylı analizleri gör.",
-                            style: TextStyle(fontSize: 12.5, color: Colors.grey),
+                            style: TextStyle(fontSize: 12.5, color: c.textFaint),
                           ),
                         ],
                       ),
@@ -66,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
                         Chip(
                           label: Text(premium ? 'Premium' : 'Ücretsiz'),
                           backgroundColor: premium
-                              ? Colors.amber.withValues(alpha: 0.2)
+                              ? c.gold.withValues(alpha: 0.2)
                               : null,
                         ),
                         if (premium) ...[
@@ -183,9 +208,9 @@ class ProfileScreen extends StatelessWidget {
                           ),
                         ),
                       const SizedBox(height: 10),
-                      const Text(
+                      Text(
                         'Premium hesapta konu skorların görselleştirilir.',
-                        style: TextStyle(fontSize: 11.5, color: Colors.grey),
+                        style: TextStyle(fontSize: 11.5, color: c.textFaint),
                       ),
                     ],
                   ),
@@ -193,7 +218,7 @@ class ProfileScreen extends StatelessWidget {
               )
             else
               Card(
-                color: Colors.amber.withValues(alpha: 0.06),
+                color: c.gold.withValues(alpha: 0.08),
                 child: Padding(
                   padding: const EdgeInsets.all(18),
                   child: Column(
@@ -208,22 +233,32 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       ElevatedButton(
-                        onPressed: () => Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                        onPressed: () {
+                          context.read<SoundService>().click();
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                        },
                         child: const Text("Premium'a Geç →"),
                       ),
                     ],
                   ),
                 ),
               ),
+            if (premium) ...[
+              const SizedBox(height: 16),
+              const _PremiumPerksCard(),
+            ],
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 if (premium)
                   TextButton(
-                    onPressed: () => Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                    },
                     child: const Text('Premium Ayrıntıları Gör'),
                   ),
               ],
@@ -241,6 +276,7 @@ class _StatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(12),
@@ -248,7 +284,7 @@ class _StatCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(label, style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+            Text(label, style: TextStyle(fontSize: 11.5, color: c.textFaint)),
             const SizedBox(height: 4),
             Text(value, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
             const SizedBox(height: 4),
@@ -266,6 +302,7 @@ class _InfoBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(12),
@@ -274,10 +311,162 @@ class _InfoBox extends StatelessWidget {
           children: [
             Text(title, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5)),
             const SizedBox(height: 4),
-            Text(text, style: const TextStyle(fontSize: 10.5, color: Colors.grey)),
+            Text(text, style: TextStyle(fontSize: 10.5, color: c.textFaint)),
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Premium kullanıcılara özel ayrıcalık listesi. Özellik isimleri
+/// lib/screens/premium_screen.dart'taki _FeatureTile listesiyle uyumlu,
+/// ayrıca birkaç ek premium özellik (karakterler, kodlama, oyun) eklendi.
+class _PremiumPerksCard extends StatelessWidget {
+  const _PremiumPerksCard();
+
+  static const _perks = <(String, String)>[
+    ('♾️', 'Sınırsız Test'),
+    ('🧠', 'Yanlışlarımı Sına'),
+    ('📊', 'Detaylı İstatistik'),
+    ('🎧', 'Sesli Özetler'),
+    ('⭐', 'VIP Rozet'),
+    ('🎭', 'Premium Karakterler'),
+    ('🧩', 'Akılda Kalıcı Kodlama'),
+    ('🎮', 'Sınırsız Oyun'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
+    return Card(
+      color: c.gold.withValues(alpha: 0.08),
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('✨ Premium Ayrıcalıkların',
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+            const SizedBox(height: 10),
+            for (final p in _perks)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: Row(
+                  children: [
+                    Text(p.$1, style: const TextStyle(fontSize: 16)),
+                    const SizedBox(width: 10),
+                    Expanded(child: Text(p.$2, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600))),
+                    Icon(Icons.check_circle, size: 16, color: c.success),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// İsim ve cinsiyet düzenleme diyaloğu.
+/// Kaydedince StorageService.setUserName() / setUserGender() çağrılır.
+class _EditProfileDialog extends StatefulWidget {
+  final StorageService storage;
+  final String initialName;
+  final String initialGender;
+  const _EditProfileDialog({
+    required this.storage,
+    required this.initialName,
+    required this.initialGender,
+  });
+
+  @override
+  State<_EditProfileDialog> createState() => _EditProfileDialogState();
+}
+
+class _EditProfileDialogState extends State<_EditProfileDialog> {
+  late final TextEditingController _nameCtrl;
+  late String _gender;
+
+  @override
+  void initState() {
+    super.initState();
+    _nameCtrl = TextEditingController(text: widget.initialName);
+    _gender = widget.initialGender;
+  }
+
+  @override
+  void dispose() {
+    _nameCtrl.dispose();
+    super.dispose();
+  }
+
+  Future<void> _save() async {
+    final name = _nameCtrl.text.trim();
+    if (name.isEmpty) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Lütfen bir isim gir.')));
+      return;
+    }
+    await widget.storage.setUserName(name);
+    await widget.storage.setUserGender(_gender);
+    if (!mounted) return;
+    Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('Profili Düzenle'),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TextField(
+            controller: _nameCtrl,
+            decoration: const InputDecoration(labelText: 'İsim'),
+            textCapitalization: TextCapitalization.words,
+          ),
+          const SizedBox(height: 16),
+          const Text('Cinsiyet', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12.5)),
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              Expanded(
+                child: ChoiceChip(
+                  label: const Text('👩 Kadın'),
+                  selected: _gender == 'k',
+                  onSelected: (_) => setState(() => _gender = 'k'),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: ChoiceChip(
+                  label: const Text('👨 Erkek'),
+                  selected: _gender == 'e',
+                  onSelected: (_) => setState(() => _gender = 'e'),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            context.read<SoundService>().click();
+            Navigator.of(context).pop();
+          },
+          child: const Text('Vazgeç'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            context.read<SoundService>().click();
+            _save();
+          },
+          child: const Text('Kaydet'),
+        ),
+      ],
     );
   }
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/question.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'quiz_screen.dart';
 import 'premium_screen.dart';
 
@@ -39,6 +41,7 @@ class _WrongBankScreenState extends State<WrongBankScreen> {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
     final premium = storage.isPremiumUser();
 
     if (!premium) {
@@ -52,15 +55,18 @@ class _WrongBankScreenState extends State<WrongBankScreen> {
               const Text('Bu bölüm sadece Premium kullanıcılar için aktif.',
                   style: TextStyle(fontSize: 14.5)),
               const SizedBox(height: 14),
-              const Text(
+              Text(
                 'Yanlış sorularının özel testlerine erişmek, hatalarını hedeflemek ve '
                 'hata analizini derinleştirmek için Premium planına geç.',
-                style: TextStyle(color: Colors.grey, height: 1.6),
+                style: TextStyle(color: c.textFaint, height: 1.6),
               ),
               const SizedBox(height: 18),
               ElevatedButton(
-                onPressed: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                onPressed: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                },
                 child: const Text("Premium'a Geç"),
               ),
             ],
@@ -95,14 +101,14 @@ class _WrongBankScreenState extends State<WrongBankScreen> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            Text('${bank.length} soru birikmiş', style: const TextStyle(color: Colors.grey)),
+            Text('${bank.length} soru birikmiş', style: TextStyle(color: c.textFaint)),
             const SizedBox(height: 12),
             for (final entry in grouped.entries)
               Card(
                 child: ListTile(
                   title: Text(entry.key, style: const TextStyle(fontWeight: FontWeight.w700)),
                   trailing: Text('${entry.value.length} yanlış',
-                      style: const TextStyle(color: Colors.red, fontWeight: FontWeight.w700)),
+                      style: TextStyle(color: c.danger, fontWeight: FontWeight.w700)),
                 ),
               ),
             const SizedBox(height: 16),
@@ -110,20 +116,36 @@ class _WrongBankScreenState extends State<WrongBankScreen> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () => _startWrongTest(context, bank),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      _startWrongTest(context, bank);
+                    },
                     child: const Text('Yanlışlarımı Sına →'),
                   ),
                 ),
                 const SizedBox(width: 10),
                 OutlinedButton(
                   onPressed: () async {
+                    context.read<SoundService>().click();
                     final ok = await showDialog<bool>(
                       context: context,
                       builder: (ctx) => AlertDialog(
                         content: const Text('Tüm yanlış soru bankasını temizlemek istiyor musun?'),
                         actions: [
-                          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Vazgeç')),
-                          TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Temizle')),
+                          TextButton(
+                            onPressed: () {
+                              context.read<SoundService>().click();
+                              Navigator.pop(ctx, false);
+                            },
+                            child: const Text('Vazgeç'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              context.read<SoundService>().click();
+                              Navigator.pop(ctx, true);
+                            },
+                            child: const Text('Temizle'),
+                          ),
                         ],
                       ),
                     );

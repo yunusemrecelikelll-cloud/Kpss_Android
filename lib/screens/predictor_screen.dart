@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../models/attempt.dart';
 import '../models/subject.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 
 /// "Bugün Sınava Girsen Kaç Alırsın?" — JS: renderPredictor.
@@ -43,15 +44,16 @@ class PredictorScreen extends StatelessWidget {
       yanlis += (n - d);
     });
     final k = KpssPoints.compute(dogru: dogru, yanlis: yanlis);
+    final c = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: const Text('🎯 Bugün Sınava Girsen Kaç Alırsın?')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          const Text(
+          Text(
             'Geçmiş test performansına dayanan tahmini bir hesaplamadır, gerçek sınav sonucu farklı olabilir.',
-            style: TextStyle(fontSize: 13, color: Colors.grey),
+            style: TextStyle(fontSize: 13, color: c.textFaint),
           ),
           const SizedBox(height: 16),
           Card(
@@ -84,7 +86,7 @@ class PredictorScreen extends StatelessWidget {
               child: Text(
                 'Bu tahmin, çözdüğün konu/ders testlerindeki ders bazlı başarı oranların 120 soruluk tam '
                 'deneme dağılımına uygulanarak hesaplanır. Daha çok test çöz, tahmin daha isabetli olsun.',
-                style: TextStyle(fontSize: 12.5, color: Colors.grey.shade600),
+                style: TextStyle(fontSize: 12.5, color: c.textFaint),
               ),
             ),
           ),

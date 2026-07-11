@@ -159,7 +159,10 @@ class _QuizScreenState extends State<QuizScreen> {
                   final answered = quiz.answers[i] != null;
                   final current = i == quiz.currentIndex;
                   return InkWell(
-                    onTap: () => quiz.goTo(i),
+                    onTap: () {
+                      context.read<SoundService>().click();
+                      quiz.goTo(i);
+                    },
                     child: CircleAvatar(
                       radius: 16,
                       backgroundColor: current
@@ -201,7 +204,8 @@ class _QuizScreenState extends State<QuizScreen> {
                         selected: quiz.answers[quiz.currentIndex] == i,
                         locked: isExpiredQuestion,
                         onTap: () {
-                          context.read<SoundService>().click();
+                          // İstek üzerine: cevap şıklarına tıklarken tık sesi çıkmasın
+                          // (diğer tüm butonlarda ses çıkmaya devam ediyor).
                           final already = quiz.answers[quiz.currentIndex];
                           quiz.answer(already == i ? null : i);
                         },
@@ -216,12 +220,18 @@ class _QuizScreenState extends State<QuizScreen> {
               children: [
                 Row(children: [
                   OutlinedButton(
-                    onPressed: quiz.currentIndex == 0 ? null : quiz.prev,
+                    onPressed: quiz.currentIndex == 0
+                        ? null
+                        : () {
+                            context.read<SoundService>().click();
+                            quiz.prev();
+                          },
                     child: const Text('← Önceki'),
                   ),
                   const SizedBox(width: 8),
                   ElevatedButton(
                     onPressed: () async {
+                      context.read<SoundService>().click();
                       final unanswered = quiz.answers.where((a) => a == null).length;
                       if (unanswered > 0) {
                         final ok = await showDialog<bool>(
@@ -242,7 +252,13 @@ class _QuizScreenState extends State<QuizScreen> {
                   ),
                 ]),
                 if (quiz.currentIndex < quiz.questions.length - 1)
-                  ElevatedButton(onPressed: quiz.next, child: const Text('Sonraki →')),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      quiz.next();
+                    },
+                    child: const Text('Sonraki →'),
+                  ),
               ],
             ),
           ],

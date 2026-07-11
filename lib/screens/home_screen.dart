@@ -7,6 +7,8 @@ import '../models/question.dart';
 import '../models/mission.dart';
 import '../models/badge.dart';
 import '../services/storage_service.dart';
+import '../services/sound_service.dart';
+import '../theme/theme_provider.dart';
 import '../utils/exam_dates.dart';
 import 'subject_screen.dart';
 import 'quiz_screen.dart';
@@ -16,6 +18,14 @@ import 'profile_screen.dart';
 import 'premium_screen.dart';
 
 const int kFreeMaxFullTestAttempts = 3;
+
+/// Cinsiyete göre hitap eden anasayfa karşılama mesajı.
+/// JS karşılığı: src/js/app.js içindeki _heroGreeting(gender, name).
+String _heroGreetingFor(String gender, String name) {
+  if (gender == 'k') return 'Merhaba Prensesim $name! Hazır mısın? 👸';
+  if (gender == 'e') return 'Merhaba Aslanım $name! Hazır mısın? 🦁';
+  return 'Merhaba, $name! Hazır mısın? 🌸';
+}
 
 class HomeScreen extends StatefulWidget {
   final List<Subject> subjects;
@@ -122,7 +132,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final subjects = widget.subjects;
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
     final name = storage.getActiveUser();
+    final gender = storage.getUserGender();
     final premium = storage.isPremiumUser();
     final overall = storage.computeOverall();
     final completed = storage.getCompletedTopics();
@@ -136,7 +148,10 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('KPSS Hazırlık', style: GoogleFonts.baloo2(fontWeight: FontWeight.w700, fontSize: 22)),
         actions: [
           TextButton.icon(
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ProfileScreen())),
+            onPressed: () {
+              context.read<SoundService>().click();
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ProfileScreen()));
+            },
             icon: const Icon(Icons.person_outline),
             label: const Text('Profil'),
           ),
@@ -154,17 +169,26 @@ class _HomeScreenState extends State<HomeScreen> {
               ListTile(
                 leading: const Text('🎮'),
                 title: const Text('Oyunlar'),
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ToolsHubScreen())),
+                onTap: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ToolsHubScreen()));
+                },
               ),
               ListTile(
                 leading: const Text('💎'),
                 title: const Text('Premium'),
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                onTap: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                },
               ),
               ListTile(
                 leading: const Text('❌'),
                 title: const Text('Yanlışlarım'),
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const WrongBankScreen())),
+                onTap: () {
+                  context.read<SoundService>().click();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const WrongBankScreen()));
+                },
               ),
             ],
           ),
@@ -182,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Selam, $name! Hazır mısın? 🚀',
+                    Text(_heroGreetingFor(gender, name),
                         style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
                     const SizedBox(height: 6),
                     const Text('2026 KPSS hazırlığında bugün ne çalışmak istersin?'),
@@ -205,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
             if (!premium) ...[
               const SizedBox(height: 16),
               Card(
-                color: Colors.deepPurple.withValues(alpha: 0.08),
+                color: c.violet.withValues(alpha: 0.08),
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -214,12 +238,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Text('💎 Ek ayrıcalıklar ve daha fazla soru için Premium\'a geç!',
                           style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14.5)),
                       const SizedBox(height: 6),
-                      const Text('100 soruluk konu havuzları, sınırsız test, oyunlar ve daha fazlası.',
-                          style: TextStyle(fontSize: 12, color: Colors.grey)),
+                      Text('100 soruluk konu havuzları, sınırsız test, oyunlar ve daha fazlası.',
+                          style: TextStyle(fontSize: 12, color: c.textFaint)),
                       const SizedBox(height: 10),
                       ElevatedButton(
-                        onPressed: () => Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                        onPressed: () {
+                          context.read<SoundService>().click();
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                        },
                         child: const Text("Premium'a Geç →"),
                       ),
                     ],
@@ -229,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
             const SizedBox(height: 16),
             Card(
-              color: Colors.amber.withValues(alpha: 0.06),
+              color: c.gold.withValues(alpha: 0.08),
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -243,10 +270,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       premium
                           ? '✨ Sınırsız deneme hakkın var'
                           : '${(kFreeMaxFullTestAttempts - fullTestDone).clamp(0, kFreeMaxFullTestAttempts)} / $kFreeMaxFullTestAttempts deneme hakkın kaldı',
-                      style: const TextStyle(fontSize: 12, color: Colors.orange),
+                      style: TextStyle(fontSize: 12, color: c.warn),
                     ),
                     const SizedBox(height: 10),
-                    ElevatedButton(onPressed: () => _startFullTest(context), child: const Text('Sınava Gir ➜')),
+                    ElevatedButton(
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        _startFullTest(context);
+                      },
+                      child: const Text('Sınava Gir ➜'),
+                    ),
                   ],
                 ),
               ),
@@ -266,9 +299,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   _SubjectCard(
                     subject: s,
                     completedCount: s.konular.where((t) => completed[t.id] == true).length,
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => SubjectScreen(subject: s)),
-                    ),
+                    onTap: () {
+                      context.read<SoundService>().click();
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => SubjectScreen(subject: s)),
+                      );
+                    },
                   ),
               ],
             ),
@@ -285,6 +321,7 @@ class _ExamCountdownBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     final date = nextExamDate(examInfo);
     final countdown = formatCountdown(date);
     final dateStr = '${date.day} ${_monthName(date.month)}';
@@ -300,7 +337,7 @@ class _ExamCountdownBar extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text('📅 ${examInfo.label} KPSS — $dateStr', style: const TextStyle(fontSize: 12, color: Colors.grey)),
+          Text('📅 ${examInfo.label} KPSS — $dateStr', style: TextStyle(fontSize: 12, color: c.textDim)),
           const SizedBox(height: 2),
           Text('Sınava kalan süre: $countdown',
               style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 
 class MentorTip {
@@ -56,14 +57,15 @@ class MentorScreen extends StatelessWidget {
       );
     }
 
+    final c = context.watch<ThemeProvider>().colors;
     return Scaffold(
       appBar: AppBar(title: const Text('🎓 Mentörlük Seansları')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          const Text(
+          Text(
             'Genel sınav stratejileri — kişiye özel canlı mentörlük için yakında sohbet özellikleri açılacak.',
-            style: TextStyle(fontSize: 13, color: Colors.grey),
+            style: TextStyle(fontSize: 13, color: c.textFaint),
           ),
           const SizedBox(height: 16),
           for (final t in kMentorTips)

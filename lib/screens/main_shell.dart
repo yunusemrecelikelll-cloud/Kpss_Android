@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/subject.dart';
+import '../services/sound_service.dart';
 import 'home_screen.dart';
 import 'badges_screen.dart';
 import 'missions_screen.dart';
@@ -32,7 +34,10 @@ class _MainShellState extends State<MainShell> {
       body: IndexedStack(index: _index, children: screens),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
+        onDestinationSelected: (i) {
+          context.read<SoundService>().click();
+          setState(() => _index = i);
+        },
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.home_outlined),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 
 class _Tier {
@@ -38,6 +39,7 @@ class LeagueScreen extends StatelessWidget {
 
     final overall = storage.computeOverall();
     final tier = _tierFromRate(overall.rate);
+    final c = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: const Text('🏆 Özel Lig')),
@@ -57,7 +59,7 @@ class LeagueScreen extends StatelessWidget {
                     'Genel başarı oranın: %${overall.rate} — yerel başarı oranına göre hesaplandı. '
                     'Çevrimiçi karşılaştırma yakında eklenecek.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 12.5, color: Colors.grey.shade600),
+                    style: TextStyle(fontSize: 12.5, color: c.textFaint),
                   ),
                 ],
               ),

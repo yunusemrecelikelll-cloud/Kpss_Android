@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../services/storage_service.dart';
 import '../services/auth_service.dart';
+import '../services/sound_service.dart';
+import '../theme/theme_provider.dart';
 import '../utils/exam_dates.dart';
 import 'main_shell.dart';
 
@@ -31,6 +33,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   Future<void> _finish() async {
+    context.read<SoundService>().click();
     final name = _nameCtrl.text.trim();
     if (name.isEmpty) {
       ScaffoldMessenger.of(context)
@@ -61,6 +64,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   Future<void> _socialSignIn(Future<AuthResult> Function() method) async {
+    context.read<SoundService>().click();
     setState(() => _busy = true);
     final result = await method();
     if (!mounted) return;
@@ -83,6 +87,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     final auth = context.watch<AuthService>();
+    final c = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       body: SafeArea(
@@ -95,8 +100,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 const Text('🌙', style: TextStyle(fontSize: 48)),
                 const SizedBox(height: 12),
                 const Text('KPSS Hazırlık', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800)),
-                const Text('2026 KPSS hazırlığına hoş geldin!',
-                    style: TextStyle(fontSize: 14, color: Colors.grey)),
+                Text('2026 KPSS hazırlığına hoş geldin!',
+                    style: TextStyle(fontSize: 14, color: c.textFaint)),
                 const SizedBox(height: 28),
 
                 SizedBox(
@@ -121,13 +126,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 const SizedBox(height: 20),
                 Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Expanded(child: Divider()),
+                  children: [
+                    const Expanded(child: Divider()),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Text('veya', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text('veya', style: TextStyle(color: c.textFaint, fontSize: 12)),
                     ),
-                    Expanded(child: Divider()),
+                    const Expanded(child: Divider()),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -141,9 +146,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                const Align(
+                Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('Sen kimsin?', style: TextStyle(fontSize: 12.5, color: Colors.grey)),
+                  child: Text('Sen kimsin?', style: TextStyle(fontSize: 12.5, color: c.textFaint)),
                 ),
                 const SizedBox(height: 8),
                 Row(
@@ -152,20 +157,26 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ChoiceChip(
                       label: const Text('👩 Kadın'),
                       selected: _gender == 'k',
-                      onSelected: (_) => setState(() => _gender = 'k'),
+                      onSelected: (_) {
+                        context.read<SoundService>().click();
+                        setState(() => _gender = 'k');
+                      },
                     ),
                     const SizedBox(width: 8),
                     ChoiceChip(
                       label: const Text('👨 Erkek'),
                       selected: _gender == 'e',
-                      onSelected: (_) => setState(() => _gender = 'e'),
+                      onSelected: (_) {
+                        context.read<SoundService>().click();
+                        setState(() => _gender = 'e');
+                      },
                     ),
                   ],
                 ),
                 const SizedBox(height: 18),
-                const Align(
+                Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('Hangi sınava gireceksin?', style: TextStyle(fontSize: 12.5, color: Colors.grey)),
+                  child: Text('Hangi sınava gireceksin?', style: TextStyle(fontSize: 12.5, color: c.textFaint)),
                 ),
                 const SizedBox(height: 8),
                 Wrap(
@@ -177,7 +188,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ChoiceChip(
                         label: Text(e.label),
                         selected: _examType == e.id,
-                        onSelected: (_) => setState(() => _examType = e.id),
+                        onSelected: (_) {
+                          context.read<SoundService>().click();
+                          setState(() => _examType = e.id);
+                        },
                       ),
                   ],
                 ),

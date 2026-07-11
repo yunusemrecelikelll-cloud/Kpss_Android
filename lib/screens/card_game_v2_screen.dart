@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../models/topic.dart';
 import '../games/card_game_v2_engine.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'tools_hub_screen.dart';
 import 'topic_screen.dart';
 
@@ -22,6 +24,7 @@ class CardGameV2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final colors = context.watch<ThemeProvider>().colors;
     final premium = storage.isPremiumUser();
     final gp = storage.getGamePlayState(kGame2Id);
     final left = (kFreeGameDaily - (gp['plays'] as int)).clamp(0, kFreeGameDaily);
@@ -34,15 +37,18 @@ class CardGameV2Screen extends StatelessWidget {
         children: [
           Text(
             'Bir ders seç. ${premium ? "Sınırsız oynarsın." : "Bugün $left hakkın kaldı."}',
-            style: const TextStyle(fontSize: 13.5, color: Colors.grey),
+            style: TextStyle(fontSize: 13.5, color: colors.textFaint),
           ),
           const SizedBox(height: 16),
           for (final s in subjects)
             _SubjectRow(
               subject: s,
               passedCount: s.konular.where((t) => progress[t.id] == true).length,
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => _V2TopicPicker(subject: s))),
+              onTap: () {
+                context.read<SoundService>().click();
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => _V2TopicPicker(subject: s)));
+              },
             ),
         ],
       ),
@@ -87,6 +93,7 @@ class _V2TopicPicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final colors = context.watch<ThemeProvider>().colors;
     final progress = storage.getGamePassedTopics(kGame2Id);
 
     return Scaffold(
@@ -104,7 +111,7 @@ class _V2TopicPicker extends StatelessWidget {
                 child: Card(
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: passed ? Colors.green.withValues(alpha: 0.2) : null,
+                      backgroundColor: passed ? colors.success.withValues(alpha: 0.2) : null,
                       child: Text(passed ? '✓' : '${i + 1}'),
                     ),
                     title: Text(t.baslik, style: const TextStyle(fontWeight: FontWeight.w700)),
@@ -115,6 +122,7 @@ class _V2TopicPicker extends StatelessWidget {
                             : 'Bu oyun için yeterli içerik yok'),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
+                      context.read<SoundService>().click();
                       if (!eligible) {
                         ScaffoldMessenger.of(context)
                             .showSnackBar(const SnackBar(content: Text('Bu konu için yeterli içerik yok.')));
@@ -298,6 +306,7 @@ class _V2PlayScreenState extends State<_V2PlayScreen> with SingleTickerProviderS
   void _handleTap(String side, int i) {
     final res = side == 'left' ? _engine.selectLeft(i) : _engine.selectRight(i);
     if (res.status == 'ignored') return;
+    context.read<SoundService>().click();
     setState(() {});
     if (res.status == 'match') {
       WidgetsBinding.instance.addPostFrameCallback((_) => _recomputeLines());
@@ -335,6 +344,7 @@ class _V2PlayScreenState extends State<_V2PlayScreen> with SingleTickerProviderS
     }
 
     WidgetsBinding.instance.addPostFrameCallback((_) => _recomputeLines());
+    final colors = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: Text('🃏 Kart Oyunu V2 — ${widget.topic.baslik}')),
@@ -347,14 +357,14 @@ class _V2PlayScreenState extends State<_V2PlayScreen> with SingleTickerProviderS
               'Sol taraftaki terimi sağdaki tanımıyla eşleştir. '
               'Eşleşen: ${_engine.matchedCount}/${_engine.pairsTotal} • '
               'Yanlış: ${_engine.mistakes}/${_engine.maxMistakes}',
-              style: const TextStyle(fontSize: 13, color: Colors.grey),
+              style: TextStyle(fontSize: 13, color: colors.textFaint),
             ),
             const SizedBox(height: 14),
             Expanded(
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
                 decoration: BoxDecoration(
-                  color: _flashWrong ? Colors.red.withValues(alpha: 0.14) : Colors.transparent,
+                  color: _flashWrong ? colors.danger.withValues(alpha: 0.14) : Colors.transparent,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Stack(
@@ -403,6 +413,7 @@ class _V2PlayScreenState extends State<_V2PlayScreen> with SingleTickerProviderS
   }
 
   Widget _buildCard({required String side, required int i, required Key key, required Match2Card card}) {
+    final colors = context.watch<ThemeProvider>().colors;
     final selected = side == 'left' ? _engine.selectedLeft == i : _engine.selectedRight == i;
     final isWrong = side == 'left' ? _engine.lastWrong?.leftIdx == i : _engine.lastWrong?.rightIdx == i;
 
@@ -412,17 +423,17 @@ class _V2PlayScreenState extends State<_V2PlayScreen> with SingleTickerProviderS
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: BoxDecoration(
         color: card.matched
-            ? Colors.green.withValues(alpha: 0.16)
+            ? colors.success.withValues(alpha: 0.16)
             : selected
                 ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.18)
                 : Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
           color: isWrong
-              ? Colors.red.withValues(alpha: 0.7)
+              ? colors.danger.withValues(alpha: 0.7)
               : selected
                   ? Theme.of(context).colorScheme.primary
-                  : Colors.grey.withValues(alpha: 0.25),
+                  : colors.border,
           width: isWrong || selected ? 1.6 : 1,
         ),
       ),
@@ -460,12 +471,13 @@ class _V2Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.watch<ThemeProvider>().colors;
     return Scaffold(
       appBar: AppBar(title: const Text('🃏 Kart Oyunu V2')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Card(
-          color: passed ? null : Colors.red.withValues(alpha: 0.06),
+          color: passed ? null : colors.danger.withValues(alpha: 0.08),
           child: Padding(
             padding: const EdgeInsets.all(32),
             child: Column(
@@ -481,7 +493,7 @@ class _V2Result extends StatelessWidget {
                       ? '${topic.baslik} konusundaki tüm eşleşmeleri buldun.'
                       : '${topic.baslik} konusunu tekrar çalışman işini kolaylaştırır.',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.grey),
+                  style: TextStyle(color: colors.textFaint),
                 ),
                 const SizedBox(height: 20),
                 Wrap(
@@ -491,16 +503,28 @@ class _V2Result extends StatelessWidget {
                   children: [
                     if (!passed)
                       ElevatedButton(
-                        onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: topic)),
-                        ),
+                        onPressed: () {
+                          context.read<SoundService>().click();
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: topic)),
+                          );
+                        },
                         child: const Text('📖 Konuyu Tekrar Çalış'),
                       ),
                     OutlinedButton(
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        Navigator.of(context).pop();
+                      },
                       child: const Text('Konu Listesine Dön'),
                     ),
-                    TextButton(onPressed: onRetry, child: const Text('🔄 Tekrar Dene')),
+                    TextButton(
+                      onPressed: () {
+                        context.read<SoundService>().click();
+                        onRetry();
+                      },
+                      child: const Text('🔄 Tekrar Dene'),
+                    ),
                   ],
                 ),
               ],

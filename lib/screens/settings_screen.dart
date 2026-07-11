@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
 import '../theme/theme_provider.dart';
@@ -21,6 +22,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
     final themeProvider = context.watch<ThemeProvider>();
+    final c = themeProvider.colors;
     final settings = storage.getSettings();
     final soundOn = settings['soundEnabled'] != false;
     final timerMode = (settings['timerMode'] as String?) ?? 'auto';
@@ -50,6 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         active: themeProvider.themeId == entry.key,
                         locked: !premium && !kFreeThemeIds.contains(entry.key),
                         onTap: () async {
+                          context.read<SoundService>().click();
                           final ok = await themeProvider.setTheme(entry.key);
                           if (!mounted) return;
                           if (!ok) {
@@ -67,11 +70,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
             ),
             if (!premium)
-              const Padding(
-                padding: EdgeInsets.only(top: 6),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
                 child: Text(
                   '🔒 6 tema daha Premium\'da açılıyor.',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(fontSize: 12, color: c.textFaint),
                 ),
               ),
 
@@ -105,6 +108,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           label: '🤖 Otomatik (KPSS oranı — 65sn/soru)',
                           selected: timerMode == 'auto',
                           onTap: () {
+                            context.read<SoundService>().click();
                             storage.saveSettings({'timerMode': 'auto'});
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(content: Text('Otomatik süre modu seçildi.')),
@@ -115,6 +119,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           label: '✏️ Soru başına süre — Sen belirle',
                           selected: timerMode == 'perq',
                           onTap: () {
+                            context.read<SoundService>().click();
                             storage.saveSettings({'timerMode': 'perq'});
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(content: Text('Soru başına süre modu seçildi.')),
@@ -131,7 +136,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text('Her soru için süre:', style: TextStyle(fontSize: 12.5, color: Colors.grey)),
+                            Text('Her soru için süre:', style: TextStyle(fontSize: 12.5, color: c.textFaint)),
                             const SizedBox(height: 10),
                             Wrap(
                               spacing: 8,
@@ -142,6 +147,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                     label: '${n}s',
                                     selected: secsPerQ == n,
                                     onTap: () {
+                                      context.read<SoundService>().click();
                                       storage.saveSettings({'secsPerQ': n});
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(content: Text('Soru başına $n saniye seçildi.')),
@@ -153,7 +159,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             const SizedBox(height: 10),
                             Text(
                               'Örnek: 10 soru × ${secsPerQ}sn = ${(10 * secsPerQ / 60).round()} dakika',
-                              style: const TextStyle(fontSize: 12, color: Colors.grey),
+                              style: TextStyle(fontSize: 12, color: c.textFaint),
                             ),
                           ],
                         ),
@@ -173,7 +179,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     const Text('Planın: ', style: TextStyle(fontWeight: FontWeight.w700)),
                     Chip(
                       label: Text(premium ? 'Premium' : 'Ücretsiz'),
-                      backgroundColor: premium ? Colors.amber.withValues(alpha: 0.2) : null,
+                      backgroundColor: premium ? c.gold.withValues(alpha: 0.2) : null,
                       visualDensity: VisualDensity.compact,
                     ),
                   ],
@@ -187,8 +193,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 isThreeLine: true,
                 trailing: ElevatedButton(
-                  onPressed: () => Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                  onPressed: () {
+                    context.read<SoundService>().click();
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                  },
                   child: const Text('Ayrıntıları Gör'),
                 ),
               ),
@@ -203,20 +212,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ? Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Profilinde ve üst menüde görünecek karakteri seç.',
-                              style: TextStyle(fontSize: 12.5, color: Colors.grey)),
+                          Text('Profilinde ve üst menüde görünecek karakteri seç.',
+                              style: TextStyle(fontSize: 12.5, color: c.textFaint)),
                           const SizedBox(height: 12),
                           Wrap(
                             spacing: 8,
                             runSpacing: 8,
                             children: [
-                              for (final c in _kCharacterOpts)
+                              for (final char in _kCharacterOpts)
                                 _ChoiceButton(
-                                  label: c,
+                                  label: char,
                                   fontSize: 20,
-                                  selected: storage.getUserCharacter() == c,
+                                  selected: storage.getUserCharacter() == char,
                                   onTap: () async {
-                                    await storage.setUserCharacter(c);
+                                    context.read<SoundService>().click();
+                                    await storage.setUserCharacter(char);
                                     if (!mounted) return;
                                     setState(() {});
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -228,9 +238,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ],
                       )
-                    : const Text(
+                    : Text(
                         "Premium'a geçerek profilin için özel karakterler açabilirsin.",
-                        style: TextStyle(fontSize: 12.5, color: Colors.grey),
+                        style: TextStyle(fontSize: 12.5, color: c.textFaint),
                       ),
               ),
             ),
@@ -375,10 +385,16 @@ class _ChoiceButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    // Bazı temalarda (ör. Kraliyet Altını) `primary` parlak/açık bir renk
+    // olabiliyor; sabit beyaz metin böyle durumlarda okunaksız kalıyordu.
+    // Arka planın parlaklığına göre kontrast rengi hesaplanır.
+    final onPrimary = ThemeData.estimateBrightnessForColor(scheme.primary) == Brightness.dark
+        ? Colors.white
+        : Colors.black87;
     return selected
         ? ElevatedButton(
             onPressed: onTap,
-            style: ElevatedButton.styleFrom(backgroundColor: scheme.primary, foregroundColor: Colors.white),
+            style: ElevatedButton.styleFrom(backgroundColor: scheme.primary, foregroundColor: onPrimary),
             child: Text(label, style: TextStyle(fontSize: fontSize)),
           )
         : OutlinedButton(

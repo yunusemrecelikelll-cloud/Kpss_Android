@@ -2,6 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/attempt.dart';
 import '../services/storage_service.dart';
+import '../services/sound_service.dart';
+import '../theme/app_theme.dart';
+import '../theme/theme_provider.dart';
+
+/// Cinsiyete ve skora göre değişen motivasyon mesajı.
+/// JS karşılığı: src/js/app.js içindeki renderResult()'taki msg(skor) fonksiyonu.
+String motivationMessageFor(String gender, String name, int skor) {
+  if (gender == 'k') {
+    if (skor >= 85) return 'Prenses $name, muhteşemsin! 👸✨ Bu konuyu tamamen kavramışsın, canım!';
+    if (skor >= 70) return 'Aferin güzelim! 💜 Küçük eksiklerini gider, bu konu senin prenses!';
+    if (skor >= 50) return 'Fena değil, kraliçem! 🌸 Biraz daha çalışırsan harika olacaksın.';
+    return 'Üzülme canım, bu konu biraz zorluyordu! 🤗 Anlatımı tekrar oku, sen yaparsın prenses!';
+  }
+  if (gender == 'e') {
+    if (skor >= 85) return 'Aslanım $name, muhteşemsin! 🦁💥 Bu konuyu tamamen kavramışsın!';
+    if (skor >= 70) return 'Aferin $name! 💪 Harika iş çıkardın, küçük eksiklerini tamamla!';
+    if (skor >= 50) return 'Fena değil $name! 🔥 Biraz daha çalışırsan harika olacaksın.';
+    return 'Üzülme $name, bu konu biraz zorluyordu! 💪 Anlatımı tekrar oku ve yeniden dene — sen yaparsın!';
+  }
+  if (skor >= 85) return '$name, muhteşem! 🌟 Bu konuyu tamamen kavramışsın!';
+  if (skor >= 70) return '$name, çok iyi! 💪 Küçük eksiklerini gider, bu konu sende!';
+  if (skor >= 50) return '$name, fena değil! 🌱 Biraz daha çalışırsan harika olacaksın.';
+  return '$name, bu konu biraz zorluyordu ama sorun değil! 🤗 Anlatımı tekrar oku ve yeniden dene.';
+}
+
+/// Skor aralığına göre motivasyon kutusunun rengi (yeşil→kırmızı gradasyonu).
+/// Temaya duyarlı olması için sabit Material renkleri yerine KpssColors kullanılır.
+Color motivationColorFor(int skor, KpssColors c) {
+  if (skor >= 85) return c.success;
+  if (skor >= 70) return c.mint;
+  if (skor >= 50) return c.warn;
+  return c.danger;
+}
 
 class ResultScreen extends StatelessWidget {
   final Attempt result;
@@ -10,8 +43,15 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
     final premium = storage.isPremiumUser();
     final k = KpssPoints.compute(dogru: result.dogru, yanlis: result.yanlis);
+    final name = storage.getActiveUser().isNotEmpty
+        ? storage.getActiveUser()
+        : (storage.getUserName().isNotEmpty ? storage.getUserName() : 'Aday');
+    final gender = storage.getUserGender();
+    final motivation = motivationMessageFor(gender, name, result.skor);
+    final motivationColor = motivationColorFor(result.skor, c);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Sonuç')),
@@ -23,15 +63,30 @@ class ResultScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+                    margin: const EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                      color: motivationColor.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: motivationColor.withValues(alpha: 0.35)),
+                    ),
+                    child: Text(
+                      motivation,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: motivationColor),
+                    ),
+                  ),
                   Text('%${result.skor}', style: const TextStyle(fontSize: 36, fontWeight: FontWeight.w900)),
                   Text('${result.subjectAd} • ${result.topicBaslik}'),
                   const SizedBox(height: 12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _Stat(label: 'Doğru ✓', value: '${result.dogru}', color: Colors.green),
-                      _Stat(label: 'Yanlış ✗', value: '${result.yanlis}', color: Colors.red),
-                      _Stat(label: 'Boş —', value: '${result.bos}', color: Colors.grey),
+                      _Stat(label: 'Doğru ✓', value: '${result.dogru}', color: c.success),
+                      _Stat(label: 'Yanlış ✗', value: '${result.yanlis}', color: c.danger),
+                      _Stat(label: 'Boş —', value: '${result.bos}', color: c.textFaint),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -47,7 +102,10 @@ class ResultScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   ElevatedButton(
-                    onPressed: () => Navigator.of(context).popUntil((r) => r.isFirst),
+                    onPressed: () {
+                      context.read<SoundService>().click();
+                      Navigator.of(context).popUntil((r) => r.isFirst);
+                    },
                     child: const Text('Anasayfa'),
                   ),
                 ],
@@ -74,9 +132,9 @@ class ResultScreen extends StatelessWidget {
                                   ? 'Yanlış ✗'
                                   : 'Boş'),
                           backgroundColor: result.review[i].status == 'dogru'
-                              ? Colors.green.withValues(alpha: 0.15)
+                              ? c.success.withValues(alpha: 0.15)
                               : result.review[i].status == 'yanlis'
-                                  ? Colors.red.withValues(alpha: 0.15)
+                                  ? c.danger.withValues(alpha: 0.15)
                                   : null,
                         ),
                         const SizedBox(width: 8),
@@ -93,9 +151,9 @@ class ResultScreen extends StatelessWidget {
                           '${String.fromCharCode(65 + oi)}) ${result.review[i].secenekler[oi]}',
                           style: TextStyle(
                             color: oi == result.review[i].dogruIndex
-                                ? Colors.green
+                                ? c.success
                                 : oi == result.review[i].verilenIndex
-                                    ? Colors.red
+                                    ? c.danger
                                     : null,
                             fontWeight: oi == result.review[i].dogruIndex ? FontWeight.w700 : null,
                           ),
@@ -109,8 +167,8 @@ class ResultScreen extends StatelessWidget {
                         Text('🤔 Büyük ihtimalle neden seçtin? ${result.review[i].distractorAciklama}',
                             style: const TextStyle(fontSize: 13, fontStyle: FontStyle.italic))
                       else
-                        const Text('Premium kullanıcılar için detaylı yanılgı analizi burada gösterilir.',
-                            style: TextStyle(fontSize: 12, color: Colors.grey)),
+                        Text('Premium kullanıcılar için detaylı yanılgı analizi burada gösterilir.',
+                            style: TextStyle(fontSize: 12, color: c.textFaint)),
                     ],
                   ],
                 ),

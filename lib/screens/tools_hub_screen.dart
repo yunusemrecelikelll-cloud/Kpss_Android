@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../services/data_service.dart';
+import '../services/sound_service.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 import 'card_game_screen.dart';
 import 'card_game_v2_screen.dart';
 import 'solitaire_screen.dart';
@@ -62,11 +64,12 @@ class _ToolsHubScreenState extends State<ToolsHubScreen> {
           final sol = storage.getGamePlayState('solitaire');
           final solLeft = (kFreeGameDailyLimit - (sol['plays'] as int)).clamp(0, kFreeGameDailyLimit);
 
+          final c = context.watch<ThemeProvider>().colors;
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              const Text('Çalışmanı güçlendirecek oyunlar ve ekstra araçlar.',
-                  style: TextStyle(fontSize: 13.5, color: Colors.grey)),
+              Text('Çalışmanı güçlendirecek oyunlar ve ekstra araçlar.',
+                  style: TextStyle(fontSize: 13.5, color: c.textFaint)),
               const SizedBox(height: 18),
               const _SectionTitle('🎮 Oyunlar'),
               const SizedBox(height: 10),
@@ -182,10 +185,14 @@ class ToolCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     return Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: onTap,
+        onTap: () {
+          context.read<SoundService>().click();
+          onTap();
+        },
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Column(
@@ -203,7 +210,7 @@ class ToolCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   desc,
-                  style: const TextStyle(fontSize: 11.5, color: Colors.grey),
+                  style: TextStyle(fontSize: 11.5, color: c.textFaint),
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -235,11 +242,13 @@ class LockedFeatureCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(desc, style: const TextStyle(color: Colors.grey, height: 1.6)),
+                Text(desc, style: TextStyle(color: context.watch<ThemeProvider>().colors.textFaint, height: 1.6)),
                 const SizedBox(height: 18),
                 ElevatedButton(
-                  onPressed: () =>
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PremiumScreen())),
+                  onPressed: () {
+                    context.read<SoundService>().click();
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                  },
                   child: const Text("Premium'a Geç"),
                 ),
               ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/badge.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 
 /// JS karşılığı: renderBadges() (src/js/app.js) + rozet tanımları src/js/badges.js.
 class BadgesScreen extends StatelessWidget {
@@ -10,6 +11,7 @@ class BadgesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
     final unlocked = storage.getUnlockedBadges().toSet();
 
     return Scaffold(
@@ -22,11 +24,7 @@ class BadgesScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
               child: Text(
                 '${unlocked.length} / ${kBadgeDefs.length} kazanıldı',
-                style: TextStyle(
-                  fontSize: 13.5,
-                  color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.7) ??
-                      Colors.grey,
-                ),
+                style: TextStyle(fontSize: 13.5, color: c.textFaint),
               ),
             ),
             Expanded(
@@ -60,6 +58,7 @@ class _BadgeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     return Card(
       elevation: unlocked ? 2 : 0,
       color: unlocked ? null : Theme.of(context).cardColor.withValues(alpha: 0.5),
@@ -79,7 +78,7 @@ class _BadgeCard extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 fontSize: 13,
-                color: unlocked ? null : Colors.grey,
+                color: unlocked ? null : c.textFaint,
               ),
             ),
             const SizedBox(height: 6),
@@ -90,9 +89,9 @@ class _BadgeCard extends StatelessWidget {
             ),
             if (unlocked) ...[
               const SizedBox(height: 6),
-              const Text(
+              Text(
                 'Kazanıldı ✓',
-                style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: Colors.teal),
+                style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: c.success),
               ),
             ],
           ],

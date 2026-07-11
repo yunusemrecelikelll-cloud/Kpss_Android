@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/mission.dart';
 import '../services/storage_service.dart';
+import '../theme/theme_provider.dart';
 
 /// JS karşılığı: renderMissions() (src/js/app.js) + görev tanımları src/js/missions.js.
 class MissionsScreen extends StatefulWidget {
@@ -35,6 +36,7 @@ class _MissionsScreenState extends State<MissionsScreen> {
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
+    final c = context.watch<ThemeProvider>().colors;
 
     return Scaffold(
       appBar: AppBar(title: const Text('📋 Görevler')),
@@ -42,9 +44,9 @@ class _MissionsScreenState extends State<MissionsScreen> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            const Text(
+            Text(
               'Günlük ve haftalık görevleri tamamla!',
-              style: TextStyle(fontSize: 13.5, color: Colors.grey),
+              style: TextStyle(fontSize: 13.5, color: c.textFaint),
             ),
             const SizedBox(height: 16),
             for (final m in kMissions) ...[
@@ -68,6 +70,7 @@ class _MissionRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.watch<ThemeProvider>().colors;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -81,14 +84,15 @@ class _MissionRow extends StatelessWidget {
                 children: [
                   Text(mission.title, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14)),
                   const SizedBox(height: 2),
-                  Text(mission.desc, style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                  Text(mission.desc, style: TextStyle(fontSize: 12, color: c.textFaint)),
                   const SizedBox(height: 8),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4),
                     child: LinearProgressIndicator(
                       value: done ? 1 : 0,
                       minHeight: 6,
-                      backgroundColor: Colors.grey.withValues(alpha: 0.2),
+                      backgroundColor: c.border,
+                      color: done ? c.success : c.violet,
                     ),
                   ),
                 ],
