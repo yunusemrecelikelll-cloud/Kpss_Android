@@ -57,6 +57,10 @@ class StorageService extends ChangeNotifier {
 
   Future<void> _set(String key, dynamic value) async {
     await _prefs?.setString(_prefix() + key, jsonEncode(value));
+    // Neredeyse tüm veri-değiştiren metodlar bu yardımcıdan geçiyor; tek noktadan
+    // bildirim vererek Ana Sayfa/Profil gibi dinleyen ekranların (context.watch)
+    // test bitince/rozet açılınca vb. otomatik yenilenmesini garantiliyoruz.
+    notifyListeners();
   }
 
   // ── Kullanıcı yönetimi ──
@@ -259,6 +263,7 @@ class StorageService extends ChangeNotifier {
 
   Future<void> clearDraft() async {
     await _prefs?.remove(_prefix() + 'draft');
+    notifyListeners();
   }
 
   // ── Ayarlar ──
@@ -286,8 +291,7 @@ class StorageService extends ChangeNotifier {
 
   Future<void> saveSettings(Map<String, dynamic> patch) async {
     final merged = {...getSettings(), ...patch};
-    await _set('settings', merged);
-    notifyListeners();
+    await _set('settings', merged); // _set zaten notifyListeners() çağırıyor
   }
 
   String getUserPlan() => (getSettings()['plan'] as String?) ?? 'free';
