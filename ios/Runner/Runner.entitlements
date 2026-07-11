@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- "Günün Kilit Ekranı Kodu" widget'ı (DailyCodeWidget extension) ile
+	     ana uygulama arasında home_widget verisi paylaşmak için App Group.
+	     Değer, ios/DailyCodeWidget/DailyCodeWidget.entitlements ve Dart
+	     tarafındaki LockWidgetService.iosAppGroupId ile birebir aynı olmalı.
+
+	     TODO(Mac/Xcode): Bu dosya proje diskinde hazır ama HENÜZ
+	     Runner target'ının "Code Signing Entitlements" build setting'ine
+	     bağlı DEĞİL (project.pbxproj bu makinede — Windows'ta — güvenli
+	     şekilde düzenlenemediği için elle bırakıldı). Xcode'da:
+	       Runner target > Signing & Capabilities > + Capability >
+	       App Groups > "group.com.kpsshazirlik.kpss_telefon" ekle.
+	     Bu adım Xcode'un kendi otomatik ürettiği entitlements dosyasıyla
+	     bu dosyayı birleştirir/değiştirir. -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.kpsshazirlik.kpss_telefon</string>
+	</array>
+</dict>
+</plist>

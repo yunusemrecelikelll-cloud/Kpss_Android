@@ -4,6 +4,7 @@ import '../models/question.dart';
 import '../services/storage_service.dart';
 import '../services/quiz_engine.dart';
 import '../services/timer_service.dart';
+import '../services/sound_service.dart';
 import 'result_screen.dart';
 
 const int kAutoSecsPerQ = 65; // KPSS GY-GK oranı
@@ -116,6 +117,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
     final isExpiredQuestion = timerMode == 'perq' && displaySecs <= 0;
 
+    // JS updateTimer(): son 5 saniye tik-tak sesi (Timer her saniye bir kez
+    // notifyListeners() çağırıyor, bu build de saniyede bir kez tetikleniyor).
+    if (displaySecs <= 5 && displaySecs > 0) {
+      context.read<SoundService>().tick();
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('${widget.subjectAd} • ${widget.topicBaslik}', style: const TextStyle(fontSize: 14)),
@@ -194,6 +201,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         selected: quiz.answers[quiz.currentIndex] == i,
                         locked: isExpiredQuestion,
                         onTap: () {
+                          context.read<SoundService>().click();
                           final already = quiz.answers[quiz.currentIndex];
                           quiz.answer(already == i ? null : i);
                         },

@@ -4,6 +4,7 @@ import 'services/storage_service.dart';
 import 'services/data_service.dart';
 import 'services/quiz_engine.dart';
 import 'services/timer_service.dart';
+import 'services/sound_service.dart';
 import 'theme/theme_provider.dart';
 import 'screens/splash_screen.dart';
 
@@ -20,6 +21,7 @@ Future<void> main() async {
         ChangeNotifierProvider<QuizEngine>(create: (_) => QuizEngine(storage)),
         ChangeNotifierProvider<TimerService>(create: (_) => TimerService()),
         ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(storage)),
+        Provider<SoundService>(create: (_) => SoundService(storage)),
       ],
       child: const KpssApp(),
     ),

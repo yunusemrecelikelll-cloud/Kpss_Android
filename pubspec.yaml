@@ -59,6 +59,24 @@ dependencies:
   # Tarih biçimlendirme
   intl: ^0.19.0
 
+  # ── Bulut özellikleri (Google/Apple girişi, sohbet, canlı sınav, bulut
+  # yedekleme, lig) — gerçek bir Firebase projesi (google-services.json /
+  # GoogleService-Info.plist) eklenip lib/firebase_bootstrap.dart'taki
+  # initFirebaseIfConfigured() main.dart'tan çağrılana kadar bu paketler
+  # kurulu olsa da devreye girmez. Bkz. FIREBASE_SETUP.md.
+  firebase_core: ^4.11.0
+  firebase_auth: ^6.5.4
+  cloud_firestore: ^6.6.0
+  google_sign_in: ^7.2.0
+  sign_in_with_apple: ^8.1.0
+
+  # Uygulama içi satın alma (App Store / Play Billing) — premium abonelikleri için
+  in_app_purchase: ^3.2.0
+
+  # "Günün Kilit Ekranı Kodu" — gerçek Android App Widget / iOS Home Screen
+  # Widget'ı (bkz. lib/services/lock_widget_service.dart, WIDGET_SETUP.md)
+  home_widget: ^0.9.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

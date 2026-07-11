@@ -319,6 +319,23 @@ class StorageService extends ChangeNotifier {
     return s['plays'] as int;
   }
 
+  // ── Genel oyun günlük hak takibi (Kart Oyunu V2 / Solitaire) — JS: getGamePlayState/useGamePlay.
+  // NOT: Kart Oyunu v1 kendi ayrı sayacını (getCardGameState/useCardGamePlay) kullanır; JS'te
+  // FREE_CARDGAME_DAILY (v1) ile FREE_GAME_DAILY (v2/solitaire, oyun başına ayrı) farklı sayaçlardır.
+  Map<String, dynamic> getGamePlayState(String gameId) {
+    final today = DateTime.now().toString().split(' ')[0];
+    final s = Map<String, dynamic>.from(_get('gameplays_$gameId', {'date': today, 'plays': 0}));
+    if (s['date'] != today) return {'date': today, 'plays': 0};
+    return s;
+  }
+
+  Future<int> useGamePlay(String gameId) async {
+    final s = getGamePlayState(gameId);
+    s['plays'] = (s['plays'] as int) + 1;
+    await _set('gameplays_$gameId', s);
+    return s['plays'] as int;
+  }
+
   // ── Oyun ilerlemesi (Kart Oyunu V2 / Solitaire) — konu bazlı geçme takibi ──
   Map<String, bool> getGamePassedTopics(String gameId) =>
       Map<String, bool>.from(_get('game_passed_$gameId', <String, dynamic>{}));
