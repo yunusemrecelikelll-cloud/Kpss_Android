@@ -1,17 +1,24 @@
-# kpss_telefon
+# KPSS Hazırlık — Android
 
-A new Flutter project.
+Bu klasör, KPSS Hazırlık uygulamasının **sadece Android** için hazırlanmış sürümüdür.
+`Kpss_Telefon` klasöründeki ortak Flutter kod tabanından türetildi; `ios/`, `web/`
+ve `windows/` platform klasörleri kasıtlı olarak kaldırıldı — bu klasör Play Store'a
+yüklenecek Android derlemesi için tek kaynaktır.
 
-## Getting Started
+iOS sürümü için `Kpss_Ios` klasörüne bakın.
 
-This project is a starting point for a Flutter application.
+## Derleme
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter pub get
+flutter build apk --release      # ya da
+flutter build appbundle --release  # Play Console yüklemesi için
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Notlar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `lib/`, `assets/` ve `pubspec.yaml` içeriği Kpss_Ios ile birebir aynı tutulmalı —
+  bundan sonraki özellik/hata düzeltme istekleri hem bu klasöre hem Kpss_Ios'a
+  aynı şekilde uygulanacak.
+- Firebase/Ödeme/Widget kurulumu için kök dizindeki `FIREBASE_SETUP.md`,
+  `IAP_SETUP.md`, `WIDGET_SETUP.md` dosyalarına bakın.
