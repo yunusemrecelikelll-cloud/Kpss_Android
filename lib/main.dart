@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'services/storage_service.dart';
+import 'services/data_service.dart';
+import 'services/quiz_engine.dart';
+import 'services/timer_service.dart';
+import 'theme/theme_provider.dart';
+import 'screens/splash_screen.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final storage = StorageService();
+  await storage.init();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<StorageService>.value(value: storage),
+        Provider<DataService>(create: (_) => DataService()),
+        ChangeNotifierProvider<QuizEngine>(create: (_) => QuizEngine(storage)),
+        ChangeNotifierProvider<TimerService>(create: (_) => TimerService()),
+        ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(storage)),
+      ],
+      child: const KpssApp(),
+    ),
+  );
+}
+
+class KpssApp extends StatelessWidget {
+  const KpssApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final themeProvider = context.watch<ThemeProvider>();
+    return MaterialApp(
+      title: 'KPSS Hazırlık',
+      debugShowCheckedModeBanner: false,
+      theme: themeProvider.themeData,
+      home: const SplashScreen(),
+    );
+  }
+}
