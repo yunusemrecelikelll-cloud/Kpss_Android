@@ -128,7 +128,46 @@ const kThemes = <String, KpssColors>{
     success: Color(0xFF34D399), danger: Color(0xFFF87171), warn: Color(0xFFFBBF24),
     isLight: false,
   ),
+  'lacivert': KpssColors(
+    id: 'lacivert', name: 'Gece Mavisi', icon: '🌌',
+    bg: Color(0xFF060A1E), bg2: Color(0xFF0B1230), bg3: Color(0xFF121B42),
+    headerBg: Color(0xCC060A1E), glass: Color(0x0EFFFFFF), glass2: Color(0x17FFFFFF),
+    border: Color(0x266366F1),
+    violet: Color(0xFF6366F1), violetL: Color(0xFF818CF8),
+    rose: Color(0xFFEC4899), roseL: Color(0xFFF472B6),
+    gold: Color(0xFFFBBF24), mint: Color(0xFF22D3EE),
+    text: Color(0xFFEEF2FF), textDim: Color(0xFFC7D2FE), textFaint: Color(0xFF8B93C4),
+    success: Color(0xFF34D399), danger: Color(0xFFF87171), warn: Color(0xFFFBBF24),
+    isLight: false,
+  ),
+  'altin': KpssColors(
+    id: 'altin', name: 'Kraliyet Altını', icon: '👑',
+    bg: Color(0xFF120D02), bg2: Color(0xFF1D1505), bg3: Color(0xFF2A1E08),
+    headerBg: Color(0xCC120D02), glass: Color(0x0FFFFFFF), glass2: Color(0x18FFFFFF),
+    border: Color(0x33D4AF37),
+    violet: Color(0xFFD4AF37), violetL: Color(0xFFE8C766),
+    rose: Color(0xFFB45309), roseL: Color(0xFFD97706),
+    gold: Color(0xFFFDE68A), mint: Color(0xFF34D399),
+    text: Color(0xFFFEF9E7), textDim: Color(0xFFE8D9A8), textFaint: Color(0xFFA8925C),
+    success: Color(0xFF34D399), danger: Color(0xFFF87171), warn: Color(0xFFFDE68A),
+    isLight: false,
+  ),
+  'ferahlik': KpssColors(
+    id: 'ferahlik', name: 'Ferahlık', icon: '🍃',
+    bg: Color(0xFFF0FBF9), bg2: Color(0xFFE1F6F1), bg3: Color(0xFFD1EFE7),
+    headerBg: Color(0xE0F0FBF9), glass: Color(0x9EFFFFFF), glass2: Color(0xCCFFFFFF),
+    border: Color(0x2E14B8A6),
+    violet: Color(0xFF0D9488), violetL: Color(0xFF14B8A6),
+    rose: Color(0xFFDB2777), roseL: Color(0xFFEC4899),
+    gold: Color(0xFFD97706), mint: Color(0xFF059669),
+    text: Color(0xFF042F2E), textDim: Color(0xFF115E59), textFaint: Color(0xFF5EAAA0),
+    success: Color(0xFF059669), danger: Color(0xFFDC2626), warn: Color(0xFFD97706),
+    isLight: true,
+  ),
 };
+
+/// Ücretsiz kullanıcıların erişebildiği 3 tema; kalan 6'sı premium'a özel.
+const List<String> kFreeThemeIds = ['default', 'safak', 'pembe'];
 
 ThemeData buildThemeData(KpssColors c) {
   final base = c.isLight ? ThemeData.light() : ThemeData.dark();

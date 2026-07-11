@@ -5,6 +5,7 @@ import 'services/data_service.dart';
 import 'services/quiz_engine.dart';
 import 'services/timer_service.dart';
 import 'services/sound_service.dart';
+import 'services/auth_service.dart';
 import 'theme/theme_provider.dart';
 import 'screens/splash_screen.dart';
 
@@ -12,6 +13,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final storage = StorageService();
   await storage.init();
+  // Gerçek bir Firebase projesi (google-services.json / GoogleService-Info.plist)
+  // eklenene kadar bu çağrı güvenle "yapılandırılmadı" durumuna düşer.
+  // await initFirebaseIfConfigured(); // bkz. FIREBASE_SETUP.md
 
   runApp(
     MultiProvider(
@@ -22,6 +26,7 @@ Future<void> main() async {
         ChangeNotifierProvider<TimerService>(create: (_) => TimerService()),
         ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider(storage)),
         Provider<SoundService>(create: (_) => SoundService(storage)),
+        ChangeNotifierProvider<AuthService>(create: (_) => AuthService()),
       ],
       child: const KpssApp(),
     ),

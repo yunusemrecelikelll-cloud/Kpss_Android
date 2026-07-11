@@ -19,6 +19,10 @@ class BadgeDef {
 /// ile kontrol edilir. Otomatik tetikleme (testi bitirince rozet kontrolü)
 /// ayrı bir işte quiz akışına eklenebilir.
 const List<BadgeDef> kBadgeDefs = [
+  // — Görevler —
+  BadgeDef(id: 'gorev-1', icon: '🎯', name: 'İlk Görev', desc: 'İlk günlük/haftalık görevini tamamladın'),
+  BadgeDef(id: 'gorev-10', icon: '🏹', name: 'Görev Avcısı', desc: 'Toplam 10 görev tamamladın'),
+  BadgeDef(id: 'gorev-50', icon: '🎖️', name: 'Görev Ustası', desc: 'Toplam 50 görev tamamladın'),
   // — Başlangıç —
   BadgeDef(id: 'ilk-adim', icon: '🌱', name: 'İlk Adım', desc: 'İlk testini çözdün!'),
   BadgeDef(id: 'hizli-basla', icon: '🚀', name: 'Hızlı Başla', desc: '3 farklı konu testi çözdün'),

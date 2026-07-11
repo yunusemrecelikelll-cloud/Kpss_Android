@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/storage_service.dart';
-import '../services/data_service.dart';
 import '../theme/app_theme.dart';
 import '../theme/theme_provider.dart';
 import 'premium_screen.dart';
-import 'user_select_screen.dart';
 
 const List<String> _kCharacterOpts = ['🦉', '🦁', '🐯', '🦄', '🐼', '🚀', '🏆', '📚'];
 const List<int> _kSecsOpts = [30, 45, 60, 90, 120];
@@ -19,15 +17,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  Future<void> _switchUser() async {
-    final data = context.read<DataService>();
-    final subjects = await data.loadAll();
-    if (!mounted) return;
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => UserSelectScreen(subjects: subjects)),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final storage = context.watch<StorageService>();
@@ -47,7 +36,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           padding: const EdgeInsets.all(16),
           children: [
             // ── Tema ──
-            const _SectionTitle('🎨 Uygulama Teması'),
+            _SectionTitle(premium ? '🎨 Uygulama Teması (9/9 açık)' : '🎨 Uygulama Teması (3/9 açık)'),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(14),
@@ -59,9 +48,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       _ThemeSwatch(
                         colors: entry.value,
                         active: themeProvider.themeId == entry.key,
+                        locked: !premium && !kFreeThemeIds.contains(entry.key),
                         onTap: () async {
-                          await themeProvider.setTheme(entry.key);
+                          final ok = await themeProvider.setTheme(entry.key);
                           if (!mounted) return;
+                          if (!ok) {
+                            Navigator.of(context)
+                                .push(MaterialPageRoute(builder: (_) => const PremiumScreen()));
+                            return;
+                          }
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Tema değiştirildi!')),
                           );
@@ -71,6 +66,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ),
             ),
+            if (!premium)
+              const Padding(
+                padding: EdgeInsets.only(top: 6),
+                child: Text(
+                  '🔒 6 tema daha Premium\'da açılıyor.',
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
+              ),
 
             // ── Ses ──
             const _SectionTitle('🔊 Ses Efektleri'),
@@ -157,31 +160,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                     ),
                   ],
-                ),
-              ),
-            ),
-
-            // ── Kullanıcılar ──
-            const _SectionTitle('👤 Kullanıcılar'),
-            Card(
-              child: ListTile(
-                title: RichText(
-                  text: TextSpan(
-                    style: DefaultTextStyle.of(context).style.copyWith(fontWeight: FontWeight.w700),
-                    children: [
-                      const TextSpan(text: 'Aktif: '),
-                      TextSpan(
-                        text: storage.getActiveUser(),
-                        style: const TextStyle(color: Colors.deepPurple),
-                      ),
-                    ],
-                  ),
-                ),
-                subtitle: Text('${storage.getUserList().length} kayıtlı kullanıcı',
-                    style: const TextStyle(fontSize: 12)),
-                trailing: OutlinedButton(
-                  onPressed: _switchUser,
-                  child: const Text('👤 Kullanıcı Değiştir'),
                 ),
               ),
             ),
@@ -325,8 +303,14 @@ class _SectionTitle extends StatelessWidget {
 class _ThemeSwatch extends StatelessWidget {
   final KpssColors colors;
   final bool active;
+  final bool locked;
   final VoidCallback onTap;
-  const _ThemeSwatch({required this.colors, required this.active, required this.onTap});
+  const _ThemeSwatch({
+    required this.colors,
+    required this.active,
+    required this.onTap,
+    this.locked = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -349,17 +333,31 @@ class _ThemeSwatch extends StatelessWidget {
             width: active ? 2.5 : 1,
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
-            Text(colors.icon, style: const TextStyle(fontSize: 18)),
-            const Spacer(),
-            Text(
-              colors.name,
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: colors.text),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(colors.icon, style: TextStyle(fontSize: 18, color: locked ? colors.textFaint : null)),
+                const Spacer(),
+                Text(
+                  colors.name,
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w700,
+                    color: locked ? colors.textFaint : colors.text,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
             ),
+            if (locked)
+              Positioned(
+                top: 0,
+                right: 0,
+                child: Icon(Icons.lock, size: 14, color: colors.textFaint),
+              ),
           ],
         ),
       ),

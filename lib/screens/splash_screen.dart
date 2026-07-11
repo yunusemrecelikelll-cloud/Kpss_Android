@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import '../models/subject.dart';
 import '../services/data_service.dart';
 import '../services/storage_service.dart';
-import 'user_select_screen.dart';
-import 'home_screen.dart';
+import 'registration_screen.dart';
+import 'main_shell.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -26,17 +26,14 @@ class _SplashScreenState extends State<SplashScreen> {
     final subjects = await data.loadAll();
     if (!mounted) return;
 
-    final users = storage.getUserList();
-    final active = storage.getActiveUser();
-
-    if (users.isEmpty || active.isEmpty || !users.contains(active)) {
+    if (!storage.hasProfile) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => UserSelectScreen(subjects: subjects)),
+        MaterialPageRoute(builder: (_) => RegistrationScreen(subjects: subjects)),
       );
     } else {
       await storage.resetDailyMissions();
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HomeScreen(subjects: subjects)),
+        MaterialPageRoute(builder: (_) => MainShell(subjects: subjects)),
       );
     }
   }

@@ -10,14 +10,24 @@ class ThemeProvider extends ChangeNotifier {
     _themeId = (storage.getSettings()['theme'] as String?) ?? 'default';
   }
 
-  KpssColors get colors => kThemes[_themeId] ?? kThemes['default']!;
+  /// Premium düşerse (abonelik iptal vb.) kilitli bir temada takılı kalmasın.
+  KpssColors get colors {
+    if (!kFreeThemeIds.contains(_themeId) && !storage.isPremiumUser()) {
+      return kThemes['default']!;
+    }
+    return kThemes[_themeId] ?? kThemes['default']!;
+  }
+
   ThemeData get themeData => buildThemeData(colors);
   String get themeId => _themeId;
 
-  Future<void> setTheme(String id) async {
-    if (!kThemes.containsKey(id)) return;
+  /// Tema premium'a özelse ve kullanıcı ücretsizse false döner (UI Premium'a yönlendirsin).
+  Future<bool> setTheme(String id) async {
+    if (!kThemes.containsKey(id)) return false;
+    if (!kFreeThemeIds.contains(id) && !storage.isPremiumUser()) return false;
     _themeId = id;
     await storage.saveSettings({'theme': id});
     notifyListeners();
+    return true;
   }
 }

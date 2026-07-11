@@ -115,6 +115,13 @@ class StorageService extends ChangeNotifier {
   String getUserCharacter() => _get('character', '') as String;
   Future<void> setUserCharacter(String c) => _set('character', c);
 
+  // ── Sınav türü: 'lisans' | 'onlisans' | 'ortaogretim' ──
+  String getExamType() => _get('examType', '') as String;
+  Future<void> setExamType(String t) => _set('examType', t);
+
+  /// Bu profil bir kez oluşturulduktan sonra tekrar sorulmaz (tek kullanıcılı uygulama).
+  bool get hasProfile => getUserName().isNotEmpty;
+
   String getUserName() => _get('name', '') as String;
   Future<void> setUserName(String n) {
     final c = n.trim();
@@ -229,7 +236,12 @@ class StorageService extends ChangeNotifier {
     final m = getMissionsDone();
     m[id] = DateTime.now().millisecondsSinceEpoch;
     await _set('missions_done', m);
+    await _set('missions_total', getMissionsCompletedTotal() + 1);
   }
+
+  /// resetDailyMissions ile günlük/haftalık kayıtlar silinse bile hiç azalmayan,
+  /// "bugüne kadar toplam kaç görev tamamladın" sayacı — görev rozetleri için.
+  int getMissionsCompletedTotal() => (_get('missions_total', 0) as num).toInt();
 
   bool isMissionDone(String id) => getMissionsDone().containsKey(id);
 

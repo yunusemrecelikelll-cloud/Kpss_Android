@@ -59,6 +59,9 @@ dependencies:
   # Tarih biçimlendirme
   intl: ^0.19.0
 
+  # Başlık/marka fontu (KPSS Hazırlık yazısı için)
+  google_fonts: ^6.2.1
+
   # ── Bulut özellikleri (Google/Apple girişi, sohbet, canlı sınav, bulut
   # yedekleme, lig) — gerçek bir Firebase projesi (google-services.json /
   # GoogleService-Info.plist) eklenip lib/firebase_bootstrap.dart'taki
