@@ -15,3 +15,6 @@ ios/Pods/
 ios/.symlinks/
 ios/Flutter/Flutter.framework
 ios/Flutter/Flutter.podspec
+
+# Ajan/oturum çalışma dosyaları (repo dışına yazılması gerekirdi, hijyen için)
+scratchpad/

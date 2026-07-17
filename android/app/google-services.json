@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "993008276386",
+    "project_id": "kpss-52eb6",
+    "storage_bucket": "kpss-52eb6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993008276386:android:f5f5d30976007b52dd58fb",
+        "android_client_info": {
+          "package_name": "com.kpsshazirlik.kpss_telefon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993008276386-gailf0pg6rkrgvv12btu42jql9ui25jm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kpsshazirlik.kpss_telefon",
+            "certificate_hash": "8a8c0aed7ac7477d99704536377fb1101fdef404"
+          }
+        },
+        {
+          "client_id": "993008276386-ck4bsp5c9di3amlrmr2m3pbf03u3cmf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiDF_ixOgqv99mT2lp-4UqckbzkUxkhVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993008276386-ck4bsp5c9di3amlrmr2m3pbf03u3cmf8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "993008276386-78k2ralk6pk3adsr2uut0lhlc7g0m4kj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kpsshazirlik.kpssTelefon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

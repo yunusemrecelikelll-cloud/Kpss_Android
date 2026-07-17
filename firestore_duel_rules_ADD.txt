@@ -1,0 +1,67 @@
+// ==========================================================================
+// KPSS Düello / KPSS Royale — Firestore Güvenlik Kuralları (EKLENECEK PARÇA)
+// ==========================================================================
+//
+// Bu proje ÜCRETSİZ Spark planında çalışır; Cloud Functions yoktur. Tüm oyun
+// akışı istemci tarafı okuma/yazma iledir. Aşağıdaki `match /duel_rooms/...`
+// bloğunu, Firebase Console > Firestore > Kurallar bölümündeki MEVCUT
+// `rules_version = '2'; service cloud.firestore { match /databases/{db}/documents { ... } }`
+// gövdesinin İÇİNE (diğer `match` bloklarının yanına) ekleyip
+// `firebase deploy --only firestore:rules` ile yayınla.
+//
+// NOT: Firestore güvenlik kurallarında iç içe (nested) map anahtarı bazlı
+// hassas kısıtlama (ör. "oyuncu SADECE kendi players.<uid> alt-alanını
+// değiştirebilir") sınırlıdır — request.resource.data ile alan-alan
+// karşılaştırma gerektirir ve kırılgandır. Bu CASUAL bir mobil oyun olduğu
+// için MAKUL bir güvenlik seviyesi hedeflenmiştir; mükemmel anti-cheat şart
+// değildir. Aşağıdaki kurallar: (1) sadece giriş yapmış (anonim dahil)
+// kullanıcılar erişebilir, (2) herkese açık ya da içinde bulunduğun odaları
+// okuyabilirsin, (3) odayı yalnızca kendini host yazan kullanıcı
+// oluşturabilir, (4) güncellemede kritik alanların (code, hostUid, questions,
+// mode) değiştirilemeyeceğini garanti eder.
+
+match /duel_rooms/{roomId} {
+
+  // Okuma: herkese açık oda (isPublic == true) ya da oyuncusu olduğun oda.
+  allow read: if request.auth != null
+    && (
+      resource.data.isPublic == true
+      || request.auth.uid in resource.data.players
+      || request.auth.uid == resource.data.hostUid
+    );
+
+  // Liste sorgusu (listOpenRooms: where status == 'waiting'):
+  // yukarıdaki read koşulu tekil dokümanlar için çalışır; koleksiyon
+  // sorgusunda her doküman ayrı ayrı bu koşuldan geçer, isPublic == true
+  // olanlar döner.
+
+  // Oluşturma: sadece kendini host olarak yazan giriş yapmış kullanıcı,
+  // ve kendini players içine ekleyen ilk kayıt.
+  allow create: if request.auth != null
+    && request.resource.data.hostUid == request.auth.uid
+    && request.resource.data.status == 'waiting'
+    && request.auth.uid in request.resource.data.players;
+
+  // Güncelleme: giriş yapmış herhangi bir oyuncu (katılma, cevap gönderme,
+  // başlatma, eleme, bitirme İSTEMCİ tarafında yapıldığı için gerekli),
+  // ANCAK değişmez alanlar korunur (kod, host, sorular, mod, maxPlayers
+  // sabit kalmalı — kopya/hile riskini azaltır).
+  allow update: if request.auth != null
+    && request.resource.data.code == resource.data.code
+    && request.resource.data.hostUid == resource.data.hostUid
+    && request.resource.data.mode == resource.data.mode
+    && request.resource.data.questions == resource.data.questions
+    && request.resource.data.maxPlayers == resource.data.maxPlayers;
+
+  // Silme: sadece host odayı silebilir (opsiyonel; uygulama şu an silmiyor,
+  // eski odalar Console'dan TTL/manuel temizlenebilir).
+  allow delete: if request.auth != null
+    && request.auth.uid == resource.data.hostUid;
+}
+
+// --------------------------------------------------------------------------
+// ÖNEMLİ: Bu kurallar Firebase Anonim Kimlik Doğrulama'nın (Anonymous Auth)
+// AÇIK olmasını gerektirir. Firebase Console > Authentication > Sign-in
+// method > Anonymous > Enable ile etkinleştir (uygulama katılırken
+// FirebaseAuth.instance.signInAnonymously() çağırır).
+// --------------------------------------------------------------------------

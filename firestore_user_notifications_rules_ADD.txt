@@ -1,0 +1,50 @@
+// ==========================================================================
+// Kullanıcı Bildirimleri (user_notifications) — Firestore Güvenlik Kuralları
+// (EKLENECEK PARÇA)
+// ==========================================================================
+//
+// NEDEN GEREKLİ: Sohbet ekranında bir mesaj rapor edildiğinde
+// (lib/services/chat_service.dart -> ChatService.reportMessage), rapor eden
+// kullanıcı artık RAPOR EDİLEN kullanıcının kendi bildirim kutusuna
+// ("Bir mesajınız incelenmek üzere bildirildi.") hafif bir bildirim yazmaya
+// çalışıyor (bkz. ChatService._notifyUser / fetchAndClearNotifications).
+//
+// Mevcut kural desenlerinin (`blocked_users`, `league_scores` vb.) hepsi
+// "isOwner(uid)" ile SADECE kendi belgeni yazabilirsin şeklinde çalışıyor.
+// Burada ise YAZAN (reporterUid) ile HEDEF belgenin sahibi (reportedUid)
+// FARKLI kullanıcılar — yani "kendi belgeni yaz" deseni YETMEZ, YENİ bir
+// kural gerekir. Bu dosya, o yeni kuralın TASLAĞIDIR — insan onayı
+// ALINMADAN Firebase Console'a YAYINLANMAMALIDIR (bkz. proje kuralı: Firestore
+// güvenlik kuralı değişiklikleri her zaman insan onayı gerektirir).
+//
+// GÜVENLİK NOTU: "allow create: if isSignedIn()" bilinçli olarak GENİŞ
+// tutuldu (herhangi bir giriş yapmış kullanıcı, başka birinin bildirim
+// kutusuna yazabilir) çünkü bu, "rapor eden ile rapor edilen farklı kişiler"
+// senaryosunun doğası gereği. Kötüye kullanımı sınırlamak için:
+//   (1) `type` alanı sabit bir değer kümesiyle sınırlandı,
+//   (2) `message` alanının uzunluğu sınırlandı (spam/çok uzun metin önlemek için),
+//   (3) İSTEMCİ tarafında zaten sadece ChatService.reportMessage bu yazma
+//       işlemini tetikliyor (serbest metin girişi kullanıcıdan alınmıyor).
+// Daha sıkı bir kısıtlama (ör. "sadece gerçekten bir chat_reports belgesi
+// oluşturulmuşsa bildirim yazılabilir") Cloud Functions olmadan pratik
+// değildir (bu proje Spark/ücretsiz plandadır, bkz. FIREBASE_SETUP.md).
+//
+// Firebase Console > Firestore > Kurallar bölümündeki MEVCUT
+// `rules_version = '2'; service cloud.firestore { match /databases/{db}/documents { ... } }`
+// gövdesinin İÇİNE (diğer `match` bloklarının yanına) ekleyip
+// `firebase deploy --only firestore:rules` ile yayınlayın (İNSAN ONAYINDAN SONRA).
+
+match /user_notifications/{uid}/items/{itemId} {
+  // Okuma/güncelleme/silme: sadece bildirim kutusunun sahibi (bkz.
+  // ChatService.fetchAndClearNotifications — okuduktan sonra kendi
+  // bildirimlerini siler).
+  allow read, update, delete: if isOwner(uid);
+
+  // Oluşturma: giriş yapmış HERHANGİ bir kullanıcı (rapor eden, hedefin
+  // kendisi DEĞİL) yazabilir — ama sadece izin verilen 'type' değerleriyle ve
+  // kısa bir mesajla.
+  allow create: if isSignedIn()
+    && request.resource.data.type in ['info', 'report_notice']
+    && request.resource.data.message is string
+    && request.resource.data.message.size() <= 200;
+}
