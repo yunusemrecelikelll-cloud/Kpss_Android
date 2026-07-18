@@ -18,3 +18,12 @@ ios/Flutter/Flutter.podspec
 
 # Ajan/oturum çalışma dosyaları (repo dışına yazılması gerekirdi, hijyen için)
 scratchpad/
+
+# Gizli anahtarlar — asla commit edilmemeli
+**/*firebase-adminsdk*.json
+**/*service-account*.json
+*.env
+*.pem
+**/key.properties
+**/*.keystore
+**/*.jks
