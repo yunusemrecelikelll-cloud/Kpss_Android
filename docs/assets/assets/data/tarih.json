@@ -1,0 +1,2533 @@
+{
+  "id": "tarih",
+  "ad": "Tarih",
+  "konular": [
+    {
+      "id": "tarih-ilk-turk-devletleri",
+      "baslik": "İslamiyet Öncesi Türk Tarihi",
+      "anlatim": {
+        "ozet": "🏛️ Hunlar'dan Uygurlara uzanan köklü Türk devlet geleneği: bozkır, toy meclisi, kurultay ve göçebe kültürü.",
+        "icerik": [
+          "📌 Asya Hun Devleti (MÖ 220 – MS 216), Mete Han tarafından kurulmuş ve Orta Asya'da ilk büyük Türk devletini oluşturmuştur. Mete Han'ın 'onluk sistem' adıyla bilinen ordu teşkilatı, tarihte ilk düzenli ordu örneklerinden sayılır.",
+          "📎 Göktürkler (552–744), Türk adının devlet adı olarak ilk kez kullanıldığı uygarlıktır. Bumin ve İstemi Kağanların liderliğinde kurulan devlet, Orhun Yazıtları ile Türkçenin ilk yazılı belgelerini bırakmıştır.",
+          "📌 Uygur Devleti (744–840), yerleşik yaşama geçen, Mani dinini benimseyen ve gelişmiş sanat-kültür anlayışıyla öne çıkan Türk devletidir. Minyatür sanatı, kitap sanatı ve mimari alanda önemli eserler vermişlerdir.",
+          "📌 Köktürk Devleti, Çin baskısı ve iç çekişmeler nedeniyle 630'da Çin'e (Tang Hanedanı) bağımlı hale gelmiş; bu yaklaşık 50 yıllık dönem 'Çin Esareti' olarak adlandırılır. Kutluk Kağan (İlteriş Kağan) 682'de bağımsızlığı yeniden kazanarak II. Göktürk (Kutluk) Devleti'ni kurmuş; kardeşi Kapgan Kağan ve veziri Tonyukuk devletin yeniden güçlenmesinde belirleyici rol oynamıştır.",
+          "📎 Göktürklerde ülke doğu (Şad) ve batı (Yabgu) olmak üzere ikili bir teşkilatla yönetilirdi; bu 'ikili teşkilat' sistemi sonraki pek çok Türk devletinde de sürdürülmüştür. Bilge Kağan, Kül Tigin ve Tonyukuk'un birlikte yürüttüğü yönetim anlayışı, Orhun Yazıtları'nda halkın tok ve huzurlu olmasının devletin bekası için şart olduğu vurgusuyla anlatılır.",
+          "📌 Asya Hunlarının MS 48'de Kuzey ve Güney Hun olmak üzere ikiye bölünmesinin ardından, batıya göç eden bir Hun kolu 4. yüzyılda Avrupa'ya ulaşarak Avrupa Hun Devleti'ni kurmuş; Attila liderliğinde (434–453) Roma İmparatorluğu'nu ağır vergilere bağlamış ve Batı kaynaklarında 'Tanrının Kırbacı' olarak anılmıştır. Bu göç dalgası, Kavimler Göçü'nü (375) tetikleyerek Avrupa'nın siyasi haritasını kökten değiştirmiştir.",
+          "📎 Uygurlar 840'ta Kırgızların baskısıyla yıkılınca bir bölümü Doğu Türkistan'a (Turfan-Beşbalık çevresi) göç ederek yeni bir yerleşik uygarlık kurmuş; burada kervan ticareti, hareketli harfle baskı tekniklerinin öncü örnekleri ve minyatür sanatı gelişmiştir. Uygurlar Soğd alfabesinden geliştirdikleri kendi alfabelerini kullanmış, bu alfabe sonradan Moğollara da geçmiştir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Mete Han onluk ordu sistemi kurdu (MÖ 209)",
+          "💡 Orhun Yazıtları ilk Türkçe yazılı belgedir (8. yy)",
+          "⚡ Uygurlar yerleşik yaşama geçen ilk büyük Türk topluluğudur",
+          "🔑 Göktürkler Türk adını kullanan ilk devlettir",
+          "💡 Kurultay (toy) Türklerde en yüksek karar organıdır",
+          "🎯 Göktürkler 630-682 arasında Çin (Tang) egemenliğinde kaldı; bu döneme 'Çin Esareti' denir",
+          "🔑 Kutluk (İlteriş) Kağan 682'de II. Göktürk Devleti'ni kurarak bağımsızlığı yeniden kazandı",
+          "💡 Attila (434-453) Avrupa Hunlarını yönetti, Roma'ya karşı 'Tanrının Kırbacı' olarak anıldı",
+          "⚡ Göktürklerde ikili teşkilat (doğuda Şad, batıda Yabgu) devlet yönetiminin temelidir",
+          "🔑 Uygurlar 840'ta Kırgız baskısıyla yıkılınca Turfan-Beşbalık bölgesine göç etti"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Türk tarihinde 'onluk sistem' adıyla bilinen ordu teşkilatını kuran hükümdar aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Bumin Kağan",
+            "Mete Han",
+            "Bilge Kağan",
+            "Kül Tigin",
+            "Töngüz Han"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Mete Han (MÖ 209), Asya Hun Devleti'nde onluk, yüzlük, binlik ve tümenlük bölümlere dayanan düzenli ordu teşkilatını kurmuştur.",
+          "distractorAciklama": "Bumin Kağan Göktürk Devleti'ni kurmuştur; Bilge Kağan ve Kül Tigin ise Orhun Yazıtları döneminin önemli isimlerdir. Ancak onluk ordu sistemi Mete Han'a aittir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Orhun Yazıtları hangi Türk devletine aittir?",
+          "secenekler": [
+            "Asya Hun Devleti",
+            "Uygur Devleti",
+            "Göktürk Devleti",
+            "Avar Devleti",
+            "Kıpçak Devleti"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Orhun Yazıtları, 8. yüzyılda II. Göktürk (Kutluk) Devleti döneminde Bilge Kağan ve Kül Tigin adına dikilmiş, Türkçenin bilinen en eski yazılı belgelerinden sayılır.",
+          "distractorAciklama": "Uygurlar da yazılı eserler bırakmıştır; ancak Orhun Yazıtları doğrudan Göktürk Devleti'ne atfedilir.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Uygur Türkleri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+          "secenekler": [
+            "Mani dinini benimsemişlerdir",
+            "Minyatür sanatında önemli eserler vermişlerdir",
+            "Yerleşik yaşama geçmişlerdir",
+            "Orhun Yazıtları'nı dikmişlerdir",
+            "Kağıt ve matbaayı kullanmışlardır"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Orhun Yazıtları Göktürklere aittir; Uygurlar değil. Uygurlar yerleşik yaşam, Mani dini, minyatür ve kitap sanatıyla öne çıkar.",
+          "distractorAciklama": "Minyatür sorusu 2020 KPSS'de sorulmuştur. Uygurların minyatür sanatıyla ünlü olduğu doğrudur; ancak Orhun Yazıtları Uygur değil Göktürk eseridir.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Türklerin İslamiyet'i kabulünden önce kullandıkları yazı sistemi aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Arap alfabesi",
+            "Latin alfabesi",
+            "Süryani alfabesi",
+            "Göktürk (Runik) alfabesi",
+            "Kiril alfabesi"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Göktürk alfabesi (Runik), Türklerin İslamiyet öncesi dönemde kullandığı özgün yazı sistemidir. Orhun Yazıtları bu alfabeyle yazılmıştır.",
+          "distractorAciklama": "Arap alfabesi İslamiyet sonrasında, Latin alfabesi ise 1928 Harf Devrimi ile kullanılmaya başlanmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki Türk devletlerinden hangisi Mani dinini benimsemiştir?",
+          "secenekler": [
+            "Asya Hunları",
+            "Göktürkler",
+            "Uygurlar",
+            "Hazarlar",
+            "Kıpçaklar"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Uygur Türkleri 762'de Mani dinini resmi din olarak benimsemiştir. Bu, Türk tarihinde bir kavmin toplu olarak dini değiştirdiği önemli bir örnektir.",
+          "distractorAciklama": "Hazarlar Yahudiliği, Kıpçaklar ise genellikle Şamanizm'i benimsemiştir. Hunlar ve Göktürkler Şamanizm'de kalmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk devlet geleneğinde 'kurultay' kavramı neyi ifade eder?",
+          "secenekler": [
+            "Ordunun savaş öncesi toplandığı meydan",
+            "Hükümdarın danışmanlar kurulu",
+            "En yüksek karar organı olan büyük meclis",
+            "Din adamlarının toplandığı dini kurul",
+            "Vergi toplama sistemi"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Kurultay (toy), eski Türk devletlerinde hükümdar, beyler, hatunlar ve komutanların bir araya geldiği en yüksek karar organıdır.",
+          "distractorAciklama": "Kurultay salt askeri ya da dini bir kurul değildir; hükümdar seçimi, savaş kararı ve barış görüşmeleri de kurultayda alınırdı.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Göktürk Devleti'nin kurucusu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Mete Han",
+            "Bumin Kağan",
+            "Bilge Kağan",
+            "Kül Tigin",
+            "İstemi Yabgu"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Göktürk Devleti 552'de Bumin Kağan tarafından kurulmuştur. Bumin, Juan-Juan egemenliğine son vererek bağımsız Türk devletini ilan etmiştir.",
+          "distractorAciklama": "İstemi Yabgu batı kanatını yönetmiştir; Bilge Kağan ve Kül Tigin II. Göktürk Devleti'nin önemli isimlerdir. Mete Han ise Hun devletine aittir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türklerin Orta Asya'dan göç etmelerinde aşağıdaki faktörlerden hangisi ETKİLİ OLMAMIŞDIR?",
+          "secenekler": [
+            "İklim değişikliği ve kuraklık",
+            "Nüfus artışı",
+            "Çin baskısı ve saldırıları",
+            "Deniz ticaretinin gelişmesi",
+            "Salgın hastalıklar"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Orta Asya bozkır toplulukları denizle bağlantısı olmayan iç kesimlerde yaşadığından deniz ticareti göçleri tetikleyen bir faktör değildir.",
+          "distractorAciklama": "İklim, nüfus baskısı, Çin saldırıları ve salgın hastalıklar göçlerin bilinen nedenleri arasındadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Asya Hun Devleti'nin yıkılmasından sonra batıya göç eden Hun topluluklarının kurduğu devlet aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Avrupa Hunları",
+            "Akhunlar",
+            "Bulgar Devleti",
+            "Hazar Devleti",
+            "Peçenek Devleti"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Asya Hunlarının bir kolu batıya göç ederek Avrupa Hunları Devleti'ni kurmuş ve Attila önderliğinde Roma İmparatorluğu'nu tehdit etmiştir.",
+          "distractorAciklama": "Akhunlar Orta Asya'da kurulmuştur; Bulgar, Hazar ve Peçenekler ise daha sonraki dönemlerde ortaya çıkan topluluklardır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+          "secenekler": [
+            "Mete Han – Onluk ordu sistemi",
+            "Bumin Kağan – Göktürk Devleti'nin kuruluşu",
+            "Bilge Kağan – Orhun Yazıtları",
+            "Uygurlar – Minyatür sanatı",
+            "Asya Hunları – Mani dini"
+          ],
+          "dogruIndex": 4,
+          "aciklama": "Mani dini Uygurlar tarafından benimsenmişir; Asya Hunları Şamanizm'e bağlı kalmıştır.",
+          "distractorAciklama": "Diğer tüm eşleştirmeler doğrudur. Yanıltıcı olan, Mani dininin Hunlarla ilişkilendirilmesidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk tarihinde 'il' kavramı neyi ifade eder?",
+          "secenekler": [
+            "Ordu birliği",
+            "Devlet düzeni ve egemenlik",
+            "Yerleşim yeri",
+            "Vergi sistemi",
+            "Dini tören"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "'İl' kavramı Türklerde devlet düzeni, barış ve egemenlik anlamına gelir. 'İl olmak' bağımsız devlet düzenine kavuşmak demektir.",
+          "distractorAciklama": "İl coğrafi bir birim (yerleşim yeri) anlamında modern Türkçe'de kullanılsa da eski Türkçe'de devlet ve egemenlik kavramını ifade eder.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Köktürk Yazıtları'nı kim yazdırmıştır?",
+          "secenekler": [
+            "Mete Han",
+            "Bumin Kağan",
+            "Bilge Kağan",
+            "Kaşgarlı Mahmut",
+            "Yusuf Has Hacip"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Orhun (Köktürk) Yazıtları II. Göktürk Devleti döneminde Bilge Kağan tarafından, kardeşi Kül Tigin ve Vezir Tonyukuk adına da yazılar eklenerek dikilmiştir.",
+          "distractorAciklama": "Kaşgarlı Mahmut Divanu Lügati't-Türk'ü, Yusuf Has Hacip Kutadgu Bilig'i yazmıştır. Bunlar İslami dönem Türk edebiyatına aittir.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Türklerde hükümdarın 'gök tanrı tarafından yetkilendirildiği' inancına ne ad verilir?",
+          "secenekler": [
+            "Töre",
+            "Kut",
+            "İl",
+            "Kurultay",
+            "Urug"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "'Kut' anlayışı, hükümdarın iktidarını gök tanrıdan aldığını ve bu kudretin ilahi bir bağış olduğunu ifade eder.",
+          "distractorAciklama": "Töre, Türk hukuk anlayışını; il, devlet düzenini; kurultay, büyük meclisi; urug ise soy/aile kavramını ifade eder.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki Türk boylarından hangisi tarihte ilk kez 'Türk' adını kullanmıştır?",
+          "secenekler": [
+            "Hunlar",
+            "Uygurlar",
+            "Göktürkler",
+            "Karluklar",
+            "Oğuzlar"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türk adını devlet adı olarak ilk kullanan topluluk Göktürklerdir (552). Bu nedenle Türk tarihinde özel bir yeri vardır.",
+          "distractorAciklama": "Hunlar büyük bir Türk devleti olsa da 'Türk' adını resmi olarak kullanmamışlardır. Oğuzlar ise Selçuklu ve Osmanlı'nın kurucu unsurudur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Asya Hun Devleti'nin kurucusu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Mete Han",
+            "B) Teoman",
+            "C) Attila",
+            "D) Bumin Kağan",
+            "E) Bilge Kağan"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Asya Hun Devleti'nin kurucusu Teoman'dır (MÖ 209 öncesi). Oğlu Mete Han ise devleti en güçlü dönemine ulaştıran hükümdardır."
+        }
+      ]
+    },
+    {
+      "id": "tarih-ilk-turk-islam",
+      "baslik": "İlk Türk-İslam Devletleri",
+      "anlatim": {
+        "ozet": "☪️ Karahanlılar'dan Büyük Selçuklu'ya: Türklerin İslam dünyasına entegrasyonu ve medrese-kervansaray medeniyeti.",
+        "icerik": [
+          "📌 Karahanlılar (840–1212), İslamiyet'i kabul eden ilk Türk devletidir (942). Satuk Buğra Han önderliğinde gerçekleşen bu din değişikliği, Türk-İslam sentezinin başlangıcını oluşturur. Divanu Lügati't-Türk ve Kutadgu Bilig bu dönemde kaleme alınmıştır.",
+          "📎 Gazneliler (963–1187), Türk asıllı Alptekin tarafından kurulan ve Hint-İran coğrafyasında hüküm süren bir hanedan devletidir. Sultan Mahmut döneminde Hindistan'a 17 sefer düzenlenmiştir.",
+          "📌 Büyük Selçuklu Devleti (1040–1157), Dandanakan Savaşı (1040) ile Gaznelileri yenerek kurulan ve İslam dünyasına hâkim olan büyük Türk İmparatorluğudur. Nizamülmülk'ün kurduğu Nizamiye medreseleri düzenli eğitim sisteminin öncüsü sayılır.",
+          "📌 Karahanlı Devleti, Göktürklerden miras kalan ikili teşkilat geleneğini İslam sonrasında da sürdürmüş; devlet 'Arslan Kara Hakan' unvanlı doğu hükümdarı ile 'Bughra Kara Hakan' unvanlı batı hükümdarı arasında paylaşılmıştır. Bu yapı, Türk devlet geleneğinin İslamiyet'in kabulünden sonra da devam ettiğinin somut bir göstergesidir.",
+          "📎 Büyük Selçuklu Sultanı Melikşah döneminde (1072–1092), Ömer Hayyam başkanlığındaki bilginler kurulu güneş yılı esaslı ve dönemin Miladi takviminden daha hassas kabul edilen Celali Takvimi'ni hazırlamıştır. Aynı dönemde Nizamülmülk'ün ikta sistemini düzenli hale getirmesi, hem sipahi ordusunun beslenmesini hem de taşrada üretimin sürekliliğini güvence altına almıştır.",
+          "📌 Büyük Selçuklu'nun 1157'de Sultan Sencer'in ölümüyle merkezi otoritesini kaybetmesinin ardından, Musul ve Şam Atabeylikleri ile Harzemşahlar Devleti bu siyasi boşluğu doldurmuştur. Harzemşahlar, 13. yüzyıl başında İran ve Maveraünnehir'de güçlü bir devlet kurmuş; ancak Moğol istilası karşısında 1231'de tamamen yıkılmıştır.",
+          "📎 Sultan Alp Arslan'ın 1071 Malazgirt zaferinden önce izlediği strateji, hem Bizans'ı hem de Mısır'daki Şii Fatımi Devleti'ni dengelemeye yönelikti; bu iki cepheli siyaset, Sünni İslam dünyasının koruyuculuğunu üstlenen Büyük Selçuklu kimliğinin de temel taşlarından birini oluşturmuştur."
+        ],
+        "anahtarNoktalar": [
+          "🔑 İslamiyet'i kabul eden ilk Türk devleti Karahanlılardır (942)",
+          "💡 Nizamiye Medreseleri Nizamülmülk tarafından kurulmuştur",
+          "⚡ Dandanakan Savaşı (1040) Büyük Selçuklunun kuruluşunu simgeler",
+          "🔑 Kutadgu Bilig ve Divanu Lügati't-Türk Karahanlı dönemi eserleridir",
+          "💡 Gazneli Mahmut Hindistan'a 17 sefer düzenlemiştir",
+          "🎯 Karahanlılar ikili teşkilatla (Arslan Kara Hakan-doğu, Bughra Kara Hakan-batı) yönetildi",
+          "🔑 Ömer Hayyam, Melikşah döneminde Celali Takvimi'ni hazırladı",
+          "💡 Harzemşahlar Devleti 1231'de Moğol istilasıyla yıkıldı",
+          "⚡ Sultan Sencer'in 1157'de ölümüyle Büyük Selçuklu merkezi otoritesi fiilen sona erdi",
+          "🔑 Selçuklular Sünni İslam'ın koruyuculuğunu üstlenerek Şii Fatımilere karşı denge kurdu"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "İslamiyet'i kabul eden ilk Türk devleti aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Gazneliler",
+            "Büyük Selçuklular",
+            "Karahanlılar",
+            "İlhanlılar",
+            "Harzemşahlar"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Karahanlılar, Satuk Buğra Han önderliğinde 942 yılında İslamiyet'i kabul eden ilk Türk devletidir.",
+          "distractorAciklama": "Gazneliler ve Selçuklular da Müslüman Türk devletleridir; ancak İslamiyet'i kitlesel olarak ilk kabul eden Karahanlılardır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Divanu Lügati't-Türk adlı eseri yazan düşünür aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Yusuf Has Hacip",
+            "Kaşgarlı Mahmut",
+            "Nizamülmülk",
+            "Farabi",
+            "Biruni"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kaşgarlı Mahmut, 1072–1074 yılları arasında Divanu Lügati't-Türk'ü kaleme almıştır. Eser, Türk dili ve kültürünün ansiklopedik bir belgesidir.",
+          "distractorAciklama": "Yusuf Has Hacip Kutadgu Bilig'i yazmıştır. Nizamülmülk Siyasetname'yi yazmıştır. Bunları karıştırmamak gerekir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Dandanakan Savaşı (1040) hangi iki devlet arasında gerçekleşmiştir?",
+          "secenekler": [
+            "Karahanlılar – Gazneliler",
+            "Büyük Selçuklular – Gazneliler",
+            "Büyük Selçuklular – Bizans",
+            "Gazneliler – Karahanlılar",
+            "Büyük Selçuklular – Karahanlılar"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Dandanakan Savaşı'nda Selçuklular Gaznelileri yenmiş; bu zafer Büyük Selçuklu Devleti'nin resmen kuruluşunu simgelemiştir.",
+          "distractorAciklama": "Malazgirt Savaşı (1071) Selçuklular ile Bizans arasındadır. Dandanakan ise Selçuklular ile Gazneliler arasındaki kuruluş savaşıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Nizamiye Medreseleri'ni kuran Selçuklu veziri kimdir?",
+          "secenekler": [
+            "Alp Arslan",
+            "Melikşah",
+            "Nizamülmülk",
+            "Tuğrul Bey",
+            "Hasan Sabbah"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Nizamülmülk, Selçuklu veziri olarak 1065'te Bağdat'ta ilk Nizamiye Medresesini kurmuş; bu kurum düzenli İslam eğitiminin öncüsü sayılmıştır.",
+          "distractorAciklama": "Tuğrul Bey ve Alp Arslan Selçuklu sultanlarıdır; medreseleri kuran vezir Nizamülmülk'tür.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Malazgirt Savaşı'nın (1071) tarihsel önemi nedir?",
+          "secenekler": [
+            "Türklerin İslamiyet'i kabul etmesi",
+            "Anadolu'nun Türklere açılması",
+            "Haçlı Seferlerinin başlaması",
+            "Büyük Selçuklu'nun çöküşü",
+            "İstanbul'un fethinin temeli"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Malazgirt Savaşı'nda Alp Arslan, Bizans İmparatoru Romanos Diogenes'i yenerek Anadolu'nun Türklere açılmasını sağlamıştır.",
+          "distractorAciklama": "Haçlı Seferleri 1096'da başlamıştır; İstanbul'un fethi 1453'tedir. Malazgirt Anadolu'nun kapılarını açmıştır.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Kutadgu Bilig'in yazarı ve konusu aşağıdakilerden hangisinde doğru verilmiştir?",
+          "secenekler": [
+            "Kaşgarlı Mahmut – Türk dili sözlüğü",
+            "Yusuf Has Hacip – Devlet yönetimi ve erdem",
+            "Nizamülmülk – Siyaset ve yönetim",
+            "Farabi – Felsefe ve mantık",
+            "Biruni – Astronomi ve coğrafya"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kutadgu Bilig (Mutluluk Veren Bilgi), Yusuf Has Hacip tarafından 1069'da yazılmış; devlet yönetimi ve erdem üzerine manzum bir eserdir.",
+          "distractorAciklama": "Nizamülmülk'ün Siyasetname'si de yönetim üzerinedir; ancak Kutadgu Bilig Karahanlı dönemi Türkçesiyle yazılmış ilk büyük eserdir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Gazneli Mahmut'un Hindistan seferlerinin temel amacı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Türk boylarını birleştirmek",
+            "İslam'ı yaymak ve ganimet elde etmek",
+            "Bizans'a karşı ittifak kurmak",
+            "Haçlılara karşı savunma",
+            "Baharat yolunu ele geçirmek"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Gazneli Mahmut 1000–1027 arasında 17 Hindistan seferi düzenlemiştir. Seferlerin amacı hem İslam'ı yaymak hem de tapınak hazinelerinden ganimet elde etmekti.",
+          "distractorAciklama": "Baharat yolu ticaret hedefi Gaznelilerin değil daha sonraki dönem devletlerinin gündemindeydi.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İlk Türk-İslam devletlerinde inşa edilen 'ribat' yapıları ne amaçla kullanılmıştır?",
+          "secenekler": [
+            "Dini eğitim merkezi",
+            "Ticaret yollarında konaklama ve savunma",
+            "Hükümdar sarayı",
+            "Mahkeme binası",
+            "Hastane"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Ribatlar, ticaret yolları üzerinde hem kervanların konakladığı hem de sınır savunmasına katkı sağlayan yapılardır.",
+          "distractorAciklama": "Medreseler dini eğitim için, hanlar ticari amaçla, imarethaneler sosyal yardım için kullanılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Büyük Selçuklu Devleti'nin en geniş sınırlara ulaştığı dönem hangi sultanın hükümdarlığına denk gelir?",
+          "secenekler": [
+            "Tuğrul Bey",
+            "Alp Arslan",
+            "Melikşah",
+            "Sencer",
+            "Berkyaruk"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Melikşah döneminde (1072–1092) Büyük Selçuklu en geniş sınırlarına ulaşmış; Horasan'dan Anadolu ve Mısır sınırına kadar uzanmıştır.",
+          "distractorAciklama": "Alp Arslan Malazgirt'i kazanmıştır; ancak en geniş topraklara oğlu Melikşah döneminde ulaşılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türklerin İslamiyet'i kabulü ile birlikte benimsedikleri alfabe aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Latin",
+            "Kiril",
+            "Süryani",
+            "Arap",
+            "İbrani"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Türkler İslamiyet'i benimsedikten sonra Arap alfabesini kullanmaya başlamış ve 1928 Harf Devrimi'ne kadar kullanmaya devam etmiştir.",
+          "distractorAciklama": "Latin alfabesi 1928'de kabul edilmiştir. Kiril alfabesi Sovyet döneminde bazı Türk topluluklarına uygulanmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Karahanlılar döneminde yazılmış bir eser DEĞİLDİR?",
+          "secenekler": [
+            "Kutadgu Bilig",
+            "Divanu Lügati't-Türk",
+            "Atabetü'l-Hakayık",
+            "Siyasetname",
+            "Divan-ı Hikmet"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Siyasetname, Selçuklu veziri Nizamülmülk tarafından yazılmış bir devlet yönetim kitabıdır; Karahanlı dönemi eseri değildir.",
+          "distractorAciklama": "Kutadgu Bilig, Divanu Lügati't-Türk ve Atabetü'l-Hakayık Karahanlı döneminin önemli Türkçe eserleridir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Selçuklu kervansaraylarının inşa edilmesinin temel amacı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Askeri üs olarak kullanmak",
+            "Ticaret yollarını güvenli kılmak ve ekonomiyi canlandırmak",
+            "Dini eğitim vermek",
+            "Vergi toplamak",
+            "Seyyahlara müze hizmeti sunmak"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kervansaraylar, İpek Yolu üzerindeki ticaret güzergahlarında inşa edilmiş; tüccarların güvenli konakladığı, ticaretin canlandığı yapılardır.",
+          "distractorAciklama": "Kervansaraylar vergi istasyonu değildir; ticaret ve güvenli seyahati teşvik etmek için inşa edilmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İlk Türk-İslam devletlerinde 'ikta' sistemi neyi ifade eder?",
+          "secenekler": [
+            "Devlete ait toprakların köylülere satılması",
+            "Askeri hizmet karşılığında verilen toprak gelir hakkı",
+            "Tüccarlardan alınan gümrük vergisi",
+            "Hükümdarın hazineye koyduğu para",
+            "Dini vakıflara ayrılan arazi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "İkta sistemi, devlet topraklarının asker ve memurlara maaş yerine kullanım ve gelir toplama hakkı biçiminde verilmesi uygulamasıdır.",
+          "distractorAciklama": "İkta mülkiyet değil gelir hakkı verir; toprak devlete ait kalmaya devam eder.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki eserlerden hangisi Türklerin İslami dönem ilk yazılı ürünü olarak kabul edilir?",
+          "secenekler": [
+            "Orhun Yazıtları",
+            "Kutadgu Bilig",
+            "Divan-ı Hikmet",
+            "Siyasetname",
+            "Babürname"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kutadgu Bilig (1069), Türk-İslam edebiyatının ilk büyük manzum eseri olarak kabul edilir. Karahanlı döneminde Yusuf Has Hacip tarafından yazılmıştır.",
+          "distractorAciklama": "Orhun Yazıtları İslam öncesi döneme aittir. Divan-ı Hikmet Hoca Ahmet Yesevi'ye ait olup daha sonraki bir döneme tarihlenir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Karahanlıların İslamiyet'i kabul ettiği yıl aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) 751",
+            "B) 840",
+            "C) 942",
+            "D) 1040",
+            "E) 1071"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Karahanlılar, Satuk Buğra Han önderliğinde 942 yılında İslamiyet'i kabul etmiştir."
+        }
+      ]
+    },
+    {
+      "id": "tarih-osmanli-kurulus",
+      "baslik": "Osmanlı Kuruluş ve Yükselme",
+      "anlatim": {
+        "ozet": "🏰 Söğüt'ten dünya devletine: Osman Bey'den Kanuni'ye 250 yıllık yükseliş ve İstanbul'un fethi.",
+        "icerik": [
+          "📌 Osmanlı Devleti, Osman Bey tarafından 1299'da Söğüt merkezli küçük bir uç beyliği olarak kurulmuştur. Osmanlı, diğer Anadolu beyliklerinden farklı olarak gazâ ideolojisi, merkezi yönetim anlayışı ve devşirme sistemiyle güçlü bir devlet yapısı kurmuştur.",
+          "📎 İstanbul'un Fethi (29 Mayıs 1453), Fatih Sultan Mehmet komutasında gerçekleşmiş ve Orta Çağ'ın sona erip Yeni Çağ'ın başladığı kabul edilen dönüm noktasıdır. Fetih, Osmanlı'yı gerçek bir cihan devletine dönüştürmüştür.",
+          "📌 Yavuz Sultan Selim dönemi (1512–1520) Mısır ve Suriye'nin fethi ile halifeliğin Osmanlı'ya geçişini kapsar. Kanuni Sultan Süleyman dönemi (1520–1566) ise Osmanlı'nın en geniş sınırlara ulaştığı altın çağdır.",
+          "📌 Orhan Bey döneminde 1354'te Süleyman Paşa komutasındaki Osmanlı kuvvetleri Çimpe Kalesi'ni ele geçirerek Rumeli'ye (Balkanlara) ilk kez ayak basmış; bu olay, Osmanlı'nın bir Anadolu beyliğinden bir Balkan-Avrupa gücüne dönüşümünün başlangıç noktasıdır.",
+          "📎 Yıldırım Bayezid'in 1402'de Ankara Savaşı'nda Timur'a yenilerek esir düşmesi, Osmanlı'yı 'Fetret Devri' (1402-1413) adı verilen yaklaşık 11 yıllık taht kavgaları dönemine sürüklemiştir; şehzadeler arasındaki mücadeleyi Çelebi Mehmet (I. Mehmet) kazanarak devletin siyasi birliğini yeniden sağlamıştır.",
+          "📌 Fatih döneminde 1473'te Otlukbeli Savaşı'nda Akkoyunlu hükümdarı Uzun Hasan'a karşı kazanılan zafer, Osmanlı'nın Doğu Anadolu'da Türkmen beylikleri karşısındaki üstünlüğünü pekiştirmiştir; buna karşılık II. Bayezid dönemi (1481-1512) daha çok içe dönük ve sükunetçi bir politikayla anılır.",
+          "📎 Preveze Deniz Savaşı (1538), Barbaros Hayreddin Paşa komutasındaki Osmanlı donanmasının İspanya, Venedik ve Papalık donanmalarından oluşan Haçlı donanmasını yenilgiye uğratmasıyla, Osmanlı'nın Akdeniz'deki deniz üstünlüğünü uzun süre kesinleştirmiştir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Osmanlı Devleti 1299'da Osman Bey tarafından kuruldu",
+          "💡 İstanbul 29 Mayıs 1453'te Fatih tarafından fethedildi",
+          "⚡ Yavuz, halifeliği 1517'de Mısır'ı alarak Osmanlı'ya taşıdı",
+          "🔑 Kanuni Süleyman döneminde Osmanlı en geniş sınırlara ulaştı",
+          "💡 Devşirme sistemi kapıkulunu oluşturan temel mekanizmadır",
+          "🎯 Osmanlı 1354'te Çimpe Kalesi ile Rumeli'ye (Balkanlara) ilk kez geçti",
+          "🔑 Ankara Savaşı (1402) sonrası yaklaşık 11 yıllık Fetret Devri yaşandı",
+          "💡 Çelebi Mehmet (I. Mehmet) Fetret Devri'ni sona erdirerek birliği yeniden sağladı",
+          "⚡ Preveze Deniz Savaşı (1538) ile Osmanlı Akdeniz'de deniz üstünlüğü kazandı",
+          "🔑 Otlukbeli Savaşı (1473) ile Akkoyunlu tehdidi bertaraf edildi"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Osmanlı Devleti'nin kurucusu ve kuruluş yeri aşağıdakilerden hangisinde doğru verilmiştir?",
+          "secenekler": [
+            "Ertuğrul Gazi – Bursa",
+            "Osman Bey – Söğüt",
+            "Orhan Bey – İznik",
+            "Murat I – Edirne",
+            "Osman Bey – Konya"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı Devleti, Osman Bey tarafından 1299'da Söğüt merkezli olarak kurulmuştur.",
+          "distractorAciklama": "Ertuğrul Gazi Osmanlı'nın öncüsüdür; ancak devlet Osman Bey döneminde kurulmuştur. Bursa ise Orhan Bey döneminde fethedilmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İstanbul'un fethinden sonra Fatih Sultan Mehmet'in aldığı unvan aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Yıldırım",
+            "Gazi",
+            "Kayser-i Rum",
+            "Hünkar",
+            "Şah"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Fatih, İstanbul'u fethettikten sonra 'Kayser-i Rum' unvanını almıştır; bu unvan Doğu Roma İmparatoru'nun mirasçısı anlamına gelir.",
+          "distractorAciklama": "'Yıldırım' lakabı I. Bayezid'e aittir. 'Gazi' unvanı pek çok Osmanlı padişahı için kullanılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde 'devşirme sistemi' ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+          "secenekler": [
+            "Müslüman Türk çocuklarından asker seçilmesi",
+            "Hristiyan tebaa çocuklarının alınarak eğitilmesi",
+            "Yabancı ülkelerden satın alınan kölelerin orduya katılması",
+            "Aşiret reislerinin oğullarının sarayda yetiştirilmesi",
+            "Vergi ödeme karşılığında askerlik muafiyeti"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Devşirme, Osmanlı'nın Hristiyan tebaa arasından çocuk alarak Müslüman Türk kimliğiyle yetiştirdiği ve kapıkulu ordusuna kattığı sistemdir.",
+          "distractorAciklama": "Devşirme Müslüman çocuklarına uygulanmamıştır; yabancı ülkeden satın alınan köleler ise farklı bir uygulamadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı'nın Balkanlara geçişini sağlayan ve bu süreçte önemli rol oynayan savaş aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Niğbolu Savaşı (1396)",
+            "Kosova Savaşı (1389)",
+            "Varna Savaşı (1444)",
+            "Çirmen Savaşı (1371)",
+            "Ankara Savaşı (1402)"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Çirmen Savaşı (1371), Osmanlı'nın Balkanlarda kalıcı üstünlük kurduğu ilk büyük zaferdir.",
+          "distractorAciklama": "Kosova (1389) Balkan hâkimiyetini pekiştirmiştir; ancak Balkanlara geçiş sürecini başlatan Çirmen'dir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Yavuz Sultan Selim'in Mısır Seferi (1517) sonucunda Osmanlı'ya geçen en önemli sembolik kazanım nedir?",
+          "secenekler": [
+            "Baharat yolunun kontrolü",
+            "İslam dünyasında halifelik kurumu",
+            "Nil Nehri'nin kontrolü",
+            "Kudüs'ün fethi",
+            "Hint Okyanusu ticareti"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Yavuz Sultan Selim Memlük Devleti'ni yıktıktan sonra Mekke ve Medine'nin hizmetini üstlenerek halifeliği Osmanlı'ya taşımıştır.",
+          "distractorAciklama": "Baharat yolu kontrolü de önemlidir; ancak en büyük sembolik kazanım halifelik kurumudur.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Kanuni Sultan Süleyman döneminde imzalanan ve Osmanlı'ya kapitülasyonlar tanınan antlaşma aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Karlofça Antlaşması",
+            "Küçük Kaynarca Antlaşması",
+            "Fransız Kapitülasyonları (1535)",
+            "Edirne Antlaşması",
+            "Zitvatorok Antlaşması"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "1535'te Fransa ile imzalanan ticari ayrıcalıklar antlaşması, ilk kapitülasyonlar olarak bilinir. Başlangıçta siyasi bir denge aracıydı.",
+          "distractorAciklama": "Karlofça (1699) ve Küçük Kaynarca (1774) gerileme dönemi antlaşmalarıdır. Kapitülasyonlar Kanuni döneminde Fransa'ya verilmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde 'tımar sistemi' ile aşağıdaki kavramlardan hangisi doğrudan ilişkilidir?",
+          "secenekler": [
+            "Kapıkulu askerleri",
+            "Eyalet sistemi ve sipahi ordusu",
+            "Devşirme uygulaması",
+            "Yeniçeri ocağı",
+            "Divan-ı Hümayun"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Tımar sistemi, eyaletlerde belirli arazi gelirlerinin askerlik hizmetine karşılık sipahi adı verilen atlı askerlere verilmesiyle işleyen düzendir.",
+          "distractorAciklama": "Kapıkulu ve Yeniçeriler merkezi ordudur; tımar ise eyalet ordusu (sipahi) ile bağlantılıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İstanbul'un fethinde kullanılan topların dökülmesinde katkı sağlayan Macar mühendis kimdir?",
+          "secenekler": [
+            "Jan Hunyadi",
+            "Urban",
+            "Sigismund",
+            "Dracula",
+            "Matthias Corvinus"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Macar kökenli topçu mühendis Urban, Fatih Sultan Mehmet'in hizmetine girerek devasa topların dökülmesine katkıda bulunmuştur.",
+          "distractorAciklama": "Jan Hunyadi, Osmanlı'ya karşı savaşan Macar komutandır. Urban ise Fatih'in topçusu olarak bilinir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde 'divan-ı hümayun'un işlevi nedir?",
+          "secenekler": [
+            "Yalnızca askeri kararlar almak",
+            "Devlet işlerini görüşüp karara bağlayan yüksek yönetim kurulu",
+            "Dini fetva organı",
+            "Vilayet meclisi",
+            "Ticaret mahkemesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Divan-ı Hümayun, sadrazam başkanlığında toplanan ve devletin siyasi, idari, hukuki ve mali sorunlarının tartışıldığı en yüksek yürütme organıdır.",
+          "distractorAciklama": "Fetva organı Şeyhülislamlık kurumudur. Divan-ı Hümayun çok daha geniş kapsamlı bir devlet organıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı'nın ilk başkenti aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "İstanbul",
+            "Edirne",
+            "Bursa",
+            "Söğüt",
+            "İznik"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Orhan Bey Bursa'yı 1326'da fethettikten sonra başkent Söğüt'ten Bursa'ya taşınmıştır; Bursa Osmanlı'nın ilk resmi başkentidir.",
+          "distractorAciklama": "Söğüt kuruluş merkezidir; ancak resmî başkent Bursa'dır. Edirne başkent olmuş fakat Bursa'dan sonradır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Fatih Sultan Mehmet'in İstanbul'u fethinin Orta Çağ'ı sona erdirdiğinin göstergelerinden biri sayılır?",
+          "secenekler": [
+            "Reform hareketlerinin başlaması",
+            "Bizans İmparatorluğu'nun sona ermesi",
+            "Matbaanın icadı",
+            "Haçlı Seferlerinin bitmesi",
+            "Coğrafi keşiflerin başlaması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "1453'te Bizans'ın yıkılması, Batı tarih yazımında Orta Çağ'ı bitiren simgesel olay olarak kabul edilir.",
+          "distractorAciklama": "Matbaanın icadı (1440) fetihten önce gerçekleşmiştir. Coğrafi keşifler (1492) fetihten sonra olup ayrı bir süreçtir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde şeyhülislamın temel görevi nedir?",
+          "secenekler": [
+            "Ordu komutanlığı",
+            "Fetva vermek ve dini hukuku denetlemek",
+            "Vergi toplamak",
+            "Sadrazama vekâlet etmek",
+            "Eyaletleri yönetmek"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Şeyhülislam, İslam hukuku (fıkıh) konularında fetva veren ve din işlerinin en üst makamı olan görevlidir.",
+          "distractorAciklama": "2020 KPSS'de Osmanlı'da kadı sorusu sorulmuştu. Kadı yargı görevlisi; şeyhülislam ise en üst dini otorite konumundadır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Osmanlı yükselme döneminde Avrupa'ya açılan en önemli kapı sayılan fetih aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "İstanbul'un fethi (1453)",
+            "Belgrad'ın fethi (1521)",
+            "Rodos'un fethi (1522)",
+            "Mohaç Savaşı (1526)",
+            "Preveze Deniz Savaşı (1538)"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Belgrad'ın 1521'de Kanuni tarafından fethedilmesi, Orta Avrupa'ya açılan kapıyı aralamış ve Mohaç Savaşı'nın zeminini hazırlamıştır.",
+          "distractorAciklama": "İstanbul fethi daha erkendir; ancak Avrupa içlerine ilerlemenin anahtarı Belgrad'ın fethidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki Osmanlı padişahlarından hangisi ilk kez 'sultan' unvanını kullanmıştır?",
+          "secenekler": [
+            "Osman Bey",
+            "Orhan Bey",
+            "I. Murat",
+            "II. Murat",
+            "Fatih Sultan Mehmet"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "I. Murat (Hüdavendigar), 'sultan' unvanını kullanan ilk Osmanlı hükümdarı olarak bilinir.",
+          "distractorAciklama": "Osman ve Orhan Bey unvanları kullanmıştır. Sultan unvanı I. Murat ile başlamıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nin kuruluş tarihi olarak kabul edilen yıl aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) 1281",
+            "B) 1299",
+            "C) 1302",
+            "D) 1326",
+            "E) 1354"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı Devleti'nin kuruluş tarihi geleneksel olarak 1299 kabul edilmektedir."
+        }
+      ]
+    },
+    {
+      "id": "tarih-osmanli-gerileme",
+      "baslik": "Osmanlı Duraklama, Gerileme ve Çöküş",
+      "anlatim": {
+        "ozet": "⚖️ Karlofça'dan Mondros'a: ıslahatlar, milliyetçilik dalgası ve Osmanlı'nın çöküş süreci.",
+        "icerik": [
+          "📌 17. yüzyıldan itibaren Osmanlı Devleti duraklamaya girmiş; 1699 Karlofça Antlaşması ile toprak kayıpları başlamıştır. Bu süreçte Lale Devri, Tanzimat ve Islahat fermanları gibi yenileşme girişimleri yapılmış; ancak yeterli olmamıştır.",
+          "📎 Tanzimat Fermanı (1839) ile tüm Osmanlı vatandaşlarına can, mal ve namus güvencesi tanınmış; modern bir anayasal süreç başlamıştır. 1856 Islahat Fermanı ve 1876 Kanun-i Esasi bu sürecin devamıdır.",
+          "📌 I. Dünya Savaşı'nda İttihat ve Terakki Cemiyeti yönetimindeki Osmanlı, yenilen İttifak Devletleri tarafında yer almış; 30 Ekim 1918'de Mondros Mütarekesi imzalanmıştır.",
+          "📌 1774 Küçük Kaynarca Antlaşması, Osmanlı-Rus Savaşı'nın (1768-1774) ardından imzalanmış; Kırım'ın bağımsızlığını tanıyarak bölgeyi fiilen Rus etkisine açmış ve Rusya'ya Osmanlı topraklarındaki Ortodoksları koruma bahanesiyle içişlere müdahale hakkı vermiştir. Kırım, 1783'te doğrudan Rusya tarafından ilhak edilmiştir.",
+          "📎 1808'de II. Mahmut'un tahta çıkışıyla imzalanan Sened-i İttifak, merkezi otorite ile taşra ayanları (Alemdar Mustafa Paşa öncülüğünde) arasında bir denge belgesi niteliğindedir; Avrupa'daki Magna Carta'ya benzetilse de padişahın yetkilerini kalıcı olarak sınırlayamamıştır.",
+          "📌 Kırım Savaşı (1853-1856), Osmanlı'nın Fransa ve İngiltere desteğiyle Rusya'ya karşı kazandığı ancak ağır mali yük getiren bir savaştır; giderleri karşılamak için Osmanlı 1854'te ilk kez dış borç almış, bu borçlanma süreci zamanla Duyun-u Umumiye İdaresi'nin (1881) kurulmasıyla mali bağımsızlığın kaybına yol açmıştır.",
+          "📎 1877-1878 Osmanlı-Rus Savaşı ('93 Harbi'), Rusya'nın Balkanlar ve Doğu Anadolu'da büyük ilerleme kaydetmesiyle sonuçlanmış; Ayastefanos (Yeşilköy) Antlaşması'nın ağır şartları büyük devletlerin araya girmesiyle Berlin Antlaşması'nda (1878) kısmen yumuşatılmış, ancak Osmanlı Balkanlar'daki topraklarının büyük bölümünü kaybetmiştir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Karlofça (1699) ilk büyük toprak kaybı antlaşmasıdır",
+          "💡 Tanzimat Fermanı (1839) Mustafa Reşit Paşa tarafından okunmuştur",
+          "⚡ Mondros Mütarekesi 30 Ekim 1918'de imzalanmıştır",
+          "🔑 Kanun-i Esasi (1876) Osmanlı'nın ilk anayasasıdır",
+          "💡 Balkan Savaşları (1912–1913) Rumeli'nin kaybedilmesiyle sonuçlandı",
+          "🎯 Küçük Kaynarca Antlaşması (1774) Kırım'ı fiilen Rus etkisine açtı; Kırım 1783'te ilhak edildi",
+          "🔑 Sened-i İttifak (1808) merkezi otorite ile ayanlar arasında imzalandı",
+          "💡 Duyun-u Umumiye İdaresi (1881) Osmanlı maliyesini yabancı denetime soktu",
+          "⚡ 93 Harbi (1877-78) sonrası Berlin Antlaşması (1878) Balkan toprak kayıplarını büyük ölçüde onayladı"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Osmanlı Devleti'nin ilk büyük toprak kayıplarına yol açan antlaşma aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Küçük Kaynarca Antlaşması",
+            "Karlofça Antlaşması",
+            "Zitvatorok Antlaşması",
+            "Edirne Antlaşması",
+            "Berlin Antlaşması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "1699 Karlofça Antlaşması ile Osmanlı, Avusturya başta olmak üzere Kutsal İttifak devletlerine büyük topraklar bırakmak zorunda kalmıştır.",
+          "distractorAciklama": "Küçük Kaynarca (1774) Kırım'ı kaybettiren antlaşmadır; Karlofça ise ilk büyük genel toprak kaybıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Tanzimat Fermanı hangi padişah döneminde ilan edilmiştir?",
+          "secenekler": [
+            "II. Mahmut",
+            "Abdülmecit I",
+            "Abdülaziz",
+            "II. Abdülhamit",
+            "V. Murat"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Tanzimat Fermanı (Gülhane Hatt-ı Hümayunu) 3 Kasım 1839'da Abdülmecit döneminde Mustafa Reşit Paşa tarafından okunmuştur.",
+          "distractorAciklama": "II. Mahmut pek çok modernleşme adımı atmıştır; ancak Tanzimat Fermanı'nı ilan eden padişah Abdülmecit'tir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı'nın ilk anayasası olarak kabul edilen Kanun-i Esasi hangi yılda ilan edilmiştir?",
+          "secenekler": [
+            "1839",
+            "1856",
+            "1876",
+            "1908",
+            "1920"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Kanun-i Esasi 23 Aralık 1876'da II. Abdülhamit tarafından ilan edilmiş; Osmanlı'nın ilk anayasal belgesi olmuştur.",
+          "distractorAciklama": "1839 Tanzimat, 1856 Islahat Fermanı'dır. Kanun-i Esasi ilk anayasadır ve 1876'ya aittir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Mondros Mütarekesi hangi tarihte imzalanmıştır?",
+          "secenekler": [
+            "28 Temmuz 1914",
+            "11 Kasım 1918",
+            "30 Ekim 1918",
+            "10 Ağustos 1920",
+            "24 Temmuz 1923"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Mondros Mütarekesi 30 Ekim 1918'de Osmanlı ve İtilaf Devletleri arasında imzalanmış; Osmanlı'nın I. Dünya Savaşı'ndan çekilmesini belirlemiştir.",
+          "distractorAciklama": "11 Kasım 1918 Almanya'nın ateşkesidir. Sevr (10 Ağustos 1920) ve Lozan (24 Temmuz 1923) daha sonraki dönemlere aittir.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Aşağıdaki ıslahatlardan hangisi II. Mahmut dönemine ait DEĞİLDİR?",
+          "secenekler": [
+            "Yeniçeri Ocağı'nın kaldırılması (Vaka-i Hayriye)",
+            "Asakir-i Mansure-i Muhammediye'nin kurulması",
+            "Tanzimat Fermanı'nın ilanı",
+            "Posta örgütünün kurulması",
+            "Nüfus sayımı yapılması"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Tanzimat Fermanı Abdülmecit dönemine aittir; II. Mahmut döneminde ilan edilmemiştir.",
+          "distractorAciklama": "Yeniçeri Ocağı'nın kaldırılması (1826), Asakir-i Mansure ve posta örgütü II. Mahmut döneminin ıslahatlarıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Balkan Savaşları sonucunda imzalanan antlaşma ile Osmanlı'nın Avrupa'daki sınırı büyük ölçüde hangi nehre çekilmiştir?",
+          "secenekler": [
+            "Tuna Nehri",
+            "Meriç Nehri",
+            "Maritsa Nehri",
+            "Vardar Nehri",
+            "Struma Nehri"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Balkan Savaşları'nın ardından imzalanan Londra (1913) ve Bükreş (1913) antlaşmalarıyla Osmanlı sınırı büyük ölçüde Meriç Nehri'ne çekilmiştir.",
+          "distractorAciklama": "2020 KPSS'de Balkan savaşları sonrası sınır sorusu sorulmuştu. Meriç Nehri bugün Türkiye-Yunanistan-Bulgaristan sınırını oluşturur.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Osmanlı Devleti'nin I. Dünya Savaşı'na girdiği cephe ve tarih aşağıdakilerden hangisinde doğru verilmiştir?",
+          "secenekler": [
+            "Çanakkale Cephesi – Temmuz 1914",
+            "Kafkasya Cephesi – Kasım 1914",
+            "Sina Cephesi – Ocak 1914",
+            "Irak Cephesi – Ağustos 1914",
+            "Hicaz Cephesi – Eylül 1914"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı Devleti fiilen Kasım 1914'te Rus limanlarına saldırarak Kafkasya Cephesi'nde savaşa girmiştir.",
+          "distractorAciklama": "Çanakkale Cephesi 1915'te açılmıştır. Osmanlı resmen Kasım 1914'te İtilaf devletlerine karşı savaşa dahil olmuştur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı'da 'Islahat Fermanı' (1856) hangi savaşın ardından ilan edilmiştir?",
+          "secenekler": [
+            "I. Dünya Savaşı",
+            "Osmanlı-Rus Savaşı (1877–78)",
+            "Kırım Savaşı",
+            "Balkan Savaşları",
+            "Yunan Bağımsızlık Savaşı"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Islahat Fermanı, Kırım Savaşı'nı sonlandıran Paris Antlaşması (1856) sürecinde Batılı devletlerin baskısıyla ilan edilmiştir.",
+          "distractorAciklama": "Islahat Fermanı Kırım Savaşı sonrası dış baskıyla çıkarılmıştır; Osmanlı-Rus Savaşı ise 1877–78'e aittir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi II. Abdülhamit döneminin özelliklerinden biri DEĞİLDİR?",
+          "secenekler": [
+            "Meşrutiyetin askıya alınması (istibdat dönemi)",
+            "Hicaz Demiryolu'nun yapımı",
+            "Tanzimat Fermanı'nın ilanı",
+            "Pan-İslamizm politikası",
+            "İttihat ve Terakki muhalefeti"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Tanzimat Fermanı Abdülmecit döneminde (1839) ilan edilmiştir; II. Abdülhamit'in bu ilan ile doğrudan ilgisi yoktur.",
+          "distractorAciklama": "Hicaz Demiryolu, Pan-İslamizm ve istibdat dönemi II. Abdülhamit'e aittir; Tanzimat ise önceki padişah dönemindedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı'da 'Vaka-i Hayriye' olarak bilinen olay nedir?",
+          "secenekler": [
+            "Tanzimat Fermanı'nın ilanı",
+            "Yeniçeri Ocağı'nın kaldırılması",
+            "I. Meşrutiyet'in ilanı",
+            "Ayanlarla Sened-i İttifak'ın imzalanması",
+            "İstanbul'un Ruslar tarafından kuşatılması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Vaka-i Hayriye (1826), II. Mahmut'un yeniçerileri ortadan kaldırarak modern ordu kurma sürecini başlattığı tarihi dönüm noktasıdır.",
+          "distractorAciklama": "Sened-i İttifak (1808) II. Mahmut'un ayanlarla imzaladığı belgedir; Vaka-i Hayriye ise 1826'da yeniçerilerin kaldırılmasıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Osmanlı'da duraklama döneminin nedenlerinden biri sayılmaz?",
+          "secenekler": [
+            "Coğrafi keşiflerle ticaret yollarının değişmesi",
+            "Avrupa'da sanayi devriminin başlaması",
+            "Tımar sisteminin bozulması",
+            "İstanbul'un Fatih tarafından fethedilmesi",
+            "Kapitülasyonların ekonomiyi zayıflatması"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "İstanbul'un fethi yükselme dönemine aittir; duraklama döneminin nedeni değildir.",
+          "distractorAciklama": "Coğrafi keşifler, sanayi devrimi, tımar bozulması ve kapitülasyonlar Osmanlı'nın gerileme nedenlerindendir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sevr Antlaşması hangi tarihte ve kimler arasında imzalanmıştır?",
+          "secenekler": [
+            "30 Ekim 1918 – Osmanlı ve İngilizler",
+            "10 Ağustos 1920 – Osmanlı ve İtilaf Devletleri",
+            "24 Temmuz 1923 – Türkiye ve İtilaf Devletleri",
+            "11 Kasım 1918 – Almanya ve İtilaf Devletleri",
+            "20 Ocak 1920 – TBMM ve İtilaf Devletleri"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Sevr Antlaşması 10 Ağustos 1920'de Osmanlı Devleti ile İtilaf Devletleri arasında imzalanmış; ancak TBMM tarafından tanınmamıştır.",
+          "distractorAciklama": "Mondros 30 Ekim 1918; Lozan 24 Temmuz 1923'tür. Sevr 1920'de imzalanan, uygulamaya giremeyen antlaşmadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde kadı'nın görevleri arasında aşağıdakilerden hangisi YER ALMAZ?",
+          "secenekler": [
+            "Şer'i davalara bakmak",
+            "Modern nüfus kaydı tutmak",
+            "Noterlik işlemleri yapmak",
+            "Vergi mükellefi tutanakları düzenlemek",
+            "Vakıf işlerini denetlemek"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı'da kadı; yargı, tapu, miras, evlilik ve pazar denetimi gibi geniş görevleri üstlenmiş yetkili bir kamu görevlisidir. Modern anlamdaki nüfus kaydı sistemi Tanzimat sonrasına aittir.",
+          "distractorAciklama": "2020 KPSS'de kadı sorusu sorulmuştu. Kadının asli işlevi yargı ve hukuki belgedir; modern nüfus kaydı sistemi ise Tanzimat sonrasına aittir.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Osmanlı'nın I. Dünya Savaşı'nda yanında savaştığı devletler hangi grubu oluşturur?",
+          "secenekler": [
+            "İngiltere, Fransa, Rusya",
+            "Almanya, Avusturya-Macaristan, Bulgaristan",
+            "İtalya, Sırbistan, Romanya",
+            "ABD, Japonya, Belçika",
+            "Yunanistan, Romanya, Sırbistan"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı Devleti I. Dünya Savaşı'nda İttifak Devletleri grubunda Almanya, Avusturya-Macaristan ve Bulgaristan ile savaşmıştır.",
+          "distractorAciklama": "İngiltere, Fransa ve Rusya İtilaf Devletleri'dir. Osmanlı onlara karşı İttifak Devletleri safında yer almıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Osmanlı Devleti'nde 'Lale Devri' hangi padişah dönemine karşılık gelir?",
+          "secenekler": [
+            "A) II. Mustafa",
+            "B) III. Ahmed",
+            "C) I. Mahmut",
+            "D) III. Selim",
+            "E) II. Mahmut"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Lale Devri (1718-1730), III. Ahmed dönemine ve sadrazam Nevşehirli Damat İbrahim Paşa'nın yönetimine denk gelen; Batı ile kültürel ilişkilerin yoğunlaştığı dönemdir."
+        }
+      ]
+    },
+    {
+      "id": "tarih-kurtulus-savasi",
+      "baslik": "Kurtuluş Savaşı",
+      "anlatim": {
+        "ozet": "🗡️ Mondros'tan Lozan'a: kongreler, cepheler ve Türk milletinin bağımsızlık destanı.",
+        "icerik": [
+          "📌 Mondros Mütarekesi'nin ardından başlayan işgaller, Mustafa Kemal'in 19 Mayıs 1919'da Samsun'a çıkmasıyla örgütlü direnişe dönüşmüştür. Erzurum (Temmuz 1919) ve Sivas (Eylül 1919) kongreleri milli iradenin örgütlendiği kritik toplanmaları temsil eder.",
+          "📎 Batı Cephesi, Kurtuluş Savaşı'nın belirleyici cephesidir. İnönü (1921), Sakarya (1921) ve Büyük Taarruz (1922) zaferlerinin ardından Mudanya Ateşkesi (11 Ekim 1922) imzalanmış; işgal kuvvetleri geri çekilmiştir.",
+          "📌 Lozan Antlaşması (24 Temmuz 1923), Türkiye'nin egemenliğini uluslararası alanda tanıtan ve Misak-ı Milli sınırlarını büyük ölçüde onaylayan belgedir.",
+          "📌 Doğu Cephesi'nde Kazım Karabekir komutasındaki TBMM kuvvetleri 1920'de Ermenistan'a karşı harekete geçmiş; sonucunda imzalanan Gümrü Antlaşması (3 Aralık 1920), TBMM'nin uluslararası alanda imzaladığı ilk antlaşma olması bakımından önemlidir. Güney Cephesi'nde ise düzenli ordudan çok Kuvâ-yi Milliye birlikleri Fransızlara karşı Maraş, Antep ve Urfa'da direnmiş; bu üç şehre sonradan 'gazi' unvanı verilmiştir.",
+          "📎 Milli Mücadele'nin iç cephesinde TBMM'nin otoritesine karşı çıkan Kuvâ-yi İnzibatiye, Anzavur ve Çerkez Ethem ayaklanmaları gibi iç isyanlar bastırılmış; bu süreç, düzenli ordunun kurulmasının ve merkezi otoritenin güçlenmesinin ne denli gerekli olduğunu ortaya koymuştur.",
+          "📌 TBMM, 20 Ocak 1921'de Teşkilat-ı Esasiye Kanunu'nu (1921 Anayasası) kabul ederek egemenliğin kayıtsız şartsız millete ait olduğunu anayasal güvenceye kavuşturmuştur. Savaş koşullarında hazırlanan bu kısa ve öz anayasa, Cumhuriyet döneminin anayasal temelini de hazırlamıştır.",
+          "📎 TBMM, 10 Ağustos 1920'de imzalanan Sevr Antlaşması'nı tanımamış ve bu antlaşmayı imzalayanları vatan haini ilan etmiştir; Sevr'in fiilen uygulanamamasının en büyük nedeni, Büyük Taarruz'un (1922) askeri zaferle sonuçlanmasıdır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıktı",
+          "💡 TBMM 23 Nisan 1920'de Ankara'da açıldı",
+          "⚡ Sakarya Muharebesi (1921) savunmadan saldırıya geçişin dönüm noktasıdır",
+          "🔑 Lozan Antlaşması 24 Temmuz 1923'te imzalandı",
+          "💡 Mudanya Ateşkesi (11 Ekim 1922) Kurtuluş Savaşı'nın askeri sürecini bitirdi",
+          "🎯 Gümrü Antlaşması (3 Aralık 1920) TBMM'nin imzaladığı ilk uluslararası antlaşmadır",
+          "🔑 Maraş, Antep ve Urfa Güney Cephesi'ndeki direnişleri nedeniyle 'gazi' unvanı aldı",
+          "💡 1921 Teşkilat-ı Esasiye Kanunu egemenliğin kayıtsız şartsız millete ait olduğunu ilan etti",
+          "⚡ Çerkez Ethem ayaklanması TBMM'nin iç otoritesine karşı bastırılan önemli isyanlardandır"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Mustafa Kemal'in Samsun'a çıkış tarihi aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "30 Ekim 1918",
+            "23 Nisan 1919",
+            "19 Mayıs 1919",
+            "4 Eylül 1919",
+            "28 Ocak 1920"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Mustafa Kemal, 19 Mayıs 1919'da Samsun'a çıkarak Kurtuluş Savaşı'nın örgütlenme sürecini başlatmıştır.",
+          "distractorAciklama": "23 Nisan 1920 TBMM'nin açıldığı tarihtir; 19 Mayıs 1919 ise Samsun'a çıkış tarihidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Misak-ı Milli kararları hangi meclis tarafından alınmıştır?",
+          "secenekler": [
+            "TBMM",
+            "Osmanlı Mebusan Meclisi",
+            "Sivas Kongresi",
+            "Erzurum Kongresi",
+            "Temsil Heyeti"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Misak-ı Milli, 28 Ocak 1920'de İstanbul'daki Osmanlı Mebusan Meclisi tarafından kabul edilmiştir.",
+          "distractorAciklama": "TBMM 23 Nisan 1920'de açılmıştır; Misak-ı Milli daha önce Osmanlı Mebusan Meclisi'nde kabul edilmiştir.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Kurtuluş Savaşı'nda Doğu Cephesi'nde Ermenilere karşı kazanılan zafer sonucunda imzalanan antlaşma aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Mudanya Ateşkesi",
+            "Gümrü Antlaşması",
+            "Lozan Antlaşması",
+            "Kars Antlaşması",
+            "Moskova Antlaşması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kazım Karabekir komutasındaki Türk kuvvetleri Ermenistan'ı yenerek Gümrü Antlaşması'nı (3 Aralık 1920) imzalamıştır.",
+          "distractorAciklama": "Kars Antlaşması (1921) güney Kafkasya ülkeleriyle imzalanmıştır; Gümrü ise yalnızca Ermenistan ile imzalanmış ilk antlaşmadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "TBMM hangi tarihte ve nerede açılmıştır?",
+          "secenekler": [
+            "23 Nisan 1920 – Ankara",
+            "4 Eylül 1919 – Sivas",
+            "28 Ocak 1920 – İstanbul",
+            "23 Temmuz 1919 – Erzurum",
+            "19 Mayıs 1919 – Samsun"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "TBMM, 23 Nisan 1920'de Ankara'da açılmış; millî iradeyi temsil eden bağımsız yasama ve yürütme organı olmuştur.",
+          "distractorAciklama": "Sivas Kongresi'nin tarihi 4–12 Eylül 1919'dur. TBMM ise Ankara'da 23 Nisan 1920'de açılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sakarya Meydan Muharebesi'nin önemi nedir?",
+          "secenekler": [
+            "Kurtuluş Savaşı'nın ilk zaferi",
+            "Doğu Cephesi'nin kapanması",
+            "Savunmadan taarruza geçişin dönüm noktası",
+            "Fransa ile antlaşma imzalanması",
+            "İstanbul'un işgalinin sona ermesi"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Sakarya Muharebesi (23 Ağustos–13 Eylül 1921), Yunan kuvvetlerinin durdurulduğu ve stratejik üstünlüğün Türk kuvvetlerine geçtiği kritik zaferdir.",
+          "distractorAciklama": "İlk zafer I. İnönü'dür (1921). Sakarya, savunma başarısından taarruz planlamasına geçişi simgeler.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Kurtuluş Savaşı'nda Güney Cephesi'nde hangi devletle antlaşma imzalanmıştır?",
+          "secenekler": [
+            "İngiltere",
+            "İtalya",
+            "Fransa",
+            "Yunanistan",
+            "Ermenistan"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Fransa ile 20 Ekim 1921'de imzalanan Ankara Antlaşması (Franklin-Bouillon) ile Güney Cephesi kapanmış; Fransa işgal ettiği topraklardan çekilmiştir.",
+          "distractorAciklama": "İngiltere ile doğrudan bir cephe antlaşması imzalanmamıştır. Güney Cephesi Fransa ile çözüme kavuşmuştur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Lozan Antlaşması'nda Türkiye lehine sonuçlanan en önemli konulardan biri aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Musul'un Türkiye'ye verilmesi",
+            "Kapitülasyonların kaldırılması",
+            "Onikiadalar'ın Türkiye'ye bırakılması",
+            "Boğazların Türkiye'ye devredilmesi",
+            "Kıbrıs'ın Türkiye'ye katılması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Lozan Antlaşması ile Osmanlı döneminden kalan kapitülasyonlar tamamen kaldırılmış; Türkiye ekonomik egemenliğini kazanmıştır.",
+          "distractorAciklama": "Boğazlar Lozan'da uluslararası statüde kalmış; Türkiye'ye ancak 1936 Montrö Sözleşmesi'nde tam egemenlik tanınmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki kongrelerden hangisi yalnızca doğu illerini kapsayan bölgesel nitelik taşımaktadır?",
+          "secenekler": [
+            "Sivas Kongresi",
+            "Erzurum Kongresi",
+            "Amasya Tamimi",
+            "Balıkesir Kongresi",
+            "Alaşehir Kongresi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Erzurum Kongresi (23 Temmuz–7 Ağustos 1919), Doğu Anadolu'daki illeri kapsayan bölgesel nitelikte toplanmıştır. Sivas Kongresi ise ulusal niteliktedir.",
+          "distractorAciklama": "Sivas Kongresi ulusal ölçekte toplanmıştır; Erzurum yalnızca doğu illerini kapsar.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Büyük Taarruz hangi tarihte başlamıştır?",
+          "secenekler": [
+            "26 Ağustos 1921",
+            "26 Ağustos 1922",
+            "9 Eylül 1922",
+            "11 Ekim 1922",
+            "30 Ağustos 1922"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Büyük Taarruz 26 Ağustos 1922'de başlamış; 30 Ağustos Başkomutanlık Meydan Muharebesi ve ardından 9 Eylül İzmir'in kurtuluşuyla tamamlanmıştır.",
+          "distractorAciklama": "30 Ağustos, Başkomutanlık Meydan Muharebesi'nin gerçekleştiği tarihtir; Büyük Taarruz 26 Ağustos'ta başlamıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Mudanya Ateşkesi'nin (11 Ekim 1922) sonuçlarından biridir?",
+          "secenekler": [
+            "Lozan Konferansı'nın toplanması kararı",
+            "Doğu Trakya'nın Türkiye'ye bırakılması",
+            "Kapitülasyonların kaldırılması",
+            "Saltanatın kaldırılması",
+            "Yunanistan ile nüfus mübadelesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Mudanya Ateşkesi ile Doğu Trakya ve Boğaz bölgesi Türk kuvvetlerine bırakılmış; böylece Avrupa topraklarına geri dönüş sağlanmıştır.",
+          "distractorAciklama": "Saltanatın kaldırılması 1 Kasım 1922'de gerçekleşmiştir; bu Mudanya'dan sonraki ayrı bir adımdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "I. İnönü Savaşı'nın kazanılmasının en önemli siyasi sonucu nedir?",
+          "secenekler": [
+            "Fransa ile antlaşma imzalanması",
+            "Londra Konferansı'na Türkiye'nin çağrılması",
+            "Yunanistan'ın barış teklifinde bulunması",
+            "Mudanya Ateşkesi'nin imzalanması",
+            "TBMM'nin Ankara'ya taşınması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "I. İnönü Zaferi'nin ardından İngiltere, TBMM'yi Londra Konferansı'na (Şubat 1921) davet etmiş; bu, Ankara hükümetinin fiilen tanınmasının ilk adımıdır.",
+          "distractorAciklama": "TBMM Ankara'ya zaten taşınmıştı. Londra Konferansı daveti, I. İnönü zaferinin doğrudan siyasi sonucudur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Lozan Antlaşması'nda Türkiye ile Yunanistan arasında uygulanan nüfus mübadelesi hangi ilkeye dayanmaktadır?",
+          "secenekler": [
+            "Etnik köken",
+            "Dil",
+            "Din (Müslüman – Rum Ortodoks)",
+            "Milliyet belgesi",
+            "Doğum yeri"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Lozan nüfus mübadelesi etnik değil dini temele dayanmıştır: Türkiye'deki Rum Ortodoks Hristiyanlar Yunanistan'a, Yunanistan'daki Müslümanlar Türkiye'ye gönderilmiştir.",
+          "distractorAciklama": "Mübadele etnik ya da dil temelinde değil din temelinde gerçekleşmiştir. Bu nedenle Türkçe konuşan Ortodoks Hristiyanlar da Yunanistan'a gitmek zorunda kalmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sivas Kongresi kararlarına göre aşağıdakilerden hangisi doğrudur?",
+          "secenekler": [
+            "Yalnızca doğu illeri korunacaktır",
+            "Mandacılık kabul edilmiştir",
+            "Manda ve himaye reddedilmiş, toprak bütünlüğü savunulmuştur",
+            "Padişaha bağlı kalınacaktır",
+            "İtilaf devletleriyle müzakere açılmıştır"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Sivas Kongresi'nde manda ve himaye reddedilmiş; Türk milletinin bağımsızlığı ve toprak bütünlüğü esas alınmıştır.",
+          "distractorAciklama": "Amerikan manda tartışması Sivas Kongresi'nde gündeme gelmiş; ancak kesinlikle reddedilmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Amasya Tamimi'nde (22 Haziran 1919) öne çıkan temel ilke aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) İstanbul hükümetine itaat",
+            "B) Milletin bağımsızlığını yine milletin azim ve kararının kurtaracağı",
+            "C) Manda ve himayenin kabulü",
+            "D) Osmanlı Hanedanı'nın korunması",
+            "E) Rusya ile ittifak kurulması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Amasya Tamimi'nde 'Milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır' ifadesiyle milli kurtuluşun halkın kendi eseri olacağı vurgulanmıştır."
+        }
+      ]
+    },
+    {
+      "id": "tarih-ataturk",
+      "baslik": "Atatürk İlkeleri ve İnkılapları",
+      "anlatim": {
+        "ozet": "🌟 Cumhuriyetten harf devrimine: Atatürk'ün altı ilkesi ve Türkiye'yi modernleştiren köklü değişimler.",
+        "icerik": [
+          "📌 Atatürk'ün altı temel ilkesi (Cumhuriyetçilik, Milliyetçilik, Halkçılık, Devletçilik, Laiklik, İnkılapçılık), 1931'de CHP programına girmiş ve 1937'de anayasaya eklenmiştir.",
+          "📎 Siyasi alanda: Cumhuriyet ilanı (1923), halifeliğin kaldırılması (1924), çok partili deneme dönemi. Hukuk alanında: Medeni Kanun (1926), yeni ceza kanunu. Eğitim-kültürde: Harf Devrimi (1928), Tevhid-i Tedrisat (1924), Türk Tarih Kurumu ve Türk Dil Kurumu.",
+          "📌 Ekonomik alanda: Devletçilik ilkesi çerçevesinde İzmir İktisat Kongresi (1923), Sümerbank, Etibank gibi devlet işletmeleri kurulmuştur. Sosyal alanda: kadınlara seçme ve seçilme hakkı (1934), kıyafet devrimi, soyadı kanunu (1934).",
+          "📌 Mustafa Kemal, 1881'de Selanik'te doğmuş; matematik öğretmeni Üsküp doğumlu Mustafa Efendi'nin ismine 'Kemal'i eklemesiyle 'Mustafa Kemal' adını almıştır. Harp Okulu ve Harp Akademisi'ni bitirdikten sonra Şam'da Vatan ve Hürriyet Cemiyeti'ni kurmuş, I. Dünya Savaşı'nda özellikle Çanakkale Cephesi'nde (Anafartalar, Conkbayırı) gösterdiği başarılarla tanınmıştır.",
+          "📎 Atatürk döneminde toplumsal yaşamı düzenleyen pek çok reform art arda gerçekleştirilmiştir: Şapka Kanunu (1925), tekke ve zaviyelerin kapatılması (1925), uluslararası saat ve takvimin kabulü (1925-1926), ölçü-tartı biriminde metre ve kilogramın benimsenmesi (1931) ve hafta tatilinin cumadan pazara alınması (1935) bu düzenlemeler arasındadır.",
+          "📌 Dış politikada Atatürk döneminde bölgesel barışı güçlendirme hedefiyle Balkan Antantı (1934, Türkiye-Yunanistan-Yugoslavya-Romanya) ve Sadabat Paktı (1937, Türkiye-İran-Irak-Afganistan) imzalanmıştır. 1936 Montrö Boğazlar Sözleşmesi ile Türkiye, Lozan'da uluslararası denetime bırakılan boğazlar üzerinde tam egemenlik hakkını yeniden kazanmıştır.",
+          "📎 Atatürk, 1927'de Türkiye Büyük Millet Meclisi kürsüsünden altı gün süren ve Samsun'a çıkışından itibaren Milli Mücadele sürecini anlattığı ünlü 'Nutuk' konuşmasını gerçekleştirmiştir; bu metin, Kurtuluş Savaşı'nın Atatürk'ün kendi ağzından aktarıldığı en önemli birincil kaynaktır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Altı ilke 1937'de anayasaya girmiştir",
+          "💡 Harf Devrimi 1 Kasım 1928'de gerçekleşti",
+          "⚡ Kadınlara milletvekili seçme-seçilme hakkı 1934'te verildi",
+          "🔑 Medeni Kanun 1926'da kabul edildi",
+          "💡 Halifelik 3 Mart 1924'te kaldırıldı",
+          "🎯 Atatürk 1881'de Selanik'te doğdu; Çanakkale'de Anafartalar ve Conkbayırı'nda öne çıktı",
+          "🔑 Montrö Boğazlar Sözleşmesi (1936) Türkiye'ye boğazlarda tam egemenlik kazandırdı",
+          "💡 Balkan Antantı (1934) ve Sadabat Paktı (1937) bölgesel barış politikasının ürünüdür",
+          "⚡ Nutuk, Atatürk'ün 1927'de TBMM'de okuduğu ve Milli Mücadele'yi anlattığı konuşmadır"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Atatürk'ün altı ilkesi (Altı Ok) anayasaya hangi yılda eklenmiştir?",
+          "secenekler": [
+            "1923",
+            "1924",
+            "1928",
+            "1931",
+            "1937"
+          ],
+          "dogruIndex": 4,
+          "aciklama": "Altı ilke 1931'de CHP programına girmiş, 1937'de ise Anayasa'ya (Teşkilat-ı Esasiye Kanunu) eklenmiştir.",
+          "distractorAciklama": "1931 CHP programı tarihi; 1937 ise anayasaya girdiği tarihtir. Soru anayasaya girişi sorduğundan doğru cevap 1937'dir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Harf Devrimi hangi tarihte gerçekleşmiş ve Arap alfabesinin yerini hangi alfabe almıştır?",
+          "secenekler": [
+            "3 Mart 1924 – Latin alfabesi",
+            "1 Kasım 1928 – Latin alfabesi",
+            "29 Ekim 1923 – Kiril alfabesi",
+            "17 Şubat 1923 – Latin alfabesi",
+            "1 Kasım 1928 – Göktürk alfabesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "1 Kasım 1928'de çıkarılan kanunla Arap alfabesi kaldırılmış, Latin temelli Türk alfabesi kabul edilmiştir.",
+          "distractorAciklama": "Cumhuriyetin ilanı 29 Ekim 1923'tür. Harf Devrimi 1 Kasım 1928'dedir; alfabe Latin kökenlidir.",
+          "kaynak": "2019-KPSS"
+        },
+        {
+          "soru": "Tevhid-i Tedrisat Kanunu (1924) ile aşağıdakilerden hangisi gerçekleştirilmiştir?",
+          "secenekler": [
+            "Yükseköğretim kurumlarının açılması",
+            "Tüm eğitim kurumlarının Milli Eğitim Bakanlığı'na bağlanması",
+            "Yabancı dil eğitiminin zorunlu hale getirilmesi",
+            "Kız ve erkek öğrencilerin ayrı okullarda eğitim görmesi",
+            "İlköğretimin paralı hale getirilmesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Tevhid-i Tedrisat (Öğretim Birliği) Kanunu ile medreseler dahil tüm eğitim kurumları Milli Eğitim Bakanlığı çatısı altında birleştirilmiştir.",
+          "distractorAciklama": "Kanunun amacı eğitimi birleştirmek ve laikleştirmektir; yabancı dil zorunluluğu ya da ayrı okul uygulamasıyla ilgisi yoktur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye Cumhuriyeti'nde kadınlara milletvekili seçme ve seçilme hakkı hangi yılda tanınmıştır?",
+          "secenekler": [
+            "1923",
+            "1926",
+            "1930",
+            "1934",
+            "1946"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Kadınlara milletvekili seçme ve seçilme hakkı 5 Aralık 1934'te tanınmıştır. Türkiye bu hakta pek çok Batı ülkesinden önce davranmıştır.",
+          "distractorAciklama": "1930'da kadınlara belediye seçimlerinde oy hakkı verilmiştir; milletvekili seçme/seçilme hakkı ise 1934'tedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Medeni Kanun hangi yılda kabul edilmiş ve hangi ülkenin medeni kanunundan yararlanılmıştır?",
+          "secenekler": [
+            "1924 – Fransız Medeni Kanunu",
+            "1926 – İsviçre Medeni Kanunu",
+            "1928 – Alman Medeni Kanunu",
+            "1923 – İtalyan Medeni Kanunu",
+            "1930 – Avusturya Medeni Kanunu"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "1926'da kabul edilen Türk Medeni Kanunu, İsviçre Medeni Kanunu esas alınarak hazırlanmıştır.",
+          "distractorAciklama": "Ceza Kanunu İtalyan kaynaklıdır. Medeni Kanun ise İsviçre'den alınmıştır. Bunların karıştırılmaması gerekir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Atatürk'ün 'Halkçılık' ilkesinin temel anlamı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Devletin ekonomiyi denetlemesi",
+            "Sınıf ve ayrıcalık farkı gözetmeksizin eşit yurttaşlık",
+            "Yalnızca Türklerin yönetimde temsil edilmesi",
+            "Köylülerin toprak sahibi yapılması",
+            "Demokrasinin tam anlamıyla uygulanması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Halkçılık ilkesi, sosyal sınıf ve ayrıcalık ayrımı tanımaksızın tüm vatandaşların kanun önünde eşit olduğunu savunur.",
+          "distractorAciklama": "Devletçilik ekonomiyi, milliyetçilik milli kimliği kapsar. Halkçılık ise eşit yurttaşlık ve sosyal dayanışma ilkesidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Soyadı Kanunu hangi yılda çıkarılmıştır?",
+          "secenekler": [
+            "1928",
+            "1930",
+            "1932",
+            "1934",
+            "1938"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Soyadı Kanunu 21 Haziran 1934'te kabul edilmiş; tüm Türk vatandaşlarının soyadı alması zorunlu hale getirilmiştir.",
+          "distractorAciklama": "Harf Devrimi 1928, kadın seçme hakkı 1934'tür. Soyadı Kanunu da 1934'e aittir; yıl karıştırılmamalıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Atatürk ilkelerinden 'İnkılapçılık' ne anlama gelir?",
+          "secenekler": [
+            "Geçmişe dönük reformları savunmak",
+            "Yapılan inkılapları korumak ve çağdaşlaşmaya devam etmek",
+            "Devrim yoluyla yönetimi ele geçirmek",
+            "Dini kurumları modernleştirmek",
+            "Ekonomik dönüşümü ön planda tutmak"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "İnkılapçılık (Devrimcilik) ilkesi, gerçekleştirilen inkılapların korunmasını ve Türkiye'nin çağdaş uygarlık düzeyine ulaşma sürecinin sürdürülmesini ifade eder.",
+          "distractorAciklama": "İnkılapçılık geriye değil ileriye bakar; mevcut kazanımları korurken gelişmeye açık kalmayı esas alır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Hilafetin kaldırıldığı tarih ve bu kararı alan organ aşağıdakilerden hangisinde doğru verilmiştir?",
+          "secenekler": [
+            "29 Ekim 1923 – Bakanlar Kurulu",
+            "3 Mart 1924 – TBMM",
+            "1 Kasım 1922 – TBMM",
+            "3 Mart 1924 – Atatürk kararnamesiyle",
+            "17 Kasım 1924 – Anayasa Mahkemesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Halifelik 3 Mart 1924'te TBMM'nin aldığı kanunla kaldırılmıştır. Aynı gün şeriye mahkemeleri de ilga edilmiştir.",
+          "distractorAciklama": "1 Kasım 1922'de saltanat kaldırılmıştır; halifelik ise 3 Mart 1924'te TBMM kararıyla ayrıca kaldırılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İzmir İktisat Kongresi hangi yılda toplanmış ve amacı nedir?",
+          "secenekler": [
+            "1919 – Savaş ekonomisini planlamak",
+            "1923 – Bağımsız ulusal ekonomiyi oluşturmak",
+            "1926 – Devletçi ekonomiyi uygulamak",
+            "1930 – Büyük Buhran'a önlem almak",
+            "1934 – Beş yıllık planı açıklamak"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "İzmir İktisat Kongresi (Şubat–Mart 1923), ulusal ekonominin temellerini atmak amacıyla toplanmış; özel girişimciliğe dayalı milli iktisat politikasını benimsemiştir.",
+          "distractorAciklama": "Birinci Beş Yıllık Sanayi Planı 1934'e, devletçilik uygulamaları 1930'lara aittir. Kongre 1923'te toplanmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Atatürk'ün 'Devletçilik' ilkesi ile aşağıdakilerden hangisi doğrudan ilişkilidir?",
+          "secenekler": [
+            "Özel sektörün tamamen kaldırılması",
+            "Devletin temel sektörlerde yatırım yapması",
+            "Yabancı sermayenin yasaklanması",
+            "Tarım reformunun gerçekleştirilmesi",
+            "Milliyetçi ekonominin dış ticarete kapatılması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Devletçilik, özel sektörün yapamadığı ya da yetersiz kaldığı alanlarda devletin ekonomiye müdahil olarak yatırım yapması ilkesidir.",
+          "distractorAciklama": "Devletçilik özel sektörü yasaklamaz; özel girişimin yetersiz kaldığı alanlarda devlet devreye girer.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Atatürk dönemi laik uygulamalardan biridir?",
+          "secenekler": [
+            "Diyanet İşleri Başkanlığı'nın kurulması",
+            "Şeriye ve Evkaf Vekâleti'nin kaldırılması",
+            "Camilerin kapatılması",
+            "Ezan'ın Türkçe okunması zorunluluğu",
+            "Kuran öğretiminin tamamen yasaklanması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Şeriye (dini) mahkemeleri ve Evkaf Vekâleti 3 Mart 1924'te kaldırılmış; bu adım laikleşme sürecinin temel taşlarından biridir.",
+          "distractorAciklama": "Diyanet İşleri Başkanlığı kurulmuştur; camiler kapatılmamıştır. Laiklik dini ortadan kaldırmaz, devlet düzeninden ayırır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de çok partili siyasi hayata geçiş denemesinin yapıldığı ve ardından kapatılan parti aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Demokrat Parti",
+            "Serbest Cumhuriyet Fırkası",
+            "Halk Fırkası",
+            "Milli Kalkınma Partisi"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Serbest Cumhuriyet Fırkası, Fethi Okyar tarafından 1930'da kurulmuş ve kısa süre sonra Atatürk'ün isteğiyle kapatılmıştır.",
+          "distractorAciklama": "Terakkiperver Cumhuriyet Fırkası daha önce (1924–25) kurulup kapatılmıştır. Demokrat Parti ise 1946'da kurulmuş ve başarılı olmuştur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk Tarih Kurumu hangi yılda kurulmuştur?",
+          "secenekler": [
+            "1928",
+            "1931",
+            "1934",
+            "1936",
+            "1923"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Türk Tarih Kurumu 1931'de kurulmuş; Türk tarihini bilimsel yöntemlerle araştırmak amacıyla oluşturulmuştur.",
+          "distractorAciklama": "Türk Dil Kurumu da 1932'de kurulmuştur. Türk Tarih Kurumu 1931 tarihlidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Cumhuriyetin ilanından önce gerçekleştirilen ve Osmanlı hanedanlığının siyasi iktidarını sona erdiren adım nedir?",
+          "secenekler": [
+            "A) Halifeliğin kaldırılması",
+            "B) Saltanatın kaldırılması",
+            "C) Anayasanın yürürlüğe girmesi",
+            "D) TBMM'nin açılması",
+            "E) Lozan Antlaşması'nın imzalanması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Saltanat 1 Kasım 1922'de TBMM kararıyla kaldırılmıştır; bu, Cumhuriyet'in ilanından (29 Ekim 1923) önceki kritik bir adımdır."
+        }
+      ]
+    },
+    {
+      "id": "tarih-dunya-tarihi",
+      "baslik": "Önemli Dünya Tarihi Olayları",
+      "anlatim": {
+        "ozet": "🌍 Rönesans'tan Soğuk Savaş'a: insanlığı şekillendiren büyük dönüm noktaları ve Türkiye'ye etkileri.",
+        "icerik": [
+          "📌 Rönesans (14–17. yy) İtalya'da başlayan, insan aklını ve sanatı merkeze alan kültürel yenilenmedir. Matbaanın icadı (1440, Gutenberg), fikirlerin hızla yayılmasını sağladı. Reform ise Luther'in 1517'de Kilise'ye karşı çıkmasıyla başlayan dini dönüşümdür; Protestanlık bu hareketin ürünüdür.",
+          "📎 Fransız İhtilali (1789), özgürlük-eşitlik-kardeşlik ilkeleriyle monarşilere meydan okudu ve milliyetçilik akımını tüm dünyaya yaydı. Osmanlı'da Rum, Sırp ve diğer azınlık isyanlarının fitilini bu fikir ateşledi. Sanayi Devrimi (18. yy, İngiltere) buharlı makineyle üretimi değiştirdi; kentleşme, işçi sınıfı ve sömürgecilik bu sürecin ürünleridir.",
+          "📌 I. Dünya Savaşı (1914–1918) Osmanlı'yı parçaladı; II. Dünya Savaşı (1939–1945) ise BM ve NATO gibi uluslararası kurumları doğurdu. Soğuk Savaş (1947–1991), ABD önderliğindeki Batı ile SSCB önderliğindeki Doğu bloğu arasındaki ideolojik gerilimdi; Türkiye NATO üyeliğiyle (1952) Batı cephesinde yer aldı.",
+          "📌 Coğrafi Keşifler (15-16. yüzyıl), Osmanlı'nın İpek ve Baharat yollarını kontrol etmesi, pusulanın yaygınlaşması ve Rönesans'ın getirdiği bilimsel merakın birleşmesiyle başlamıştır. Kristof Kolomb'un 1492'de Amerika kıtasına ulaşması ve Vasco da Gama'nın 1498'de Ümit Burnu yoluyla Hindistan'a varması, Avrupa'nın zenginleşmesine ve sömürgecilik çağının başlamasına yol açmıştır.",
+          "📎 Amerikan Bağımsızlık Savaşı (1775-1783), İngiliz sömürgelerinin 'temsilsiz vergilendirmeye' karşı ayaklanmasıyla başlamış; 1776 Bağımsızlık Bildirgesi'yle Amerika Birleşik Devletleri kurulmuştur. Bu olay, halk egemenliği ve anayasal cumhuriyetçilik fikirlerinin yayılmasında Fransız İhtilali'ne de ilham kaynağı olmuştur.",
+          "📌 II. Dünya Savaşı sonrası Almanya ve Berlin, Batı (ABD, İngiltere, Fransa) ile Doğu (SSCB) blokları arasında bölünmüş; 1961'de inşa edilen Berlin Duvarı, Soğuk Savaş'ın en somut simgesi haline gelmiştir. Duvar 1989'da yıkılmış, 1990'da Almanya yeniden birleşmiştir.",
+          "📎 Soğuk Savaş, 1991'de SSCB'nin dağılmasıyla resmen sona ermiştir; bu süreçte Kore Savaşı (1950-1953) ve Vietnam Savaşı (1955-1975) gibi 'vekalet savaşları', iki süper güç arasındaki doğrudan çatışmadan kaçınılarak rekabetin dolaylı biçimlerde sürdürülmesine örnek teşkil etmiştir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Matbaa 1440'ta Gutenberg tarafından icat edildi; fikirlerin yayılmasını hızlandırdı",
+          "💡 Fransız İhtilali (1789) milliyetçilik akımını tüm dünyaya yaydı",
+          "⚡ Sanayi Devrimi 18. yy'da İngiltere'de başladı; kentleşme ve işçi sınıfını doğurdu",
+          "🔑 Türkiye 1952'de NATO'ya katılarak Soğuk Savaş'ta Batı bloğunu seçti",
+          "🎯 II. Dünya Savaşı sonrası BM (1945) ve NATO (1949) kuruldu",
+          "🎯 Kristof Kolomb 1492'de Amerika'ya ulaştı; Vasco da Gama 1498'de Hindistan deniz yolunu buldu",
+          "🔑 Amerikan Bağımsızlık Bildirgesi 1776'da ilan edildi",
+          "💡 Berlin Duvarı 1961'de inşa edildi, 1989'da yıkıldı; SSCB 1991'de dağıldı",
+          "⚡ Kore (1950-53) ve Vietnam (1955-75) savaşları Soğuk Savaş'ın vekalet savaşlarıdır"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Rönesans'ın başladığı ülke aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Fransa",
+            "Almanya",
+            "İtalya",
+            "İngiltere",
+            "İspanya"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Rönesans, 14. yüzyılda Floransa başta olmak üzere İtalya'nın şehir devletlerinde başlamış; insancılık (hümanizm) akımıyla antik Yunan-Roma mirasının yeniden keşfedilmesine dayanmıştır.",
+          "distractorAciklama": "Reform hareketi Almanya'da (Luther, 1517) başlamıştır; Rönesans ise ondan önce İtalya'da filizlendi. Bu iki hareketi birbirine karıştırmamak gerekir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Martin Luther'in 1517'de kiliseye karşı 95 Tez'ini yayımlamasıyla başlayan hareket aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Rönesans",
+            "Aydınlanma",
+            "Reform",
+            "Sanayi Devrimi",
+            "Fransız İhtilali"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Reform hareketi, Katolik Kilisesi'nin bozulmalarına karşı çıkan Luther'in 95 Tezi ile 1517'de başlamış; Protestanlık mezhebinin doğmasına yol açmıştır.",
+          "distractorAciklama": "Rönesans sanat ve düşünce alanındaki yenilenme; Aydınlanma ise 17–18. yüzyıl akıl merkezli felsefi harekettir. Reform spesifik olarak dini reformasyonu ifade eder.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Fransız İhtilali'nin (1789) Osmanlı Devleti üzerindeki en önemli etkisi aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Osmanlı'nın Fransa ile ittifak kurması",
+            "Osmanlı'da sanayi devriminin başlaması",
+            "Milliyetçilik akımının azınlık isyanlarını tetiklemesi",
+            "Osmanlı'da matbaanın yaygınlaşması",
+            "Osmanlı'nın demokrasiye geçmesi"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Fransız İhtilali'nin yaydığı milliyetçilik akımı, Osmanlı bünyesindeki Rum, Sırp, Bulgar ve diğer azınlıkları bağımsızlık mücadelelerine yöneltti; bu durum Osmanlı'nın parçalanma sürecini hızlandırdı.",
+          "distractorAciklama": "Osmanlı matbaası daha önce (1727) kurulmuştu. Milliyetçilik etkisi en belirgin ve doğrudan sonuç olduğundan bu seçenek doğrudur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sanayi Devrimi ilk olarak hangi ülkede gerçekleşmiştir?",
+          "secenekler": [
+            "Fransa",
+            "Almanya",
+            "Amerika Birleşik Devletleri",
+            "İngiltere",
+            "Hollanda"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Sanayi Devrimi, 18. yüzyılın ikinci yarısında İngiltere'de başlamış; buharlı makinenin yaygınlaşmasıyla tekstil ve maden sektörlerinde köklü dönüşüm yaşanmıştır.",
+          "distractorAciklama": "Fransa da erken sanayileşen ülkeler arasındadır; ancak Sanayi Devrimi'nin öncüsü İngiltere'dir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "I. Dünya Savaşı'nın sona ermesiyle imzalanan ve Almanya'ya ağır şartlar getiren antlaşma aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Versay Antlaşması",
+            "Lozan Antlaşması",
+            "Sevr Antlaşması",
+            "Münih Antlaşması",
+            "Yalta Antlaşması"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Versay Antlaşması (1919), I. Dünya Savaşı'nı bitiren ve Almanya'ya toprak kaybı, savaş tazminatı ve askerî kısıtlamalar getiren antlaşmadır. Bu ağır şartlar, Hitler'in yükselişini hazırlayan ortamı yarattı.",
+          "distractorAciklama": "Lozan (1923) Türkiye ile İtilaf devletleri arasında; Sevr (1920) ise Osmanlı ile imzalanmıştır. Versay Almanya'ya yönelik antlaşmadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "II. Dünya Savaşı'nın ardından kurulan uluslararası örgüt aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Milletler Cemiyeti",
+            "NATO",
+            "Birleşmiş Milletler",
+            "Avrupa Birliği",
+            "Varşova Paktı"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Birleşmiş Milletler (BM), II. Dünya Savaşı'nın ardından 1945'te uluslararası barış ve güvenliği korumak amacıyla kurulmuştur. Türkiye kurucu üyeler arasındadır.",
+          "distractorAciklama": "Milletler Cemiyeti I. Dünya Savaşı'nın ardından (1919) kurulmuş ve II. Dünya Savaşı'nın önüne geçememiştir. BM onun yerini almıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Soğuk Savaş döneminde Türkiye hangi blokta yer almıştır?",
+          "secenekler": [
+            "SSCB liderliğindeki Doğu bloğu",
+            "Bağlantısızlar hareketi",
+            "ABD liderliğindeki Batı bloğu (NATO)",
+            "Çin liderliğindeki Asya bloğu",
+            "Tarafsız ülkeler grubunda"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye, 1952'de NATO'ya katılarak Soğuk Savaş döneminde ABD önderliğindeki Batı bloğunda yer almıştır. Türkiye'nin jeopolitik konumu NATO için kritik öneme sahipti.",
+          "distractorAciklama": "Türkiye'nin bağlantısız kalması ya da SSCB tarafında yer alması düşünülemezdi; NATO üyeliği Batı bloğu tercihini açıkça ortaya koyar.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Matbaanın icadı (1440) tarih açısından önemlidir çünkü:",
+          "secenekler": [
+            "İlk kez kitap yazılmaya başlandı",
+            "Fikirlerin kitlesel olarak yayılması hızlandı ve okur-yazarlık arttı",
+            "Bilimin dinden bağımsızlaşması tamamlandı",
+            "Avrupa'da ilk üniversiteler kuruldu",
+            "Rönesans sanatı sona erdi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Gutenberg'in matbaası sayesinde kitaplar çok daha ucuz ve hızlı üretildi; Reform fikirleri, bilimsel çalışmalar ve hümanist düşünceler kısa sürede kitlesel olarak yayıldı.",
+          "distractorAciklama": "Kitap yazımı matbaadan çok önce vardı; matbaa kitabın kopyalanmasını kitleselleştirdi. Bu yüzden 'fikirlerin yayılması' en doğru yanıttır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Soğuk Savaş döneminin özelliklerinden biri DEĞİLDİR?",
+          "secenekler": [
+            "ABD ile SSCB arasında ideolojik rekabet",
+            "NATO ve Varşova Paktı'nın varlığı",
+            "Nükleer silahlanma yarışı",
+            "ABD ile SSCB'nin doğrudan savaşması",
+            "Uzay yarışı (Sputnik, Apollo)"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Soğuk Savaş'ta ABD ve SSCB birbirleriyle doğrudan savaşmamıştır; gerilim vekâlet savaşları (Kore, Vietnam) ve silah yarışı biçiminde sürmüştür.",
+          "distractorAciklama": "Soğuk Savaş'ın 'soğuk' olmasının nedeni iki süper gücün birbirini doğrudan vurmaktan kaçınmasıdır; dolaylı yollarla rekabet ettiler.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Fransız İhtilali'nin temel sloganı olan 'Özgürlük, Eşitlik, Kardeşlik' hangi felsefi akımın ürünüdür?",
+          "secenekler": [
+            "Rönesans",
+            "Reform",
+            "Aydınlanma",
+            "Pozitivizm",
+            "Romantizm"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Fransız İhtilali'nin ideolojik temelleri, Voltaire, Rousseau ve Montesquieu gibi Aydınlanma filozoflarının akıl, bireysel özgürlük ve eşitlik düşüncelerine dayanmaktadır.",
+          "distractorAciklama": "Rönesans ve Reform daha erken dönemlere ait; Pozitivizm ise 19. yüzyılın ürünüdür. Aydınlanma (17–18. yy) Fransız İhtilali'nin doğrudan fikri kaynağıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sanayi Devrimi'nin toplumsal sonuçları arasında aşağıdakilerden hangisi sayılabilir?",
+          "secenekler": [
+            "Tarımın tamamen ortadan kalkması",
+            "Kentleşmenin hızlanması ve işçi sınıfının ortaya çıkması",
+            "Avrupa'da nüfusun azalması",
+            "Milliyetçilik akımının sona ermesi",
+            "Monarşilerin güçlenmesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Sanayi Devrimi, fabrikaların etrafında yeni kentlerin oluşmasına ve köyden şehre göçe yol açtı; bu süreçte sanayi işçisi sınıfı (proletarya) ortaya çıktı ve sosyal hareketlerin önü açıldı.",
+          "distractorAciklama": "Tarım ortadan kalkmadı; aksine makineleşmeyle verimliliği arttı. Asıl sonuç kentleşme ve işçi sınıfının doğuşudur.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+          "secenekler": [
+            "Rönesans – İtalya – 14. yüzyıl",
+            "Reform – Luther – 1517",
+            "Fransız İhtilali – 1789 – milliyetçilik",
+            "Sanayi Devrimi – Fransa – buharlı makine",
+            "Soğuk Savaş – ABD/SSCB – 1947–1991"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Sanayi Devrimi İngiltere'de başlamıştır, Fransa'da değil. Diğer tüm eşleştirmeler tarihsel olarak doğrudur.",
+          "distractorAciklama": "Fransa da önemli bir sanayi ülkesidir; ancak Sanayi Devrimi'nin ilk yaşandığı ülke İngiltere'dir. Bu ayrım sık sorgulanan bir KPSS noktasıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Sanayi Devrimi'ni mümkün kılan en temel teknolojik gelişme aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Matbaanın icadı",
+            "B) Buharlı makinenin geliştirilmesi",
+            "C) Telgrafın keşfi",
+            "D) Pusulanın Avrupa'ya gelmesi",
+            "E) Barut silahlarının yaygınlaşması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "James Watt'ın geliştirdiği buharlı makine (1769), fabrika üretimine ve ulaşım devrimine zemin hazırlayarak Sanayi Devrimi'nin temel teknolojik itici gücü olmuştur."
+        },
+        {
+          "soru": "I. Dünya Savaşı'nı başlatan tetikleyici olay aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Almanya'nın Fransa'ya saldırması",
+            "B) Avusturya-Macaristan Veliahtı Arşidük Franz Ferdinand'ın Saraybosna'da öldürülmesi",
+            "C) Osmanlı'nın Rusya'ya saldırması",
+            "D) İngiltere'nin Almanya'ya savaş ilan etmesi",
+            "E) Balkan Savaşları'nın başlaması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "28 Haziran 1914'te Saraybosna'da Avusturya-Macaristan Veliahtı Arşidük Franz Ferdinand'ın bir Sırp milliyetçi tarafından öldürülmesi, I. Dünya Savaşı'nı başlatan zincir reaksiyonu tetiklemiştir."
+        },
+        {
+          "soru": "II. Dünya Savaşı'nın başlangıcı olarak kabul edilen tarih ve olay nedir?",
+          "secenekler": [
+            "A) 7 Aralık 1941 – Pearl Harbor saldırısı",
+            "B) 1 Eylül 1939 – Almanya'nın Polonya'yı işgali",
+            "C) 3 Eylül 1939 – İngiltere'nin Almanya'ya savaş ilanı",
+            "D) 10 Mayıs 1940 – Fransa'nın işgali",
+            "E) 22 Haziran 1941 – Rusya'nın işgali"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "II. Dünya Savaşı, Almanya'nın 1 Eylül 1939'da Polonya'yı işgaliyle başlamıştır; akabinde İngiltere ve Fransa Almanya'ya savaş ilan etmiştir."
+        }
+      ]
+    },
+    {
+      "id": "tarih-turk-kulturu",
+      "baslik": "Türk-İslam Medeniyeti ve Kültürü",
+      "anlatim": {
+        "ozet": "☪️ Karahanlılar'dan Osmanlı'ya: Türklerin İslam medeniyetine kattığı medrese, vakıf ve sanat mirası.",
+        "icerik": [
+          "📌 Türklerin İslamiyet'i kabulü (942, Karahanlılar) yeni bir kültür sentezini başlattı. Türk-İslam medeniyetinin temel kurumları medrese (ilim), vakıf (sosyal yardım) ve tekkedir (tasavvuf). Medreseler Nizamülmülk tarafından sistematik hale getirildi; vakıflar ise camiden hastaneye geniş bir sosyal ağ oluşturdu.",
+          "📎 Türk-İslam sanatında minyatür (kitap resmi), çini, hat (kaligrafi) ve mimari öne çıkar. Selçuklu dönemi kümbetleri, Osmanlı camileri (Süleymaniye, Selimiye) ve Edirne'deki yapılar Türk-İslam mimarisinin zirvesini temsil eder. Sinan, 16. yüzyılın en büyük mimarlarından biri olarak kabul edilir.",
+          "📌 Türk-İslam medeniyeti büyük bilim insanları yetiştirdi: İbn Sina (tıp, el-Kanun fi't-Tıb), Farabi (felsefe, el-Medinetü'l-Fazıla), Biruni (coğrafya, astronomi, Kitab'ül-Hind) ve İbn-i Rüşd (Aristo yorumları) bu dönemin öncü isimleridir.",
+          "📌 Türk-İslam edebiyatında iki büyük damar gelişmiştir: Divan edebiyatı (Arap-Fars aruz vezniyle, saray çevresinde) ve Halk edebiyatı (hece vezniyle, âşıklar ve tekke çevresinde). Yunus Emre (13. yy), sade Türkçesiyle tasavvufi halk şiirinin en büyük temsilcisi kabul edilir; Hoca Ahmet Yesevi'nin Divan-ı Hikmet'i ise Türkistan'da tasavvufun Türkçe yayılmasını sağlamıştır.",
+          "📎 Osmanlı mimarisinde 14-15. yüzyıllarda Bursa ve İznik'te gelişen erken dönem üslubu, çok kubbeli ve eyvanlı camilerle (Yeşil Cami, Ulu Cami) karakterize olur; bu üslup, 16. yüzyılda Mimar Sinan ile birlikte tek büyük kubbeli, merkezi planlı klasik dönem Osmanlı mimarisine evrilmiştir.",
+          "📌 Vakıf kurumunun sosyal hayata kattığı çeşme, sebil ve hamam gibi yapılar, Türk-İslam şehirlerinde suyun ve temizliğin toplumsal bir hizmet olarak sunulmasını sağlamıştır; imarethaneler ise yoksullara ve yolculara ücretsiz yemek dağıtan sosyal yardım kurumları olarak vakıf sisteminin sosyal boyutunu tamamlamıştır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Türklerin İslamiyet'i kabul etmesi 942'de Karahanlılarla başladı",
+          "💡 Medrese, vakıf ve tekke Türk-İslam medeniyetinin üç temel kurumudur",
+          "⚡ İbn Sina 'el-Kanun fi't-Tıb' adlı tıp ansiklopedisini yazdı",
+          "🔑 Mimar Sinan Süleymaniye ve Selimiye camilerini tasarladı",
+          "🎯 Farabi 'el-Medinetü'l-Fazıla' ile İslam felsefesinin kurucularından biri sayılır",
+          "🎯 Yunus Emre (13. yy) sade Türkçeyle tasavvufi halk şiirinin öncüsüdür",
+          "🔑 Hoca Ahmet Yesevi'nin Divan-ı Hikmet'i tasavvufun Türkçe yayılmasını sağladı",
+          "💡 Osmanlı mimarisinde erken dönem Bursa-İznik üslubundan Sinan'ın klasik üslubuna geçildi",
+          "⚡ İmarethaneler yoksul ve yolculara ücretsiz yemek dağıtan vakıf kurumlarıdır"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Türklerin İslamiyet'i toplu olarak kabulünün sembolü sayılan hükümdar aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Mete Han",
+            "Bumin Kağan",
+            "Satuk Buğra Han",
+            "Alp Arslan",
+            "Tuğrul Bey"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Karahanlı hükümdarı Satuk Buğra Han, 942 yılında İslamiyet'i kabul eden ilk Türk hükümdarı olarak bilinir; bu olay Türk tarihinde İslam öncesi ve sonrası dönemleri ayıran önemli bir milattır.",
+          "distractorAciklama": "Alp Arslan ve Tuğrul Bey Selçuklu hükümdarlarıdır; Satuk Buğra Han ise Karahanlı hanedanına mensuptur ve İslam'ı kabul eden ilk Türk hükümdarıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk-İslam medeniyetinde 'vakıf' kurumunun temel işlevi nedir?",
+          "secenekler": [
+            "Askeri güç oluşturmak",
+            "Devlet vergilerini toplamak",
+            "Cami, hastane, okul gibi sosyal hizmetleri finanse etmek",
+            "Ticaret yollarını kontrol etmek",
+            "Hükümdarın yetkisini sınırlamak"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Vakıflar, mülk veya para bağışlarıyla oluşturulan ve camiden hastaneye, kervansaraydan medreseye geniş bir sosyal hizmet ağını finanse eden kurumlardır. Osmanlı'da da toplumsal dayanışmanın omurgasını oluşturmuştur.",
+          "distractorAciklama": "Vakıf dini/sivil bir kurumdur; vergi toplama ya da askeri işlevleri yoktur. Sosyal yardım ve hizmet sunumu temel işlevidir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "'el-Kanun fi't-Tıb' adlı tıp ansiklopedisini yazan Türk-İslam bilim insanı kimdir?",
+          "secenekler": [
+            "Farabi",
+            "Biruni",
+            "İbn Sina",
+            "İbn Rüşd",
+            "Kaşgarlı Mahmut"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "İbn Sina (Avicenna, 980–1037), el-Kanun fi't-Tıb (Tıbbın Kanunu) adlı eseriyle Orta Çağ boyunca Avrupa ve İslam dünyasında temel tıp referansı oldu; 600 yılı aşkın süre Avrupa üniversitelerinde okutuldu.",
+          "distractorAciklama": "Farabi felsefe ile tanınır; Biruni coğrafya ve astronomiyle öne çıkar. Tıptaki en büyük isim İbn Sina'dır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Farabi'nin 'el-Medinetü'l-Fazıla' adlı eserinin konusu nedir?",
+          "secenekler": [
+            "Tıp ve anatomi",
+            "Astronomi ve matematik",
+            "İdeal devlet ve erdemli şehir",
+            "Türk dili ve grameri",
+            "Tarih ve coğrafya"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Farabi (872–950), 'el-Medinetü'l-Fazıla' (Erdemli Şehir Halkının Görüşleri) adlı eserinde Platon'un Cumhuriyet'inden ilham alarak ideal devlet ve toplum düzenini ele almıştır; İslam felsefesinin kurucusu sayılır.",
+          "distractorAciklama": "Tıp İbn Sina'ya, astronomi Biruni'ye, Türk dili Kaşgarlı Mahmut'a aittir. Farabi felsefe ve siyaset düşüncesiyle öne çıkar.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Biruni'nin (973–1048) özellikle hangi alanlardaki çalışmalarıyla tanındığı doğrudur?",
+          "secenekler": [
+            "Tıp ve eczacılık",
+            "Coğrafya, astronomi ve Hint kültürü araştırmaları",
+            "Dil ve edebiyat",
+            "Fıkıh ve İslam hukuku",
+            "Mimari ve şehircilik"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Biruni, Hint kültürünü inceleyen 'Kitab'ül-Hind', coğrafya ve jeodezi alanındaki çalışmaları ile Dünya'nın çevresini hesaplayan astronomik gözlemleriyle tanınır.",
+          "distractorAciklama": "Biruni çok yönlü bir bilim insanıdır; ancak özellikle coğrafya ve Hint araştırmalarıyla öne çıkar. Tıpta ise İbn Sina çok daha baskın bir isimdir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk-İslam mimarisinde 'kümbet' nedir?",
+          "secenekler": [
+            "Camilerde ezan okunan yüksek yapı",
+            "Selçuklu döneminde yaygınlaşan silindirik/konik gövdeli anıt mezar yapısı",
+            "Vakıf tarafından işletilen han",
+            "Medresede ders yapılan büyük salon",
+            "Saray avlusundaki çeşme"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kümbet, Türk-İslam mimarisinde özellikle Selçuklu döneminde Anadolu'da yaygınlaşan, silindirik ya da çokgen gövde üzerine konik veya piramidal çatıyla örtülü anıt mezar (türbe) yapısıdır.",
+          "distractorAciklama": "Minare ezanın okunduğu yüksek yapıdır. Kümbet ise mezar anıtıdır; ikisi birbiriyle karıştırılmamalıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Mimar Sinan'ın başyapıtı olarak kabul ettiği cami aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Süleymaniye Camii",
+            "Selimiye Camii",
+            "Sultanahmet Camii",
+            "Fatih Camii",
+            "Beyazıt Camii"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Sinan, Edirne'deki Selimiye Camii'ni (1575) kendi başyapıtı olarak göstermiştir. Süleymaniye (İstanbul, 1557) ise daha tanınmış olmakla birlikte Sinan'ın onu Selimiye'nin gerisinde tuttuğu bilinir.",
+          "distractorAciklama": "Sultanahmet Camii (Mavi Cami) Sinan'ın değil, Sedefkar Mehmet Ağa'nın eseridir. Sinan'ın şaheseri Selimiye'dir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk-İslam medeniyetinde 'tekke' ne tür bir kurumdur?",
+          "secenekler": [
+            "Askeri eğitim merkezi",
+            "Tarikat mensuplarının toplandığı tasavvuf merkezi",
+            "Devlet hazinesi",
+            "Tıp okulu",
+            "Ticaret merkezi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Tekke, tasavvuf tarikatlarının ibadet, eğitim ve sosyalleşme amacıyla kullandığı yapılardır. Osmanlı'da tekkeler 1925'te Atatürk'ün laikleşme reformları kapsamında kapatılmıştır.",
+          "distractorAciklama": "Medrese ilim kurumudur; tekke ise tasavvuf/manevi eğitim merkezidir. İkisi farklı işlev ve ortamlara sahiptir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki eserlerden hangisi İbn Sina'ya aittir?",
+          "secenekler": [
+            "Kitab'ül-Hind",
+            "el-Kanun fi't-Tıb",
+            "el-Medinetü'l-Fazıla",
+            "Divanu Lügati't-Türk",
+            "Siyasetname"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "el-Kanun fi't-Tıb (Tıbbın Kanunu) İbn Sina'nın tıp ansiklopedisidir. Kitab'ül-Hind Biruni'ye, el-Medinetü'l-Fazıla Farabi'ye, Divanu Lügati't-Türk Kaşgarlı Mahmut'a, Siyasetname ise Nizamülmülk'e aittir.",
+          "distractorAciklama": "Bu soru, sıkça karıştırılan eser-yazar eşleştirmelerini test eder. el-Kanun fi't-Tıb'ı İbn Sina yazmıştır; Biruni ile karıştırmayın.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk-İslam medeniyetinde minyatür sanatı ile ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": [
+            "Minyatür taş üzerine kazınan bir sanat dalıdır",
+            "Minyatür kitaplarda yer alan küçük boyutlu resimlerdir ve özellikle Uygur ve Osmanlı dönemlerinde gelişmiştir",
+            "Minyatür yalnızca cami duvarlarına yapılan büyük tablolardır",
+            "Minyatür Türklere özgü bir yazı sanatıdır",
+            "Minyatür Anadolu'ya Rönesans etkisiyle girmiştir"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Minyatür, kitap sayfalarında yer alan küçük boyutlu renkli resimlerdir. Uygurlar minyatür sanatının erken örneklerini vermiş; Osmanlı döneminde saray nakkaşhanelerinde en yüksek seviyesine ulaşmıştır.",
+          "distractorAciklama": "Minyatür hat (yazı) sanatı değil, resim sanatıdır. Hat kaligrafiyi; minyatür ise küçük boyutlu ilustrasyonu ifade eder.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Türk-İslam medeniyetinin kurumları arasında YER ALMAZ?",
+          "secenekler": [
+            "Medrese",
+            "Vakıf",
+            "Tekke",
+            "Kervansaray",
+            "Senato"
+          ],
+          "dogruIndex": 4,
+          "aciklama": "Senato, antik Roma ve modern demokrasilere ait bir yasama kurumudur; Türk-İslam medeniyetinin kurumları arasında yer almaz. Medrese, vakıf, tekke ve kervansaray ise bu medeniyetin temel kurumlarıdır.",
+          "distractorAciklama": "Kervansaray ticaret yollarında konaklama ve güvenlik sağlayan bir Türk-İslam kurumudur; senatoya benzer siyasi bir yapı bu medeniyette bulunmaz.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk-İslam döneminde kaleme alınan 'Siyasetname' hangi konuyu ele alır?",
+          "secenekler": [
+            "Türk dilinin grameri",
+            "Tıp ve ilaç bilimleri",
+            "Devlet yönetimi ve hükümdar ahlakı",
+            "Astronomi ve matematik",
+            "Tasavvuf ve mistisizm"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Nizamülmülk tarafından yazılan Siyasetname, devlet yönetiminin ilkelerini, hükümdarın görev ve sorumluluklarını ele alan Türk-İslam siyaset düşüncesinin önemli bir eseridir.",
+          "distractorAciklama": "Kutadgu Bilig de yönetim üzerinedir; ancak Siyasetname Nizamülmülk'e, Kutadgu Bilig ise Yusuf Has Hacip'e aittir. İkisini karıştırmamak gerekir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "İslam öncesi Türk kültüründe 'orun' kavramı ne anlama gelir?",
+          "secenekler": [
+            "A) Büyük meclis",
+            "B) Kurultayda oturma yeri ve protokol sırası",
+            "C) Savaş ganimetleri",
+            "D) Dini tören",
+            "E) Vergi sistemi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Orun, Türk devlet töresinde kurultay ve devlet törenlerinde kişilerin oturma yeri ve protokol sırasını belirleyen düzendir."
+        },
+        {
+          "soru": "Türk-İslam mimarisinde 'mukarnas' ne anlama gelir?",
+          "secenekler": [
+            "A) Cami minaresi",
+            "B) Tavanları ve geçiş bölgelerini süsleyen balıkçıkavağı benzeri üç boyutlu stalaktit bezeme",
+            "C) Avluda su havuzu",
+            "D) Duvar çinisi",
+            "E) Kapı tokmağı"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Mukarnas, Türk-İslam mimarisinde kubbe geçişlerinde ve taç kapılarda kullanılan, üç boyutlu geometrik stalaktit biçimli bezeme öğesidir."
+        },
+        {
+          "soru": "Hat sanatı (kaligrafi) Türk-İslam medeniyetinde neden bu kadar önem taşımaktadır?",
+          "secenekler": [
+            "A) Matbaanın yokluğunu telafi ettiği için",
+            "B) Resim yasağı nedeniyle güzel yazının en yüksek görsel sanat biçimi haline gelmesi",
+            "C) Sadece hükümdarlar için uygulandığı için",
+            "D) Avrupa etkisiyle geliştiği için",
+            "E) Ticaret belgelerinde kullanılması nedeniyle"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "İslam sanatında figüratif resim geleneğinin kısıtlı olması, hat sanatını en yüksek görsel sanat formu haline getirmiş; Kuran ayetleri ve şiirler estetik bir yazı anlayışıyla işlenmiştir."
+        }
+      ]
+    },
+    {
+      "id": "tarih-cumhuriyet-donemi",
+      "baslik": "Türkiye Cumhuriyeti Tarihi (1923-Günümüz)",
+      "anlatim": {
+        "ozet": "🇹🇷 Tek partiden çok partiye, askeri müdahalelerden AB sürecine: Cumhuriyet'in siyasi serüveni.",
+        "icerik": [
+          "📌 Türkiye 1946'da çok partili sisteme geçti; 1950'de Demokrat Parti (DP) Celal Bayar-Adnan Menderes liderliğinde iktidara geldi. DP dönemi (1950–1960) ekonomik büyüme, dış politikada Batı yönelimi (NATO üyeliği 1952) ve siyasi gerginliklerle şekillendi. 27 Mayıs 1960'ta gerçekleşen askeri müdahale ile DP iktidarı sona erdi; Menderes idam edildi.",
+          "📎 Türkiye sonraki on yıllarda 12 Mart 1971 muhtırası ve 12 Eylül 1980 askeri darbesiyle sarsıldı. 28 Şubat 1997 postmodern darbesi ise Refah Partisi'nin koalisyon hükümetini düşürdü. Her müdahale yeni anayasa veya anayasa değişikliklerini beraberinde getirdi.",
+          "📌 Türkiye'nin Avrupa Birliği süreci 1963 Ankara Anlaşması'na dayanır; 1987'de tam üyelik başvurusu yapıldı ve 1999'da aday ülke statüsü tescil edildi. 2005'te katılım müzakereleri başladı; ancak süreç çeşitli siyasi nedenlerle yavaşladı.",
+          "📌 İkinci Dünya Savaşı boyunca (1939-1945) Cumhurbaşkanı İsmet İnönü yönetimindeki Türkiye, savaşın sonlarına kadar tarafsızlığını korumuş; ancak bu dönemde uygulanan Milli Korunma Kanunu ve özellikle gayrimüslim vatandaşları ağır biçimde etkileyen Varlık Vergisi (1942), ülke içinde ekonomik ve toplumsal sıkıntılara yol açmıştır. Türkiye, Şubat 1945'te sembolik olarak Almanya ve Japonya'ya savaş ilan ederek Birleşmiş Milletler'in kurucu üyeleri arasına girmiştir.",
+          "📎 Türkiye, 1950'de Kore Savaşı'na Birleşmiş Milletler kararı doğrultusunda asker göndermiş; bu katkı 1952'de NATO'ya kabul edilmesinde önemli bir etken olmuştur. 1974'te ise Kıbrıs'ta Rum yönetiminin Yunanistan'la birleşme (Enosis) girişimine karşı gerçekleştirilen Kıbrıs Barış Harekâtı, adanın kuzeyinde Türk varlığının güvence altına alınmasını sağlamıştır.",
+          "📌 15 Temmuz 2016'da FETÖ/PDY (Fethullahçı Terör Örgütü) mensubu bir grup asker tarafından girişilen darbe teşebbüsü, halkın ve güvenlik güçlerinin ortak direnişiyle bastırılmış; bu olay Türkiye siyasi tarihinde halkın bir darbe girişimine karşı fiilen sokağa inerek direndiği ilk örnek olarak kabul edilir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Türkiye 1946'da çok partili sisteme geçti; DP 1950'de ilk seçimi kazandı",
+          "💡 27 Mayıs 1960 darbesi sonrası Menderes ve iki bakan idam edildi",
+          "⚡ 12 Eylül 1980 darbesi 1982 Anayasası'nı doğurdu",
+          "🔑 28 Şubat 1997 süreci 'postmodern darbe' olarak nitelendirilir",
+          "🎯 Türkiye 1999'da AB aday ülkesi, 2005'te müzakere süreci başladı",
+          "🎯 Varlık Vergisi (1942) II. Dünya Savaşı döneminin tartışmalı ekonomik uygulamasıdır",
+          "🔑 Türkiye 1945'te BM kurucu üyesi oldu, 1950'de Kore Savaşı'na asker gönderdi",
+          "💡 Kıbrıs Barış Harekâtı 1974'te gerçekleştirildi",
+          "⚡ 15 Temmuz 2016 darbe girişimi halkın direnişiyle bastırıldı"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Türkiye'de çok partili siyasi hayata geçişin başlangıcı hangi yıl kabul edilir?",
+          "secenekler": [
+            "1923",
+            "1930",
+            "1946",
+            "1950",
+            "1960"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "1946'da Demokrat Parti'nin kurulmasıyla Türkiye'de gerçek anlamda çok partili sisteme geçiş başlamıştır; 1950 seçimleriyle DP iktidarı devraldı.",
+          "distractorAciklama": "1930'daki Serbest Cumhuriyet Fırkası girişimi kısa sürede sona erdi. Gerçek anlamda kalıcı çok partili hayat 1946 ile başlar.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "1950 genel seçimlerini kazanarak iktidara gelen parti ve lider ikilisi aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "CHP – İsmet İnönü",
+            "Demokrat Parti – Adnan Menderes",
+            "Milli Selamet Partisi – Necmettin Erbakan",
+            "ANAP – Turgut Özal",
+            "AP – Süleyman Demirel"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Demokrat Parti, Celal Bayar cumhurbaşkanlığı ve Adnan Menderes başbakanlığıyla 1950 seçimlerini kazandı; 27 yıllık tek parti CHP iktidarı sona erdi.",
+          "distractorAciklama": "ANAP (Özal) ve AP (Demirel) sonraki dönemlere aittir. 1950'de iktidara gelen Menderes liderliğindeki Demokrat Parti'dir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "27 Mayıs 1960 askeri müdahalesinin en önemli hukuki sonucu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Cumhurbaşkanlığı seçiminin halk oylamasına bırakılması",
+            "1961 Anayasası'nın hazırlanması ve kabul edilmesi",
+            "Türkiye'nin NATO'ya katılması",
+            "Çok partili sisteme geçilmesi",
+            "Kapitülasyonların kaldırılması"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "27 Mayıs müdahalesi sonrasında kurulan Milli Birlik Komitesi, 1961 Anayasası'nı hazırlattı; bu anayasa Türkiye'nin en liberal anayasası olarak nitelendirilir ve Anayasa Mahkemesi ile Senato ilk kez bu anayasayla kuruldu.",
+          "distractorAciklama": "NATO üyeliği 1952'de gerçekleşti. 1961 Anayasası ise 27 Mayıs'ın doğrudan hukuki ürünüdür.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "12 Eylül 1980 askeri darbesinin ardından hazırlanan anayasa hangi yılda halkoylamasına sunulmuştur?",
+          "secenekler": [
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "12 Eylül 1980 darbesi sonrasında hazırlanan 1982 Anayasası, Kasım 1982'de halkoylamasına sunulmuş ve yaklaşık %91,4 oranında kabul edilmiştir.",
+          "distractorAciklama": "Darbe 1980'de gerçekleşti; anayasa ise 1982'de yürürlüğe girdi. 1983'te ise sivil yönetime geçildi.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "'28 Şubat süreci' (1997) hangi hükümetin sonunu getirmiştir?",
+          "secenekler": [
+            "ANAP-SHP koalisyonu",
+            "DSP azınlık hükümeti",
+            "RP-DYP koalisyonu (Necmettin Erbakan başbakanlığında)",
+            "CHP-AP koalisyonu",
+            "MHP-ANAP koalisyonu"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "28 Şubat 1997 MGK toplantısında askeri yönlendirmelerle alınan kararlar, Refah Partisi (RP) ve Doğru Yol Partisi (DYP) koalisyon hükümeti üzerinde baskı oluşturdu; Erbakan istifa etmek zorunda kaldı.",
+          "distractorAciklama": "28 Şubat'ı 'postmodern darbe' olarak nitelendiren kesimler, tankların sokaklara çıkılmadan siyasi baskıyla hükümetin devrildiğini vurgular.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'nin Avrupa Birliği'ne resmi tam üyelik başvurusu hangi yılda yapılmıştır?",
+          "secenekler": [
+            "1963",
+            "1973",
+            "1987",
+            "1993",
+            "1999"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye 14 Nisan 1987'de Avrupa Topluluğu'na (bugünkü AB) tam üyelik başvurusunda bulunmuştur. 1963 Ankara Anlaşması ise ortaklık ilişkisinin başlangıcıdır.",
+          "distractorAciklama": "1963 Ankara Anlaşması ortaklık; 1999 Helsinki Zirvesi adaylık; 1987 ise tam üyelik başvurusudur. Bu tarihler sık karıştırılır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye, AB aday ülkesi statüsünü hangi zirvede tescil ettirmiştir?",
+          "secenekler": [
+            "Kopenhag 1993",
+            "Amsterdam 1997",
+            "Helsinki 1999",
+            "Lizbon 2007",
+            "Brüksel 2004"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "1999 Helsinki Zirvesi'nde Türkiye resmen AB aday ülkesi ilan edilmiş; katılım müzakereleri ise 2005'te başlamıştır.",
+          "distractorAciklama": "Kopenhag kriterleri 1993'te belirlendi; ancak Türkiye'nin aday statüsü Helsinki 1999'da kabul edildi.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Adnan Menderes, 27 Mayıs 1960 darbesinin ardından hangi suçlamalarla yargılanmıştır?",
+          "secenekler": [
+            "Devlet sırlarını ifşa etmek",
+            "Anayasayı ihlal etmek ve Türklük aleyhine propaganda yapmak",
+            "Anayasayı ihlal ederek iktidarını kötüye kullanmak",
+            "Casusluk yapmak",
+            "Terör örgütü kurmak"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Menderes ve DP yöneticileri, Yassıada'da kurulan mahkemede anayasayı çiğnemek ve iktidarlarını kötüye kullanmak suçlamalarıyla yargılandı; Menderes 17 Eylül 1961'de idam edildi.",
+          "distractorAciklama": "Menderes casusluk ya da Türklük aleyhine propagandayla suçlanmadı. Temel suçlama anayasal düzeni çiğnemekti.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "12 Mart 1971 askeri muhtırasının siyasi ortamı tetikleyen temel unsur aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Ekonomik kriz ve kıtlık",
+            "Siyasi şiddet, anarşi ortamı ve hükümetin çaresizliği",
+            "Komünist bir darbe girişimi",
+            "Kürt bağımsızlık hareketinin başlaması",
+            "Yunanistan ile savaş tehlikesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "1960'ların sonlarında artan sol-sağ çatışması, öğrenci olayları ve hükümetin bu kargaşayı önleyemediği gerekçesiyle ordu, 12 Mart 1971'de hükümete muhtıra vererek istifasını istedi.",
+          "distractorAciklama": "12 Mart bir darbe değil, muhtıra yoluyla hükümeti istifaya zorlama biçiminde gerçekleşti. Siyasi şiddet ve anarşi ortamı en belirgin tetikleyiciydi.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdaki siyasi gelişmelerin kronolojik sıralaması hangi seçenekte doğru verilmiştir?",
+          "secenekler": [
+            "12 Eylül 1980 → 27 Mayıs 1960 → 12 Mart 1971",
+            "27 Mayıs 1960 → 12 Mart 1971 → 12 Eylül 1980",
+            "12 Mart 1971 → 27 Mayıs 1960 → 12 Eylül 1980",
+            "12 Eylül 1980 → 12 Mart 1971 → 27 Mayıs 1960",
+            "27 Mayıs 1960 → 12 Eylül 1980 → 12 Mart 1971"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Doğru kronoloji: 27 Mayıs 1960 (askeri darbe), 12 Mart 1971 (muhtıra), 12 Eylül 1980 (askeri darbe). Bu üç tarih Türk siyasi tarihinin en önemli askeri müdahale dönemlerini işaret eder.",
+          "distractorAciklama": "Diğer seçenekler tarihleri gerçek kronolojiden farklı sıralar: 12 Eylül 1980 (en geç tarih) bazı seçeneklerde en başa alınmış, bazılarında ise 12 Mart 1971 ile 27 Mayıs 1960'ın sırası ters çevrilmiştir. Gerçek sıra değişmez: önce DP hükümetini deviren 27 Mayıs 1960 darbesi, ardından Demirel hükümetini istifaya zorlayan 12 Mart 1971 muhtırası, en son ise Kenan Evren önderliğindeki 12 Eylül 1980 darbesi yaşanmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye ile AB arasındaki 1963 Ankara Anlaşması'nın niteliği aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Tam üyelik antlaşması",
+            "Gümrük birliği antlaşması",
+            "Ortaklık (asosiyasyon) anlaşması",
+            "Savunma işbirliği antlaşması",
+            "Serbest ticaret bölgesi kurma antlaşması"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "1963 Ankara Anlaşması (Türkiye-AET Ortaklık Anlaşması), Türkiye ile Avrupa Ekonomik Topluluğu arasında ortaklık (asosiyasyon) ilişkisi kuran belgedir; tam üyeliği değil uzun vadeli yakınlaşmayı öngörüyordu.",
+          "distractorAciklama": "Gümrük Birliği 1995'te yürürlüğe girmiştir; 1963 Ankara Anlaşması ise temel ortaklık çerçevesini belirleyen daha kapsamlı bir anlaşmadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Aşağıdakilerden hangisi Türkiye Cumhuriyeti'nin 1982 Anayasası ile getirilen yeniliklerden biridir?",
+          "secenekler": [
+            "Senato'nun kurulması",
+            "Anayasa Mahkemesi'nin ilk kez oluşturulması",
+            "Tek meclis sistemine (TBMM) dönülmesi ve Cumhurbaşkanı'nın yetkilerinin artırılması",
+            "Çok partili sisteme ilk kez geçilmesi",
+            "Laiklik ilkesinin ilk kez anayasaya girmesi"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "1982 Anayasası, 1961 Anayasası'ndaki iki meclisli (TBMM + Senato) yapıyı kaldırarak tek meclis sistemine döndü; aynı zamanda Cumhurbaşkanı'nın yetkilerini önceki anayasaya göre önemli ölçüde genişletti.",
+          "distractorAciklama": "Anayasa Mahkemesi ve Senato 1961 Anayasası'nın ürünüdür. 1982 Anayasası Senato'yu kaldırdı ve Cumhurbaşkanı yetkilerini artırdı.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de ilk çok partili seçimin yapıldığı yıl aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) 1946",
+            "B) 1950",
+            "C) 1954",
+            "D) 1957",
+            "E) 1961"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Türkiye'de ilk çok partili genel seçim 21 Temmuz 1946'da yapılmıştır; CHP yüksek oy oranıyla iktidarını sürdürmüştür."
+        },
+        {
+          "soru": "Demokrat Parti'nin 1950 seçimlerindeki zaferinin temel nedenlerinden biri aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Askeri desteğini alması",
+            "B) CHP'nin uzun tek parti iktidarına yönelik halk tepkisi ve köylü oyları",
+            "C) Amerikan finansmanı sağlaması",
+            "D) İslamiyet'i resmileştirme vaadi",
+            "E) Ordunun seçim sürecine müdahalesi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "CHP'nin 27 yıllık tek parti iktidarının yarattığı otoriter algı ve Demokrat Parti'nin liberal ekonomi ile köylüye yakın tutumu, 1950'de büyük seçim zaferi kazanmasında belirleyici olmuştur."
+        },
+        {
+          "soru": "Türkiye'nin NATO'ya katıldığı yıl aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) 1945",
+            "B) 1949",
+            "C) 1950",
+            "D) 1952",
+            "E) 1955"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Türkiye, 18 Şubat 1952'de NATO'ya katılmış; bu karar Menderes hükümeti döneminde Kore Savaşı'na asker göndermesinin yarattığı itibar artışıyla kolaylaşmıştır."
+        }
+      ]
+    },
+    {
+      "id": "tarih-anadolu-selcuklu",
+      "baslik": "Anadolu Selçuklu Devleti",
+      "anlatim": {
+        "ozet": "🗡️ Malazgirt'ten Kösedağ'a: Anadolu'nun Türkleşmesi, Selçuklu sultanları ve Beylikler Dönemi'ne geçiş.",
+        "icerik": [
+          "📌 Malazgirt Savaşı (1071), Büyük Selçuklu Sultanı Alparslan ile Bizans İmparatoru Romen Diyojen arasında yapılmış, Selçuklu zaferiyle sonuçlanmıştır. Bu zafer sonrasında Türkmen beyleri kitleler halinde Anadolu'ya yerleşmeye başlamış, bu nedenle savaş Anadolu'nun kapılarını Türklere açan savaş olarak tarihe geçmiştir.",
+          "📎 Malazgirt sonrası Anadolu'da Saltuklular (Erzurum), Danişmendliler (Sivas-Tokat-Amasya), Artuklular (Diyarbakır), Mengücekler (Erzincan-Divriği) ve Çaka Beyliği (İzmir) gibi ilk Anadolu Türk beylikleri kurulmuştur. 1075'te Kutalmışoğlu Süleyman Şah, İznik'i başkent yaparak Anadolu Selçuklu Devleti'ni (Türkiye Selçuklu Devleti / Rum Sultanlığı) kurmuştur.",
+          "📌 I. Haçlı Seferi (1096-1099) sonucunda İznik kaybedilmiş, başkent Konya'ya taşınmıştır. II. Kılıç Arslan döneminde Miryokefalon Savaşı'nda (1176) Bizans'a karşı kesin bir zafer kazanılmış, bu savaş Anadolu'nun artık kalıcı bir Türk yurdu olduğunu kanıtlamıştır.",
+          "📎 I. Alaeddin Keykubad (1220-1237) döneminde devlet en parlak dönemini yaşamıştır: Alanya (Alaiye) fethedilmiş ve tersane kurulmuş, Kubadabad Sarayı gibi eserler yaptırılmış, kervansaraylar ve medreselerle transit ticaret güvence altına alınmıştır. Ondan önce I. Gıyaseddin Keyhüsrev Antalya'yı (1207), I. İzzeddin Keykavus ise Sinop'u (1214) fethederek devleti hem Akdeniz hem Karadeniz'e açmıştır.",
+          "📌 I. Alaeddin Keykubad, 1230'da Yassıçemen Savaşı'nda Celaleddin Harzemşah'ı yenmiş; ancak bu zafer, Moğollarla Selçuklular arasındaki tampon bölgeyi ortadan kaldırarak ileride Moğol istilasını kolaylaştırmıştır. 1240'ta Baba İshak önderliğinde çıkan Babailer İsyanı, devletin iç otoritesindeki zayıflığı gözler önüne sermiştir.",
+          "📎 I. Alaeddin Keykubad'ın ölümünden sonra tahta geçen II. Gıyaseddin Keyhüsrev döneminde, 1243'te Kösedağ Savaşı'nda Moğol komutanı Baycu Noyan karşısında ağır bir yenilgi alınmış, devlet İlhanlı Moğol egemenliğine girmiştir. Bu tarihten sonra taht kavgaları ve otorite zayıflığı artmıştır.",
+          "📌 Moğol baskısı ve iç karışıklıklar sonucunda Anadolu Selçuklu Devleti güç kaybetmiş, son sultan II. Mesud'un 1308'de ölümüyle devlet fiilen sona ermiştir. Yerini Karamanoğulları, Germiyanoğulları ve Osmanoğulları gibi Anadolu Türk beyliklerinin oluşturduğu Beylikler Dönemi almıştır; bu beyliklerden Osmanoğulları zamanla büyük bir imparatorluğa dönüşmüştür.",
+          "📎 Selçuklu kültür ve medeniyeti: Ahi Evran'ın kurduğu Ahilik teşkilatı esnaf ve zanaatkarları meslek ahlakı çerçevesinde örgütlemiş, Mevlana Celaleddin Rumi Konya'da Mesnevi'yi kaleme almıştır. Karatay Medresesi, İnce Minareli Medrese, Çifte Minareli Medrese ve Sultanhanı gibi kervansaraylar döneme ait önemli mimari eserlerdir.",
+          "📌 Anadolu Selçuklu Devleti'nde ticaretin güvenliğini artırmak amacıyla devlet, kervanları soygun ve doğal afetlere karşı tazmin eden bir uygulama geliştirmişti; bu, dünya tarihinde devlet garantili ticaret sigortasının öncü örneklerinden sayılır. Alanya'da kurulan tersane ile de Akdeniz'de ticaret ve deniz gücü desteklenmiştir.",
+          "📎 Danişmendliler, uzun süre Anadolu Selçuklu Devleti ile rekabet eden güçlü bir Türkmen beyliği olmuş; II. Kılıç Arslan'ın 1178'de Danişmendli topraklarını ilhak etmesiyle bu rekabet sona ermiş ve Selçuklu, Orta Anadolu'da tartışmasız üstünlük kazanmıştır.",
+          "📌 Kösedağ yenilgisinin ardından Anadolu Selçuklu toprakları fiilen İlhanlı Moğol Devleti'nin bir vilayeti haline gelmiş; Moğol vali ve komutanları (Baycu Noyan ve sonrasında Emir Timurtaş gibi) Selçuklu sultanlarını gölgede bırakan asıl güç sahipleri olmuştur. Bu durum, Anadolu beyliklerinin zamanla fiilen bağımsız hareket etmesine zemin hazırlamıştır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Malazgirt Savaşı 1071, Sultan Alparslan - Anadolu'nun kapıları Türklere açıldı",
+          "💡 Anadolu Selçuklu Devleti 1075'te Kutalmışoğlu Süleyman Şah tarafından kuruldu, ilk başkent İznik",
+          "⚡ I. Haçlı Seferi sonrası başkent Konya'ya taşındı",
+          "🔑 Miryokefalon Savaşı 1176, II. Kılıç Arslan - Bizans'a karşı kesin zafer",
+          "💡 I. Alaeddin Keykubad dönemi (1220-1237) devletin en parlak dönemidir, Alanya fethedildi",
+          "⚡ Kösedağ Savaşı 1243'te Moğollara karşı ağır yenilgiyle sonuçlandı, devlet İlhanlı egemenliğine girdi",
+          "🔑 Devlet 1308'de II. Mesud'un ölümüyle fiilen sona erdi, Beylikler Dönemi başladı",
+          "💡 Ahilik teşkilatı (Ahi Evran) ve Mevlana Celaleddin Rumi dönemin kültürel simgeleridir",
+          "⚡ Antalya (1207) ve Sinop (1214) fethedilerek devlet iki denize açıldı",
+          "🎯 Selçuklu devleti kervanları soygun ve afetlere karşı tazmin eden öncü bir sigorta uygulaması geliştirdi",
+          "🔑 II. Kılıç Arslan 1178'de Danişmendli topraklarını ilhak etti",
+          "💡 Kösedağ sonrası Anadolu fiilen İlhanlı Moğol valiliğine dönüştü"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Malazgirt Savaşı hangi yıl gerçekleşmiştir?",
+          "secenekler": [
+            "1054",
+            "1064",
+            "1071",
+            "1076",
+            "1081"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Malazgirt Savaşı 26 Ağustos 1071'de Büyük Selçuklu Sultanı Alparslan ile Bizans İmparatoru Romen Diyojen arasında yapılmış ve Selçuklu zaferiyle sonuçlanmıştır."
+        },
+        {
+          "soru": "Malazgirt Savaşı'nda Büyük Selçuklu ordusunu kim yönetmiştir?",
+          "secenekler": [
+            "Tuğrul Bey",
+            "Çağrı Bey",
+            "Alparslan",
+            "Melikşah",
+            "Süleyman Şah"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Malazgirt Savaşı'nı Büyük Selçuklu Sultanı Alparslan yönetmiş ve Bizans ordusunu bozguna uğratmıştır."
+        },
+        {
+          "soru": "Malazgirt Savaşı'nda yenilen Bizans İmparatoru aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "I. Aleksios Komnenos",
+            "Romen Diyojen",
+            "VIII. Mihail Palaiologos",
+            "I. Manuel Komnenos",
+            "I. Andronikos"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Malazgirt Savaşı'nda Bizans ordusunun başında İmparator Romen (Romanos) Diyojen bulunuyordu; savaşı kaybedip esir düşmüştür."
+        },
+        {
+          "soru": "Malazgirt Savaşı'ndan sonra Anadolu'da kurulan ilk Türk siyasi oluşumları genel olarak ne olarak adlandırılır?",
+          "secenekler": [
+            "Atabeylikler",
+            "İlk Anadolu Türk Beylikleri",
+            "Nizamiye teşkilatı",
+            "Divan-ı Hümayun",
+            "Tımar sistemi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Malazgirt sonrası Anadolu'ya yayılan Türkmen beyleri Saltuklular, Danişmendliler, Artuklular gibi ilk Anadolu Türk beyliklerini kurmuştur."
+        },
+        {
+          "soru": "Malazgirt Savaşı öncesinde Anadolu'ya yapılan Türk akınlarının temel amacı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Bizans ile ticaret anlaşması yapmak",
+            "Keşif ve yerleşim imkanlarını araştırmak",
+            "Haçlı ordularını desteklemek",
+            "Abbasi halifesini korumak",
+            "Karahanlılarla ittifak kurmak"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Malazgirt öncesi düzenlenen akınlar, Türkmenlerin Anadolu'nun coğrafi ve askeri durumunu tanımasını sağlamış, sonraki yerleşim ve fetihlere zemin hazırlamıştır."
+        },
+        {
+          "soru": "Anadolu Selçuklu Devleti (Türkiye Selçuklu Devleti) hangi yıl kurulmuştur?",
+          "secenekler": [
+            "1071",
+            "1075",
+            "1092",
+            "1097",
+            "1099"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kutalmışoğlu Süleyman Şah, 1075'te İznik'i ele geçirerek Anadolu Selçuklu Devleti'nin (Türkiye Selçuklu Devleti) temellerini atmıştır."
+        },
+        {
+          "soru": "Anadolu Selçuklu Devleti'nin kurucusu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Tuğrul Bey",
+            "Alparslan",
+            "Kutalmışoğlu Süleyman Şah",
+            "II. Kılıç Arslan",
+            "I. Mesud"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Anadolu Selçuklu Devleti, Büyük Selçuklu hanedanından Kutalmışoğlu Süleyman Şah tarafından kurulmuştur."
+        },
+        {
+          "soru": "Anadolu Selçuklu Devleti'nin ilk başkenti aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Konya",
+            "Kayseri",
+            "İznik",
+            "Sivas",
+            "Kütahya"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Devletin ilk başkenti İznik'tir; I. Haçlı Seferi sonrasında İznik kaybedilince başkent Konya'ya taşınmıştır."
+        },
+        {
+          "soru": "Anadolu Selçuklu Devleti diğer adıyla da anılır. Bu isim aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Rum Sultanlığı",
+            "Anadolu Beylerbeyliği",
+            "Selçuklu Atabeyliği",
+            "Konya İmparatorluğu",
+            "Anadolu Hanlığı"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Bizans (Rum) topraklarında kurulduğu için Batı kaynaklarında devlet Rum Sultanlığı (Sultanate of Rum) olarak da anılmıştır."
+        },
+        {
+          "soru": "Süleyman Şah'ın kurduğu devlet, hangi büyük Türk devletine bağlı bir kol olarak ortaya çıkmıştır?",
+          "secenekler": [
+            "Gazneliler",
+            "Karahanlılar",
+            "Büyük Selçuklu Devleti",
+            "Harzemşahlar",
+            "Akkoyunlular"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Anadolu Selçuklu Devleti, Büyük Selçuklu hanedanının bir kolu olarak Anadolu'da kurulmuş, zamanla bağımsız hareket etmiştir."
+        },
+        {
+          "soru": "Anadolu Selçuklu Devleti'nin kuruluş döneminde en çok mücadele ettiği güç aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Memlükler",
+            "Bizans İmparatorluğu",
+            "Altın Orda",
+            "Safeviler",
+            "Venedik"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Kuruluş döneminde Anadolu Selçukluları, topraklarını genişletmek için başta Bizans olmak üzere yerel Hıristiyan güçlerle mücadele etmiştir."
+        },
+        {
+          "soru": "I. Haçlı Seferi hangi yıllar arasında gerçekleşmiştir?",
+          "secenekler": [
+            "1071-1075",
+            "1096-1099",
+            "1147-1149",
+            "1189-1192",
+            "1202-1204"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "I. Haçlı Seferi 1096-1099 yılları arasında gerçekleşmiş ve Anadolu Selçuklu Devleti'nin başkenti İznik'in kaybedilmesine yol açmıştır."
+        },
+        {
+          "soru": "I. Haçlı Seferi sonrasında Anadolu Selçuklu Devleti'nin başkenti neresi olmuştur?",
+          "secenekler": [
+            "İznik",
+            "Kayseri",
+            "Sivas",
+            "Konya",
+            "Erzurum"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "İznik'in Haçlılar tarafından ele geçirilmesinin ardından Anadolu Selçuklu Devleti başkentini Konya'ya taşımıştır."
+        },
+        {
+          "soru": "Haçlı Seferlerinin resmi gerekçesi olarak Batı kaynaklarında öne sürülen sebep aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Kudüs'ü Müslümanlardan almak",
+            "İpek Yolu'nu ele geçirmek",
+            "Bizans'ı yıkmak",
+            "Endülüs'ü fethetmek",
+            "Mısır'ı işgal etmek"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Haçlı Seferleri, resmi gerekçe olarak Kudüs ve kutsal toprakları Müslümanların elinden almak amacıyla düzenlenmiştir; bunun yanında siyasi ve ekonomik nedenler de etkili olmuştur."
+        }
+      ]
+    },
+    {
+      "id": "tarih-20yy-osmanli",
+      "baslik": "20. Yüzyılın Başında Osmanlı Devleti",
+      "anlatim": {
+        "ozet": "🕊️ II. Meşrutiyet'ten Mondros'a: Osmanlı'nın son on yılı - meşrutiyet, savaşlar ve çöküş.",
+        "icerik": [
+          "📌 II. Abdülhamit'in otuz yılı aşkın süren istibdat (baskı) yönetimine tepki olarak gelişen Jön Türk hareketi, Selanik ve Manastır merkezli örgütlenen İttihat ve Terakki Cemiyeti öncülüğünde 23 Temmuz 1908'de II. Meşrutiyet'in ilanını sağlamıştır; Kanun-i Esasi yeniden yürürlüğe konmuş, meclis açılmıştır.",
+          "📎 31 Mart Vakası (13 Nisan 1909), meşrutiyet karşıtı bir isyan olarak patlak vermiştir; Selanik'ten gelen Hareket Ordusu (Mahmut Şevket Paşa komutasında, kurmay heyetinde Mustafa Kemal) isyanı bastırmıştır. Bu olayın ardından II. Abdülhamit tahttan indirilmiş, yerine V. Mehmed Reşad geçmiştir.",
+          "📌 İtalya'nın 1911'de Trablusgarp'a saldırmasıyla Trablusgarp Savaşı başlamış; Mustafa Kemal ve Enver Bey gibi subaylar gönüllü olarak bölgeye giderek yerel direnişi örgütlemiştir. Ancak Balkan Savaşları'nın patlak vermesiyle Osmanlı, Uşi (Ouchy) Antlaşması (1912) ile Trablusgarp ve Bingazi'yi İtalya'ya bırakmıştır.",
+          "📎 Balkan devletlerinin (Bulgaristan, Sırbistan, Yunanistan, Karadağ) ittifak kurarak 1912'de saldırıya geçmesiyle I. Balkan Savaşı başlamış; Osmanlı ağır yenilgiler almış, Edirne dahil Balkan topraklarının büyük bölümü kaybedilmiştir (Londra Antlaşması, 1913). Kısa süre sonra galip devletler paylaşım yüzünden çatışınca, II. Balkan Savaşı'nda Osmanlı Bulgaristan'a karşı harekete geçerek Edirne'yi geri almıştır (İstanbul Antlaşması, 1913).",
+          "📌 Bab-ı Ali Baskını (23 Ocak 1913) ile Enver Bey liderliğindeki İttihatçılar Kamil Paşa hükümetini devirerek iktidarı ele geçirmiş, ardından İttihat ve Terakki'nin fiili tek parti yönetimi pekişmiştir.",
+          "📎 Osmanlı Devleti, Almanya ile gizli bir ittifak antlaşması imzalayarak (2 Ağustos 1914) I. Dünya Savaşı'na taraf olmuştur; Alman gemileri Yavuz ve Midilli'nin Karadeniz'de Rus limanlarını bombalaması (29 Ekim 1914) fiilen savaşa girişi başlatmıştır.",
+          "📌 Savaş boyunca Osmanlı birçok cephede savaşmıştır: Kafkas Cephesi'nde Sarıkamış Harekâtı (1914-1915) ağır bir yenilgiyle sonuçlanmış; Kanal Cephesi'nde Süveyş Kanalı'na yönelik saldırılar başarısız olmuş; Çanakkale Cephesi'nde (1915) İtilaf devletleri hem denizde hem karada püskürtülmüş (Osmanlı'nın tek büyük zaferi); Irak Cephesi'nde Kûtü'l-Amâre Zaferi (1916) kazanılmış; Filistin-Suriye Cephesi'nde ise Yıldırım Orduları Grubu'na rağmen 1917-1918'de geri çekilme yaşanmıştır.",
+          "📎 Savaşın sonlarına doğru Rusya'da 1917 Bolşevik İhtilali ile Kafkas Cephesi fiilen kapanmış; Brest-Litovsk Antlaşması (1918) ile Elviye-i Selâse (Kars, Ardahan, Batum) Osmanlı'ya geri verilmiştir. Ancak diğer cephelerdeki yenilgiler ve müttefiklerin art arda çekilmesi üzerine Osmanlı Devleti, 30 Ekim 1918'de Mondros Ateşkes Antlaşması'nı imzalayarak fiilen savaştan çekilmiş; antlaşmanın özellikle 7. ve 24. maddeleri, İtilaf devletlerinin işgalleri için hukuki zemin hazırlamıştır.",
+          "📌 18 Mart 1915'te İtilaf donanmasının Çanakkale Boğazı'nı geçme girişimi, Nusret Mayın Gemisi'nin bir gece önce döşediği mayınlar ile kıyı bataryalarının etkili atışları sayesinde püskürtülmüştür; bu tarih 'Çanakkale Deniz Zaferi' olarak anılır ve savaşın kara muharebelerine sıçramasına yol açmıştır.",
+          "📎 Enver Paşa'nın bizzat yönettiği Sarıkamış Harekâtı (Aralık 1914-Ocak 1915), ağır kış koşullarında Kafkasya üzerinden Rus kuvvetlerini kuşatma hedefiyle planlanmış; ancak soğuk, lojistik yetersizlik ve Rus karşı saldırıları nedeniyle Osmanlı ordusunun büyük bölümü donarak veya esir düşerek kaybedilmiştir.",
+          "📌 1915'te doğu vilayetlerinde savaş koşulları ve güvenlik gerekçesiyle çıkarılan Tehcir Kanunu ile Ermeni nüfusun bir bölümü Suriye ve çevresine zorunlu olarak göç ettirilmiş; bu süreç tarihe 'Ermeni Tehciri' olarak geçmiş olup günümüzde de tarihsel açıdan tartışılan bir konu olmaya devam etmektedir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 II. Meşrutiyet 23 Temmuz 1908'de ilan edildi",
+          "💡 31 Mart Vakası (13 Nisan 1909) Hareket Ordusu tarafından bastırıldı, II. Abdülhamit tahttan indirildi",
+          "⚡ Trablusgarp Savaşı sonucu Uşi Antlaşması (1912) ile Trablusgarp ve Bingazi kaybedildi",
+          "🔑 I. Balkan Savaşı sonucu Londra Antlaşması (1913), II. Balkan Savaşı sonucu İstanbul Antlaşması ile Edirne geri alındı",
+          "💡 Bab-ı Ali Baskını (23 Ocak 1913) ile İttihat ve Terakki iktidarı ele geçirdi",
+          "⚡ Osmanlı, Almanya ile ittifak yaparak 1914'te I. Dünya Savaşı'na girdi",
+          "🔑 Çanakkale Cephesi, Osmanlı'nın I. Dünya Savaşı'ndaki tek büyük zaferidir",
+          "💡 Kûtü'l-Amâre Zaferi (1916) Irak Cephesi'nde kazanıldı; Sarıkamış Harekâtı ağır yenilgiyle sonuçlandı",
+          "⚡ Mondros Ateşkes Antlaşması 30 Ekim 1918'de imzalandı, işgallere hukuki zemin hazırladı",
+          "🎯 18 Mart 1915 Çanakkale Deniz Zaferi'nde Nusret Mayın Gemisi kritik rol oynadı",
+          "🔑 Sarıkamış Harekâtı (1914-1915) Enver Paşa'nın kişisel komutasında ağır bir yenilgiyle sonuçlandı"
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "İttihat ve Terakki Cemiyeti'nin öncüsü olan ve 1889'da İstanbul'da Askeri Tıbbiye öğrencileri tarafından kurulan cemiyet aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "İttihad-ı Osmani Cemiyeti",
+            "Genç Osmanlılar Cemiyeti",
+            "Teşkilat-ı Mahsusa",
+            "Vatan ve Hürriyet Cemiyeti",
+            "Osmanlı Hürriyet Cemiyeti"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "İttihat ve Terakki Cemiyeti'nin kökeni, 1889'da İstanbul'da Askeri Tıbbiye öğrencileri tarafından kurulan İttihad-ı Osmani Cemiyeti'ne dayanır; cemiyet daha sonra Paris'te İttihat ve Terakki adını almıştır."
+        },
+        {
+          "soru": "Jön Türk hareketinin ortaya çıkışında etkili olan temel neden aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "II. Abdülhamit'in istibdat (baskıcı) yönetimine tepki",
+            "Balkan Savaşları'nın kaybedilmesi",
+            "Mondros Ateşkes Antlaşması",
+            "Trablusgarp Savaşı",
+            "Sevr Antlaşması"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Jön Türkler, II. Abdülhamit'in Kanun-i Esasi'yi askıya alarak sürdürdüğü baskıcı (istibdat) yönetimine tepki olarak meşrutiyetin yeniden ilanını savunmuşlardır."
+        },
+        {
+          "soru": "Selanik ve Manastır merkezli olarak örgütlenen ve II. Meşrutiyet'in ilanında etkili olan cemiyet aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "İttihat ve Terakki Cemiyeti",
+            "Hürriyet ve İtilaf Fırkası",
+            "Teali-i İslam Cemiyeti",
+            "Kürt Teali Cemiyeti",
+            "Trakya-Paşaeli Cemiyeti"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "İttihat ve Terakki Cemiyeti, özellikle Selanik ve Manastır'daki genç subaylar arasında örgütlenerek II. Meşrutiyet'in ilanında belirleyici rol oynamıştır."
+        },
+        {
+          "soru": "İttihat ve Terakki Cemiyeti'nin Paris'teki örgütlenmesinde öne çıkan isim aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Ahmed Rıza",
+            "Enver Bey",
+            "Talat Bey",
+            "Cemal Paşa",
+            "Mustafa Kemal"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Ahmed Rıza, Jön Türk hareketinin Paris'teki önde gelen isimlerinden biri olarak İttihat ve Terakki Cemiyeti'nin kurumsallaşmasında etkili olmuştur."
+        },
+        {
+          "soru": "II. Abdülhamit dönemi ile ilgili aşağıdakilerden hangisi doğrudur?",
+          "secenekler": [
+            "Kanun-i Esasi hiçbir zaman ilan edilmemiştir",
+            "1878'de meclis kapatılarak istibdat dönemi başlamıştır",
+            "Dönem boyunca meşrutiyet kesintisiz uygulanmıştır",
+            "II. Abdülhamit tahta II. Meşrutiyet sonrası çıkmıştır",
+            "Dönemde hiçbir dış savaş yaşanmamıştır"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "II. Abdülhamit, 1877-78 Osmanlı-Rus Savaşı sonrasında 1878'de meclisi kapatarak otuz yılı aşkın sürecek istibdat (baskı) dönemini başlatmıştır."
+        },
+        {
+          "soru": "II. Abdülhamit döneminde askeri okullarda ve aydınlar arasında yaygınlaşan, meşrutiyet ve özgürlük fikrini savunan harekete genel olarak ne ad verilir?",
+          "secenekler": [
+            "Jön Türk hareketi",
+            "Tanzimatçılar",
+            "Yeniçeriler",
+            "Ahiler",
+            "Bektaşiler"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Jön Türkler, II. Abdülhamit'in baskıcı yönetimine karşı meşrutiyet ve özgürlük taleplerini savunan aydın ve asker kökenli muhalefet hareketidir."
+        },
+        {
+          "soru": "II. Meşrutiyet hangi tarihte ilan edilmiştir?",
+          "secenekler": [
+            "23 Temmuz 1908",
+            "13 Nisan 1909",
+            "31 Mart 1909",
+            "24 Temmuz 1923",
+            "30 Ekim 1918"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "II. Meşrutiyet, 23 Temmuz 1908'de II. Abdülhamit'in Kanun-i Esasi'yi yeniden yürürlüğe koymasıyla ilan edilmiştir."
+        },
+        {
+          "soru": "II. Meşrutiyet'in ilanında öncülük eden ve Resne'de harekete geçen subaylardan biri aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Niyazi Bey",
+            "Mahmut Şevket Paşa",
+            "Damat Ferit Paşa",
+            "Talat Paşa",
+            "Refet Bele"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Resne'de Ahmed Niyazi Bey (Niyazi Bey), II. Meşrutiyet'in ilanı sürecinde dağa çıkarak harekete öncülük eden subaylardan biridir."
+        },
+        {
+          "soru": "II. Meşrutiyet'in ilanıyla birlikte yeniden yürürlüğe giren anayasa aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "1921 Teşkilat-ı Esasiye Kanunu",
+            "Kanun-i Esasi",
+            "Sened-i İttifak",
+            "Islahat Fermanı",
+            "Tanzimat Fermanı"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "II. Meşrutiyet'in ilanıyla, 1876'da yürürlüğe girip 1878'de askıya alınan Kanun-i Esasi yeniden yürürlüğe konmuştur."
+        },
+        {
+          "soru": "II. Meşrutiyet'in ilanı sonrasında Osmanlı Devleti'nde yönetim biçimi olarak hangi sistem benimsenmiştir?",
+          "secenekler": [
+            "Mutlak monarşi",
+            "Meşruti (anayasal) monarşi",
+            "Cumhuriyet",
+            "İki başlılık",
+            "Federasyon"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "II. Meşrutiyet'in ilanıyla Osmanlı Devleti'nde padişahın yetkilerinin anayasa ve meclis ile sınırlandığı meşruti monarşi yeniden yürürlüğe girmiştir."
+        },
+        {
+          "soru": "II. Meşrutiyet'in ilanı sürecinde etkili olan ve Manastır çevresinde görev yapan subaylardan biri aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Enver Bey",
+            "Mustafa Kemal",
+            "Mahmut Şevket Paşa",
+            "Kamil Paşa",
+            "Damat Ferit Paşa"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Enver Bey, Manastır çevresinde İttihat ve Terakki örgütlenmesi içinde yer almış ve II. Meşrutiyet'in ilanı sürecinde etkili subaylardan biri olmuştur."
+        },
+        {
+          "soru": "II. Meşrutiyet'in ilanının en önemli sonuçlarından biri aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Osmanlı Devleti'nin çok partili hayata ve meclis sistemine geçişi",
+            "Saltanatın kaldırılması",
+            "Halifeliğin kaldırılması",
+            "Cumhuriyetin ilanı",
+            "Padişahlığın güçlenmesi"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "II. Meşrutiyet ile birlikte Osmanlı Devleti'nde meclis yeniden açılmış, İttihat ve Terakki, Hürriyet ve İtilaf gibi çeşitli siyasi partiler faaliyet göstermeye başlamıştır."
+        },
+        {
+          "soru": "31 Mart Vakası hangi tarihte gerçekleşmiştir?",
+          "secenekler": [
+            "23 Temmuz 1908",
+            "13 Nisan 1909",
+            "23 Ocak 1913",
+            "30 Ekim 1918",
+            "10 Ağustos 1920"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "31 Mart Vakası, Rumi takvime göre 31 Mart, miladi takvime göre 13 Nisan 1909 tarihinde İstanbul'da patlak vermiştir."
+        },
+        {
+          "soru": "31 Mart Vakası'nı bastırmak üzere Selanik'ten İstanbul'a gönderilen ordu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Yıldırım Orduları",
+            "Hareket Ordusu",
+            "Kafkas Ordusu",
+            "Şark Orduları Grubu",
+            "Kuvâ-yi Milliye"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "31 Mart Vakası, Selanik'ten İstanbul'a gönderilen Hareket Ordusu tarafından bastırılmıştır."
+        },
+        {
+          "soru": "Hareket Ordusu'nun komutanı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "Mahmut Şevket Paşa",
+            "Enver Paşa",
+            "Cemal Paşa",
+            "Talat Paşa",
+            "Mustafa Kemal"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "Hareket Ordusu, Mahmut Şevket Paşa komutasında İstanbul'a girerek 31 Mart Vakası'nı bastırmıştır."
+        }
+      ]
+    }
+  ]
+}

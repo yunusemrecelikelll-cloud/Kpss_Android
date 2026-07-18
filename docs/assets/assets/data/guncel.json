@@ -1,0 +1,1142 @@
+{
+  "id": "guncel",
+  "ad": "Güncel Bilgiler",
+  "konular": [
+    {
+      "id": "guncel-turkiye-siyasi",
+      "baslik": "Türkiye'nin Yakın Tarihi ve Güncel Siyasi Gelişmeler",
+      "anlatim": {
+        "ozet": "🌍 2020-2026 arasında Türkiye; pandemi yönetimi, dış politika atakları (Azerbaycan-Karabağ, Libya, S-400), deprem felaketi ve seçimler gibi kritik süreçler yaşadı. NATO içinde özgün bir denge politikası izlendi.",
+        "icerik": [
+          "📌 2020: COVID-19 pandemisinde Türkiye erken önlemler aldı. Dağlık Karabağ Savaşı'nda (27 Eylül - 10 Kasım 2020) Türkiye, Azerbaycan'a insansız hava aracı (Bayraktar TB2) ve diplomatik destek sağladı; Azerbaycan topraklarının önemli bir kısmını geri aldı. Libya'da Ulusal Mutabakat Hükümeti'ne destek için BM kararlarına dayanan askeri iş birliği anlaşmaları imzalandı.",
+          "📎 2021-2022: Türkiye-Yunanistan arasında Doğu Akdeniz gerilimi sürdü. Ukrayna-Rusya savaşının (Şubat 2022) başlamasıyla Türkiye, Montrö Sözleşmesi gereği Boğazları savaş gemilerine kapattı; arabulucu rolü üstlendi. Tahıl Koridoru Anlaşması (Temmuz 2022) imzalandı. Finlandiya ve İsveç'in NATO üyeliği sürecinde Türkiye'nin önemli müzakere rolü dikkat çekti.",
+          "📎 2023: Kahramanmaraş merkezli 6 Şubat depremleri (7,7 ve 7,6 büyüklüğünde) on bir ili etkiledi; 50.000'den fazla can kaybına yol açtı. AFAD koordinasyonuyla uluslararası yardım sağlandı. Mayıs 2023'te Cumhurbaşkanlığı ve milletvekili seçimleri yapıldı; Cumhurbaşkanı Erdoğan ikinci turda yeniden seçildi.",
+          "📎 2024-2026: Türkiye'nin NATO içindeki rolü güçlendi. İsveç'in NATO üyeliği onaylandı. Suriye'de Aralık 2024'te Esad rejiminin çöküşünün ardından Türkiye'nin etkisi arttı. Gazze meselesi Türkiye'nin dış politikasında belirleyici oldu.",
+          "📎 Cumhurbaşkanlığı Hükümet Sistemi: 2017 anayasa referandumuyla kabul edilip 2018 seçimleriyle yürürlüğe giren bu sistemde yürütme yetkisi doğrudan halk tarafından seçilen Cumhurbaşkanı'na aittir; başbakanlık makamı kaldırılmış, bakanlar kurulu yerine cumhurbaşkanlığı kararnameleriyle işleyen bir yürütme yapısı oluşturulmuştur. Yasama yetkisi 600 üyeli TBMM'de, yargı bağımsız mahkemelerdedir; bu üçlü ayrım sistemin temel iskeletini oluşturur.",
+          "📎 Türkiye'nin dış politika araçları çok katmanlı bir yapı sergiler: Dışişleri Bakanlığı resmi diplomasiyi yürütürken, MİT (Millî İstihbarat Teşkilatı) istihbarat toplama ve kriz yönetimini, TİKA kalkınma yardımlarını, Yunus Emre Enstitüsü ise yurt dışında Türkçe ve Türk kültürünü tanıtan 'yumuşak güç' diplomasisini üstlenir. Bu araçların birlikte kullanımı, Türkiye'nin bölgesel meselelerde arabuluculuk rolü üstlenmesini kolaylaştırır.",
+          "📎 Denge (çok boyutlu) dış politika yaklaşımı: Türkiye, NATO üyeliğini sürdürürken aynı zamanda Rusya, Çin ve Orta Doğu ülkeleriyle de diplomatik ve ekonomik ilişkilerini geliştirme stratejisi izler. Bu yaklaşım, ülkenin Avrupa-Asya-Orta Doğu kesişimindeki jeopolitik konumundan kaynaklanan çıkarları dengeleme ihtiyacıyla açıklanır ve literatürde sıkça 'denge politikası' olarak adlandırılır.",
+          "📎 Afet yönetim sisteminin yapısı: 6 Şubat depremlerinin ardından Türkiye'de bina denetim mekanizmaları ve deprem yönetmeliği standartları kamuoyunda yeniden gündeme gelmiştir. AFAD'ın illerde teşkilatlanan afet müdürlükleri, Kızılay ve AKUT gibi arama-kurtarma odaklı sivil toplum kuruluşlarıyla koordineli çalışarak afet öncesi hazırlık, afet anı müdahale ve afet sonrası iyileştirme aşamalarını birlikte planlar.",
+          "📎 Seçim sistemlerinin işleyişi: Cumhurbaşkanlığı seçimi iki turlu çoğunluk esasına dayanır; ilk turda adaylardan biri geçerli oyların salt çoğunluğunu (yarısından fazlasını) alamazsa, en çok oy alan iki aday arasında ikinci tur yapılır. Milletvekili genel seçimlerinde ise partilerin veya ittifakların TBMM'de grup kurabilmesi, ülke genelinde uygulanan ulusal seçim barajını aşmalarına bağlıdır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Dağlık Karabağ Savaşı: Eylül-Kasım 2020; Türk yapımı Bayraktar TB2 insansız hava araçları belirleyici rol oynadı.",
+          "💡 6 Şubat 2023 depremleri: Kahramanmaraş merkez üssü, 11 il etkilendi, AFAD koordinasyonu.",
+          "🔑 Tahıl Koridoru Anlaşması: Temmuz 2022, Türkiye arabuluculuğuyla Rusya-Ukrayna arasında imzalandı.",
+          "💡 Montrö Sözleşmesi: Boğazların statüsünü belirler; Türkiye savaş gemilerini geçişini durdurabilir.",
+          "🔑 İsveç ve Finlandiya NATO: Türkiye uzun görüşmeler sonunda onay verdi (Finlandiya 2023, İsveç 2024).",
+          "💡 Cumhurbaşkanlığı Hükümet Sistemi: 2018'den itibaren yürürlükte; yürütme yetkisi doğrudan seçilen Cumhurbaşkanı'nda toplanır.",
+          "🔑 Türkiye'nin dış politika araçları: Dışişleri Bakanlığı (resmi diplomasi), MİT (istihbarat), TİKA (kalkınma yardımı), Yunus Emre Enstitüsü (kültürel diplomasi).",
+          "💡 Cumhurbaşkanlığı seçimi iki turlu çoğunluk sistemine dayanır; ilk turda salt çoğunluk sağlanamazsa ikinci tur yapılır.",
+          "🔑 AFAD, il düzeyinde teşkilatlanmış afet müdürlükleri aracılığıyla Kızılay ve AKUT gibi kuruluşlarla koordineli çalışır."
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "2020 yılında yaşanan Dağlık Karabağ Savaşı'nda Türkiye hangi tarafı desteklemiştir?",
+          "secenekler": [
+            "A) Ermenistan",
+            "B) Rusya",
+            "C) Azerbaycan",
+            "D) İran",
+            "E) Fransa"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye, 27 Eylül - 10 Kasım 2020 tarihleri arasında yaşanan Dağlık Karabağ Savaşı'nda Azerbaycan'a insansız hava araçları ve diplomatik destek sağlamıştır.",
+          "distractorAciklama": "Rusya Ermenistan'a yakın bir tutum sergilerken Türkiye açıkça Azerbaycan'ı destekledi. Fransa ise Ermenistan'ın yanında diplomatik destek verdi.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye'nin Dağlık Karabağ Savaşı'nda Azerbaycan'a sağladığı en etkili askeri destek aracı hangisiydi?",
+          "secenekler": [
+            "A) F-16 savaş uçakları",
+            "B) Bayraktar TB2 insansız hava araçları",
+            "C) Leopard tankları",
+            "D) Deniz kuvvetleri gemileri",
+            "E) Hava savunma sistemleri"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Türk yapımı Bayraktar TB2 insansız hava araçları (İHA), Dağlık Karabağ Savaşı'nda Azerbaycan'ın zafere ulaşmasında belirleyici rol oynamıştır.",
+          "distractorAciklama": "F-16 ve Leopard gibi büyük sistemler Azerbaycan'a o süreçte tahsis edilmedi. Bayraktar TB2 savaşın seyrini değiştiren temel unsur olarak öne çıktı.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "6 Şubat 2023 depremlerinin merkezi hangi ildir?",
+          "secenekler": [
+            "A) Adıyaman",
+            "B) Hatay",
+            "C) Kahramanmaraş",
+            "D) Malatya",
+            "E) Gaziantep"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "6 Şubat 2023'te yaşanan 7,7 ve 7,6 büyüklüğündeki depremler Kahramanmaraş merkez üssü ile yaşandı; on bir ili etkiledi.",
+          "distractorAciklama": "Adıyaman, Hatay, Malatya ve Gaziantep depremin yoğun hasar verdiği iller arasındadır; ancak merkez üssü Kahramanmaraş'tır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Ukrayna-Rusya savaşında Türkiye, Montrö Sözleşmesi gereği hangi kararı almıştır?",
+          "secenekler": [
+            "A) Ukrayna savaş gemilerinin geçişini serbest bıraktı.",
+            "B) Boğazları savaş gemilerine kapattı.",
+            "C) Rus savaş gemilerinin geçişine izin verdi.",
+            "D) Boğazları tamamen ticarete kapattı.",
+            "E) Montrö Sözleşmesi'ni tek taraflı feshetti."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Şubat 2022'de Ukrayna-Rusya savaşının başlamasıyla Türkiye, Montrö Sözleşmesi'nin 19. maddesi gereği Boğazları savaş gemilerine kapattı.",
+          "distractorAciklama": "Montrö Sözleşmesi savaş durumunda tarafsız devletin Boğazları kapatma hakkı verir. Türkiye bu hakkı kullanarak her iki tarafın savaş gemilerinin geçişini engelledi.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Temmuz 2022'de Türkiye arabuluculuğuyla imzalanan 'Tahıl Koridoru Anlaşması' hangi ülkeler arasındadır?",
+          "secenekler": [
+            "A) Türkiye ve Yunanistan",
+            "B) Rusya ve Ukrayna",
+            "C) Azerbaycan ve Ermenistan",
+            "D) NATO ve Rusya",
+            "E) AB ve Ukrayna"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Tahıl Koridoru Anlaşması, Temmuz 2022'de Türkiye ve BM'nin arabuluculuğuyla Rusya ile Ukrayna arasında imzalandı; Ukrayna'nın tahıl ihracatına olanak sağladı.",
+          "distractorAciklama": "Anlaşma doğrudan Rusya ve Ukrayna arasındaydı; Türkiye arabulucu sıfatıyla imzacı oldu. NATO veya AB taraf değildir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye, aşağıdaki ülkelerin NATO üyeliğine başlangıçta itiraz etmiş ve uzun müzakereler yürütmüştür. Bu ülkeler hangileridir?",
+          "secenekler": [
+            "A) Polonya ve Romanya",
+            "B) Finlandiya ve İsveç",
+            "C) Ukrayna ve Gürcistan",
+            "D) Bulgaristan ve Macaristan",
+            "E) Çekya ve Slovakya"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "2022'de NATO üyeliği başvurusu yapan Finlandiya ve İsveç'in üyeliklerine Türkiye başlangıçta itiraz etti; PKK/terör örgütü bağlantıları konusunda güvence talep etti.",
+          "distractorAciklama": "Polonya, Romanya, Bulgaristan ve diğerleri çok daha önce NATO üyesi olmuştur. Ukrayna ve Gürcistan'ın NATO üyeliği 2022-2026 döneminde onaylanmamıştır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Aralık 2024'te Türkiye'nin dış politikasını doğrudan etkileyen hangi önemli gelişme Suriye'de yaşandı?",
+          "secenekler": [
+            "A) Suriye iç savaşı yeniden başladı.",
+            "B) Esad rejimi çöktü ve iktidar değişti.",
+            "C) Suriye NATO'ya üye oldu.",
+            "D) ABD Suriye'yi işgal etti.",
+            "E) İsrail Suriye'ye saldırdı."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Aralık 2024'te Beşar Esad rejimi muhalefet güçleri önünde çöktü; Türkiye'nin bölgedeki etkisi belirgin biçimde arttı.",
+          "distractorAciklama": "Esad rejiminin düşüşü Türkiye-destekli muhalefet gruplarının galibiyetiyle gerçekleşti. Suriye NATO üyesi değildir; ABD işgali söz konusu değildir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye'de 6 Şubat 2023 depremlerinde afet koordinasyonunu yürüten kurum hangisidir?",
+          "secenekler": [
+            "A) Kızılay",
+            "B) AFAD",
+            "C) Jandarma Genel Komutanlığı",
+            "D) İçişleri Bakanlığı",
+            "E) Sağlık Bakanlığı"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Afet ve Acil Durum Yönetimi Başkanlığı (AFAD), 6 Şubat 2023 depremlerinde tüm ulusal ve uluslararası afet müdahale koordinasyonunu yürüttü.",
+          "distractorAciklama": "Kızılay, Jandarma, İçişleri ve Sağlık Bakanlığı afet sürecinde önemli görevler üstlendi; ancak merkezi koordinasyon yetkisi yasal olarak AFAD'a aittir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye, S-400 hava savunma sistemlerini hangi ülkeden satın almıştır?",
+          "secenekler": [
+            "A) ABD",
+            "B) Fransa",
+            "C) Almanya",
+            "D) Rusya",
+            "E) Çin"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Türkiye, S-400 hava savunma sistemlerini Rusya'dan satın almış ve 2019'da teslimat gerçekleşmiştir. Bu durum ABD ile F-35 programından çıkarılma krizine yol açmıştır.",
+          "distractorAciklama": "ABD, F-35 satışına karşılık Türkiye'yi S-400 almaktan caydırmaya çalıştı. Sistem NATO standardı olmadığı için tartışmalara konu oldu. Satıcı ülke Rusya'dır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Mayıs 2023 Cumhurbaşkanlığı seçiminde hangi tur sonucunda Cumhurbaşkanı Erdoğan seçilmiştir?",
+          "secenekler": [
+            "A) Birinci turda salt çoğunlukla",
+            "B) İkinci turda (28 Mayıs 2023)",
+            "C) TBMM tarafından belirlenerek",
+            "D) Yargı kararıyla",
+            "E) Halk oylamasıyla"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "14 Mayıs 2023'teki birinci turda hiçbir aday salt çoğunluğu sağlayamadı. 28 Mayıs 2023'teki ikinci turda Cumhurbaşkanı Erdoğan yaklaşık %52 oranında oy alarak yeniden seçildi.",
+          "distractorAciklama": "Birinci turda salt çoğunluk sağlanamadığı için ikinci tura gidildi. TBMM veya yargı bu seçimde belirleyici olmadı.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye-Libya arasında imzalanan deniz yetki alanları anlaşması hangi yılda yürürlüğe girmiştir?",
+          "secenekler": [
+            "A) 2018",
+            "B) 2019",
+            "C) 2021",
+            "D) 2023",
+            "E) 2025"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Türkiye ve Libya Ulusal Mutabakat Hükümeti arasındaki deniz yetki alanları mutabakat muhtırası Kasım 2019'da imzalanmış ve yürürlüğe girmiştir.",
+          "distractorAciklama": "Anlaşma 2019'da imzalandı. Yunanistan ve Mısır bu anlaşmaya karşı çıkarak hukuka aykırı ilan etti; ancak Türkiye anlaşmanın geçerliliğini savunmaya devam etti.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "COVID-19 pandemisi döneminde Türkiye'nin sağlık diplomasisi kapsamında dünyaya gönderdiği tıbbi malzeme hangi isimle anılmaktadır?",
+          "secenekler": [
+            "A) TÜBA Paketi",
+            "B) Türkiye Yardım Seti",
+            "C) TİKA Sağlık Paketi",
+            "D) TURKOVAC kitleri",
+            "E) Türkiye, dünyaya tıbbi yardım göndermemiştir"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye, COVID-19 pandemisinin ilk döneminde (2020) TİKA (Türk İşbirliği ve Koordinasyon Ajansı) koordinasyonuyla 150'den fazla ülkeye tıbbi malzeme ve maske yardımı göndermiştir.",
+          "distractorAciklama": "TURKOVAC Türkiye'nin geliştirdiği COVID-19 aşısının adıdır. TİKA ise yurt dışı kalkınma yardımlarını koordine eden kurumdur; pandemideki tıbbi yardım TİKA üzerinden organize edilmiştir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "2023 Cumhurbaşkanlığı seçiminin ikinci turunda Recep Tayyip Erdoğan'ın rakibi kim olmuştur?",
+          "secenekler": [
+            "A) Mansur Yavas",
+            "B) Kemal Kılıçdaroğlu",
+            "C) Muharrem İnce",
+            "D) Ekrem İmamoğlu",
+            "E) Meral Akşener"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "2023 Cumhurbaşkanlığı seçiminde Millet İttifakı adayı Kemal Kılıçdaroğlu ile Recep Tayyip Erdoğan ikinci tura kalmış; Erdoğan yaklaşık %52,1 oranında oy alarak seçimi kazanmıştır."
+        },
+        {
+          "soru": "2023 milletvekili genel seçimlerinde tek başına en fazla milletvekili çıkaran parti hangisidir?",
+          "secenekler": [
+            "A) CHP",
+            "B) İYİ Parti",
+            "C) HDP/HEDEP",
+            "D) AKP",
+            "E) MHP"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "14 Mayıs 2023 milletvekili seçimlerinde AKP (Adalet ve Kalkınma Partisi) tek başına en fazla milletvekili çıkaran parti olmuştur."
+        },
+        {
+          "soru": "Türkiye'nin NATO üyeliği hangi yıla dayanmaktadır?",
+          "secenekler": [
+            "A) 1945",
+            "B) 1949",
+            "C) 1952",
+            "D) 1955",
+            "E) 1963"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye, 1952 yılında NATO'ya (Kuzey Atlantik Antlaşması Örgütü) katılmıştır."
+        }
+      ]
+    },
+    {
+      "id": "guncel-ekonomi-kurumlar",
+      "baslik": "Ekonomi ve Kamu Kurumları",
+      "anlatim": {
+        "ozet": "🏭 Türkiye ekonomisi; savunma sanayi atılımları, ihracat rekoru ve yüksek enflasyonla şekillendi. TÜBİTAK, ASELSAN, ROKETSAN, AFAD, TİKA ve TÜRKSAT gibi kurumlar kritik roller üstleniyor.",
+        "icerik": [
+          "📌 Savunma sanayii: ASELSAN (elektronik), ROKETSAN (roket-füze), TUSAŞ (uçak), STM (denizcilik) büyük gelişim gösterdi. BAYKAR'ın Bayraktar TB2'si 2020'lerde uluslararası üne kavuştu. AKINCI İHA ve KAAN muharip uçağı (ilk uçuş Şubat 2023) önemli dönüm noktaları.",
+          "📎 TÜBİTAK (Türkiye Bilimsel ve Teknolojik Araştırma Kurumu): Ar-Ge destekleri, TEKNOFEST'in organizasyonu, milli teknoloji hamlesinin koordinasyonu.",
+          "📎 AFAD (Afet ve Acil Durum Yönetimi Başkanlığı): Cumhurbaşkanlığı'na bağlı; afet yönetimi, arama-kurtarma, afet önleme.",
+          "📎 TİKA (Türk İşbirliği ve Koordinasyon Ajansı): Yurt dışı kalkınma yardımları; Afrika, Asya ve Balkanlar'da projeler.",
+          "📎 TÜRKSAT: Haberleşme uyduları; TÜRKSAT 5A ve 5B uyduları 2021'de fırlatıldı. Yerli roket geliştirme çalışmaları sürmekte.",
+          "📎 Savunma Sanayii Başkanlığı (SSB): Cumhurbaşkanlığı'na bağlı olarak faaliyet gösteren bir çatı kurumdur; ASELSAN, ROKETSAN, TUSAŞ, STM ve Baykar gibi şirketlerin yürüttüğü büyük savunma projelerini planlar, finanse eder ve denetler. Savunma sanayiinde sıkça geçen 'yerlilik oranı' kavramı, bir sistemin parçalarının ne kadarının yurt içinde üretildiğini ifade eder ve dışa bağımlılığı azaltma hedefiyle stratejik önem taşır.",
+          "📎 Türkiye Cumhuriyet Merkez Bankası (TCMB): Para politikasını yürüten ve fiyat istikrarını sağlamakla görevli kurumdur. Temel araçları arasında politika faizi belirleme, zorunlu karşılık oranları ve döviz rezervi yönetimi bulunur. Enflasyon hedeflemesi rejimi, merkez bankalarının belirli bir enflasyon oranını hedef alarak para politikası kararları alması ilkesine dayanır.",
+          "📎 TÜBİTAK'ın kurumsal yapısı: 1963'te kurulan TÜBİTAK bünyesinde BİLGEM (bilişim ve bilgi güvenliği), MAM (Marmara Araştırma Merkezi) ve UZAY Enstitüsü gibi araştırma birimlerini barındırır; üniversite ve sanayiye yönelik Ar-Ge destek programları sunarak bilimsel araştırmaların ticarileşmesine katkı sağlar.",
+          "📎 Organize Sanayi Bölgeleri (OSB) ve kalkınma ajansları: OSB'ler, sanayi üretimini belirli bölgelerde yoğunlaştırarak altyapı maliyetlerini paylaştırır ve yatırımcıyı teşvik eder. Bölgesel kalkınma ajansları ise il ve bölge düzeyinde ekonomik kalkınma projelerini destekleyen, kamu-özel sektör iş birliğine dayanan yapılardır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 TÜBİTAK: Bilimsel araştırma destekler; TEKNOFEST'i organize eder.",
+          "💡 ASELSAN: Savunma elektroniği; Türkiye'nin en büyük savunma şirketi.",
+          "🔑 AFAD: Afet yönetimi koordinasyonu; Cumhurbaşkanlığı'na bağlı.",
+          "💡 TİKA: Yurt dışı kalkınma yardımları; 150+ ülkede proje.",
+          "🔑 TÜRKSAT 5A ve 5B: 2021'de fırlatılan haberleşme uyduları.",
+          "💡 SSB (Savunma Sanayii Başkanlığı): Cumhurbaşkanlığı'na bağlı; savunma projelerini planlar ve denetler.",
+          "🔑 TCMB: Para politikasından sorumlu kurum; fiyat istikrarı temel görevidir.",
+          "💡 TÜBİTAK bünyesinde BİLGEM, MAM ve UZAY Enstitüsü gibi araştırma birimleri bulunur.",
+          "🔑 OSB'ler sanayi üretimini yoğunlaştırarak yatırımcıya altyapı avantajı sağlar."
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "TÜBİTAK'ın temel görevi aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Afet yönetimi koordinasyonu",
+            "B) Yurt dışı kalkınma yardımları",
+            "C) Bilimsel ve teknolojik araştırmaları desteklemek",
+            "D) Savunma sanayii üretimi",
+            "E) Uydu fırlatma operasyonları"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "TÜBİTAK (Türkiye Bilimsel ve Teknolojik Araştırma Kurumu), bilimsel ve teknolojik araştırmaları desteklemek, Ar-Ge faaliyetlerini koordine etmek ve milli teknoloji hamlesi kapsamında projeleri yürütmekle görevlidir.",
+          "distractorAciklama": "Afet yönetimi AFAD'a, yurt dışı yardımlar TİKA'ya, savunma üretimi ASELSAN/ROKETSAN'a, uydu fırlatma TÜRKSAT'a aittir. TÜBİTAK Ar-Ge ve bilim odaklıdır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "TEKNOFEST etkinliğini düzenleyen kurum aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) AFAD",
+            "B) TİKA",
+            "C) TÜRKSAT",
+            "D) TÜBİTAK ve Türkiye Teknoloji Takımı Vakfı (T3 Vakfı)",
+            "E) Millî Eğitim Bakanlığı"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "TEKNOFEST, TÜBİTAK ile Türkiye Teknoloji Takımı Vakfı (T3 Vakfı) ortaklığıyla düzenlenmektedir. Türkiye'nin en büyük havacılık, uzay ve teknoloji festivali olarak uluslararası ilgi çekmektedir.",
+          "distractorAciklama": "AFAD ve TİKA farklı alanlarda görev yapar. TEKNOFEST'i organize eden kurum TÜBİTAK ve T3 Vakfı ortaklığıdır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "AFAD hangi kuruma bağlıdır?",
+          "secenekler": [
+            "A) İçişleri Bakanlığı",
+            "B) Sağlık Bakanlığı",
+            "C) Cumhurbaşkanlığı",
+            "D) Millî Savunma Bakanlığı",
+            "E) Çevre ve Şehircilik Bakanlığı"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "AFAD (Afet ve Acil Durum Yönetimi Başkanlığı), 2018 itibarıyla Cumhurbaşkanlığı'na bağlı bir kurum olarak faaliyetlerini sürdürmektedir.",
+          "distractorAciklama": "2018 öncesinde AFAD İçişleri Bakanlığı bünyesindeydi. Cumhurbaşkanlığı hükümet sistemine geçilmesinin ardından doğrudan Cumhurbaşkanlığı'na bağlandı.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Türkiye'nin muharip uçağı KAAN'ın ilk uçuşu hangi yılda gerçekleşmiştir?",
+          "secenekler": [
+            "A) 2020",
+            "B) 2021",
+            "C) 2022",
+            "D) 2023",
+            "E) 2025"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "TUSAŞ tarafından geliştirilen KAAN muharip uçağının ilk uçuşu Şubat 2023'te gerçekleşmiştir.",
+          "distractorAciklama": "KAAN projesinin ilk uçuşu 2023'te gerçekleşti. 2020-2022 yıllarında tasarım ve üretim süreçleri devam ediyordu.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "TÜRKSAT 5A ve TÜRKSAT 5B uyduları hangi yılda fırlatılmıştır?",
+          "secenekler": [
+            "A) 2019",
+            "B) 2020",
+            "C) 2021",
+            "D) 2022",
+            "E) 2023"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "TÜRKSAT 5A Ocak 2021'de, TÜRKSAT 5B ise Aralık 2021'de SpaceX Falcon 9 roketi ile fırlatılmıştır.",
+          "distractorAciklama": "2019 ve 2020, TÜRKSAT 4A/4B önceki nesil uyduların dönemine denk gelir. 2021 ise 5A ve 5B'nin fırlatıldığı yıldır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "TİKA'nın (Türk İşbirliği ve Koordinasyon Ajansı) temel işlevi nedir?",
+          "secenekler": [
+            "A) Yurt içi Ar-Ge projeleri yönetmek",
+            "B) Yurt dışında kalkınma yardımları ve projeler yürütmek",
+            "C) Afet yönetimi koordinasyonu",
+            "D) Savunma sanayi ihracatı",
+            "E) Üniversitelere burs vermek"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "TİKA, 150'den fazla ülkede eğitim, sağlık, altyapı ve kültür alanlarında kalkınma yardımları ve projeleri yürüterek Türkiye'nin dış yardım politikasını hayata geçirmektedir.",
+          "distractorAciklama": "Ar-Ge TÜBİTAK'a, afet yönetimi AFAD'a, savunma sanayi ihracatı SSB'ye, burslar YTB'ye aittir. TİKA kalkınma yardımı ajansıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "ASELSAN hangi alanda faaliyet gösteren Türkiye'nin öncü savunma şirketidir?",
+          "secenekler": [
+            "A) Roket ve füze sistemleri",
+            "B) Savunma elektroniği",
+            "C) Savaş uçağı üretimi",
+            "D) Deniz altı inşası",
+            "E) Uzay roketi geliştirme"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "ASELSAN, Türkiye'nin en büyük savunma elektroniği şirketidir; radar, haberleşme, elektronik harp, gözetleme ve silah sistemleri üretir.",
+          "distractorAciklama": "Roket-füze ROKETSAN'a, savaş uçağı TUSAŞ'a, denizaltı ASFAT'a, uzay roketi TÜBİTAK Uzay/TÜRKSAT'a aittir. ASELSAN elektronik odaklıdır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de 'Milli Teknoloji Hamlesi' kavramı hangi altyapıyla doğrudan ilişkilendirilmektedir?",
+          "secenekler": [
+            "A) Turizm gelirleri artışı",
+            "B) Yerli ve milli savunma-teknoloji ürünleri geliştirme",
+            "C) Yabancı yatırım teşvikleri",
+            "D) Tarım üretim artışı",
+            "E) Banka sistemi reformu"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Milli Teknoloji Hamlesi, Türkiye'nin savunma, uzay, ulaşım ve enerji alanlarında yerli ve milli teknoloji ürünleri geliştirmesini ifade eder. KAAN, Bayraktar TB2, TÜRKSAT ve TOGG bu hamlenin simgelerindendir.",
+          "distractorAciklama": "Turizm, yabancı yatırım ve tarım önemli ekonomik alanlar olsa da Milli Teknoloji Hamlesi yerli-milli Ar-Ge ve üretim odaklı bir kavramdır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye'nin yerli otomobili TOGG'un seri üretimine hangi yılda başlanmıştır?",
+          "secenekler": [
+            "A) 2020",
+            "B) 2021",
+            "C) 2022",
+            "D) 2023",
+            "E) 2025"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Türkiye'nin Otomobili (TOGG), 2023 yılında seri üretimine başlamış ve ilk araçlar tüketicilere teslim edilmiştir.",
+          "distractorAciklama": "TOGG projesi 2018'de duyuruldu, prototip 2019'da tanıtıldı. Fabrika inşaatı 2021-2022'de tamamlandı ve seri üretim 2023'te başladı.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Darülaceze kurumu Türkiye'de hangi alanda hizmet vermektedir?",
+          "secenekler": [
+            "A) Savunma sanayi",
+            "B) Yaşlı, engelli ve kimsesizlere bakım hizmetleri",
+            "C) Afet müdahalesi",
+            "D) Yurt dışı kalkınma yardımları",
+            "E) Burs ve eğitim destekleri"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Darülaceze, 1896'da kurulan ve yaşlı, engelli, kimsesiz bireylere bakım hizmeti sunan Türkiye'nin köklü sosyal yardım kurumlarından biridir.",
+          "distractorAciklama": "Darülaceze sosyal yardım kurumudur. Savunma sanayi ASELSAN/ROKETSAN'a, afet yönetimi AFAD'a, yurt dışı yardım TİKA'ya, burs YTB'ye aittir.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Hilal-i Ahmer Cemiyeti, bugün Türkiye'de hangi isimle faaliyetlerini sürdürmektedir?",
+          "secenekler": [
+            "A) AFAD",
+            "B) Türk Kızılay",
+            "C) TİKA",
+            "D) Türkiye Yardım Vakfı",
+            "E) Sağlık Bakanlığı"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Osmanlı döneminde 1868'de 'Osmanlı Hilal-i Ahmer Cemiyeti' adıyla kurulan bu kurum, Cumhuriyet döneminde Türk Kızılay adını almıştır.",
+          "distractorAciklama": "AFAD devlet kurumu olup afet yönetimi yapar. TİKA kalkınma yardım ajansıdır. Hilal-i Ahmer'in devamı Türk Kızılay'dır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Türkiye'nin 2023 yılı ihracatı tarihinin en yüksek düzeyine ulaşmıştır. Bu ihracatın en büyük hedef pazarı aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) ABD",
+            "B) Çin",
+            "C) Avrupa Birliği ülkeleri",
+            "D) Körfez ülkeleri",
+            "E) Afrika ülkeleri"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye'nin ihracatında Avrupa Birliği ülkeleri en büyük pazar konumundadır; Almanya, İngiltere ve diğer AB ülkeleri önemli pay taşımaktadır.",
+          "distractorAciklama": "ABD ve Körfez ülkeleri de önemli pazarlar olmakla birlikte AB, Türkiye'nin toplam ihracatında tarihsel olarak en büyük paya sahip coğrafyadır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "TÜBİTAK'ın açılımı nedir?",
+          "secenekler": [
+            "A) Türkiye Bilim ve Teknoloji Araştırma Kurumu",
+            "B) Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
+            "C) Türkiye Bilim Teknoloji ve Kalkınma Araştırma Kurumu",
+            "D) Türkiye Bilişim ve Teknoloji Araştırma Kurumu",
+            "E) Türkiye Bilim Araştırma ve Teknoloji Kurumu"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "TÜBİTAK; Türkiye Bilimsel ve Teknolojik Araştırma Kurumu'nun kısaltmasıdır. 1963 yılında kurulmuş olup Türkiye'nin en önemli bilim ve teknoloji kurumudur."
+        },
+        {
+          "soru": "ASELSAN hangi alanlarda faaliyet gösteren bir savunma sanayi şirketidir?",
+          "secenekler": [
+            "A) Gemi inşası ve deniz platformları",
+            "B) Elektronik sistemler, haberleşme ve savunma elektroniği",
+            "C) Uçak motoru ve havacılık sistemleri",
+            "D) Kimyasal savunma sistemleri",
+            "E) Balistik füze üretimi"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "ASELSAN (Askeri Elektronik Sanayii), elektronik sistemler, haberleşme, radar, sensör sistemleri ve savunma elektroniği alanlarında faaliyet gösteren Türkiye'nin en büyük savunma elektroniği şirketidir."
+        },
+        {
+          "soru": "Türkiye'nin yerli insansız hava aracı (İHA) Bayraktar TB2'yi hangi şirket üretmektedir?",
+          "secenekler": [
+            "A) ASELSAN",
+            "B) ROKETSAN",
+            "C) Baykar",
+            "D) TAI",
+            "E) Havelsan"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Bayraktar TB2 (Silahlı İnsansız Hava Aracı - SİHA), Baykar Savunma şirketi tarafından üretilmektedir. Azerbaycan-Ermenistan çatışmasındaki başarısıyla uluslararası üne kavuşmuştur."
+        }
+      ]
+    },
+    {
+      "id": "guncel-kultur-sanat",
+      "baslik": "Kültür, Sanat ve Bilim",
+      "anlatim": {
+        "ozet": "🎭 Türkiye; dünyaca tanınan sanatçıları, eşsiz kültürel mirası (Göbeklitepe, Çatalhöyük) ve UNESCO dünya miras listesindeki alanlarıyla kültürel zenginliğini korumaktadır.",
+        "icerik": [
+          "📌 Göbeklitepe: Şanlıurfa'da bulunan, MÖ 10.000'e tarihlenen dünyanın en eski tapınak kompleksidir. 2018'de UNESCO Dünya Mirası Listesi'ne alınmıştır. Arkeolog Klaus Schmidt tarafından kazılmıştır.",
+          "📎 UNESCO Türkiye: İstanbul Tarihi Alanları, Kapadokya, Pamukkale (Hierapolis), Çatalhöyük, Göbeklitepe, Truva, Afrodisias, Bursa ve Cumalıkızık, Arslantepe gibi alanlar UNESCO listesindedir. Toplam liste 21 kültürel mirası kapsar.",
+          "📎 Önemli Türk sanatçılar: Orhan Pamuk (2006 Nobel Edebiyat Ödülü), Fazıl Say (piyanist ve besteci), Elif Şafak (uluslararası roman yazarı). Tarihte: Yunus Emre, Mevlana, Nazım Hikmet.",
+          "📎 Hayrettin Karaca: Çevreci iş insanı; TEMA Vakfı kurucusu (1992). Ağaçlandırma ve erozyon önleme çalışmalarıyla Türkiye'nin doğasına katkı sağladı. 2024'te vefat etti.",
+          "📎 UNESCO'nun kültür alanındaki başlıca listeleri birbirinden farklı amaçlar taşır: Dünya Mirası Listesi tarihi yapılar ve doğal alanlar gibi somut varlıkları kapsarken, Somut Olmayan Kültürel Miras Listesi Karagöz-Hacivat gölge oyunu, Mevlevi Sema töreni, Nevruz ve geleneksel el sanatları gibi yaşayan gelenekleri kapsar. Bu ayrım, bir mirasın taşınamaz-fiziksel mi yoksa yaşayan-aktarılan bir uygulama mı olduğuna göre yapılır.",
+          "📎 Geleneksel Türk el sanatları: Ebru (kağıt üzerine su yüzeyinde yapılan boyama sanatı), hat sanatı (Arap harfleriyle estetik yazı) ve tezhip (el yazması eserlerin altın varak ve motiflerle süslenmesi), Osmanlı döneminden günümüze aktarılan başlıca geleneksel sanatlardandır; bu sanatların birçoğu UNESCO'nun somut olmayan kültürel miras listesinde yer almaktadır.",
+          "📎 Türk edebiyatının tarihsel evreleri genel hatlarıyla Divan edebiyatı (Osmanlı klasik dönemi, aruz vezni ve gazel-kaside gibi nazım biçimleri), Tanzimat sonrası Batılılaşma dönemi edebiyatı ve Cumhuriyet dönemi edebiyatı olarak sınıflandırılır. Bu evreler, toplumsal ve siyasi dönüşümlerle iç içe gelişmiş; her dönem kendi öne çıkan yazar ve şairlerini ortaya çıkarmıştır.",
+          "📎 Müze ve kültürel miras kurumları: Topkapı Sarayı Müzesi Osmanlı saray hayatını ve hazinelerini sergilerken, Anadolu Medeniyetleri Müzesi (Ankara) Anadolu'nun çok katmanlı tarihini yansıtır. Bu müzeler ve çok sayıda arkeoloji müzesi, Türkiye'nin kültürel mirasının korunması ve tanıtılmasında Kültür ve Turizm Bakanlığı'na bağlı olarak görev yapar."
+        ],
+        "anahtarNoktalar": [
+          "🔑 Göbeklitepe: MÖ ~10.000, Şanlıurfa, UNESCO 2018.",
+          "💡 Orhan Pamuk: 2006 Nobel Edebiyat Ödülü; Türkiye'nin tek Nobel Edebiyat ödüllüsü.",
+          "🔑 TEMA Vakfı kurucusu: Hayrettin Karaca (çevreci-iş insanı, 2024'te vefat etti).",
+          "💡 Çatalhöyük: MÖ 7500-5700, Konya; UNESCO listesinde.",
+          "🔑 Mevlana Celaleddin Rumi: Konya'da yaşadı; Mesnevi eseri, Sema törenleri UNESCO kültürel mirası.",
+          "💡 UNESCO Dünya Mirası Listesi somut/fiziksel varlıkları, Somut Olmayan Kültürel Miras Listesi yaşayan gelenekleri kapsar.",
+          "🔑 Ebru, hat ve tezhip Osmanlı'dan aktarılan başlıca geleneksel Türk el sanatlarıdır.",
+          "💡 Divan edebiyatı - Tanzimat - Cumhuriyet dönemi, Türk edebiyat tarihinin temel evreleridir.",
+          "🔑 Topkapı Sarayı Müzesi ve Anadolu Medeniyetleri Müzesi, Kültür ve Turizm Bakanlığı'na bağlı önde gelen müzelerdendir."
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "Göbeklitepe UNESCO Dünya Mirası Listesi'ne hangi yılda alınmıştır?",
+          "secenekler": [
+            "A) 2010",
+            "B) 2012",
+            "C) 2015",
+            "D) 2018",
+            "E) 2020"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Göbeklitepe, 2018 yılında UNESCO Dünya Mirası Listesi'ne alınmıştır.",
+          "distractorAciklama": "Göbeklitepe kazıları Klaus Schmidt öncülüğünde 1990'lardan bu yana sürmekteydi; ancak UNESCO tarafından listeye alınması 2018'de gerçekleşti.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Göbeklitepe hangi şehrimizde yer almaktadır?",
+          "secenekler": [
+            "A) Konya",
+            "B) Ankara",
+            "C) Şanlıurfa",
+            "D) Gaziantep",
+            "E) Mardin"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Göbeklitepe, Şanlıurfa iline bağlı Örencik köyü yakınlarında yer almaktadır.",
+          "distractorAciklama": "Konya'da Çatalhöyük bulunmaktadır. Göbeklitepe ise dünyanın en eski tapınak kompleksi olarak Şanlıurfa'da yer alır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Nobel Edebiyat Ödülü'nü kazanan ilk ve tek Türk yazar aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Elif Şafak",
+            "B) Nazım Hikmet",
+            "C) Orhan Pamuk",
+            "D) Yaşar Kemal",
+            "E) Ahmet Hamdi Tanpınar"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Orhan Pamuk, 2006 yılında Nobel Edebiyat Ödülü'nü kazanmıştır. Türkiye'nin Nobel Edebiyat Ödülü alan ilk ve tek yazarıdır.",
+          "distractorAciklama": "Elif Şafak, Yaşar Kemal ve Tanpınar uluslararası tanınırlığa sahip olmakla birlikte Nobel kazanmamıştır. Nazım Hikmet ise Türk vatandaşlığından çıkarılmıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "TEMA Vakfı'nın kurucusu aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Sakıp Sabancı",
+            "B) Vehbi Koç",
+            "C) Hayrettin Karaca",
+            "D) Ahmet Necdet Sezer",
+            "E) Fuat Sezgin"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "TEMA Vakfı (Türkiye Erozyonla Mücadele, Ağaçlandırma ve Doğal Varlıkları Koruma Vakfı), çevreci iş insanı Hayrettin Karaca tarafından 1992'de kurulmuştur.",
+          "distractorAciklama": "Sabancı ve Koç vakıfları farklı amaçlarla kurulmuştur. Fuat Sezgin bilim tarihçisidir. TEMA'nın kurucusu Hayrettin Karaca'dır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Hayrettin Karaca hangi yılda hayatını kaybetmiştir?",
+          "secenekler": [
+            "A) 2019",
+            "B) 2021",
+            "C) 2022",
+            "D) 2024",
+            "E) 2026"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "TEMA Vakfı kurucusu Hayrettin Karaca, 2024 yılında hayatını kaybetmiştir.",
+          "distractorAciklama": "Hayrettin Karaca uzun yıllar çevre mücadelesi verdi ve 2024'te vefat etti. 2019-2022 yılları onun yaşadığı döneme aittir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Çatalhöyük neolitik yerleşimi hangi ilimizde yer almaktadır?",
+          "secenekler": [
+            "A) Şanlıurfa",
+            "B) Gaziantep",
+            "C) Konya",
+            "D) Ankara",
+            "E) İzmir"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Çatalhöyük, Konya iline bağlıdır ve yaklaşık MÖ 7500-5700 yıllarına tarihlenmektedir. 2012'de UNESCO Dünya Mirası Listesi'ne alınmıştır.",
+          "distractorAciklama": "Göbeklitepe Şanlıurfa'da, Gaziantep'te ise Zeugma mozaik müzesi öne çıkmaktadır. Çatalhöyük Konya'dadır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türk bilim tarihçisi Fuat Sezgin hangi alanda tanınmaktadır?",
+          "secenekler": [
+            "A) Fizik araştırmaları",
+            "B) İslam bilim tarihi ve el yazmaları",
+            "C) Çevre mühendisliği",
+            "D) Nükleer enerji",
+            "E) Astronomi gözlemleri"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Prof. Dr. Fuat Sezgin (1924-2018), İslam medeniyetinin bilim tarihini araştırmış ve 'Geschichte des arabischen Schrifttums' (Arap Yazılı Eserlerinin Tarihi) adlı 17 ciltlik dev eseriyle dünya çapında tanınmıştır.",
+          "distractorAciklama": "Fuat Sezgin fizik veya mühendislik çalışmıyor; İslam bilimleri tarihçisiydi. Goethe Üniversitesi'nde akademik kariyerini sürdürmüş ve pek çok uluslararası ödül almıştır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de Mevlana Celaleddin Rumi'nin tekkesinin ve türbesinin bulunduğu şehir aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Bursa",
+            "B) Ankara",
+            "C) Konya",
+            "D) İstanbul",
+            "E) Kayseri"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Mevlana Celaleddin Rumi, Konya'da yaşamış ve 1273'te vefat etmiştir. Mevlana Müzesi ve türbesi Konya'da bulunmaktadır.",
+          "distractorAciklama": "Mevlana Horasan doğumlu olmakla birlikte Konya'ya yerleşmiş ve hayatını orada geçirmiştir. Sema törenleri ve Mevlevilik Konya ile özdeşleşmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Pamukkale (Hierapolis) hangi ilimizde yer almaktadır?",
+          "secenekler": [
+            "A) Antalya",
+            "B) İzmir",
+            "C) Muğla",
+            "D) Denizli",
+            "E) Aydın"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Pamukkale travertenler ve antik Hierapolis kalıntılarıyla birlikte Denizli iline bağlıdır; 1988'de UNESCO Dünya Mirası Listesi'ne alınmıştır.",
+          "distractorAciklama": "Antalya, İzmir, Muğla ve Aydın Ege-Akdeniz'in turizm merkezleridir. Pamukkale ise Denizli'ye aittir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Dünyaca ünlü Türk piyanist ve besteci aşağıdakilerden hangisidir?",
+          "secenekler": [
+            "A) Zülfü Livaneli",
+            "B) Fazıl Say",
+            "C) Barış Manço",
+            "D) Sezen Aksu",
+            "E) Tarkan"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Fazıl Say, uluslararası arenada tanınan Türk klasik müzik piyanisti ve bestecisidir; dünya turu konserleri ve besteciliğiyle öne çıkmaktadır.",
+          "distractorAciklama": "Zülfü Livaneli, Barış Manço, Sezen Aksu ve Tarkan pop/rock müziğinde önemli isimlerdir. Fazıl Say ise klasik müzik alanında dünya genelinde tanınan tek isimdir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de 'Nevruz' kutlamaları UNESCO'nun hangi listesine alınmıştır?",
+          "secenekler": [
+            "A) UNESCO Dünya Mirası Listesi",
+            "B) UNESCO Somut Olmayan Kültürel Miras Listesi",
+            "C) UNESCO Acil Koruma Listesi",
+            "D) UNESCO Bellek listesi",
+            "E) UNESCO'nun herhangi bir listesinde yer almamaktadır."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Nevruz, Türkiye dahil çok sayıda ülkenin ortak başvurusuyla 2009'da UNESCO Somut Olmayan Kültürel Miras Listesi'ne alınmıştır.",
+          "distractorAciklama": "UNESCO Dünya Mirası Listesi somut (fiziksel) kültürel miraslar içindir. Nevruz gibi yaşayan gelenekler Somut Olmayan Kültürel Miras Listesi'nde yer alır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de 2024 yılı Nobel Edebiyat Ödülü'nü kazanan bir Türk yazar var mıdır? Yoksa bu ödülü en son hangi Türk yazar almıştır?",
+          "secenekler": [
+            "A) Elif Şafak 2023'te aldı.",
+            "B) 2024'te herhangi bir Türk yazar almadı; en son 2006'da Orhan Pamuk aldı.",
+            "C) Yaşar Kemal 2020'de aldı.",
+            "D) Ahmet Altan 2022'de aldı.",
+            "E) Türk bir yazar Nobel almamıştır."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Nobel Edebiyat Ödülü'nü kazanan tek Türk yazar Orhan Pamuk'tur (2006). 2024 dahil sonraki yıllarda herhangi bir Türk yazar bu ödülü almamıştır.",
+          "distractorAciklama": "Elif Şafak, Yaşar Kemal ve Ahmet Altan Nobel Edebiyat Ödülü almamıştır. Bu ödülü alan tek Türk yazar Orhan Pamuk'tur (2006).",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Göbeklitepe hangi ülkede yer almakta ve UNESCO Dünya Mirası Listesi'ne ne zaman alınmıştır?",
+          "secenekler": [
+            "A) Irak, 2005",
+            "B) Türkiye, 2018",
+            "C) Suriye, 2010",
+            "D) Türkiye, 2015",
+            "E) İran, 2012"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Göbeklitepe; Şanlıurfa iline bağlı Örencik köyünde yer alan ve yaklaşık 12.000 yıllık olan dünyanın en eski tapınak kompleksidir. 2018 yılında UNESCO Dünya Mirası Listesi'ne alınmıştır."
+        },
+        {
+          "soru": "Çatalhöyük neyi temsil etmektedir ve nerededir?",
+          "secenekler": [
+            "A) Tunç Çağı kalesi; Bursa",
+            "B) Dünyanın en eski şehir yerleşimlerinden biri; Konya",
+            "C) Osmanlı dönemi sarayı; İstanbul",
+            "D) Antik liman kenti; İzmir",
+            "E) Roma dönemi amfitiyatrosu; Efes"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Çatalhöyük; Konya'da yer alan ve yaklaşık 9.500 yıl önce kurulmuş, dünyanın en eski büyük yerleşim yerlerinden biridir. 2012 yılında UNESCO Dünya Mirası Listesi'ne alınmıştır."
+        },
+        {
+          "soru": "Pamukkale ve Hierapolis UNESCO Dünya Mirası Listesi'ne hangi yıl alınmıştır?",
+          "secenekler": [
+            "A) 1988",
+            "B) 1992",
+            "C) 1998",
+            "D) 2004",
+            "E) 2010"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Pamukkale ve Hierapolis antik kenti 1988 yılında UNESCO Dünya Mirası Listesi'ne alınmıştır. Denizli iline bağlı olan bu alan, travertenlerden oluşan doğal termal havuzlarıyla ünlüdür."
+        }
+      ]
+    },
+    {
+      "id": "guncel-dunya-siyaseti",
+      "baslik": "Dünya Siyaseti ve Uluslararası Örgütler",
+      "anlatim": {
+        "ozet": "🌍 BM, NATO, AB, BRICS ve SCO başlıca uluslararası örgütlerdir. Günümüzde Ukrayna-Rusya savaşı, Orta Doğu çatışmaları ve iklim diplomasisi küresel siyasetin odağındadır.",
+        "icerik": [
+          "📌 Birleşmiş Milletler (BM): 1945'te 51 kurucu üyeyle kurulmuş; günümüzde 193 üyesi var. Genel Merkez New York'ta. Ana organlar: Güvenlik Konseyi (5 daimi + 10 geçici üye), Genel Kurul, Uluslararası Adalet Divanı (Lahey), Sekretarya, Ekonomik ve Sosyal Konsey, Vesayet Konseyi. Daimi üyeler (P5): ABD, Rusya, Çin, İngiltere, Fransa. Her biri veto hakkına sahip.",
+          "📎 NATO: 1949'da Washington Antlaşması ile kuruldu. 'Madde 5' kolektif savunma ilkesi: üyelerden birine saldırı tümüne saldırı sayılır. 2023'te Finlandiya, 2024'te İsveç katıldı (Sovyet dönemi sonrası en büyük genişleme). Genel Merkez Brüksel. Türkiye kurucu üye değil; 1952'de Yunanistan ile birlikte katıldı.",
+          "📎 Ukrayna-Rusya Savaşı: Şubat 2022'de Rusya'nın Ukrayna'ya tam ölçekli askeri saldırısıyla başladı. Avrupa tarihindeki en büyük kara savaşıdır. BM Güvenlik Konseyi'nde Rusya veto yetkisini kullandığı için iş Genel Kurul'a taşındı (ES-11 serisi olağanüstü oturumlar). AB ve ABD, Rusya'ya kapsamlı yaptırımlar uyguladı; Ukrayna'ya Batı'dan silah ve mali yardım yapıldı.",
+          "📎 BRICS: Brezilya, Rusya, Hindistan, Çin, Güney Afrika'nın oluşturduğu büyük ekonomiler grubu. 2024'te Suudi Arabistan, BAE, İran, Etiyopya, Mısır ve Arjantin (Arjantin daha sonra geri çekildi) tam üye olarak davet edildi. BRICS+ olarak anılmaya başlandı.",
+          "📎 Bretton Woods kurumları: İkinci Dünya Savaşı sonrasında 1944'te kurulan Uluslararası Para Fonu (IMF), üye ülkelere ödemeler dengesi krizlerinde kısa vadeli mali destek sağlar ve küresel para sisteminin istikrarını gözetir. Dünya Bankası ise gelişmekte olan ülkelere altyapı ve kalkınma projeleri için uzun vadeli kredi ve teknik destek sunar; her iki kurumun genel merkezi Washington DC'dedir.",
+          "📎 Dünya Ticaret Örgütü (DTÖ/WTO): 1995'te kurulmuş, uluslararası ticaret kurallarını belirleyen ve üye ülkeler arasındaki ticaret anlaşmazlıklarını çözen küresel örgüttür; merkezi Cenevre'dedir ve GATT (Gümrük Tarifeleri ve Ticaret Genel Anlaşması) adlı önceki sistemin devamı niteliğindedir.",
+          "📎 Avrupa Birliği'nin kurumsal yapısı üç temel organa dayanır: Avrupa Komisyonu (yürütme organı, yasa tekliflerini hazırlar), Avrupa Parlamentosu (üye ülke vatandaşları tarafından doğrudan seçilir, yasama sürecine katılır) ve Avrupa Birliği Konseyi (üye devlet hükümetlerini temsil eder). Bu üçlü yapı, AB'nin hem uluslarüstü hem de hükümetler arası niteliklere sahip benzersiz bir birlik olmasını sağlar.",
+          "📎 Uluslararası Adalet Divanı (UAD) ile Uluslararası Ceza Mahkemesi (UCM) sıkça karıştırılır: UAD, BM'nin ana yargı organıdır ve devletler arası uyuşmazlıkları çözer; UCM ise BM'den bağımsız bir antlaşmayla (Roma Statüsü, 1998) kurulmuş olup soykırım, savaş suçları ve insanlığa karşı suçlardan sorumlu bireyleri yargılar. İkisi de Lahey merkezlidir ancak farklı hukuki temellere ve yetkilere sahiptir.",
+          "📎 G7 ve G20: G7, dünyanın önde gelen gelişmiş ekonomilerini (ABD, Kanada, Fransa, Almanya, İtalya, Japonya, İngiltere) bir araya getiren gayriresmî bir forumdur. G20 ise bu ülkelere ek olarak Türkiye, Çin, Hindistan, Brezilya, Suudi Arabistan gibi büyük gelişmekte olan ekonomileri ve Avrupa Birliği'ni kapsayan, küresel GSYİH'nın büyük bölümünü temsil eden geniş katılımlı bir ekonomik forumdur.",
+          "📎 Şangay İşbirliği Örgütü (ŞİÖ/SCO): Çin ve Rusya öncülüğünde kurulan, Orta Asya ülkelerini de kapsayan bölgesel güvenlik ve ekonomik iş birliği örgütüdür; Batı ittifaklarına alternatif bir Avrasya iş birliği platformu olarak değerlendirilir."
+        ],
+        "anahtarNoktalar": [
+          "🔑 BM Güvenlik Konseyi'nin 5 daimi üyesi (P5): ABD, Rusya, Çin, İngiltere, Fransa; hepsinin veto hakkı var.",
+          "💡 NATO Madde 5: Bir üyeye saldırı hepsine saldırıdır; kolektif savunma ilkesi.",
+          "🔑 Finlandiya 2023, İsveç 2024'te NATO'ya katıldı.",
+          "💡 Ukrayna savaşı Şubat 2022'de başladı; BM veto sorunu nedeniyle iş Genel Kurul'a taşındı.",
+          "🔑 BRICS 2024 genişlemesiyle küresel GSYİH'ın yaklaşık %35'ini temsil eder hale geldi.",
+          "💡 IMF kısa vadeli mali istikrar, Dünya Bankası uzun vadeli kalkınma kredisi sağlar; ikisi de 1944 Bretton Woods sisteminin ürünüdür.",
+          "🔑 DTÖ (WTO): 1995'te kuruldu, merkezi Cenevre'dedir, GATT'ın devamı niteliğindedir.",
+          "💡 AB'nin üç temel organı: Avrupa Komisyonu (yürütme), Avrupa Parlamentosu (yasama), AB Konseyi (üye hükümetler).",
+          "🔑 UAD devletler arası, UCM bireyler için yargı yetkisine sahiptir; ikisi de Lahey'dedir ama farklı kurumlardır.",
+          "💡 G7 gelişmiş ekonomiler forumu; G20 bunlara büyük gelişmekte olan ekonomileri ekleyen geniş forumdur."
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "BM Güvenlik Konseyi'nin 5 daimi üyesinden biri değildir?",
+          "secenekler": [
+            "A) ABD",
+            "B) Rusya",
+            "C) Almanya",
+            "D) Çin",
+            "E) Fransa"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "BM Güvenlik Konseyi'nin 5 daimi üyesi (P5): ABD, Rusya, Çin, Fransa ve Birleşik Krallık'tır. Almanya daimi üye değildir; ancak G4 ülkesi olarak daimi üyelik talep etmektedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "NATO Antlaşması'nın 'Madde 5' ilkesi ne anlama gelir?",
+          "secenekler": [
+            "A) Tüm üyeler nükleer silah paylaşımına tabidir.",
+            "B) Bir üyeye yapılan silahlı saldırı tüm üyelere yapılmış sayılır.",
+            "C) Üyeler yıllık GSYİH'larının %2'sini savunmaya harcamak zorundadır.",
+            "D) Üyeler arasındaki ticaret anlaşmazlıkları NATO tahkimiyle çözülür.",
+            "E) Üyeler büyük nükleer kararlar için oy birliği aramak zorundadır."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Madde 5, NATO'nun kolektif savunma ilkesini düzenler: üyelerden birine silahlı saldırı gerçekleşirse bu saldırı tüm ittifak üyelerine yapılmış sayılır ve ortak savunma mekanizması devreye girer.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye NATO'ya hangi yılda katılmıştır?",
+          "secenekler": [
+            "A) 1945",
+            "B) 1949",
+            "C) 1952",
+            "D) 1963",
+            "E) 1980"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Türkiye, Yunanistan ile birlikte 1952 yılında NATO'ya katılmıştır. NATO'nun kuruluşu 1949'dadır; Türkiye kurucu üye değildir.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "Rusya'nın Ukrayna'ya tam ölçekli askeri saldırısı hangi tarihte başlamıştır?",
+          "secenekler": [
+            "A) Ocak 2021",
+            "B) Kasım 2021",
+            "C) Şubat 2022",
+            "D) Ekim 2022",
+            "E) Mart 2023"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Rusya, 24 Şubat 2022'de Ukrayna'ya tam ölçekli askeri saldırı başlattı. Bu, 2014'teki Kırım ilhakı ve Donbas çatışmalarından farklı olarak Avrupa'nın tamamını etkileyen büyük çaplı bir savaşın başlangıcı oldu.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "2023 yılında NATO'ya katılan ülke hangisidir?",
+          "secenekler": [
+            "A) İsveç",
+            "B) Finlandiya",
+            "C) Ukrayna",
+            "D) Avustralya",
+            "E) Japonya"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Finlandiya, Şubat 2023'te NATO'nun 31. üyesi oldu. İsveç ise Mart 2024'te 32. üye olarak katıldı. İkisi de onlarca yıllık askeri tarafsızlık politikasını Ukrayna savaşının ardından sona erdirdi.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "BM Güvenlik Konseyi'nin toplam üye sayısı kaçtır?",
+          "secenekler": [
+            "A) 5",
+            "B) 10",
+            "C) 15",
+            "D) 20",
+            "E) 25"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "BM Güvenlik Konseyi 15 üyeden oluşur: 5 daimi üye (P5) ve Genel Kurul tarafından 2 yıllık dönemler için seçilen 10 geçici üye.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "BRICS grubunun kurucu üyelerinden biri değildir?",
+          "secenekler": [
+            "A) Brezilya",
+            "B) Rusya",
+            "C) Türkiye",
+            "D) Hindistan",
+            "E) Çin"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "BRICS'in kurucu üyeleri Brezilya, Rusya, Hindistan, Çin ve Güney Afrika'dır (Güney Afrika 2010'da katıldı). Türkiye BRICS üyesi değildir; SCO'ya gözlemci statüsünde katılım süreci yürütmektedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "BM'nin genel merkezi hangi şehirdedir?",
+          "secenekler": [
+            "A) Cenevre",
+            "B) Brüksel",
+            "C) Lahey",
+            "D) New York",
+            "E) Paris"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "BM Genel Merkezi New York'ta bulunmaktadır. Cenevre'de ise BM Avrupa ofisi ve pek çok BM kuruluşu yer almaktadır. Uluslararası Adalet Divanı Lahey'de, NATO'nun genel merkezi ise Brüksel'dedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Avrupa Birliği'nin Türkiye'ye yönelik tam üyelik müzakereleri resmen hangi yılda başlamıştır?",
+          "secenekler": [
+            "A) 1987",
+            "B) 1999",
+            "C) 2002",
+            "D) 2005",
+            "E) 2013"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "AB tam üyelik müzakereleri Türkiye ile Ekim 2005'te resmen başlatılmıştır. Türkiye 1987'de ortaklık başvurusu yapmış, 1999'da aday ülke statüsü kazanmıştır.",
+          "kaynak": "2020-KPSS"
+        },
+        {
+          "soru": "İklim değişikliğiyle mücadelede Paris Anlaşması'nın temel hedefi nedir?",
+          "secenekler": [
+            "A) Okyanus plastik kirliliğini sıfırlamak",
+            "B) Küresel ortalama sıcaklık artışını sanayi öncesine göre 1,5-2°C ile sınırlamak",
+            "C) Tüm ülkelerin 2030'a kadar sıfır emisyona ulaşması",
+            "D) Fosil yakıt ticaretini yasaklamak",
+            "E) Nükleer santrallerin kapatılmasını sağlamak"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "2015 yılında imzalanan Paris Anlaşması'nın temel hedefi; küresel ortalama sıcaklık artışını sanayi öncesi dönemin 2°C üzerinde sınırlamak, mümkünse 1,5°C ile tutmaktır. Bu hedef için ülkeler ulusal katkı beyanlarını (NDC) BM'ye sunar.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "BM Güvenlik Konseyi'nin daimi üyeleri hangileridir?",
+          "secenekler": [
+            "A) ABD, Rusya, Çin, Fransa, Almanya",
+            "B) ABD, Rusya, Çin, Fransa, İngiltere",
+            "C) ABD, Rusya, Çin, İngiltere, Japonya",
+            "D) ABD, Rusya, AB, Çin, Hindistan",
+            "E) ABD, Rusya, Çin, Fransa, İtalya"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "BM Güvenlik Konseyi'nin 5 daimi (veto hakkına sahip) üyesi şunlardır: ABD, Rusya Federasyonu, Çin Halk Cumhuriyeti, Fransa ve Birleşik Krallık."
+        },
+        {
+          "soru": "Finlandiya NATO'ya hangi yıl katılmıştır?",
+          "secenekler": [
+            "A) 2022",
+            "B) 2023",
+            "C) 2024",
+            "D) 2025",
+            "E) 2021"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Finlandiya, Rusya'nın Ukrayna'yı işgalinin ardından Nisan 2023'te NATO'ya katılmıştır. Bu adım; Finlandiya'nın onlarca yıllık tarafsızlık politikasından vazgeçmesi bakımından tarihi bir kırılma noktasıdır."
+        },
+        {
+          "soru": "İsveç NATO'ya hangi yılda katılmıştır?",
+          "secenekler": [
+            "A) 2022",
+            "B) 2023",
+            "C) 2024",
+            "D) 2025",
+            "E) 2021"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "İsveç, Mart 2024'te NATO'ya 32. üye olarak katılmıştır. Türkiye, İsveç'in üyeliğine ilişkin onay sürecini Ocak 2024'te tamamlamıştır."
+        },
+        {
+          "soru": "BRICS grubu başlangıçta hangi ülkelerden oluşmaktaydı?",
+          "secenekler": [
+            "A) Brezilya, Rusya, Hindistan, Çin, Güney Afrika",
+            "B) Brezilya, Romanya, İran, Çin, Suudi Arabistan",
+            "C) Bolivya, Rusya, Irak, Çin, Arjantin",
+            "D) Brezilya, Rusya, Hindistan, Kuveyt, Sudan",
+            "E) Bolivya, Romanya, Endonezya, Çin, Singapur"
+          ],
+          "dogruIndex": 0,
+          "aciklama": "BRICS; Brezilya, Rusya, Hindistan, Çin ve Güney Afrika'nın kısaltmasıdır. Gelişmekte olan büyük ekonomilerin oluşturduğu bu grup 2024'te genişleme sürecine girmiştir."
+        }
+      ]
+    },
+    {
+      "id": "guncel-teknoloji",
+      "baslik": "Teknoloji ve Dijital Dönüşüm",
+      "anlatim": {
+        "ozet": "💻 Yapay zeka, 5G, siber güvenlik, kripto para ve uzay teknolojileri günümüzün dönüştürücü teknoloji gündemleridir. Türkiye'nin Togg ve uzay programı bu alanda öne çıkan millî girişimlerdir.",
+        "icerik": [
+          "📌 Yapay Zeka (AI): ChatGPT, OpenAI tarafından geliştirilen ve Kasım 2022'de kamuoyuyla paylaşılan büyük dil modelidir. Hizmete açıldıktan 2 ayda 100 milyon kullanıcıya ulaşarak tarihin en hızlı büyüyen uygulaması oldu. Üretken yapay zeka (Generative AI) metinden görüntü, ses, video ve kod üretebilir. AB, 2024'te 'AI Act' (Yapay Zeka Yasası) ile dünya genelinde bu alandaki ilk kapsamlı düzenlemeyi hayata geçirdi.",
+          "📎 Türkiye'nin teknoloji atılımları: Togg (Türkiye'nin Otomobili Girişim Grubu) — 2023'te seri üretime başlayan, yerli ve milli elektrikli otomobil. Türksat uyduları: Türkiye'nin iletişim uyduları. TÜBİTAK BİLGEM: siber güvenlik ve bilişim araştırmaları. STM (Savunma Teknolojileri Mühendislik): insansız denizaltı ve yapay zeka tabanlı silah sistemleri. 2023'te Türkiye'nin ilk uzay yolcusu Alper Gezeravcı ISS'a gönderildi.",
+          "📎 Kripto para ve blok zinciri: Bitcoin, 2009'da Satoshi Nakamoto takma adıyla tanıtıldı; 2024'te Bitcoin ETF'lerin ABD'de onaylanmasıyla fiyatı 70.000 doları aştı. Türkiye'de kripto para alım-satımı yasal ancak ödeme aracı olarak kullanımı yasak. Blok zinciri; değişmez dağıtık defter (ledger) teknolojisidir — kripto para dışında tedarik zinciri, sağlık ve tapu kayıtlarında da kullanılır.",
+          "📎 5G ve nesnelerin interneti (IoT): 5G şebekeleri, 4G'ye kıyasla 100 kat daha hızlı veri aktarımı sunabilir; özellikle otonom araçlar, akıllı fabrikalar ve telemedikal için kritik. Türkiye'de 5G'ye geçiş süreci AB standartlarına uygun biçimde planlanmakta ve kademeli devreye alım 2025-2026 dönemine denk gelmesi beklenmektedir.",
+          "📎 Yapay zeka türleri kavramsal olarak ikiye ayrılır: 'Dar yapay zeka' (Narrow AI) belirli bir görevi (görüntü tanıma, dil çevirisi gibi) insan seviyesinde veya üzerinde yerine getirebilen, günümüzde yaygın kullanılan sistemleri ifade eder. 'Genel yapay zeka' (AGI - Artificial General Intelligence) ise insan zekasına eşdeğer, herhangi bir bilişsel görevi öğrenip uygulayabilen, henüz teorik aşamada olan bir kavramdır.",
+          "📎 Siber güvenliğin temel kavramları arasında şifreleme (verinin yetkisiz erişime kapalı hale getirilmesi), çok faktörlü kimlik doğrulama (şifre dışında ikinci bir doğrulama katmanı) ve DDoS (dağıtık hizmet engelleme) saldırıları yer alır. Türkiye'de USOM (Ulusal Siber Olaylara Müdahale Merkezi), kamu ve özel sektörü siber tehditlere karşı bilgilendirme ve koordinasyon görevini üstlenir.",
+          "📎 Bulut bilişim (cloud computing), veri depolama ve işlem gücünün kullanıcının kendi cihazı yerine uzak sunucular üzerinden internet aracılığıyla sağlanmasıdır; işletmelerin donanım yatırımı yapmadan ölçeklenebilir teknoloji altyapısına erişmesini sağlar. IaaS (altyapı), PaaS (platform) ve SaaS (yazılım) olmak üzere üç temel hizmet modeline ayrılır.",
+          "📎 Türkiye Uzay Ajansı (TUA), 2018 yılında kurulan ve ülkenin uzay politikalarını, uydu ve roket geliştirme stratejilerini koordine eden kamu kurumudur. Uydular yörünge yüksekliklerine göre sınıflandırılır: Alçak Dünya Yörüngesi (LEO) gözlem ve haberleşme uyduları için, Jeostasyoner Yörünge (GEO) ise TÜRKSAT gibi sabit konumlu haberleşme uydularının bulunduğu yükseklik aralığıdır.",
+          "📎 Yenilenebilir enerji teknolojileri: Güneş enerjisi fotovoltaik (PV) paneller aracılığıyla güneş ışığını doğrudan elektriğe çevirirken, rüzgar enerjisi türbin kanatlarının döndürülmesiyle mekanik enerjiyi elektriğe dönüştürür. Türkiye, coğrafi konumu nedeniyle güneş ve rüzgar enerjisi potansiyeli yüksek ülkeler arasında yer alır ve enerjide dışa bağımlılığı azaltma hedefiyle yenilenebilir kaynaklara yatırımlarını artırmaktadır."
+        ],
+        "anahtarNoktalar": [
+          "🔑 ChatGPT, Kasım 2022'de yayıma girdi; OpenAI geliştirdi.",
+          "💡 Togg, 2023'te seri üretime başlayan Türkiye'nin ilk yerli elektrikli otomobilidir.",
+          "🔑 AB'nin AI Act'i (2024) dünya tarihinde yapay zekayı kapsamlı biçimde düzenleyen ilk yasadır.",
+          "💡 Bitcoin 2009'da başlatıldı; 2024'te ETF onayıyla 70.000 $ üzerini gördü.",
+          "🔑 Alper Gezeravcı, 2024 başında ISS'a giden Türkiye'nin ilk uzay yolcusudur.",
+          "💡 Dar yapay zeka (Narrow AI) belirli görevlerde uzmanlaşır; Genel yapay zeka (AGI) henüz teorik bir hedeftir.",
+          "🔑 USOM, Türkiye'nin siber tehditlere karşı ulusal koordinasyon merkezidir.",
+          "💡 Bulut bilişim modelleri: IaaS (altyapı), PaaS (platform), SaaS (yazılım).",
+          "🔑 Türkiye Uzay Ajansı (TUA), 2018'de kuruldu; ülkenin uzay stratejisini koordine eder."
+        ]
+      },
+      "sorular": [
+        {
+          "soru": "ChatGPT'yi geliştiren şirket hangisidir?",
+          "secenekler": [
+            "A) Google DeepMind",
+            "B) Meta AI",
+            "C) OpenAI",
+            "D) Microsoft Research",
+            "E) IBM Watson"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "ChatGPT, San Francisco merkezli OpenAI şirketi tarafından geliştirilmiş ve Kasım 2022'de kamuoyuyla paylaşılmıştır. Microsoft, OpenAI'ye büyük yatırım yaparak ürünlerini entegre etmiştir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Togg (Türkiye'nin Otomobili) hangi yılda seri üretimine başlamıştır?",
+          "secenekler": [
+            "A) 2020",
+            "B) 2021",
+            "C) 2022",
+            "D) 2023",
+            "E) 2025"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "Togg, 2023 yılında Bursa Gemlik'teki fabrikasında seri üretime başlamış ve aynı yıl ilk müşterilerine teslim edilmiştir. Türkiye'nin ilk yerli ve milli elektrikli otomobilidir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Bitcoin hangi yılda piyasaya çıkmıştır?",
+          "secenekler": [
+            "A) 2005",
+            "B) 2007",
+            "C) 2009",
+            "D) 2011",
+            "E) 2013"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Bitcoin, Satoshi Nakamoto takma adlı kişi/grup tarafından 2009 yılında tanıtılmış; Ocak 2009'da ilk blok (genesis block) üretilmiştir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Avrupa Birliği'nin yapay zekayı kapsamlı biçimde düzenleyen 'AI Act' yasası hangi yılda yürürlüğe girmiştir?",
+          "secenekler": [
+            "A) 2021",
+            "B) 2022",
+            "C) 2023",
+            "D) 2024",
+            "E) 2025"
+          ],
+          "dogruIndex": 3,
+          "aciklama": "AB'nin Yapay Zeka Yasası (AI Act) 2024 yılında resmi olarak yürürlüğe girmiştir. Dünya tarihinde yapay zekayı bu ölçekte kapsamlı biçimde düzenleyen ilk yasal çerçevedir.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Türkiye'nin ilk uzay yolcusu kimdir ve ISS'a hangi yılda gitmiştir?",
+          "secenekler": [
+            "A) Selçuk Bayraktar — 2023",
+            "B) Alper Gezeravcı — 2024",
+            "C) Haluk Bayraktar — 2023",
+            "D) Hasan Doğan — 2022",
+            "E) Türkiye henüz uzay yolcusu göndermemiştir."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Türk astronot Alper Gezeravcı, Ocak 2024'te SpaceX Crew Dragon aracıyla Uluslararası Uzay İstasyonu'na (ISS) gönderilmiş ve yaklaşık 14 gün orada görev yapmıştır.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "Blok zinciri (blockchain) teknolojisinin temel özelliği nedir?",
+          "secenekler": [
+            "A) Merkezi bir sunucu tarafından kontrol edilir.",
+            "B) Verileri değiştirilemez biçimde dağıtık kayıt defterinde saklar.",
+            "C) Yalnızca kripto para işlemlerinde kullanılabilir.",
+            "D) Veriler internet bağlantısı olmadan silinemez.",
+            "E) Her işlem devlet onayına tabidir."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Blok zinciri; verilerin şifrelenerek birbirine bağlı bloklar hâlinde, dağıtık ve değiştirilemez biçimde saklandığı teknolojidir. Kripto para dışında tedarik zinciri, tapu, sağlık ve oy verme sistemlerinde de kullanılır.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "5G teknolojisinin 4G'ye kıyasla temel avantajı nedir?",
+          "secenekler": [
+            "A) Daha düşük enerji tüketimi ve daha az baz istasyonu ihtiyacı",
+            "B) Çok daha yüksek veri hızı ve düşük gecikme süresi",
+            "C) Yalnızca şehir merkezlerinde kapsama alanı sunabilir.",
+            "D) Yüksek güvenlik nedeniyle şifreleme gerektirmez.",
+            "E) Uluslararası arama ücretlerini ortadan kaldırır."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "5G, 4G'ye kıyasla 100 kata kadar daha hızlı veri iletimi ve çok daha düşük gecikme süresi sunar. Bu özellikler otonom araçlar, akıllı fabrikalar (endüstri 4.0) ve uzaktan cerrahi gibi gecikmeye duyarlı uygulamalar için kritiktir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'de kripto para kullanımına ilişkin aşağıdaki ifadelerden hangisi doğrudur?",
+          "secenekler": [
+            "A) Türkiye'de kripto para tamamen yasaklanmıştır.",
+            "B) Kripto para alım-satımı serbesttir; ancak mal/hizmet ödemelerinde kullanımı yasaktır.",
+            "C) Türkiye, kripto parayı resmi para birimi olarak kabul etmiştir.",
+            "D) Yalnızca devlet onaylı borsa platformlarında işlem yapılabilir.",
+            "E) Kripto para yatırımcıları vergi ödeme yükümlülüğünden muaftır."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Türkiye'de 2021 yılında yürürlüğe giren düzenlemeyle kripto paraların ödeme aracı olarak kullanılması yasaklandı; ancak borsa platformları üzerinden alım-satım (yatırım amaçlı) yasaldır. 2024'te kripto varlık hizmet sağlayıcılarının lisanslı olması zorunluluğu getirildi.",
+          "kaynak": "2024-Güncel"
+        },
+        {
+          "soru": "TÜBİTAK BİLGEM Türkiye'de hangi alanda çalışmalar yürütmektedir?",
+          "secenekler": [
+            "A) Uzay araştırmaları ve uydu geliştirme",
+            "B) Siber güvenlik ve bilişim teknolojileri araştırmaları",
+            "C) Yerli otomobil geliştirme",
+            "D) Yenilenebilir enerji sistemleri",
+            "E) Nükleer enerji reaktörü tasarımı"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "TÜBİTAK BİLGEM (Bilişim ve Bilgi Güvenliği İleri Teknolojiler Araştırma Merkezi), siber güvenlik, kriptografi, yazılım geliştirme ve bilgi güvenliği alanlarında Türkiye'nin önde gelen araştırma merkezi olarak faaliyet göstermektedir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Üretken yapay zeka (Generative AI) sistemleri aşağıdakilerden hangisini yapabilir?",
+          "secenekler": [
+            "A) Yalnızca metin yorumlayabilir; yeni içerik üretemez.",
+            "B) Fiziksel nesneleri 3D yazıcıyla basabilir.",
+            "C) Metinden görüntü, ses, video ve kod üretebilir.",
+            "D) İnternet erişimi olmadan çalışamaz.",
+            "E) Yalnızca programlama dilleri için kullanılır."
+          ],
+          "dogruIndex": 2,
+          "aciklama": "Üretken yapay zeka, metin, görüntü, ses, video ve kod dahil çok sayıda formatta yeni içerik üretebilen yapay zeka sistemlerini kapsar. ChatGPT (metin), DALL-E (görüntü), Sora (video) ve GitHub Copilot (kod) bunların örnekleridir.",
+          "kaynak": "KPSS-Tipi"
+        },
+        {
+          "soru": "Türkiye'nin yerli elektrikli otomobili Togg'un açılımı nedir?",
+          "secenekler": [
+            "A) Türkiye Otomotiv Girişim Grubu",
+            "B) Türk Otonom Güdümlü Girişim",
+            "C) Türkiye'nin Otomobili Girişim Grubu",
+            "D) Türkiye Ortak Girişim Grubu",
+            "E) Türk Otomasyon ve Güç Grubu"
+          ],
+          "dogruIndex": 2,
+          "aciklama": "TOGG; Türkiye'nin Otomobili Girişim Grubu'nun kısaltmasıdır. 2017'de kurulan şirket, Türkiye'nin ilk yerli ve milli elektrikli otomobilini üretmektedir."
+        },
+        {
+          "soru": "Alper Gezeravcı'nın uzay yolculuğu hakkında aşağıdakilerden hangisi doğrudur?",
+          "secenekler": [
+            "A) 2022 yılında Soyuz roketi ile uzaya gitti.",
+            "B) Ocak 2024'te SpaceX'in Crew Dragon kapsülüyle uzaya giderek ilk Türk astronot oldu.",
+            "C) 2021 yılında ilk Türk uydu fırlatma görevini tamamladı.",
+            "D) NASA'nın astronot programına kabul edilen ilk Türk'tür.",
+            "E) Uzaya giden ilk Müslüman astronottur."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Alper Gezeravcı; 18 Ocak 2024'te SpaceX Falcon 9 roketiyle fırlatılan Crew Dragon kapsülüyle Uluslararası Uzay İstasyonu'na giderek Türkiye'nin ilk astronotu olmuştur."
+        },
+        {
+          "soru": "Blockchain teknolojisinin temel özelliği nedir?",
+          "secenekler": [
+            "A) Merkezi bir sunucu üzerinde çalışır.",
+            "B) Verilerin dağıtık, şifrelenmiş ve değiştirilemez bir kayıt zincirinde tutulmasıdır.",
+            "C) Yalnızca finans sektöründe kullanılır.",
+            "D) Hız açısından geleneksel veritabanlarından yavaştır ama güvenliği yoktur.",
+            "E) Devletler tarafından kontrol edilen bir sistem gerektirir."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "Blockchain (dağıtık defter teknolojisi); verilerin merkezi bir otorite yerine ağdaki tüm katılımcılara dağıtılmış, şifrelenmiş ve birbirine zincirlenmiş bloklar halinde tutulduğu bir teknolojidir."
+        },
+        {
+          "soru": "5G teknolojisinin 4G'ye göre temel avantajı nedir?",
+          "secenekler": [
+            "A) Daha az baz istasyonu gerektirir.",
+            "B) Çok daha yüksek veri hızı ve çok daha düşük gecikme süresi sağlar.",
+            "C) Yalnızca akıllı telefonlarda kullanılır.",
+            "D) Kapsama alanı daha geniştir.",
+            "E) Daha az enerji tüketir ve daha ucuzdur."
+          ],
+          "dogruIndex": 1,
+          "aciklama": "5G; 4G/LTE'ye kıyasla çok daha yüksek veri hızı (teorik olarak 20 Gbps'e kadar) ve çok daha düşük gecikme süresi (1 ms altı) sunmaktadır. Nesnelerin interneti ve otonom araçlar için kritik öneme sahiptir."
+        },
+        {
+          "soru": "TÜBİTAK BİLGEM hangi alanda faaliyet göstermektedir?",
+          "secenekler": [
+            "A) Tarım araştırmaları",
+            "B) Bilgi ve iletişim teknolojileri ile siber güvenlik",
+            "C) Uzay bilimleri",
+            "D) Tıp ve ilaç araştırmaları",
+            "E) Enerji sistemleri araştırmaları"
+          ],
+          "dogruIndex": 1,
+          "aciklama": "TÜBİTAK BİLGEM (Bilişim ve Bilgi Güvenliği İleri Teknolojiler Araştırma Merkezi); bilgi ve iletişim teknolojileri, siber güvenlik ve kriptografi alanlarında araştırma ve geliştirme faaliyetleri yürütmektedir."
+        }
+      ]
+    }
+  ]
+}
