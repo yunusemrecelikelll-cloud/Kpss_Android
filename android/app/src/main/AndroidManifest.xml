@@ -2,7 +2,7 @@
     <!-- Firebase eklentileri bunu zaten merge ediyor; açıkça yazmak daha sağlam. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:label="kpss_telefon"
+        android:label="KPSS Hazırlık"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false">
