@@ -64,5 +64,16 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+
+        <!-- "Sesli Dinle" (konu anlatımını okuma, flutter_tts) için ZORUNLU.
+             Android 11 (API 30) ile gelen paket görünürlüğü kısıtlaması
+             yüzünden, bu intent bildirilmezse uygulama cihazdaki TTS
+             motorunu (Google Text-to-Speech vb.) HİÇ göremez: speak()
+             çağrısı hata bile vermeden sessizce hiçbir şey yapmaz.
+             Bkz. lib/services/tts_service.dart ve
+             https://developer.android.com/training/package-visibility -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
     </queries>
 </manifest>
