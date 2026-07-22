@@ -9,6 +9,13 @@
          planlanmış haftalık bildirimler KAYBOLUR. -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- TAM ZAMANLI hatırlatma için (bkz. NotificationService.schedulePlan).
+         Android 12-13'te kurulumda kendiliğinden verilir, kullanıcıya izin
+         ekranı AÇILMAZ. Bu izin olmadan inexact mod kullanılıyordu ve Doze +
+         üretici pil optimizasyonları bildirimleri fiilen hiç tetiklemiyordu
+         ("Android'de bildirim gelmiyor" hatasının kök sebebi). Android 14+'ta
+         izin varsayılan kapalıysa kod kendiliğinden inexact moda düşer. -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <application
         android:label="KPSS Hazırlık"
         android:name="${applicationName}"
