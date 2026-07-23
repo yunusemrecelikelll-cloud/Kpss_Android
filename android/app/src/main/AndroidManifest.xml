@@ -21,6 +21,13 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false">
+        <!-- AdMob uygulama kimliği. ŞU AN GOOGLE'IN RESMÎ TEST KİMLİĞİ —
+             uygulama çökmesin diye zorunlu. Gerçek yayında AdMob konsolundan
+             aldığın "App ID" ile değiştir (ca-app-pub-XXXX~YYYY). Reklam BİRİM
+             kimlikleri ise lib/services/ad_service.dart içinde. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
