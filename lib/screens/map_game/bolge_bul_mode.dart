@@ -149,7 +149,11 @@ class _BolgeyiBulScreenState extends State<BolgeyiBulScreen> {
   @override
   Widget build(BuildContext context) {
     if (_locked) {
-      return const LockedFeatureCard(
+      return LockedFeatureCard(
+        gameId: kMapGameId,
+        oyunAdi: 'Harita Oyunu',
+        onUnlocked: _retry,
+
         title: 'Bölgeyi Bul',
         desc: "Bugünkü $kFreeGameDailyLimit ücretsiz harita oyunu hakkını kullandın. Yarın tekrar oyna ya da Premium'a geçip sınırsız oyna.",
       );
@@ -158,12 +162,12 @@ class _BolgeyiBulScreenState extends State<BolgeyiBulScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     if (_finished) {
-      return MapSessionResult(
+      return MapQuizResult(
         title: '🧭 Bölgeyi Bul',
-        emoji: _score >= (_queue.length * 0.7) ? '🎉' : '📚',
-        message: '${_queue.length} sorudan $_score tanesini doğru bildin.',
+        modeId: kBolgeBulGameId,
+        score: _score,
+        total: _queue.length,
         onRetry: _retry,
-        palette: mapModePaletteFor(kBolgeBulGameId),
       );
     }
     return _buildRound(context);

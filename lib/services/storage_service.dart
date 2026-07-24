@@ -7,7 +7,7 @@ import '../models/question.dart';
 
 /// storage.js'nin Dart/SharedPreferences karşılığı.
 /// Çok kullanıcılı yapı: her anahtar aktif kullanıcı adına göre önekleniyor
-/// (JS: kpss_v2_<kullanıcı>_<anahtar>), localStorage yerine SharedPreferences kullanılıyor.
+/// (JS: `kpss_v2_<kullanıcı>_<anahtar>`), localStorage yerine SharedPreferences kullanılıyor.
 class StorageService extends ChangeNotifier {
   SharedPreferences? _prefs;
   String _activeUser = '';
@@ -24,8 +24,11 @@ class StorageService extends ChangeNotifier {
     final buf = StringBuffer();
     for (final ch in name.runes) {
       final c = String.fromCharCode(ch);
-      if (RegExp(r'[a-zA-Z0-9ğüşıöçĞÜŞİÖÇ]').hasMatch(c)) buf.write(c);
-      else buf.write('_');
+      if (RegExp(r'[a-zA-Z0-9ğüşıöçĞÜŞİÖÇ]').hasMatch(c)) {
+        buf.write(c);
+      } else {
+        buf.write('_');
+      }
     }
     final s = buf.toString();
     return s.length > 40 ? s.substring(0, 40) : s;
@@ -46,15 +49,6 @@ class StorageService extends ChangeNotifier {
     }
   }
 
-  dynamic _getFor(String user, String key, [dynamic fallback]) {
-    final raw = _prefs?.getString(_prefix(user) + key);
-    if (raw == null) return fallback;
-    try {
-      return jsonDecode(raw);
-    } catch (_) {
-      return fallback;
-    }
-  }
 
   Future<void> _set(String key, dynamic value) async {
     await _prefs?.setString(_prefix() + key, jsonEncode(value));
@@ -86,6 +80,59 @@ class StorageService extends ChangeNotifier {
     return cap;
   }
 
+  // ── Hesaba bağlı profiller ────────────────────────────────────────────────
+  //
+  // KÖK SORUN DÜZELTMESİ ("farklı Google hesapları aynı istatistikleri
+  // görüyor"): Yerel veriler eskiden cihazdaki TEK profile yazılıyordu; kim
+  // giriş yaparsa yapsın aynı istatistik/premium/yanlışlar görünüyordu ve
+  // hesap değiştirince veriler birbirine karışıyordu. Artık her Firebase
+  // hesabının KENDİ yerel profili var ('hesap_<uid>'); girişte ona geçilir,
+  // çıkışta tertemiz Misafir profiline dönülür.
+
+  /// Verilen Firebase uid'i için yerel profil adı.
+  static String hesapProfilAdi(String uid) => 'hesap_$uid';
+
+  /// Hesaba bağlı profile geçer (yoksa oluşturur). addUser KULLANILMAZ:
+  /// addUser adı 24 karaktere kırpıyor; uid'ler daha uzun olduğundan farklı
+  /// hesaplar aynı profile düşebilirdi.
+  Future<void> hesapProfilineGec(String uid) async {
+    final ad = hesapProfilAdi(uid);
+    final users = getUserList();
+    if (!users.contains(ad)) {
+      users.add(ad);
+      await _prefs?.setString(_usersKey, jsonEncode(users));
+    }
+    await setActiveUser(ad);
+  }
+
+  /// Çıkış sonrası TERTEMİZ Misafir profiline döner (kullanıcı isteği:
+  /// "çıkış yaptığında uygulama sıfırlansın" — yanlışlarım/premium/istatistik
+  /// görünmesin). Hesap profillerine DOKUNULMAZ: aynı hesapla tekrar girişte
+  /// o hesabın verileri olduğu gibi geri gelir.
+  Future<void> misafireDon() async {
+    await deleteUser('Misafir');
+    final ad = await addUser('Misafir');
+    await setActiveUser(ad);
+    await setUserName(ad);
+  }
+
+  /// TÜM uygulama verisini sıfırlar — bütün profiller, ayarlar, istatistikler,
+  /// rozetler ve PREMIUM dahil. Yalnızca "Hesabımı Sil" akışı kullanır
+  /// (kullanıcı isteği: silince premium ve istatistikler de gitsin; uygulama
+  /// ilk kurulmuş gibi başlasın).
+  ///
+  /// NOT: Mağazadan GERÇEKTEN satın alınmış bir abonelik, mağaza hesabında
+  /// yaşamaya devam eder — uygulama yeniden girişte satın alımı geri
+  /// yükleyebilir (Apple/Google kuralı; aboneliği ancak mağaza iptal eder).
+  Future<void> tumVerileriSil() async {
+    final keys = _prefs?.getKeys().toList() ?? [];
+    for (final k in keys) {
+      await _prefs?.remove(k);
+    }
+    _activeUser = '';
+    notifyListeners();
+  }
+
   Future<void> deleteUser(String name) async {
     final prefix = _prefix(name);
     final keys = _prefs?.getKeys().where((k) => k.startsWith(prefix)).toList() ?? [];
@@ -108,17 +155,9 @@ class StorageService extends ChangeNotifier {
     notifyListeners();
   }
 
-  // ── Gender / karakter / isim ──
+  // ── Gender / isim ──
   String getUserGender() => _get('gender', '') as String;
   Future<void> setUserGender(String g) => _set('gender', g);
-  String getUserGenderFor(String name) => (_getFor(name, 'gender', '')) as String;
-
-  String getUserCharacter() => _get('character', '') as String;
-  Future<void> setUserCharacter(String c) => _set('character', c);
-
-  // ── Hedef meslek (ör. 'polis', 'ogretmen', 'memur', 'uzman-yardimcisi') ──
-  String getTargetProfession() => _get('targetProfession', '') as String;
-  Future<void> setTargetProfession(String p) => _set('targetProfession', p);
 
   // ── Sınav türü: 'lisans' | 'onlisans' | 'ortaogretim' ──
   String getExamType() => _get('examType', '') as String;
@@ -136,11 +175,38 @@ class StorageService extends ChangeNotifier {
   Future<void> markPlacementExamTaken() => _set('placement_exam_taken', true);
 
   String getUserName() => _get('name', '') as String;
+
+  /// İsimdeki HER kelimenin ilk harfini büyütür, kalanını küçültür — Türkçe
+  /// kurallarıyla ("ali veli" → "Ali Veli", "irem" → "İrem", "IŞIL" → "Işıl").
+  /// Dart'ın toUpperCase/toLowerCase'i Unicode varsayılanını uygular; 'i'→'İ'
+  /// ve 'I'→'ı' dönüşümleri elle yapılır (bkz. AuthService.usernameKey'deki
+  /// aynı tuzak).
+  static String _adiBicimle(String ad) {
+    return ad
+        .trim()
+        .split(RegExp(r'\s+'))
+        .where((k) => k.isNotEmpty)
+        .map((k) {
+      final ilk = k[0] == 'i' ? 'İ' : k[0].toUpperCase();
+      final kalan =
+          k.substring(1).replaceAll('İ', 'i').replaceAll('I', 'ı').toLowerCase();
+      return ilk + kalan;
+    }).join(' ');
+  }
+
   Future<void> setUserName(String n) {
     final c = n.trim();
     if (c.isEmpty) return _set('name', '');
-    return _set('name', c[0].toUpperCase() + c.substring(1).toLowerCase());
+    return _set('name', _adiBicimle(c));
   }
+
+  /// Kullanıcı ismini AÇIKÇA onayladı mı? Girişten sonra isim bir kez sorulur;
+  /// onaylanınca bu bayrak set edilir ve bir daha SORULMAZ. Hesaba/profile
+  /// bağlıdır (aktif profil öneki ile saklanır) — böylece farklı hesaplar
+  /// birbirinin ismini/onayını görmez. Bulut yedeğine de yazılır (bkz.
+  /// CloudSyncService) ki cihaz değiştiren dönüş kullanıcısı tekrar sorulmasın.
+  bool getNameConfirmed() => _get('name_confirmed', false) as bool;
+  Future<void> setNameConfirmed(bool v) => _set('name_confirmed', v);
 
   // ── Tamamlanan konular ──
   Map<String, bool> getCompletedTopics() => Map<String, bool>.from(_get('completed', <String, dynamic>{}));
@@ -150,7 +216,6 @@ class StorageService extends ChangeNotifier {
     await _set('completed', c);
   }
 
-  bool isTopicCompleted(String id) => getCompletedTopics()[id] == true;
 
   // ── Testler (attempts) ──
   List<Attempt> getAttempts() {
@@ -182,12 +247,6 @@ class StorageService extends ChangeNotifier {
     final existing = Set<String>.from(all[topicId] as List? ?? const []);
     existing.addAll(keys);
     all[topicId] = existing.toList();
-    await _set('used_qs', all);
-  }
-
-  Future<void> resetUsedQuestions(String topicId) async {
-    final all = Map<String, dynamic>.from(_get('used_qs', <String, dynamic>{}));
-    all.remove(topicId);
     await _set('used_qs', all);
   }
 
@@ -377,10 +436,6 @@ class StorageService extends ChangeNotifier {
 
   Map<String, dynamic> getNotificationSettings() =>
       Map<String, dynamic>.from(getSettings()['notifications'] as Map);
-  Future<void> saveNotificationSettings(Map<String, dynamic> cfg) async {
-    final n = {...getNotificationSettings(), ...cfg};
-    await saveSettings({'notifications': n});
-  }
 
   bool getCloudBackupEnabled() => getSettings()['cloudBackupEnabled'] == true;
   Future<void> setCloudBackupEnabled(bool enabled) => saveSettings({'cloudBackupEnabled': enabled});
@@ -457,6 +512,54 @@ class StorageService extends ChangeNotifier {
     return s['plays'] as int;
   }
 
+  // ── HAK CÜZDANI + reklam/satın alma ile ekstra haklar ──────────────────────
+  //
+  // Birleşik "hak" kredisi (kullanıcı kararı): ödüllü reklam +2, satın alma
+  // +10. 1 hak = 1 ekstra oyun hakkı YA DA 1 deneme sınavı tekrarı. Kredi
+  // istenen yerde harcanır (sohbet/DM HARİÇ — onlar reklamla açılmaz).
+  // Premium kullanıcıda tüm bu sistem GİZLİDİR (sınırsız).
+
+  int getHaklar() => (_get('haklar', 0) as num).toInt();
+  Future<void> hakEkle(int n) async => _set('haklar', getHaklar() + n);
+
+  /// [n] hak harcamayı dener. Yeterli bakiye yoksa false döner ve hiçbir şey
+  /// değişmez.
+  Future<bool> hakHarca(int n) async {
+    final mevcut = getHaklar();
+    if (mevcut < n) return false;
+    await _set('haklar', mevcut - n);
+    return true;
+  }
+
+  /// Bir oyunun BUGÜN için kazanılmış EKSTRA oynama hakları (reklam/hak ile).
+  /// Günlük ücretsiz limitin ÜSTÜNE eklenir; gün değişince sıfırlanır.
+  int getExtraPlays(String gameId) {
+    final today = DateTime.now().toString().split(' ')[0];
+    final s = Map<String, dynamic>.from(
+        _get('extraplays_$gameId', {'date': today, 'extra': 0}));
+    if (s['date'] != today) return 0;
+    return (s['extra'] as num).toInt();
+  }
+
+  Future<void> addExtraPlays(String gameId, int n) async {
+    final today = DateTime.now().toString().split(' ')[0];
+    final mevcut = getExtraPlays(gameId);
+    await _set('extraplays_$gameId', {'date': today, 'extra': mevcut + n});
+  }
+
+  /// Tam deneme sınavı için kazanılmış ekstra tekrar hakları (reklam/hak ile).
+  /// Deneme sınavı ömür boyu sayıldığından bu da ömür boyu birikir.
+  int getBonusFullTests() => (_get('bonus_full_tests', 0) as num).toInt();
+  Future<void> addBonusFullTests(int n) async =>
+      _set('bonus_full_tests', getBonusFullTests() + n);
+
+  // ── Onboarding (karşılama tanıtımı) — CİHAZA özel, GLOBAL ────────────────────
+  // Profil/hesaptan bağımsız: kaydırmalı tanıtım cihazda YALNIZCA İLK kurulumda
+  // bir kez gösterilir. Bu yüzden profil ön eki KULLANILMAZ, doğrudan _prefs.
+  bool onboardingGorulduMu() => _prefs?.getBool('onboarding_seen_v1') ?? false;
+  Future<void> onboardingGoruldu() async =>
+      _prefs?.setBool('onboarding_seen_v1', true);
+
   // ── Oyun ilerlemesi (Kart Oyunu V2 / Solitaire) — konu bazlı geçme takibi ──
   Map<String, bool> getGamePassedTopics(String gameId) =>
       Map<String, bool>.from(_get('game_passed_$gameId', <String, dynamic>{}));
@@ -467,7 +570,6 @@ class StorageService extends ChangeNotifier {
     await _set('game_passed_$gameId', m);
   }
 
-  bool isGameTopicPassed(String gameId, String topicId) => getGamePassedTopics(gameId)[topicId] == true;
 
   // ── Çalışma kronometresi ──
   Map<String, int> getStudyTime() => Map<String, int>.from(_get('studytime', <String, dynamic>{}));
@@ -532,16 +634,6 @@ class StorageService extends ChangeNotifier {
     await _set('weekly_points', {'weekStart': thisWeek, 'points': current + points});
   }
 
-  // ── Konu testi sıfırlama ──
-  Future<void> resetTopicAttempts(String topicId) async {
-    final remaining = getAttempts().where((a) => a.topicId != topicId).toList();
-    await _set('attempts', remaining.map((x) => x.toJson()).toList());
-    final c = getCompletedTopics()..remove(topicId);
-    await _set('completed', c);
-    await resetUsedQuestions(topicId);
-    await clearDraft(topicId);
-  }
-
   // ── Bilgi Maratonu: en uzun seri (yerel rekor) ──
   int getBestMarathonStreak() => ((_get('best_marathon_streak', 0) as num?) ?? 0).toInt();
 
@@ -549,6 +641,80 @@ class StorageService extends ChangeNotifier {
     if (streak > getBestMarathonStreak()) {
       await _set('best_marathon_streak', streak);
     }
+  }
+
+  // ── Oyun rekorları: her mini oyun için "en yüksek skor" + son doğru/yanlış ──
+  //
+  // Tek bir ortak API; her oyun kendi `gameId`'sini verir (ör. 'hiz_60',
+  // 'yazim_yanlislari', 'tarihleri_bil', 'kimim_ben'). Böylece her oyuna ayrı
+  // ayrı anahtar/metod eklemek gerekmez.
+
+  Map<String, dynamic> _highScores() =>
+      Map<String, dynamic>.from((_get('game_high_scores', {}) as Map?) ?? {});
+
+  /// [gameId] için kaydedilmiş en yüksek skor (hiç oynanmadıysa 0).
+  int getHighScore(String gameId) =>
+      ((_highScores()[gameId] as num?) ?? 0).toInt();
+
+  /// Skoru kaydeder — SADECE önceki rekordan büyükse günceller.
+  /// Yeni bir rekor kırıldıysa `true` döner (UI "Yeni rekor!" gösterebilir).
+  Future<bool> submitHighScore(String gameId, int score) async {
+    if (score <= getHighScore(gameId)) return false;
+    final all = _highScores();
+    all[gameId] = score;
+    await _set('game_high_scores', all);
+    return true;
+  }
+
+  // ── EN İYİ SÜRE rekoru (DÜŞÜK olan daha iyidir) ──────────────────────────
+  //
+  // getHighScore/submitHighScore (yüksek daha iyi) ile AYNI desen, ama süre
+  // ölçen oyunlar için TERS yönlü: yalnızca mevcut rekordan KÜÇÜK bir süre
+  // yeni rekor sayılır. Alfabe Oyunu (A'dan Z'ye) turunu ne kadar hızlı
+  // bitirdiğini saniye cinsinden tutar; her oyun kendi `gameId`'sini verir.
+  Map<String, dynamic> _bestTimes() =>
+      Map<String, dynamic>.from((_get('game_best_times', {}) as Map?) ?? {});
+
+  /// [gameId] için kaydedilmiş EN İYİ (en kısa) süre — saniye. Hiç
+  /// tamamlanmadıysa null döner (UI "—" gösterebilsin diye).
+  int? getBestTimeSeconds(String gameId) {
+    final v = _bestTimes()[gameId];
+    return v == null ? null : (v as num).toInt();
+  }
+
+  /// Süreyi kaydeder — SADECE önceki rekordan KÜÇÜKSE (ya da ilk kez).
+  /// Yeni rekor kırıldıysa `true` döner.
+  Future<bool> submitBestTime(String gameId, int seconds) async {
+    if (seconds <= 0) return false;
+    final cur = getBestTimeSeconds(gameId);
+    if (cur != null && seconds >= cur) return false;
+    final all = _bestTimes();
+    all[gameId] = seconds;
+    await _set('game_best_times', all);
+    return true;
+  }
+
+  /// Bir oyunun EN SON turundaki doğru/yanlış sayısı — sonuç ekranında
+  /// "hangisine çalışmalısın" yorumunu üretmek için kullanılır.
+  Map<String, int> getLastRoundStats(String gameId) {
+    final all = Map<String, dynamic>.from(
+        (_get('game_last_round', {}) as Map?) ?? {});
+    final row = Map<String, dynamic>.from((all[gameId] as Map?) ?? {});
+    return {
+      'correct': ((row['correct'] as num?) ?? 0).toInt(),
+      'wrong': ((row['wrong'] as num?) ?? 0).toInt(),
+    };
+  }
+
+  Future<void> setLastRoundStats(
+    String gameId, {
+    required int correct,
+    required int wrong,
+  }) async {
+    final all = Map<String, dynamic>.from(
+        (_get('game_last_round', {}) as Map?) ?? {});
+    all[gameId] = {'correct': correct, 'wrong': wrong};
+    await _set('game_last_round', all);
   }
 
   // ── Günün Patronu: günde 1 kez oynanabilir + toplam tamamlama sayacı ──

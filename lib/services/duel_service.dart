@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
+import '../data/duel_solo_questions.dart';
 import '../firebase_bootstrap.dart';
 import '../models/question.dart';
 import '../models/subject.dart';
@@ -17,8 +18,9 @@ class DuelNotConfiguredException implements Exception {
   const DuelNotConfiguredException();
   @override
   String toString() =>
-      'Çok oyunculu Düello/Royale için internet bağlantısı ve Firebase '
-      'gereklidir. Çevrimdışıyken "Tek Başına Yarış"ı deneyebilirsin.';
+      'Çok oyunculu Düello/Royale şu an kullanılamıyor: sunucu bağlantısı '
+      'kurulamadı. İnternetini kontrol et; sorun sürerse uygulamayı yeniden '
+      'başlat. Bu sırada "Tek Başına Yarış" çevrimdışı da çalışır.';
 }
 
 /// Oda dolu olduğunda katılmaya çalışılırsa fırlatılır.
@@ -111,6 +113,26 @@ class DuelRoom {
   final Map<String, DuelPlayer> players;
   final int lastElimRound;
 
+  /// Erken geçişlerle "kazanılmış" toplam süre (ms).
+  ///
+  /// Oyun akışının TEK senkron kaynağı `startedAt`'tir: her istemci soruyu
+  /// "başlangıçtan bu yana geçen süre / soru süresi" ile hesaplar. Tüm
+  /// oyuncular bir soruyu cevapladığında kalan süreyi beklemek anlamsız
+  /// olduğundan, o soruda kalan süre buraya EKLENİR. Böylece herkesin
+  /// hesabındaki "geçen süre" aynı anda ileri sıçrar ve senkron BOZULMADAN
+  /// sonraki soruya geçilir.
+  ///
+  /// Alternatif olarak odaya "şu an kaçıncı sorudayız" diye bir alan
+  /// yazılabilirdi; ama o zaman geri sayım, Royale elemesi ve bitiş kontrolü
+  /// ayrı bir zaman kaynağına bağlanır ve iki kaynak birbirinden kayabilirdi.
+  /// Tek bir sayıyı kaydırmak bu riski tamamen ortadan kaldırıyor.
+  final int timeShiftMs;
+
+  /// Erken geçişin uygulandığı SON soru indeksi (-1: hiç geçilmedi).
+  /// Aynı sorunun birden çok cihaz tarafından tekrar tekrar kaydırılmasını
+  /// engeller — bkz. [DuelService.skipToNextIfAllAnswered].
+  final int lastSkippedIndex;
+
   const DuelRoom({
     required this.id,
     required this.code,
@@ -132,6 +154,8 @@ class DuelRoom {
     required this.questions,
     required this.players,
     required this.lastElimRound,
+    this.timeShiftMs = 0,
+    this.lastSkippedIndex = -1,
   });
 
   bool get isRoyale => mode == 'royale';
@@ -156,24 +180,6 @@ class DuelRoom {
   String get configLabel {
     final subj = topicAd != null && topicAd!.isNotEmpty ? '$subjectsLabel · $topicAd' : subjectsLabel;
     return '$subj · $totalQuestions soru · $perQuestionSeconds sn';
-  }
-
-  /// startedAt + geçen süreye göre "şu an kaçıncı soruda olmamız gerektiğini"
-  /// (0 tabanlı) hesaplar — sunucudan gelen zamana göre TAMAMEN istemci
-  /// tarafında. Süre bittiyse totalQuestions döner (oyun bitmiş demektir).
-  int currentQuestionIndex(DateTime now) {
-    if (startedAt == null) return 0;
-    final elapsedMs = now.difference(startedAt!).inMilliseconds;
-    if (elapsedMs < 0) return 0;
-    final idx = elapsedMs ~/ (perQuestionSeconds * 1000);
-    return idx;
-  }
-
-  /// startedAt'e göre içinde bulunulan sorunun bitişine kalan milisaniye.
-  int remainingMsForQuestion(int questionIndex, DateTime now) {
-    if (startedAt == null) return perQuestionSeconds * 1000;
-    final deadline = startedAt!.add(Duration(milliseconds: (questionIndex + 1) * perQuestionSeconds * 1000));
-    return deadline.difference(now).inMilliseconds;
   }
 
   List<DuelPlayer> get playersByScore {
@@ -216,6 +222,10 @@ class DuelRoom {
       questions: questions,
       players: players,
       lastElimRound: (data['lastElimRound'] as num?)?.toInt() ?? 0,
+      // Eski odalarda bu alanlar YOKTUR; varsayılanlar (0 / -1) o odaların
+      // eskisi gibi, sadece süreyle ilerlemesini sağlar.
+      timeShiftMs: (data['timeShiftMs'] as num?)?.toInt() ?? 0,
+      lastSkippedIndex: (data['lastSkippedIndex'] as num?)?.toInt() ?? -1,
     );
   }
 }
@@ -387,6 +397,83 @@ class DuelService {
     return _generateCode();
   }
 
+  // ── Tek Başına Yarış (solo) — LOKAL soru havuzu ──
+  //
+  // Solo mod Firestore GEREKTİRMEZ; bu bölüm tamamen çevrimdışı çalışır ve
+  // çok oyunculu (oda) akışını hiçbir şekilde etkilemez.
+
+  /// Solo bir turda sorulacak varsayılan soru sayısı.
+  static const int soloQuestionsPerRound = 10;
+
+  /// Uygulama açık olduğu sürece solo turlarda KULLANILMIŞ soru anahtarları
+  /// ([Question.key]). Turdan tura aynı soruların tekrar gelmesini engeller;
+  /// havuz tükendiğinde [buildSoloQuestions] içinde temizlenip havuz yeniden
+  /// karıştırılır (böylece sonsuz döngü yerine "bitince baştan" davranışı olur).
+  static final Set<String> _soloUsedKeys = <String>{};
+
+  /// Solo turda kullanılmış soru takibini sıfırlar (ör. kullanıcı "havuzu
+  /// yenile" derse ya da testlerde).
+  static void resetSoloProgress() => _soloUsedKeys.clear();
+
+  /// Şu ana kadar bu oturumda solo modda görülen soru sayısı.
+  static int get soloSeenCount => _soloUsedKeys.length;
+
+  /// "Tek Başına Yarış" için bir turluk soru listesi hazırlar.
+  ///
+  /// Havuz İKİ yerel kaynağın birleşimidir — ikisi de internet gerektirmez:
+  ///  1. `assets/data/*.json` ders bankası ([QuickModesShared.collectAll]).
+  ///     [RemoteQuestionService] önbellek varsa tam havuzu, yoksa uygulamayla
+  ///     gömülü yedek soruları ANINDA döndürdüğü için çevrimdışı da doludur.
+  ///  2. [kDuelSoloQuestions] — düello temposuna göre seçilmiş, derleme
+  ///     zamanında gömülü ek havuz. Ders listesi hiç yüklenememişse bile
+  ///     solo modun soru bulmasını GARANTİ eder.
+  ///
+  /// Aynı soru iki kaynakta da varsa [Question.key] üzerinden teke indirilir.
+  /// Daha önce sorulmamış sorular önceliklendirilir; havuz tükenince kullanılmış
+  /// kaydı temizlenip liste yeniden karıştırılır.
+  ///
+  /// Hiçbir durumda istisna fırlatmaz — en kötü ihtimalle gömülü havuzdan döner.
+  Future<List<Question>> buildSoloQuestions({
+    required List<Subject> subjects,
+    RemoteQuestionService? remote,
+    int count = soloQuestionsPerRound,
+  }) async {
+    final pool = <Question>[];
+
+    // 1) JSON ders bankası (varsa).
+    if (subjects.isNotEmpty && remote != null) {
+      try {
+        pool.addAll(await QuickModesShared.collectAll(subjects, remote, rnd: _rnd));
+      } catch (e) {
+        debugPrint('DuelService.buildSoloQuestions: ders bankası okunamadı: $e');
+      }
+    }
+
+    // 2) Gömülü düello havuzu — her zaman eklenir (çevrimdışı garantisi).
+    pool.addAll(kDuelSoloQuestions);
+
+    // Tekrarlayan soruları (aynı metinli) teke indir.
+    final unique = <String, Question>{};
+    for (final q in pool) {
+      if (q.secenekler.length < 2) continue; // bozuk kayıtları ele
+      unique.putIfAbsent(q.key, () => q);
+    }
+    if (unique.isEmpty) return const [];
+
+    final all = unique.values.toList()..shuffle(_rnd);
+
+    // Daha önce sorulmamışları öne al; yetmiyorsa havuzu baştan başlat.
+    var fresh = all.where((q) => !_soloUsedKeys.contains(q.key)).toList();
+    if (fresh.length < count) {
+      _soloUsedKeys.clear();
+      fresh = all;
+    }
+
+    final chosen = fresh.take(count).toList();
+    _soloUsedKeys.addAll(chosen.map((q) => q.key));
+    return chosen;
+  }
+
   // ── Oda oluşturma ──
 
   /// Verilen mod için 10 (royale'de daha fazla) soruyu HEMEN seçer, çakışmayan
@@ -476,6 +563,10 @@ class DuelService {
       'perQuestionSeconds': perQuestionSeconds,
       'totalQuestions': chosen.length,
       'lastElimRound': 0,
+      // Erken geçiş durumu (bkz. skipToNextIfAllAnswered). Baştan yazılıyor ki
+      // ilk kaydırma bir "alan oluşturma" değil, düz bir güncelleme olsun.
+      'timeShiftMs': 0,
+      'lastSkippedIndex': -1,
       'questions': questionMaps,
       'players': {
         uid: {
@@ -486,6 +577,14 @@ class DuelService {
           'eliminated': false,
         },
       },
+      // `players` bir HARİTA alanı olduğu için Firestore'da "şu kullanıcıyı
+      // içeren odalar" diye sorgulanamaz. Aynı uid listesini ayrıca bir DİZİ
+      // olarak da tutuyoruz ki `arrayContains` ile sorgulanabilsin — hesap
+      // silme (bkz. AccountDeletionService) bu alan sayesinde kullanıcının
+      // katıldığı TÜM odaları bulup temizleyebiliyor.
+      // İki alan birlikte güncellenmeli: players.<uid> yazan/silen her yer
+      // playerUids'i de arrayUnion/arrayRemove ile güncellemek zorunda.
+      'playerUids': [uid],
     });
     return docRef.id;
   }
@@ -528,6 +627,10 @@ class DuelService {
         if (!alreadyIn) 'players.$uid.score': 0,
         if (!alreadyIn) 'players.$uid.answers': <String, dynamic>{},
         if (!alreadyIn) 'players.$uid.eliminated': false,
+        // Sorgulanabilir uid dizisini de güncel tut (bkz. createRoom'daki
+        // 'playerUids' açıklaması). arrayUnion tekrar eklemeye karşı güvenli,
+        // ayrıca ESKİ odalarda (alan hiç yokken) diziyi oluşturur.
+        'playerUids': FieldValue.arrayUnion([uid]),
       });
     });
   }
@@ -590,13 +693,6 @@ class DuelService {
       if (!doc.exists) return null;
       return DuelRoom.fromDoc(doc);
     });
-  }
-
-  Future<DuelRoom?> getRoomOnce(String roomId) async {
-    if (!isConfigured) return null;
-    final doc = await _rooms.doc(roomId).get();
-    if (!doc.exists) return null;
-    return DuelRoom.fromDoc(doc);
   }
 
   // ── Başlatma ──
@@ -672,6 +768,79 @@ class DuelService {
     });
   }
 
+  /// Tüm oyuncular cevapladığında sonraki soruya geçmeden ÖNCE bırakılan süre.
+  /// Sıfır olsaydı ekran, kullanıcı kendi cevabının doğru/yanlış olduğunu ve
+  /// açıklamasını görmeye fırsat bulamadan anında değişirdi.
+  static const int allAnsweredGraceMs = 1500;
+
+  /// Bir sorudaki TÜM (elenmemiş) oyuncular cevap verdiyse, o soruda kalan
+  /// süreyi `timeShiftMs`'e ekleyerek herkesi aynı anda sonraki soruya taşır.
+  ///
+  /// Neden oda dokümanına yazıyoruz: erken geçiş SADECE geçişi fark eden
+  /// cihazda uygulanırsa oyuncular farklı sorularda kalır ve çok oyunculu
+  /// senkron çöker. Kaydırma odaya yazıldığı için tüm istemciler aynı anda
+  /// aynı sonucu hesaplar.
+  ///
+  /// GÜVENLİK: "herkes cevapladı" iddiası çağırana DEĞİL, transaction içinde
+  /// okunan oda verisine bakılarak doğrulanır. Böylece tek bir oyuncunun
+  /// cihazı, rakipleri henüz cevaplamamışken soruyu ileri saramaz.
+  ///
+  /// `lastSkippedIndex` koşulu sayesinde aynı soru için birden çok cihaz
+  /// çağırsa bile kaydırma YALNIZCA BİR KEZ uygulanır.
+  Future<void> skipToNextIfAllAnswered(String roomId, int questionIndex) async {
+    if (!isConfigured) return;
+    if (questionIndex < 0) return;
+    final ref = _rooms.doc(roomId);
+    try {
+      await _db.runTransaction((tx) async {
+        final doc = await tx.get(ref);
+        if (!doc.exists) return;
+        final data = doc.data()!;
+        if ((data['status'] as String?) != 'active') return;
+
+        final lastSkipped = (data['lastSkippedIndex'] as num?)?.toInt() ?? -1;
+        if (lastSkipped >= questionIndex) return; // Bu soru zaten işlendi.
+
+        final startedAt = data['startedAt'];
+        if (startedAt is! Timestamp) return; // Maç henüz başlamamış.
+
+        final perQ = (data['perQuestionSeconds'] as num?)?.toInt() ?? 30;
+        final shift = (data['timeShiftMs'] as num?)?.toInt() ?? 0;
+
+        // Elenen oyuncular cevap VEREMEZ; onları beklemek oyunu kilitlerdi.
+        final rawPlayers = Map<String, dynamic>.from(data['players'] as Map? ?? const {});
+        final aktif = rawPlayers.values
+            .whereType<Map>()
+            .where((p) => p['eliminated'] != true)
+            .toList();
+        if (aktif.isEmpty) return;
+
+        final hepsiCevapladi = aktif.every((p) {
+          final answers = p['answers'];
+          return answers is Map && answers.containsKey('$questionIndex');
+        });
+        if (!hepsiCevapladi) return;
+
+        final gecen = DateTime.now().difference(startedAt.toDate()).inMilliseconds + shift;
+        final kalan = (questionIndex + 1) * perQ * 1000 - gecen;
+
+        // Süre zaten dolmak üzereyse kaydırmaya gerek yok; yalnızca bu sorunun
+        // tekrar tekrar denenmemesi için işaretliyoruz.
+        if (kalan <= allAnsweredGraceMs) {
+          tx.update(ref, {'lastSkippedIndex': questionIndex});
+          return;
+        }
+
+        tx.update(ref, {
+          'timeShiftMs': shift + (kalan - allAnsweredGraceMs),
+          'lastSkippedIndex': questionIndex,
+        });
+      });
+    } catch (e) {
+      debugPrint('DuelService.skipToNextIfAllAnswered başarısız: $e');
+    }
+  }
+
   // ── Royale eleme ──
 
   /// Her 5 soruda bir (istemci tarafında ilk fark eden oyuncu tetikler)
@@ -733,7 +902,13 @@ class DuelService {
     final uid = currentUid;
     if (uid == null) return;
     try {
-      await _rooms.doc(roomId).update({'players.$uid': FieldValue.delete()});
+      await _rooms.doc(roomId).update({
+        'players.$uid': FieldValue.delete(),
+        // Harita ve dizi ASLA ayrışmamalı — biri silinip diğeri kalırsa
+        // kullanıcı odadan çıkmış görünmesine rağmen sorgularda çıkmaya
+        // devam eder.
+        'playerUids': FieldValue.arrayRemove([uid]),
+      });
     } catch (e) {
       debugPrint('DuelService.leaveRoom başarısız: $e');
     }

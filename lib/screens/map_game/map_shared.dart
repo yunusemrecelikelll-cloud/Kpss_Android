@@ -7,6 +7,9 @@ import '../../services/storage_service.dart';
 import '../../theme/subject_colors.dart';
 import '../../theme/theme_provider.dart';
 import '../../widgets/turkey_map_painter.dart';
+// Sonuç ekranı TÜM oyunlarda ortak olsun diye Hızlı Modlar'daki
+// [GameResultScreen] burada da kullanılır (tek tasarım dili, tek yer).
+import '../quick_modes/quick_modes_shared.dart';
 import '../tools_hub_screen.dart';
 
 /// Harita Oyunu — JS karşılığı yok (yeni Flutter-özel oyun), diğer oyunlarla
@@ -165,7 +168,7 @@ Future<bool> consumeMapGameDailyPlay(BuildContext context) async {
   final storage = context.read<StorageService>();
   if (storage.isPremiumUser()) return true;
   final gp = storage.getGamePlayState(kMapGameId);
-  if ((gp['plays'] as int) >= kFreeGameDailyLimit) return false;
+  if ((gp['plays'] as int) >= kFreeGameDailyLimit + storage.getExtraPlays(kMapGameId)) return false;
   await storage.useGamePlay(kMapGameId);
   return true;
 }
@@ -212,23 +215,82 @@ class TurkeyMapCanvas extends StatefulWidget {
   State<TurkeyMapCanvas> createState() => _TurkeyMapCanvasState();
 }
 
-class _TurkeyMapCanvasState extends State<TurkeyMapCanvas> {
-  // ÖNEMLİ (düzeltilen hata): `boundaryMargin: EdgeInsets.zero` ile pan+zoom
-  // birlikte kullanıldığında InteractiveViewer'ın dahili kırpma/sınır mantığı
-  // "büyütülüyor ama küçültülemiyor" şeklinde bir sıkışmaya yol açabiliyordu
-  // (kullanıcı zoom yaptıktan sonra tekrar 1.0 ölçeğe dönemiyordu). Şimdi:
-  // (1) küçük bir boundaryMargin ile sınır matematiğine nefes payı verildi,
-  // (2) bir TransformationController + çift dokunuşla/butonla anında
-  // "yakınlaştırmayı sıfırla" imkânı eklendi (gesture matematiği her zaman
-  // mükemmel olmasa bile kullanıcı için her zaman bir çıkış yolu olsun diye).
-  final _controller = TransformationController();
+class _TurkeyMapCanvasState extends State<TurkeyMapCanvas> with SingleTickerProviderStateMixin {
+  // ── Yakınlaşma/uzaklaşma (zoom) davranışı ──────────────────────────────
+  // ÖNEMLİ (düzeltilen hata): Eskiden `constrained: false` kullanılıyordu.
+  // Bu modda InteractiveViewer çocuğu SINIRSIZ ölçüyle yerleştirir ve dahili
+  // sınır (boundary) matematiği viewport ile çocuğun ölçüsünü karıştırdığından
+  // harita "büyüyor ama bir daha küçülmüyor" ve büyürken sıçramalı/dengesiz
+  // davranıyordu. Artık:
+  //   (1) `constrained: true` (varsayılan) — viewport = çocuk, sınır
+  //       matematiği tutarlı; ölçek her iki yönde de serbestçe değişebilir,
+  //   (2) `boundaryMargin` cömert tutuldu ki içeri/dışarı sıkışma olmasın,
+  //   (3) parmak kaldırıldığında ölçek 1.0'a çok yaklaşmışsa harita YUMUŞAK
+  //       bir animasyonla tam oturmuş hâline geri döner (küçültememe hatasına
+  //       karşı garantili çıkış yolu),
+  //   (4) çift dokunuş, dokunulan noktayı merkez alarak KADEMELİ (animasyonlu)
+  //       yakınlaştırır; zaten yakınlaşmışsa aynı animasyonla sıfırlar.
+  static const double _kMinScale = 1.0;
+  static const double _kMaxScale = 4.0;
+  static const double _kDoubleTapScale = 2.4;
+  static const Duration _kZoomDuration = Duration(milliseconds: 260);
 
-  void _resetZoom() {
-    _controller.value = Matrix4.identity();
+  final _controller = TransformationController();
+  late final AnimationController _anim;
+  Animation<Matrix4>? _zoomAnimation;
+  Offset? _doubleTapPos;
+
+  @override
+  void initState() {
+    super.initState();
+    _anim = AnimationController(vsync: this, duration: _kZoomDuration)
+      ..addListener(() {
+        final a = _zoomAnimation;
+        if (a != null) _controller.value = a.value;
+      });
+  }
+
+  /// Mevcut dönüşümden [target] dönüşüme yumuşak (kademeli) geçiş.
+  void _animateTo(Matrix4 target) {
+    _zoomAnimation = Matrix4Tween(begin: _controller.value, end: target)
+        .animate(CurvedAnimation(parent: _anim, curve: Curves.easeOutCubic));
+    _anim.forward(from: 0);
+  }
+
+  void _resetZoom() => _animateTo(Matrix4.identity());
+
+  double get _scale => _controller.value.getMaxScaleOnAxis();
+
+  void _handleDoubleTap() {
+    // Zaten yakınlaşmışsa sıfırla, değilse dokunulan noktaya yaklaş.
+    if (_scale > _kMinScale + 0.05) {
+      _resetZoom();
+      return;
+    }
+    final pos = _doubleTapPos;
+    if (pos == null) {
+      _resetZoom();
+      return;
+    }
+    const s = _kDoubleTapScale;
+    // Dokunulan nokta sabit kalsın: s * p + t = p  →  t = -p * (s - 1)
+    _animateTo(Matrix4.identity()
+      ..translateByDouble(-pos.dx * (s - 1), -pos.dy * (s - 1), 0, 1)
+      ..scaleByDouble(s, s, 1, 1));
+  }
+
+  /// Parmak kaldırıldığında ölçek tam oturmuş hâle çok yakınsa küçük
+  /// kaymaları temizleyip haritayı tam oturmuş hâline geri yaslar.
+  void _snapIfNearFit() {
+    if (_scale <= _kMinScale + 0.02) {
+      final m = _controller.value;
+      if (m != Matrix4.identity()) _animateTo(Matrix4.identity());
+    }
   }
 
   @override
   void dispose() {
+    _anim.dispose();
     _controller.dispose();
     super.dispose();
   }
@@ -246,70 +308,62 @@ class _TurkeyMapCanvasState extends State<TurkeyMapCanvas> {
         for (final g in geos)
           if (widget.overlayFor!(byId[g.id]!) != null) g.id: widget.overlayFor!(byId[g.id]!)!,
     };
-    return LayoutBuilder(builder: (context, constraints) {
-      final w = constraints.maxWidth;
-      final h = w / kMapAspectRatio;
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(18),
-        child: SizedBox(
-          width: w,
-          height: h,
-          child: Stack(
-            children: [
-              GestureDetector(
-                onDoubleTap: _resetZoom,
-                child: InteractiveViewer(
-                  transformationController: _controller,
-                  constrained: false,
-                  minScale: 1.0,
-                  maxScale: 3.2,
-                  boundaryMargin: const EdgeInsets.all(40),
-                  child: SizedBox(
-                    width: w,
-                    height: h,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: colors.glass,
-                        border: Border.all(color: colors.border),
-                      ),
-                      child: TurkeyMapWidget(
-                        geos: geos,
-                        fillColors: fillColors,
-                        defaultFillColor: colors.violet.withValues(alpha: 0.15),
-                        borderColor: colors.border,
-                        dimmedIds: widget.dimmed,
-                        overlays: overlays,
-                        onProvinceTap: widget.onTap == null
-                            ? null
-                            : (id) {
-                                final p = byId[id];
-                                if (p == null) return;
-                                context.read<SoundService>().click();
-                                widget.onTap!(p);
-                              },
-                      ),
-                    ),
-                  ),
+    // NOT: Haritanın arkasında ARTIK beyaz/`glass` bir dolgu ve çerçeve YOK —
+    // kullanıcı "haritanın etrafındaki beyazlığı kaldır" dedi. Harita kendi
+    // en/boy oranını koruyup alana ortalandığı için (bkz. TurkeyMapWidget)
+    // artan boşluk şeffaf kalır ve ekranın tema gradyanı görünür.
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(18),
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: GestureDetector(
+              onDoubleTapDown: (d) => _doubleTapPos = d.localPosition,
+              onDoubleTap: _handleDoubleTap,
+              child: InteractiveViewer(
+                transformationController: _controller,
+                minScale: _kMinScale,
+                maxScale: _kMaxScale,
+                boundaryMargin: const EdgeInsets.all(48),
+                onInteractionStart: (_) {
+                  if (_anim.isAnimating) _anim.stop();
+                },
+                onInteractionEnd: (_) => _snapIfNearFit(),
+                child: TurkeyMapWidget(
+                  geos: geos,
+                  fillColors: fillColors,
+                  defaultFillColor: colors.violet.withValues(alpha: 0.15),
+                  borderColor: colors.border,
+                  dimmedIds: widget.dimmed,
+                  overlays: overlays,
+                  onProvinceTap: widget.onTap == null
+                      ? null
+                      : (id) {
+                          final p = byId[id];
+                          if (p == null) return;
+                          context.read<SoundService>().click();
+                          widget.onTap!(p);
+                        },
                 ),
               ),
-              Positioned(
-                right: 6,
-                bottom: 6,
-                child: Material(
-                  color: colors.glass2,
-                  shape: const CircleBorder(),
-                  child: IconButton(
-                    tooltip: 'Yakınlaştırmayı sıfırla',
-                    icon: Icon(Icons.zoom_out_map, size: 18, color: colors.text),
-                    onPressed: _resetZoom,
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
-      );
-    });
+          Positioned(
+            right: 6,
+            bottom: 6,
+            child: Material(
+              color: colors.glass2,
+              shape: const CircleBorder(),
+              child: IconButton(
+                tooltip: 'Yakınlaştırmayı sıfırla',
+                icon: Icon(Icons.zoom_out_map, size: 18, color: colors.text),
+                onPressed: _resetZoom,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -391,66 +445,142 @@ class MapQuizScaffold extends StatelessWidget {
   }
 }
 
-/// Genel bir "oturum bitti" sonuç kartı (skor + tekrar oyna / menüye dön).
+/// Soru-cevap tipli harita modlarının (İli Bul, Bölgeyi Bul, Komşu İl, Ürün
+/// Haritası, Tarih Haritası, İklim Avı) ORTAK sonuç ekranı.
+///
+/// Hepsi "N sorudan M tanesini doğru bildin" biçiminde bittiği için başarı
+/// emojisi, başlık, doğru/yanlış/isabet şeridi ve arka plan tek yerden üretilir
+/// — böylece bir modda yapılan iyileştirme hepsine birden yansır.
+class MapQuizResult extends StatelessWidget {
+  final String title;
+
+  /// Modun kimliği — rengi ([kMapModePalettes]) buradan gelir.
+  final String modeId;
+  final int score;
+  final int total;
+  final VoidCallback onRetry;
+
+  const MapQuizResult({
+    super.key,
+    required this.title,
+    required this.modeId,
+    required this.score,
+    required this.total,
+    required this.onRetry,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.watch<ThemeProvider>().colors;
+    final yanlis = (total - score).clamp(0, total);
+    final oran = total <= 0 ? 0 : (score * 100 / total).round();
+    // Başarıya göre illüstrasyon: kusursuz tur 🏆, iyi tur 🎉, orta 💪, düşük 📚.
+    final String emoji;
+    final String baslik;
+    if (total > 0 && score == total) {
+      emoji = '🏆';
+      baslik = 'Kusursuz tur!';
+    } else if (oran >= 70) {
+      emoji = '🎉';
+      baslik = 'Harika iş!';
+    } else if (oran >= 40) {
+      emoji = '💪';
+      baslik = 'Fena değil!';
+    } else {
+      emoji = '📚';
+      baslik = 'Biraz daha çalışmalısın';
+    }
+
+    return MapSessionResult(
+      title: title,
+      emoji: emoji,
+      headline: baslik,
+      message: '$total sorudan $score tanesini doğru bildin.',
+      stats: [
+        GameResultStat(emoji: '✅', value: '$score', label: 'Doğru', color: colors.success),
+        GameResultStat(emoji: '❌', value: '$yanlis', label: 'Yanlış', color: colors.danger),
+        GameResultStat(emoji: '🎯', value: '%$oran', label: 'İsabet'),
+      ],
+      onRetry: onRetry,
+      palette: mapModePaletteFor(modeId),
+    );
+  }
+}
+
+/// Genel bir "oturum bitti" sonuç kartı — TÜM harita modlarının (İli Bul,
+/// Bölgeyi Bul, Komşu İl, Ürün/Tarih Haritası, İklim Avı, 60 Saniyede Türkiye)
+/// ortak sonuç ekranı.
+///
+/// Artık kendi düzenini çizmez; Hızlı Modlar ve Kart Oyunu ile AYNI tasarım
+/// dilini kullanan ortak [GameResultScreen]'i sarmalar (bkz.
+/// quick_modes/quick_modes_shared.dart). Modun kendi rengi ([palette]) hem
+/// arka plan gradyanına hem butonlara vurgu olarak geçer.
 class MapSessionResult extends StatelessWidget {
   final String title;
   final String emoji;
+
+  /// Kısa değerlendirme cümlesi ("5 sorudan 4 tanesini doğru bildin." gibi).
   final String message;
+
+  /// Büyük başlık — verilmezse "Oturum Bitti!".
+  final String? headline;
+
+  /// [DsStatStrip] ile gösterilecek sayısal özet.
+  final List<GameResultStat> stats;
+
+  /// Kalıcı rekor (yalnızca rekor tutan modlarda verilir — ör. 60 Saniyede
+  /// Türkiye). null ise rekor satırı çizilmez.
+  final int? highScore;
+  final bool newRecord;
+
+  /// Uzun "neye çalışmalısın" yorumu.
+  final String? note;
+
   final VoidCallback onRetry;
   final SubjectPalette? palette;
+
+  /// Butonların etiketleri ve geri dönüş davranışı — 81 İl Fethi gibi haritaya
+  /// sonuç döndüren modlar bunları özelleştirir.
+  final String retryLabel;
+  final String backLabel;
+  final VoidCallback? onBack;
+
   const MapSessionResult({
     super.key,
     required this.title,
     required this.emoji,
     required this.message,
     required this.onRetry,
+    this.headline,
+    this.stats = const [],
+    this.highScore,
+    this.newRecord = false,
+    this.note,
     this.palette,
+    this.retryLabel = 'Tekrar Oyna',
+    this.backLabel = 'Oyunlara Dön',
+    this.onBack,
   });
 
   @override
   Widget build(BuildContext context) {
     final colors = context.watch<ThemeProvider>().colors;
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Container(
-        decoration: palette != null ? mapModeBackgroundDecoration(palette!, colors.isLight) : null,
-        padding: const EdgeInsets.all(20),
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(28),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(emoji, style: const TextStyle(fontSize: 44)),
-                const SizedBox(height: 12),
-                Text(message, textAlign: TextAlign.center, style: TextStyle(color: colors.textFaint, height: 1.5)),
-                const SizedBox(height: 20),
-                Wrap(
-                  spacing: 10,
-                  runSpacing: 8,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        context.read<SoundService>().click();
-                        onRetry();
-                      },
-                      child: const Text('🔄 Tekrar Oyna'),
-                    ),
-                    OutlinedButton(
-                      onPressed: () {
-                        context.read<SoundService>().click();
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text('Menüye Dön'),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+    return GameResultScreen(
+      title: title,
+      emoji: emoji,
+      headline: headline ?? 'Oturum Bitti!',
+      message: message,
+      stats: stats,
+      highScore: highScore,
+      newRecord: newRecord,
+      note: note,
+      accent: palette?.a,
+      backgroundDecoration:
+          palette != null ? mapModeBackgroundDecoration(palette!, colors.isLight) : null,
+      onRetry: onRetry,
+      retryLabel: retryLabel,
+      backLabel: backLabel,
+      onBack: onBack,
     );
   }
 }

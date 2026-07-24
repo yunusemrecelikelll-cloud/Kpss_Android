@@ -14,11 +14,27 @@
       },
       "oauth_client": [
         {
+          "client_id": "993008276386-7v01lu2rhkhrgqgsfnbv5m2t0evgic4j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kpsshazirlik.kpss_telefon",
+            "certificate_hash": "6604bee0e058132727dd0fcf439e4be1ff7e6b80"
+          }
+        },
+        {
           "client_id": "993008276386-gailf0pg6rkrgvv12btu42jql9ui25jm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.kpsshazirlik.kpss_telefon",
             "certificate_hash": "8a8c0aed7ac7477d99704536377fb1101fdef404"
+          }
+        },
+        {
+          "client_id": "993008276386-ioqulkrgcthv3li8koljnu9d7fg5hdv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kpsshazirlik.kpss_telefon",
+            "certificate_hash": "ae61fce9c30d62af189430f9ad1d229df53dca70"
           }
         },
         {

@@ -1,11 +1,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Firebase eklentileri bunu zaten merge ediyor; açıkça yazmak daha sağlam. -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- "Günlük Çalışma Planı" hatırlatmaları (flutter_local_notifications).
+         POST_NOTIFICATIONS Android 13+ (API 33) için zorunlu; uygulama izni
+         çalışma anında ister (bkz. NotificationService.requestPermission).
+         RECEIVE_BOOT_COMPLETED olmazsa cihaz yeniden başlatıldığında
+         planlanmış haftalık bildirimler KAYBOLUR. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- TAM ZAMANLI hatırlatma için (bkz. NotificationService.schedulePlan).
+         Android 12-13'te kurulumda kendiliğinden verilir, kullanıcıya izin
+         ekranı AÇILMAZ. Bu izin olmadan inexact mod kullanılıyordu ve Doze +
+         üretici pil optimizasyonları bildirimleri fiilen hiç tetiklemiyordu
+         ("Android'de bildirim gelmiyor" hatasının kök sebebi). Android 14+'ta
+         izin varsayılan kapalıysa kod kendiliğinden inexact moda düşer. -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <application
-        android:label="kpss_telefon"
+        android:label="KPSS Hazırlık"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false">
+        <!-- AdMob uygulama kimliği. ŞU AN GOOGLE'IN RESMÎ TEST KİMLİĞİ —
+             uygulama çökmesin diye zorunlu. Gerçek yayında AdMob konsolundan
+             aldığın "App ID" ile değiştir (ca-app-pub-XXXX~YYYY). Reklam BİRİM
+             kimlikleri ise lib/services/ad_service.dart içinde. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2208830315848722~5089802422"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -55,6 +77,17 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+
+        <!-- "Sesli Dinle" (konu anlatımını okuma, flutter_tts) için ZORUNLU.
+             Android 11 (API 30) ile gelen paket görünürlüğü kısıtlaması
+             yüzünden, bu intent bildirilmezse uygulama cihazdaki TTS
+             motorunu (Google Text-to-Speech vb.) HİÇ göremez: speak()
+             çağrısı hata bile vermeden sessizce hiçbir şey yapmaz.
+             Bkz. lib/services/tts_service.dart ve
+             https://developer.android.com/training/package-visibility -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
         </intent>
     </queries>
 </manifest>

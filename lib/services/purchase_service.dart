@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
 import 'cloud_sync_service.dart';
+import 'presence_service.dart';
 import 'storage_service.dart';
 
 /// ============================================================================
@@ -19,8 +19,20 @@ import 'storage_service.dart';
 const String kOgrenciPremiumId = 'premium_ogrenci_aylik';
 const String kTamPremiumId = 'premium_tam_aylik';
 
+/// TÜKETİLEBİLİR (consumable) "hak paketi": 10 hak, ~9,99 TL. Aboneliklerden
+/// farklı olarak tekrar tekrar satın alınabilir; her satın almada cüzdana
+/// [kHakPaketiMiktar] hak eklenir ve mağazada TÜKETİLİR (completePurchase +
+/// consume) ki kullanıcı yeniden alabilsin. Mağazada bu ID ile "consumable"
+/// ürün tanımlanmalı (Play: uygulama içi ürün / App Store: tüketilebilir).
+const String kHakPaketiId = 'hak_paketi_10';
+const int kHakPaketiMiktar = 10;
+
 /// Sorgulanacak / satın alınabilecek tüm ürün ID'lerinin kümesi.
-const Set<String> kPremiumProductIds = {kOgrenciPremiumId, kTamPremiumId};
+const Set<String> kPremiumProductIds = {
+  kOgrenciPremiumId,
+  kTamPremiumId,
+  kHakPaketiId,
+};
 
 /// Mağaza / satın alma akışının o anki durumu. UI bu duruma göre buton
 /// metnini, yükleniyor göstergesini ve hata mesajını belirler.
@@ -73,7 +85,6 @@ class PurchaseService extends ChangeNotifier {
   String? lastError;
   bool _initialized = false;
 
-  bool get isReady => status == PurchaseServiceStatus.ready;
   bool get isPurchasing => status == PurchaseServiceStatus.purchasing;
 
   ProductDetails? productFor(String id) {
@@ -162,8 +173,14 @@ class PurchaseService extends ChangeNotifier {
       notifyListeners();
 
       final purchaseParam = PurchaseParam(productDetails: product);
-      // Abonelik = non-consumable akış (yukarıdaki nota bakın).
-      await _iap.buyNonConsumable(purchaseParam: purchaseParam);
+      if (productId == kHakPaketiId) {
+        // Hak paketi TÜKETİLEBİLİR: tekrar tekrar alınabilsin diye consumable
+        // akışıyla satın alınır.
+        await _iap.buyConsumable(purchaseParam: purchaseParam);
+      } else {
+        // Abonelik = non-consumable akış (yukarıdaki nota bakın).
+        await _iap.buyNonConsumable(purchaseParam: purchaseParam);
+      }
       // Sonuç purchaseStream üzerinden _onPurchaseUpdate'e gelecek.
     } catch (e) {
       status = PurchaseServiceStatus.error;
@@ -213,6 +230,20 @@ class PurchaseService extends ChangeNotifier {
             // durumu kaybolmuş görünmez (bkz. CloudSyncService.syncDown).
             // ignore: unawaited_futures
             CloudSyncService().syncUp(_storage);
+            // Yönetici panelindeki premium/ücretsiz etiketi beklemeden
+            // tazelensin (2 dk'lık nabız gazını atla).
+            // ignore: unawaited_futures
+            PresenceService.instance.bildir(_storage, zorla: true);
+          } else if (purchase.productID == kHakPaketiId &&
+              purchase.status == PurchaseStatus.purchased) {
+            // TÜKETİLEBİLİR hak paketi: cüzdana ekle. "restored" durumunda
+            // EKLEME (tüketilebilir ürünler geri yüklenmez; yoksa çift sayım
+            // olurdu — yalnızca yeni 'purchased' olayında ekleriz).
+            await _storage.hakEkle(kHakPaketiMiktar);
+            // Girişliyse satın alınan hakları hemen buluta yaz — cihaz
+            // değişiminde/yeniden kurulumda kaybolmasın (bkz. CloudSyncService).
+            // ignore: unawaited_futures
+            CloudSyncService().syncUp(_storage);
           }
           if (purchase.pendingCompletePurchase) {
             await _iap.completePurchase(purchase);
@@ -245,10 +276,3 @@ class PurchaseService extends ChangeNotifier {
     super.dispose();
   }
 }
-
-/// iOS'ta App Store'un satın alma kuyruğunu StoreKit 2 ile uyumlu şekilde
-/// başlatmak için bazı kurulumlarda gerekli olabilecek yardımcı — bu proje
-/// varsayılan in_app_purchase davranışını kullanıyor, burada sadece
-/// platformun iOS olup olmadığını basitçe kontrol etmek için tutuluyor
-/// (ör. ileride StoreKit'e özgü bir ayar eklenmek istenirse).
-bool get isApplePlatform => Platform.isIOS || Platform.isMacOS;

@@ -3,13 +3,16 @@ import 'package:provider/provider.dart';
 import '../theme/theme_provider.dart';
 
 /// Son güncelleme tarihi — politika metni değiştikçe elle güncellenmeli.
-const String kPrivacyPolicyUpdatedAt = '16 Temmuz 2026';
+const String kPrivacyPolicyUpdatedAt = '21 Temmuz 2026';
 
 /// Gizlilik Politikası — uygulamanın GERÇEK veri toplama/kullanma
 /// davranışını yansıtır (bkz. StorageService, AuthService, ChatService,
-/// LeagueService, DuelService, PurchaseService). Yayına almadan önce
-/// aşağıdaki "[...]" ile işaretli yer tutucu iletişim bilgisini gerçek bir
-/// e-posta adresiyle değiştir.
+/// LeagueService, DuelService, PurchaseService, CloudSyncService).
+///
+/// ÖNEMLİ: Bu ekranın içeriği, GitHub Pages'te yayınlanan web sürümüyle
+/// (Kpss_Android/docs/gizlilik.html) AYNI kalmalıdır. Mağazalar politikanın
+/// web URL'ini zorunlu tutar ve iki metin çeliştiğinde bu bir uyumsuzluk
+/// olarak değerlendirilir. Birini değiştirirken diğerini de güncelle.
 class PrivacyPolicyScreen extends StatelessWidget {
   const PrivacyPolicyScreen({super.key});
 
@@ -36,15 +39,28 @@ class PrivacyPolicyScreen extends StatelessWidget {
             _Section(
               title: '2. Cihazında yerel olarak saklanan veriler',
               body:
-                  'Aşağıdaki bilgiler SADECE kendi cihazında (SharedPreferences ile) '
-                  'saklanır ve bizim sunucularımıza gönderilmez:\n\n'
+                  'Aşağıdaki bilgiler öncelikli olarak kendi cihazında '
+                  '(SharedPreferences ile) saklanır:\n\n'
                   '• Profil bilgilerin: isim, cinsiyet, hedeflediğin sınav türü '
-                  '(Lisans/Önlisans/Ortaöğretim), hedef meslek tercihin\n'
+                  '(Lisans/Önlisans/Ortaöğretim)\n'
                   '• Çözdüğün testler, doğru/yanlış sayıların, konu bazlı ilerlemen\n'
                   '• Rozet, seviye/XP, günlük görev ve çalışma serisi (streak) bilgilerin\n'
-                  '• Uygulama ayarların (tema, ses, bildirim tercihleri)\n'
+                  '• Uygulama ayarların (tema, ses tercihleri)\n'
                   '• Yanlış yaptığın soruların listesi ("Yanlışlarım Bankası")\n\n'
-                  'Bu veriler uygulamayı kaldırdığında (uninstall) cihazından tamamen silinir.',
+                  'ÖNEMLİ — bulut yedekleme nasıl çalışır:\n'
+                  '• Hesabınla GİRİŞ YAPMADIĞIN sürece bu verilerin hiçbiri '
+                  'sunucularımıza gönderilmez; her şey yalnızca cihazında kalır.\n'
+                  '• Bir hesapla giriş yaptığında (e-posta, Google ya da Apple) bulut '
+                  'yedekleme OTOMATİK OLARAK AÇILIR ve yukarıdaki verilerin bir kısmı '
+                  'hesabına bağlı olarak buluta yedeklenmeye başlar (bkz. 3. bölüm). '
+                  'Bunun amacı, telefonunu değiştirdiğinde ya da uygulamayı yeniden '
+                  'kurduğunda ilerlemenin kaybolmamasıdır.\n'
+                  '• Bunu istemiyorsan Ayarlar > Hesap bölümündeki "Bulut yedekleme" '
+                  'seçeneğini istediğin zaman KAPATABİLİRSİN. Kapalıyken yeni ilerleme '
+                  'verisi sunucularımıza gönderilmez.\n\n'
+                  'Yerel veriler, uygulamayı cihazından kaldırdığında (uninstall) '
+                  'tamamen silinir. Ancak bu, buluttaki hesabını SİLMEZ — bunun için '
+                  'Ayarlar > Hesap > "Hesabımı Sil" seçeneğini kullan (bkz. 6. bölüm).',
             ),
             _Section(
               title: '3. Bulut sunucularında (Firebase) saklanan veriler',
@@ -80,10 +96,17 @@ class PrivacyPolicyScreen extends StatelessWidget {
             _Section(
               title: '6. Verilerini silme hakkın',
               body:
-                  'Yerel verilerini istediğin zaman uygulamayı cihazından kaldırarak '
-                  'tamamen silebilirsin. Bulutta (Firebase) saklanan hesap/sohbet/lig/düello '
-                  'verilerinin silinmesini istersen bizimle iletişime geçebilirsin — '
-                  'talebini aldıktan sonra makul bir süre içinde ilgili verileri sileriz.',
+                  'Hesabını ve tüm verilerini uygulama içinden, tek başına silebilirsin: '
+                  'Ayarlar > Hesap > "Hesabımı Sil". Bu işlem geri alınamaz ve şunların '
+                  'tamamını kalıcı olarak siler: giriş hesabın, bulut yedeğin, test '
+                  'sonuçların ve istatistiklerin, rozetlerin ve lig kaydın, genel '
+                  'sohbetteki mesajların, özel konuşmaların, engellediğin kullanıcı '
+                  'listesi, gönderdiğin şikayet kayıtları ve açtığın düello odaları. '
+                  'Ayrıca cihazındaki tüm yerel ilerleme de temizlenir.\n\n'
+                  'Not: Uygulamayı cihazından kaldırmak yalnızca yerel veriyi siler, '
+                  'buluttaki hesabını silmez. Bir aboneliğin varsa hesap silmek aboneliği '
+                  'durdurmaz — aboneliği App Store / Google Play hesabından ayrıca iptal '
+                  'etmen gerekir.',
             ),
             _Section(
               title: '7. Çocukların gizliliği',
@@ -103,7 +126,9 @@ class PrivacyPolicyScreen extends StatelessWidget {
               title: '9. İletişim',
               body:
                   'Gizlilikle ilgili sorular, veri erişim/silme talepleri için: '
-                  '[GELİŞTİRİCİ İLETİŞİM E-POSTASINI BURAYA EKLE]',
+                  'yunusemrecelikellll@gmail.com\n\n'
+                  'Bu politikanın web sürümü:\n'
+                  'https://yunusemrecelikelll-cloud.github.io/Kpss_Android/gizlilik.html',
             ),
           ],
         ),

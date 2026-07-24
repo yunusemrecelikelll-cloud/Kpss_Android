@@ -21,6 +21,12 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
+        // flutter_local_notifications ("Günlük Çalışma Planı" hatırlatmaları)
+        // java.time API'lerini kullanıyor ve eski Android sürümlerinde
+        // çalışabilmesi için core library desugaring ŞART. Bu satır olmadan
+        // derleme "Dependency ':flutter_local_notifications' requires core
+        // library desugaring to be enabled" hatasıyla durur.
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
@@ -70,4 +76,10 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // isCoreLibraryDesugaringEnabled = true ile birlikte ZORUNLU: desugaring
+    // için gereken JDK API sarmalayıcısı (bkz. compileOptions).
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
