@@ -98,7 +98,21 @@ Premium aylık otomatik yenilenen bir aboneliktir. İstediğin zaman Google Play
 KPSS Lisans, Önlisans ve Ortaöğretim adayları için hazırlanmıştır.
 Görüş ve önerilerin için: yunusemrecelikelll@gmail.com
 
-Bu uygulama bağımsız olarak geliştirilmiştir; ÖSYM veya herhangi bir resmî devlet kurumuyla bağlantılı, onlar tarafından desteklenen ya da onaylanan bir uygulama değildir. "KPSS" adı yalnızca ilgili sınavın tanımlanması amacıyla kullanılmaktadır. Sınav takvimi, başvuru ve resmî duyurular için ÖSYM'nin resmî web sitesini (www.osym.gov.tr) ziyaret edin.
+Bu uygulama bağımsız olarak geliştirilmiştir; ÖSYM veya herhangi bir resmî devlet kurumuyla bağlantılı, onlar tarafından desteklenen ya da onaylanan bir uygulama değildir. "KPSS" adı yalnızca ilgili sınavın tanımlanması amacıyla kullanılmaktadır. Sınav takvimi, başvuru ve resmî duyurular için ÖSYM'nin resmî web sitesini ziyaret edin:
+https://www.osym.gov.tr
+```
+
+---
+
+## İNGİLİZCE FERAGAT (en-US / varsayılan listeleme VARSA buraya da ekle)
+
+> ÖNEMLİ: Google inceleme kanıtı İNGİLİZCE geldi. Feragat + çalışan link, mağazadaki **TÜM dil**
+> açıklamalarına (özellikle İngilizce/varsayılan) eklenmeli. En temizi: varsayılan dili **Türkçe (tr-TR)**
+> yapmak ve gereksiz İngilizce listelemeyi kaldırmak. İngilizce listeleme varsa şu metni ekle:
+
+```
+This app is independently developed. It is not affiliated with, endorsed by, or approved by ÖSYM or any official government institution. The name "KPSS" is used solely to identify the relevant exam. For the exam calendar, applications, and official announcements, please visit ÖSYM's official website:
+https://www.osym.gov.tr
 ```
 
 ---
