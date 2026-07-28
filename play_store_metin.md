@@ -97,6 +97,8 @@ Premium aylık otomatik yenilenen bir aboneliktir. İstediğin zaman Google Play
 
 KPSS Lisans, Önlisans ve Ortaöğretim adayları için hazırlanmıştır.
 Görüş ve önerilerin için: yunusemrecelikellll@gmail.com
+
+Bu uygulama bağımsız olarak geliştirilmiştir; ÖSYM veya herhangi bir resmî devlet kurumuyla bağlantılı, onlar tarafından desteklenen ya da onaylanan bir uygulama değildir. "KPSS" adı yalnızca ilgili sınavın tanımlanması amacıyla kullanılmaktadır. Sınav takvimi, başvuru ve resmî duyurular için ÖSYM'nin resmî web sitesini (www.osym.gov.tr) ziyaret edin.
 ```
 
 ---

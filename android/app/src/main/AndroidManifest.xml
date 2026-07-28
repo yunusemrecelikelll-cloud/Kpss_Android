@@ -89,5 +89,15 @@
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE"/>
         </intent>
+
+        <!-- Tarayıcıda link açmak (url_launcher) için — ör. ÖSYM resmî sitesi
+             (Ayarlar > Hakkında feragatı), Kullanım Koşulları, YouTube konu
+             videoları. Android 11+ (API 30) paket görünürlüğü kısıtı yüzünden
+             https VIEW intent'i bildirilmezse canLaunchUrl false döner ve link
+             açılmayabilir. Bkz. url_launcher README (Android integration). -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
     </queries>
 </manifest>
