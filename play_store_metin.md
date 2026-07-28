@@ -96,7 +96,7 @@ Premium aylık otomatik yenilenen bir aboneliktir. İstediğin zaman Google Play
 ━━━━━━━━━━━━━━━━━━━━
 
 KPSS Lisans, Önlisans ve Ortaöğretim adayları için hazırlanmıştır.
-Görüş ve önerilerin için: yunusemrecelikellll@gmail.com
+Görüş ve önerilerin için: yunusemrecelikelll@gmail.com
 
 Bu uygulama bağımsız olarak geliştirilmiştir; ÖSYM veya herhangi bir resmî devlet kurumuyla bağlantılı, onlar tarafından desteklenen ya da onaylanan bir uygulama değildir. "KPSS" adı yalnızca ilgili sınavın tanımlanması amacıyla kullanılmaktadır. Sınav takvimi, başvuru ve resmî duyurular için ÖSYM'nin resmî web sitesini (www.osym.gov.tr) ziyaret edin.
 ```
@@ -120,6 +120,6 @@ harita oyunları, kart oyunları ve günlük çalışma planı.
 | Kategori | Education |
 | Etiketler | Eğitim, Sınav hazırlığı |
 | Gizlilik politikası | https://yunusemrecelikelll-cloud.github.io/Kpss_Android/gizlilik.html |
-| Destek e-postası | yunusemrecelikellll@gmail.com |
+| Destek e-postası | yunusemrecelikelll@gmail.com |
 | Destek sayfası | https://yunusemrecelikelll-cloud.github.io/Kpss_Android/destek.html |
 | Hesap silme URL'i | https://yunusemrecelikelll-cloud.github.io/Kpss_Android/hesap-silme.html |
