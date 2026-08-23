@@ -2,6 +2,14 @@
     <!-- Firebase eklentileri bunu zaten merge ediyor; açıkça yazmak daha sağlam. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- REKLAM KİMLİĞİ (AdMob) — Google Play, AdMob/reklam kimliği kullanan
+         uygulamalarda bu izni MANİFEST'te AÇIKÇA görmek ister. Bu izin
+         olmadan Play Console "Kaydet" ve "İncelemeye gönder" butonları
+         açılmıyordu. Uygulama AdMob reklamı gösterdiği için beyanı EVET'tir
+         (Play Console > Uygulama içeriği > Reklam kimliği: "Evet, reklam
+         kimliği kullanıyorum"). -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
     <!-- "Günlük Çalışma Planı" hatırlatmaları (flutter_local_notifications).
          POST_NOTIFICATIONS Android 13+ (API 33) için zorunlu; uygulama izni
          çalışma anında ister (bkz. NotificationService.requestPermission).
