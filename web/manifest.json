@@ -1,6 +1,6 @@
 {
-    "name": "kpss_telefon",
-    "short_name": "kpss_telefon",
+    "name": "KPSS Hazırlık",
+    "short_name": "KPSS Hazırlık",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
